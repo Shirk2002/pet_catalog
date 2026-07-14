@@ -79,8 +79,19 @@
     name.className = "product-name";
     name.textContent = product.name || "Unnamed Product";
 
+    const details = document.createElement("div");
+    details.className = "product-details";
+
+    if (product.code) {
+      const code = document.createElement("p");
+      code.className = "product-code";
+      code.textContent = `Item No. ${product.code}`;
+      details.appendChild(code);
+    }
+
     imageWrap.appendChild(image);
-    card.append(imageWrap, name);
+    details.appendChild(name);
+    card.append(imageWrap, details);
 
     return card;
   }
