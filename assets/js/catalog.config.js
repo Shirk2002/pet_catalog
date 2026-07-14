@@ -1,85 +1,146 @@
-// 商品目录配置文件
-// 维护方式：
-// 1. 将商品图片放到 assets/images/ 目录下；
-// 2. 修改对应商品的 image 路径，例如：assets/images/dog-food.jpg；
-// 3. 新增类别时，复制 categories 数组中的一个对象并修改 id/name/description/products。
+// Product catalog configuration
+// How to maintain:
+// 1. Put product images in the assets/images/ folder.
+// 2. Update the image path, for example: assets/images/automatic-feeder.jpg.
+// 3. To add a category, copy one object in categories and update id/name/description/products.
 
 window.PET_CATALOG_CONFIG = {
   site: {
-    title: "宠物用品商品目录",
-    description: "按类别浏览宠物用品，查看商品名称与图片。",
-    footer: "© 宠物用品商品目录",
+    title: "Pet Supplies Product Catalog",
+    description: "Browse pet supplies by category and view product names with images.",
+    footer: "© Pet Supplies Product Catalog",
   },
 
   categories: [
     {
-      id: "dog-supplies",
-      name: "狗狗用品",
-      description: "狗粮、牵引绳、玩具等常用狗狗用品。",
+      id: "smart-cleaning",
+      name: "Smart Cleaning Series",
+      description: "Smart cleaning solutions for easier pet care and a cleaner home.",
       products: [
         {
-          name: "成犬营养狗粮",
+          name: "Self-Cleaning Litter Box",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "耐咬磨牙玩具",
+          name: "Pet Grooming Vacuum Kit",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "可调节牵引绳",
+          name: "Automatic Paw Cleaner",
           image: "assets/images/placeholder.svg",
         },
       ],
     },
     {
-      id: "cat-supplies",
-      name: "猫咪用品",
-      description: "猫粮、猫砂、猫抓板等猫咪日常用品。",
+      id: "feeding-drinking",
+      name: "Feeding & Drinking Series",
+      description: "Food and water products designed for daily feeding needs.",
       products: [
         {
-          name: "全价猫粮",
+          name: "Automatic Pet Feeder",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "除臭豆腐猫砂",
+          name: "Pet Water Fountain",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "瓦楞纸猫抓板",
+          name: "Stainless Steel Pet Bowl",
           image: "assets/images/placeholder.svg",
         },
       ],
     },
     {
-      id: "cleaning-care",
-      name: "清洁护理",
-      description: "洗护、梳毛、除味等清洁护理商品。",
+      id: "beds-home-comfort",
+      name: "Home Beds & Mats Series",
+      description: "Comfortable beds, mats, and home essentials for pets.",
       products: [
         {
-          name: "宠物沐浴露",
+          name: "Cozy Pet Bed",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "宠物除味喷雾",
+          name: "Foldable Pet House",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "针梳脱毛梳",
+          name: "Cooling Pet Mat",
           image: "assets/images/placeholder.svg",
         },
       ],
     },
     {
-      id: "feeding",
-      name: "喂食饮水",
-      description: "食盆、水碗、自动喂食器等喂养相关商品。",
+      id: "toys-enrichment",
+      name: "Toys & Enrichment Series",
+      description: "Interactive toys and enrichment products to keep pets active and happy.",
       products: [
         {
-          name: "不锈钢宠物碗",
+          name: "Interactive Treat Ball",
           image: "assets/images/placeholder.svg",
         },
         {
-          name: "自动饮水机",
+          name: "Chew Toy Set",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Cat Teaser Wand",
+          image: "assets/images/placeholder.svg",
+        },
+      ],
+    },
+    {
+      id: "outdoor-travel",
+      name: "Outdoor Travel Series",
+      description: "Portable and reliable products for walks, trips, and outdoor activities.",
+      products: [
+        {
+          name: "Portable Pet Carrier",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Travel Water Bottle",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Adjustable Safety Leash",
+          image: "assets/images/placeholder.svg",
+        },
+      ],
+    },
+    {
+      id: "wearables-apparel",
+      name: "Wearables Series",
+      description: "Harnesses, clothing, and wearable accessories for pets.",
+      products: [
+        {
+          name: "Reflective Pet Harness",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Waterproof Pet Jacket",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Adjustable Pet Collar",
+          image: "assets/images/placeholder.svg",
+        },
+      ],
+    },
+    {
+      id: "training-supplies",
+      name: "Training Supplies Series",
+      description: "Useful tools for obedience training, behavior guidance, and daily routines.",
+      products: [
+        {
+          name: "Training Clicker",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Treat Pouch",
+          image: "assets/images/placeholder.svg",
+        },
+        {
+          name: "Training Pads",
           image: "assets/images/placeholder.svg",
         },
       ],

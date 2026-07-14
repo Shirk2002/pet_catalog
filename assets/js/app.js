@@ -2,7 +2,7 @@
   const config = window.PET_CATALOG_CONFIG;
 
   if (!config || !Array.isArray(config.categories)) {
-    throw new Error("未找到有效的 PET_CATALOG_CONFIG 配置。");
+    throw new Error("Valid PET_CATALOG_CONFIG was not found.");
   }
 
   const siteTitle = document.getElementById("site-title");
@@ -16,11 +16,12 @@
   const productGrid = document.getElementById("product-grid");
 
   function setSiteInfo() {
-    document.title = config.site?.title || "宠物用品商品目录";
-    siteTitle.textContent = config.site?.title || "宠物用品商品目录";
+    document.title = config.site?.title || "Pet Supplies Product Catalog";
+    siteTitle.textContent = config.site?.title || "Pet Supplies Product Catalog";
     siteDescription.textContent =
-      config.site?.description || "按类别浏览宠物用品，查看商品名称与图片。";
-    footerText.textContent = config.site?.footer || "© 宠物用品商品目录";
+      config.site?.description ||
+      "Browse pet supplies by category and view product names with images.";
+    footerText.textContent = config.site?.footer || "© Pet Supplies Product Catalog";
   }
 
   function getSelectedCategory() {
@@ -68,7 +69,7 @@
     const image = document.createElement("img");
     image.className = "product-image";
     image.src = product.image || "assets/images/placeholder.svg";
-    image.alt = product.name || "宠物用品商品图片";
+    image.alt = product.name || "Pet supplies product image";
     image.loading = "lazy";
     image.addEventListener("error", () => {
       image.src = "assets/images/placeholder.svg";
@@ -76,7 +77,7 @@
 
     const name = document.createElement("h3");
     name.className = "product-name";
-    name.textContent = product.name || "未命名商品";
+    name.textContent = product.name || "Unnamed Product";
 
     imageWrap.appendChild(image);
     card.append(imageWrap, name);
@@ -90,7 +91,7 @@
     if (!products.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
-      empty.textContent = "该类别暂未配置商品。";
+      empty.textContent = "No products have been added to this category yet.";
       productGrid.appendChild(empty);
       return;
     }
@@ -102,12 +103,15 @@
 
   function renderPage(category) {
     renderCategories(category.id);
-    categoryKicker.textContent = "当前类别";
+    categoryKicker.textContent = "Current Category";
     categoryTitle.textContent = category.name;
-    categoryDescription.textContent = category.description || "查看该类别下的商品。";
+    categoryDescription.textContent =
+      category.description || "View products in this category.";
 
     const products = Array.isArray(category.products) ? category.products : [];
-    productCount.textContent = `${products.length} 件商品`;
+    productCount.textContent = `${products.length} ${
+      products.length === 1 ? "product" : "products"
+    }`;
     renderProducts(products);
   }
 

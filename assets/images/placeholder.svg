@@ -8,5 +8,5 @@
   <circle cx='286' cy='320' r='42' fill='#E07A3F'/>
   <circle cx='514' cy='320' r='42' fill='#E07A3F'/>
   <path d='M328 357C348 321 372 304 400 304C428 304 452 321 472 357C490 390 465 425 430 407C411 397 389 397 370 407C335 425 310 390 328 357Z' fill='#B65324'/>
-  <text x='400' y='515' text-anchor='middle' font-size='36' font-family='Arial, sans-serif' font-weight='700' fill='#B65324'>&#21830;&#21697;&#22270;&#29255;</text>
+  <text x='400' y='515' text-anchor='middle' font-size='36' font-family='Arial, sans-serif' font-weight='700' fill='#B65324'>Product Image</text>
 </svg>
