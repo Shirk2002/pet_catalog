@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="宠物用品商品类别展示网站，支持按类别查看商品名称和图片。"
+    />
+    <title>宠物用品商品目录</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div>
+          <p class="eyebrow">Pet Supplies Catalog</p>
+          <h1 id="site-title">宠物用品商品目录</h1>
+          <p id="site-description" class="site-description">
+            按类别浏览宠物用品，查看商品名称与图片。
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <aside class="sidebar" aria-label="商品类别">
+        <div class="sidebar-title">商品类别</div>
+        <nav id="category-list" class="category-list"></nav>
+      </aside>
+
+      <section class="content" aria-live="polite">
+        <div class="content-heading">
+          <div>
+            <p id="category-kicker" class="eyebrow">全部商品</p>
+            <h2 id="category-title">全部类别</h2>
+          </div>
+          <span id="product-count" class="product-count">0 件商品</span>
+        </div>
+        <p id="category-description" class="category-description">
+          选择左侧类别查看对应商品。
+        </p>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span id="footer-text">© 宠物用品商品目录</span>
+      </div>
+    </footer>
+
+    <script src="assets/js/catalog.config.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
