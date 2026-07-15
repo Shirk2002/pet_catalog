@@ -1,9 +1,9 @@
 ﻿<!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catalog Admin - Pet Supplies</title>
+    <title>宠物用品目录后台</title>
     <style>
       :root {
         --bg: #f7f3ec;
@@ -435,10 +435,10 @@
     <header class="header">
       <div class="container header-row">
         <div>
-          <p class="eyebrow">Private Admin</p>
-          <h1>Catalog Manager</h1>
+          <p class="eyebrow">私有后台</p>
+          <h1>商品目录管理</h1>
           <p class="description">
-            Edit products and upload images directly to your GitHub repository. This page is static: your GitHub token is only used in the browser and is not written into the project.
+            在这里可以直接编辑商品、上传图片，并通过 GitHub API 保存到仓库。这个页面是静态页面，GitHub Token 只在浏览器本次会话中使用，不会写入项目文件。
           </p>
         </div>
         <span class="pill">GitHub Pages + GitHub API</span>
@@ -447,35 +447,35 @@
 
     <main class="container">
       <section class="notice">
-        <strong>Token safety:</strong> create a GitHub fine-grained token for this repository only, with <strong>Contents: Read and write</strong>. Do not commit the token anywhere. For better safety, set an expiration date.
+        <strong>Token 安全提醒：</strong>请只为当前仓库创建 GitHub Fine-grained Token，并授予 <strong>Contents: Read and write</strong> 权限。不要把 Token 提交到仓库，建议设置过期时间。
         <ol class="help-list">
-          <li>GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.</li>
-          <li>Select repository: <strong>Shirk2002/pet_catalog</strong>.</li>
-          <li>Repository permissions → Contents → <strong>Read and write</strong>.</li>
-          <li>Paste the token below, load catalog, edit, then save.</li>
+          <li>GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens。</li>
+          <li>选择仓库：<strong>Shirk2002/pet_catalog</strong>。</li>
+          <li>Repository permissions → Contents → <strong>Read and write</strong>。</li>
+          <li>把 Token 粘贴到下面，加载目录，编辑商品，然后保存。</li>
         </ol>
       </section>
 
-      <section class="panel settings" aria-label="GitHub settings">
+      <section class="panel settings" aria-label="GitHub 设置">
         <div class="field">
-          <label for="ownerInput">Owner</label>
+          <label for="ownerInput">用户名</label>
           <input id="ownerInput" value="Shirk2002" autocomplete="off" />
         </div>
         <div class="field">
-          <label for="repoInput">Repo</label>
+          <label for="repoInput">仓库</label>
           <input id="repoInput" value="pet_catalog" autocomplete="off" />
         </div>
         <div class="field">
-          <label for="branchInput">Branch</label>
+          <label for="branchInput">分支</label>
           <input id="branchInput" value="main" autocomplete="off" />
         </div>
         <div class="field wide">
           <label for="tokenInput">GitHub Token</label>
-          <input id="tokenInput" type="password" placeholder="Paste token for this session" autocomplete="off" />
+          <input id="tokenInput" type="password" placeholder="粘贴本次使用的 Token" autocomplete="off" />
         </div>
         <div class="actions">
-          <button class="btn" id="loadBtn" type="button">Load Catalog</button>
-          <button class="btn secondary" id="saveBtn" type="button" disabled>Save to GitHub</button>
+          <button class="btn" id="loadBtn" type="button">加载商品目录</button>
+          <button class="btn secondary" id="saveBtn" type="button" disabled>保存到 GitHub</button>
         </div>
       </section>
 
@@ -483,17 +483,17 @@
 
       <section class="layout">
         <aside class="panel sidebar">
-          <p class="sidebar-title">Categories</p>
+          <p class="sidebar-title">商品分类</p>
           <div id="categoryList" class="category-list"></div>
         </aside>
 
         <section class="main">
           <div class="panel toolbar">
             <div>
-              <h2 id="currentCategoryTitle">Load catalog first</h2>
-              <p id="currentCategoryDescription">Products will appear here after loading from GitHub.</p>
+              <h2 id="currentCategoryTitle">请先加载商品目录</h2>
+              <p id="currentCategoryDescription">从 GitHub 加载数据后，商品会显示在这里。</p>
             </div>
-            <button class="btn" id="addProductBtn" type="button" disabled>Add Product</button>
+            <button class="btn" id="addProductBtn" type="button" disabled>新增商品</button>
           </div>
           <div id="productGrid" class="product-grid"></div>
         </section>
@@ -504,43 +504,43 @@
       <form id="productForm" class="panel modal">
         <div class="modal-header">
           <div>
-            <p class="eyebrow">Product Editor</p>
-            <h2 id="modalTitle">Add Product</h2>
+            <p class="eyebrow">商品编辑</p>
+            <h2 id="modalTitle">新增商品</h2>
           </div>
-          <button class="btn secondary" id="closeModalBtn" type="button">Close</button>
+          <button class="btn secondary" id="closeModalBtn" type="button">关闭</button>
         </div>
 
         <div class="modal-grid">
           <div class="field">
-            <label for="productCategoryInput">Category</label>
+            <label for="productCategoryInput">分类</label>
             <select id="productCategoryInput" required></select>
           </div>
           <div class="field">
-            <label for="productCodeInput">Item No.</label>
-            <input id="productCodeInput" placeholder="Example: LC-09" required />
+            <label for="productCodeInput">商品编号</label>
+            <input id="productCodeInput" placeholder="例如：LC-09" required />
           </div>
           <div class="field wide">
-            <label for="productNameInput">English Product Name</label>
-            <input id="productNameInput" placeholder="Example: Smart Pet Water Fountain" required />
+            <label for="productNameInput">英文商品名</label>
+            <input id="productNameInput" placeholder="例如：Smart Pet Water Fountain" required />
           </div>
           <div class="field wide">
-            <label for="productImageInput">Image Path</label>
+            <label for="productImageInput">图片路径</label>
             <input id="productImageInput" placeholder="assets/images/catalog/example.png" required />
           </div>
           <div class="field wide">
-            <label for="imageFileInput">Upload New Image</label>
+            <label for="imageFileInput">上传新图片</label>
             <input id="imageFileInput" type="file" accept="image/*" />
           </div>
           <div class="field wide preview">
-            <label>Preview</label>
-            <img id="imagePreview" src="assets/images/placeholder.svg" alt="Product image preview" />
-            <p class="description">If you upload a new image, the image path will be generated automatically when saving the product.</p>
+            <label>预览</label>
+            <img id="imagePreview" src="assets/images/placeholder.svg" alt="商品图片预览" />
+            <p class="description">如果上传新图片，保存商品时会自动生成图片路径。</p>
           </div>
         </div>
 
         <div class="modal-actions">
-          <button class="btn danger" id="deleteProductBtn" type="button">Delete</button>
-          <button class="btn" type="submit">Apply Changes</button>
+          <button class="btn danger" id="deleteProductBtn" type="button">删除</button>
+          <button class="btn" type="submit">应用修改</button>
         </div>
       </form>
     </div>
@@ -594,7 +594,7 @@
 
       function githubHeaders() {
         const token = els.token.value.trim();
-        if (!token) throw new Error("Please paste your GitHub token first.");
+        if (!token) throw new Error("请先粘贴 GitHub Token。");
         return {
           Accept: "application/vnd.github+json",
           Authorization: `Bearer ${token}`,
@@ -620,7 +620,7 @@
         const text = await response.text();
         const data = text ? JSON.parse(text) : null;
         if (!response.ok) {
-          throw new Error(data?.message || `GitHub API failed: ${response.status}`);
+          throw new Error(data?.message || `GitHub API 请求失败：${response.status}`);
         }
         return data;
       }
@@ -646,7 +646,7 @@
         const fn = new Function("window", `${jsText}; return window.PET_CATALOG_CONFIG;`);
         const config = fn(sandbox);
         if (!config || !Array.isArray(config.categories)) {
-          throw new Error("Invalid catalog config file.");
+          throw new Error("商品配置文件格式不正确。");
         }
         return config;
       }
@@ -654,7 +654,7 @@
       function buildConfigFile(config) {
         return [
           "// Product catalog configuration",
-          "// Managed by admin.html. Product names are intended for international buyers.",
+          "// 由 admin.html 后台管理，商品名用于外贸展示。",
           "",
           `window.PET_CATALOG_CONFIG = ${JSON.stringify(config, null, 2)};`,
           "",
@@ -663,7 +663,7 @@
 
       async function loadCatalog() {
         try {
-          setStatus("Loading catalog from GitHub...");
+          setStatus("正在从 GitHub 加载商品目录...");
           const data = await githubRequest(`${CONFIG_PATH}?ref=${encodeURIComponent(els.branch.value.trim())}`);
           const jsText = decodeBase64ToText(data.content);
           state.config = parseConfig(jsText);
@@ -673,7 +673,7 @@
           els.saveBtn.disabled = false;
           els.addProductBtn.disabled = false;
           render();
-          setStatus("Catalog loaded successfully.", "success");
+          setStatus("商品目录加载成功。", "success");
         } catch (error) {
           setStatus(error.message, "error");
         }
@@ -699,7 +699,7 @@
           const button = document.createElement("button");
           button.type = "button";
           button.className = "category-button" + (category.id === state.selectedCategoryId ? " active" : "");
-          button.innerHTML = `${escapeHtml(category.name)}<span class="category-count">${category.products?.length || 0} products</span>`;
+          button.innerHTML = `${escapeHtml(category.name)}<span class="category-count">${category.products?.length || 0} 个商品</span>`;
           button.addEventListener("click", () => {
             state.selectedCategoryId = category.id;
             render();
@@ -713,8 +713,8 @@
         const category = getSelectedCategory();
 
         if (!category) {
-          els.currentTitle.textContent = "Load catalog first";
-          els.currentDescription.textContent = "Products will appear here after loading from GitHub.";
+          els.currentTitle.textContent = "请先加载商品目录";
+          els.currentDescription.textContent = "从 GitHub 加载数据后，商品会显示在这里。";
           return;
         }
 
@@ -726,14 +726,14 @@
           card.className = "panel product-card";
           card.innerHTML = `
             <div class="product-image-wrap">
-              <img class="product-image" src="${escapeAttr(product.image || PLACEHOLDER_IMAGE)}" alt="${escapeAttr(product.name || "Product image")}" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
+              <img class="product-image" src="${escapeAttr(product.image || PLACEHOLDER_IMAGE)}" alt="${escapeAttr(product.name || "商品图片")}" onerror="this.src='${PLACEHOLDER_IMAGE}'" />
             </div>
             <div class="product-body">
-              <span class="product-code">Item No. ${escapeHtml(product.code || "-")}</span>
-              <h3 class="product-name">${escapeHtml(product.name || "Unnamed Product")}</h3>
+              <span class="product-code">商品编号：${escapeHtml(product.code || "-")}</span>
+              <h3 class="product-name">${escapeHtml(product.name || "未命名商品")}</h3>
               <div class="product-actions">
-                <button class="btn secondary" type="button" data-action="edit">Edit</button>
-                <button class="btn danger" type="button" data-action="delete">Delete</button>
+                <button class="btn secondary" type="button" data-action="edit">编辑</button>
+                <button class="btn danger" type="button" data-action="delete">删除</button>
               </div>
             </div>
           `;
@@ -760,7 +760,7 @@
         const category = state.config.categories.find((item) => item.id === categoryId);
         const product = index === null ? null : category.products[index];
 
-        els.modalTitle.textContent = product ? "Edit Product" : "Add Product";
+        els.modalTitle.textContent = product ? "编辑商品" : "新增商品";
         els.productCategory.value = categoryId;
         els.productCode.value = product?.code || "";
         els.productName.value = product?.name || "";
@@ -780,11 +780,11 @@
       function deleteProduct(categoryId, index) {
         const category = state.config.categories.find((item) => item.id === categoryId);
         const product = category.products[index];
-        if (!confirm(`Delete ${product.code || product.name}?`)) return;
+        if (!confirm(`确定删除 ${product.code || product.name} 吗？`)) return;
         category.products.splice(index, 1);
         state.dirty = true;
         render();
-        setStatus("Product deleted locally. Click Save to GitHub to publish.");
+        setStatus("商品已在本地删除。点击“保存到 GitHub”后才会发布到线上。");
       }
 
       function cleanFileName(value) {
@@ -816,7 +816,7 @@
         };
 
         if (!product.code || !product.name) {
-          setStatus("Item No. and product name are required.", "error");
+          setStatus("商品编号和商品名不能为空。", "error");
           return;
         }
 
@@ -841,17 +841,17 @@
         state.dirty = true;
         closeEditor();
         render();
-        setStatus("Product updated locally. Click Save to GitHub to publish.");
+        setStatus("商品已在本地更新。点击“保存到 GitHub”后才会发布到线上。");
       }
 
       async function saveToGitHub() {
         if (!state.config) return;
         try {
-          setStatus("Saving to GitHub...");
+          setStatus("正在保存到 GitHub...");
           els.saveBtn.disabled = true;
 
           if (state.pendingUploads.length) {
-            setStatus(`Uploading ${state.pendingUploads.length} image(s)...`);
+            setStatus(`正在上传 ${state.pendingUploads.length} 张图片...`);
             for (const upload of state.pendingUploads) {
               await uploadImageFile(upload.file, upload.path);
             }
@@ -870,7 +870,7 @@
           });
           state.configSha = result.content.sha;
           state.dirty = false;
-          setStatus("Saved to GitHub. GitHub Pages will redeploy automatically.", "success");
+          setStatus("已保存到 GitHub，GitHub Pages 会自动重新部署。", "success");
         } catch (error) {
           setStatus(error.message, "error");
         } finally {
