@@ -531,7 +531,7 @@
         </div>
         <div class="actions">
           <button class="btn" id="loadBtn" type="button">加载商品目录</button>
-          <button class="btn secondary" id="saveBtn" type="button" disabled>保存到 GitHub</button>
+          <button class="btn secondary" id="saveBtn" type="button" disabled>保存并发布到前台</button>
         </div>
       </section>
 
@@ -910,6 +910,42 @@
           .replace(/^-+|-+$/g, "") || "product";
       }
 
+      function normalizeProductCode(value) {
+        return String(value || "").trim().toUpperCase();
+      }
+
+      function findDuplicateProductCode(code, excludedCategoryId = null, excludedIndex = null) {
+        const normalizedCode = normalizeProductCode(code);
+        if (!normalizedCode) return null;
+
+        for (const category of state.config.categories) {
+          for (let index = 0; index < category.products.length; index += 1) {
+            if (category.id === excludedCategoryId && index === excludedIndex) {
+              continue;
+            }
+
+            if (normalizeProductCode(category.products[index].code) === normalizedCode) {
+              return { category, index, product: category.products[index] };
+            }
+          }
+        }
+
+        return null;
+      }
+
+      function hasAnotherProductWithCode(code, categoryId, index) {
+        const normalizedCode = normalizeProductCode(code);
+        if (!normalizedCode) return false;
+
+        return state.config.categories.some((category) =>
+          category.products.some(
+            (product, productIndex) =>
+              !(category.id === categoryId && productIndex === index) &&
+              normalizeProductCode(product.code) === normalizedCode
+          )
+        );
+      }
+
       function getFileExtension(file) {
         const fromName = file.name.split(".").pop();
         if (fromName && fromName.length <= 5) return fromName.toLowerCase();
@@ -933,6 +969,29 @@
 
         if (!product.code || !product.name) {
           setStatus("商品编号和商品名不能为空。", "error");
+          return;
+        }
+
+        const isEditingExistingProduct = oldIndex !== null;
+        const originalProduct = isEditingExistingProduct
+          ? state.config.categories
+              .find((category) => category.id === oldCategoryId)
+              ?.products[oldIndex]
+          : null;
+        const originalCode = normalizeProductCode(originalProduct?.code);
+        const editedCode = normalizeProductCode(product.code);
+        const unchangedHistoricalDuplicate =
+          isEditingExistingProduct &&
+          editedCode === originalCode &&
+          hasAnotherProductWithCode(originalCode, oldCategoryId, oldIndex);
+        const duplicate = unchangedHistoricalDuplicate
+          ? null
+          : findDuplicateProductCode(product.code, oldCategoryId, oldIndex);
+        if (duplicate) {
+          setStatus(
+            `商品编号“${product.code}”已被 ${duplicate.category.name} 中的“${duplicate.product.name || duplicate.product.code}”使用，不能重复添加。`,
+            "error"
+          );
           return;
         }
 
@@ -961,13 +1020,13 @@
         } else {
           render();
         }
-        setStatus("商品已在本地更新。点击“保存到 GitHub”后才会发布到线上。");
+        setStatus("商品已暂存。请点击“保存并发布到前台”，完成 GitHub 提交与网站发布。", "success");
       }
 
       async function saveToGitHub() {
         if (!state.config) return;
         try {
-          setStatus("正在保存到 GitHub...");
+          setStatus("正在提交商品目录并发布到前台...");
           els.saveBtn.disabled = true;
 
           if (state.pendingUploads.length) {
@@ -990,7 +1049,7 @@
           });
           state.configSha = result.content.sha;
           state.dirty = false;
-          setStatus("已保存到 GitHub，GitHub Pages 会自动重新部署。", "success");
+          setStatus("已提交到 GitHub。前台将在 GitHub Pages 部署完成后自动更新，通常需要约 1 分钟。", "success");
         } catch (error) {
           setStatus(error.message, "error");
         } finally {

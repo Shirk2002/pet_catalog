@@ -124,7 +124,11 @@
       </div>
     </footer>
 
-    <script src="assets/js/catalog.config.js"></script>
+    <script>
+      document.write(
+        `<script src="assets/js/catalog.config.js?v=${Date.now()}"><\/script>`
+      );
+    </script>
     <script src="assets/js/app.js"></script>
     <script>
       (() => {
