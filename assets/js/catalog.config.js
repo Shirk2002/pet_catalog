@@ -664,11 +664,6 @@ window.PET_CATALOG_CONFIG = {
           "code": "FD-06",
           "name": "Anti-Lost Pet GPS Tracker Collar",
           "image": "assets/images/catalog/125-fd-06.png"
-        },
-        {
-          "code": "TZ-01",
-          "name": "123456",
-          "image": "assets/images/catalog/1784305158285-tz-01.png"
         }
       ]
     }
