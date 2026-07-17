@@ -102,14 +102,62 @@
       <div class="container">
         <span id="footer-text">© Pet Supplies Product Catalog</span>
         <span class="footer-separator" aria-hidden="true">·</span>
-        <span id="busuanzi_container_site_pv" class="visitor-count" style="display: none">
-          Total Views: <span id="busuanzi_value_site_pv">0</span>
+        <span id="visitor-count" class="visitor-count" style="display: none">
+          Total Views: <span id="visitor-count-value">0</span>
+        </span>
+        <span id="busuanzi_container_site_pv" style="display: none" aria-hidden="true">
+          <span id="busuanzi_value_site_pv"></span>
         </span>
       </div>
     </footer>
 
     <script src="assets/js/catalog.config.js"></script>
     <script src="assets/js/app.js"></script>
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script>
+      (() => {
+        const countKey = "pet-catalog-total-views";
+        const dateKey = "pet-catalog-last-counted-date";
+        const countContainer = document.getElementById("visitor-count");
+        const countValue = document.getElementById("visitor-count-value");
+        const today = new Date().toLocaleDateString("en-CA");
+
+        const showCount = (value) => {
+          countValue.textContent = value;
+          countContainer.style.display = "inline";
+        };
+
+        const savedCount = localStorage.getItem(countKey);
+        if (savedCount) {
+          showCount(savedCount);
+        }
+
+        if (localStorage.getItem(dateKey) === today) {
+          return;
+        }
+
+        const script = document.createElement("script");
+        script.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+        script.async = true;
+        script.addEventListener("load", () => {
+          let attempts = 0;
+          const readCount = () => {
+            const remoteValue = document.getElementById("busuanzi_value_site_pv")?.textContent?.trim();
+            if (remoteValue && /^\d+$/.test(remoteValue)) {
+              localStorage.setItem(countKey, remoteValue);
+              localStorage.setItem(dateKey, today);
+              showCount(remoteValue);
+              return;
+            }
+
+            attempts += 1;
+            if (attempts < 20) {
+              window.setTimeout(readCount, 250);
+            }
+          };
+          readCount();
+        });
+        document.head.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
