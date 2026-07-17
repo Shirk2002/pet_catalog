@@ -288,6 +288,15 @@ h1 {
   text-align: center;
 }
 
+.footer-separator {
+  margin: 0 8px;
+  color: var(--border);
+}
+
+.visitor-count {
+  font-variant-numeric: tabular-nums;
+}
+
 @media (max-width: 760px) {
   .site-header {
     padding-top: 36px;
