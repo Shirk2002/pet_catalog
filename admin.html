@@ -291,6 +291,55 @@
         color: var(--muted);
       }
 
+      .catalog-search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        margin-bottom: 18px;
+        padding: 0 12px;
+        background: #fffaf4;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .catalog-search:focus-within {
+        border-color: rgba(224, 122, 63, 0.75);
+        box-shadow: 0 0 0 4px rgba(224, 122, 63, 0.12);
+      }
+
+      .catalog-search-icon {
+        color: var(--brand-dark);
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .catalog-search input {
+        width: 100%;
+        border: 0;
+        padding: 13px 0;
+        color: var(--text);
+        background: transparent;
+        outline: 0;
+      }
+
+      .catalog-search button {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 50%;
+        color: var(--muted);
+        background: transparent;
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 1;
+      }
+
+      .catalog-search button:hover {
+        color: var(--brand-dark);
+        background: #fff0e6;
+      }
+
       .product-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
@@ -333,6 +382,13 @@
         margin-bottom: 12px;
         font-size: 15px;
         line-height: 1.4;
+      }
+
+      .product-category-label {
+        margin: -4px 0 10px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 800;
       }
 
       .product-actions {
@@ -495,6 +551,17 @@
             </div>
             <button class="btn" id="addProductBtn" type="button" disabled>新增商品</button>
           </div>
+          <label class="catalog-search" for="catalogSearchInput">
+            <span class="catalog-search-icon" aria-hidden="true">⌕</span>
+            <input
+              id="catalogSearchInput"
+              type="search"
+              placeholder="搜索英文商品名、商品编号或分类"
+              autocomplete="off"
+              disabled
+            />
+            <button id="clearCatalogSearchBtn" type="button" aria-label="清空搜索" hidden>×</button>
+          </label>
           <div id="productGrid" class="product-grid"></div>
         </section>
       </section>
@@ -569,6 +636,8 @@
         loadBtn: $("loadBtn"),
         saveBtn: $("saveBtn"),
         addProductBtn: $("addProductBtn"),
+        catalogSearch: $("catalogSearchInput"),
+        clearCatalogSearchBtn: $("clearCatalogSearchBtn"),
         status: $("status"),
         categoryList: $("categoryList"),
         productGrid: $("productGrid"),
@@ -672,6 +741,7 @@
           state.dirty = false;
           els.saveBtn.disabled = false;
           els.addProductBtn.disabled = false;
+          els.catalogSearch.disabled = false;
           render();
           setStatus("商品目录加载成功。", "success");
         } catch (error) {
@@ -685,6 +755,7 @@
         renderCategoryOptions();
         els.saveBtn.disabled = !state.config;
         els.addProductBtn.disabled = !state.config;
+        els.catalogSearch.disabled = !state.config;
       }
 
       function getSelectedCategory() {
@@ -702,6 +773,8 @@
           button.innerHTML = `${escapeHtml(category.name)}<span class="category-count">${category.products?.length || 0} 个商品</span>`;
           button.addEventListener("click", () => {
             state.selectedCategoryId = category.id;
+            els.catalogSearch.value = "";
+            els.clearCatalogSearchBtn.hidden = true;
             render();
           });
           els.categoryList.appendChild(button);
@@ -722,6 +795,11 @@
         els.currentDescription.textContent = category.description || "";
 
         category.products.forEach((product, index) => {
+          renderProductCard(product, category, index);
+        });
+      }
+
+      function renderProductCard(product, category, index, showCategory = false) {
           const card = document.createElement("article");
           card.className = "panel product-card";
           card.innerHTML = `
@@ -731,6 +809,7 @@
             <div class="product-body">
               <span class="product-code">商品编号：${escapeHtml(product.code || "-")}</span>
               <h3 class="product-name">${escapeHtml(product.name || "未命名商品")}</h3>
+              ${showCategory ? `<p class="product-category-label">分类：${escapeHtml(category.name)}</p>` : ""}
               <div class="product-actions">
                 <button class="btn secondary" type="button" data-action="edit">编辑</button>
                 <button class="btn danger" type="button" data-action="delete">删除</button>
@@ -740,6 +819,39 @@
           card.querySelector('[data-action="edit"]').addEventListener("click", () => openEditor(category.id, index));
           card.querySelector('[data-action="delete"]').addEventListener("click", () => deleteProduct(category.id, index));
           els.productGrid.appendChild(card);
+      }
+
+      function renderSearchResults(query) {
+        const normalizedQuery = query.trim().toLowerCase();
+        if (!normalizedQuery) {
+          render();
+          return;
+        }
+
+        const matches = state.config.categories.flatMap((category) =>
+          category.products
+            .map((product, index) => ({ product, category, index }))
+            .filter(({ product, category }) => {
+              const searchable = `${product.name || ""} ${product.code || ""} ${category.name || ""}`.toLowerCase();
+              return searchable.includes(normalizedQuery);
+            })
+        );
+
+        renderCategories();
+        els.currentTitle.textContent = `搜索结果：${query.trim()}`;
+        els.currentDescription.textContent = `找到 ${matches.length} 个匹配商品，可直接编辑或删除。`;
+        els.productGrid.innerHTML = "";
+
+        if (!matches.length) {
+          const empty = document.createElement("p");
+          empty.className = "notice";
+          empty.textContent = "没有找到匹配的商品。";
+          els.productGrid.appendChild(empty);
+          return;
+        }
+
+        matches.forEach(({ product, category, index }) => {
+          renderProductCard(product, category, index, true);
         });
       }
 
@@ -783,7 +895,11 @@
         if (!confirm(`确定删除 ${product.code || product.name} 吗？`)) return;
         category.products.splice(index, 1);
         state.dirty = true;
-        render();
+        if (els.catalogSearch.value.trim()) {
+          renderSearchResults(els.catalogSearch.value);
+        } else {
+          render();
+        }
         setStatus("商品已在本地删除。点击“保存到 GitHub”后才会发布到线上。");
       }
 
@@ -840,7 +956,11 @@
         state.selectedCategoryId = newCategoryId;
         state.dirty = true;
         closeEditor();
-        render();
+        if (els.catalogSearch.value.trim()) {
+          renderSearchResults(els.catalogSearch.value);
+        } else {
+          render();
+        }
         setStatus("商品已在本地更新。点击“保存到 GitHub”后才会发布到线上。");
       }
 
@@ -929,6 +1049,17 @@
       els.loadBtn.addEventListener("click", loadCatalog);
       els.saveBtn.addEventListener("click", saveToGitHub);
       els.addProductBtn.addEventListener("click", () => openEditor(state.selectedCategoryId, null));
+      els.catalogSearch.addEventListener("input", () => {
+        const query = els.catalogSearch.value;
+        els.clearCatalogSearchBtn.hidden = !query;
+        renderSearchResults(query);
+      });
+      els.clearCatalogSearchBtn.addEventListener("click", () => {
+        els.catalogSearch.value = "";
+        els.clearCatalogSearchBtn.hidden = true;
+        render();
+        els.catalogSearch.focus();
+      });
       els.closeModalBtn.addEventListener("click", closeEditor);
       els.productForm.addEventListener("submit", applyProductForm);
       els.deleteProductBtn.addEventListener("click", () => {
