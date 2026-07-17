@@ -94,6 +94,19 @@
         <p id="category-description" class="category-description">
           Select a category to view matching products.
         </p>
+        <label class="product-search" for="product-search-input">
+          <span class="sr-only">Search products</span>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="product-search-input"
+            type="search"
+            placeholder="Search by product name or item number"
+            autocomplete="off"
+          />
+          <button id="clear-search-button" type="button" aria-label="Clear search" hidden>
+            ×
+          </button>
+        </label>
         <div id="product-grid" class="product-grid"></div>
       </section>
     </main>

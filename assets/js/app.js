@@ -14,6 +14,8 @@
   const categoryDescription = document.getElementById("category-description");
   const productCount = document.getElementById("product-count");
   const productGrid = document.getElementById("product-grid");
+  const productSearchInput = document.getElementById("product-search-input");
+  const clearSearchButton = document.getElementById("clear-search-button");
 
   function setSiteInfo() {
     document.title = config.site?.title || "Pet Supplies Product Catalog";
@@ -51,6 +53,8 @@
       button.setAttribute("aria-pressed", String(category.id === selectedCategoryId));
 
       button.addEventListener("click", () => {
+        productSearchInput.value = "";
+        clearSearchButton.hidden = true;
         updateUrl(category.id);
         renderPage(category);
       });
@@ -59,7 +63,7 @@
     });
   }
 
-  function createProductCard(product) {
+  function createProductCard(product, categoryName = "") {
     const card = document.createElement("article");
     card.className = "product-card";
 
@@ -89,6 +93,13 @@
       details.appendChild(code);
     }
 
+    if (categoryName) {
+      const category = document.createElement("p");
+      category.className = "product-category-label";
+      category.textContent = categoryName;
+      details.appendChild(category);
+    }
+
     imageWrap.appendChild(image);
     details.appendChild(name);
     card.append(imageWrap, details);
@@ -96,20 +107,45 @@
     return card;
   }
 
-  function renderProducts(products) {
+  function renderProducts(products, categoryName = "") {
     productGrid.innerHTML = "";
 
     if (!products.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
-      empty.textContent = "No products have been added to this category yet.";
+      empty.textContent = "No matching products were found.";
       productGrid.appendChild(empty);
       return;
     }
 
     products.forEach((product) => {
-      productGrid.appendChild(createProductCard(product));
+      productGrid.appendChild(createProductCard(product, categoryName || product.categoryName));
     });
+  }
+
+  function renderSearchResults(query) {
+    const normalizedQuery = query.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+      renderPage(getSelectedCategory());
+      return;
+    }
+
+    const matches = config.categories.flatMap((category) =>
+      (Array.isArray(category.products) ? category.products : [])
+        .filter((product) => {
+          const searchable = `${product.name || ""} ${product.code || ""}`.toLowerCase();
+          return searchable.includes(normalizedQuery);
+        })
+        .map((product) => ({ ...product, categoryName: category.name }))
+    );
+
+    renderCategories("");
+    categoryKicker.textContent = "Search Results";
+    categoryTitle.textContent = `Results for “${query.trim()}”`;
+    categoryDescription.textContent = "Search matches product names and item numbers across all categories.";
+    productCount.textContent = `${matches.length} ${matches.length === 1 ? "product" : "products"}`;
+    renderProducts(matches);
   }
 
   function renderPage(category) {
@@ -128,6 +164,19 @@
 
   setSiteInfo();
   renderPage(getSelectedCategory());
+
+  productSearchInput.addEventListener("input", () => {
+    const query = productSearchInput.value;
+    clearSearchButton.hidden = !query;
+    renderSearchResults(query);
+  });
+
+  clearSearchButton.addEventListener("click", () => {
+    productSearchInput.value = "";
+    clearSearchButton.hidden = true;
+    renderPage(getSelectedCategory());
+    productSearchInput.focus();
+  });
 
   window.addEventListener("popstate", () => {
     renderPage(getSelectedCategory());
