@@ -1,5 +1,5 @@
 // Product catalog configuration
-// Data imported from catalog.xlsx. Product names were translated and polished for international buyers.
+// 由 admin.html 后台管理，商品名用于外贸展示。
 
 window.PET_CATALOG_CONFIG = {
   "site": {
@@ -664,6 +664,11 @@ window.PET_CATALOG_CONFIG = {
           "code": "FD-06",
           "name": "Anti-Lost Pet GPS Tracker Collar",
           "image": "assets/images/catalog/125-fd-06.png"
+        },
+        {
+          "code": "TZ-01",
+          "name": "123456",
+          "image": "assets/images/catalog/1784305158285-tz-01.png"
         }
       ]
     }
