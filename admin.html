@@ -146,6 +146,28 @@
         box-shadow: 0 0 0 4px rgba(224, 122, 63, 0.12);
       }
 
+      .field input.is-duplicate {
+        border-color: var(--danger);
+        box-shadow: 0 0 0 4px rgba(180, 35, 24, 0.12);
+      }
+
+      .field-message {
+        min-height: 18px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.4;
+      }
+
+      .field-message.success {
+        color: var(--success);
+      }
+
+      .field-message.error {
+        color: var(--danger);
+        font-weight: 700;
+      }
+
       .wide {
         grid-column: span 2;
       }
@@ -585,10 +607,12 @@
           <div class="field">
             <label for="productCodeInput">商品编号</label>
             <input id="productCodeInput" placeholder="例如：LC-09" required />
+            <p id="productCodeMessage" class="field-message" aria-live="polite"></p>
           </div>
           <div class="field wide">
             <label for="productNameInput">英文商品名</label>
             <input id="productNameInput" placeholder="例如：Smart Pet Water Fountain" required />
+            <p id="productNameMessage" class="field-message" aria-live="polite"></p>
           </div>
           <div class="field wide">
             <label for="productImageInput">图片路径</label>
@@ -649,7 +673,9 @@
         modalTitle: $("modalTitle"),
         productCategory: $("productCategoryInput"),
         productCode: $("productCodeInput"),
+        productCodeMessage: $("productCodeMessage"),
         productName: $("productNameInput"),
+        productNameMessage: $("productNameMessage"),
         productImage: $("productImageInput"),
         imageFile: $("imageFileInput"),
         imagePreview: $("imagePreview"),
@@ -914,9 +940,14 @@
         return String(value || "").trim().toUpperCase();
       }
 
-      function findDuplicateProductCode(code, excludedCategoryId = null, excludedIndex = null) {
-        const normalizedCode = normalizeProductCode(code);
-        if (!normalizedCode) return null;
+      function normalizeProductName(value) {
+        return String(value || "").trim().replace(/\s+/g, " ").toLowerCase();
+      }
+
+      function findDuplicateProduct(field, value, excludedCategoryId = null, excludedIndex = null) {
+        const normalizer = field === "code" ? normalizeProductCode : normalizeProductName;
+        const normalizedValue = normalizer(value);
+        if (!normalizedValue) return null;
 
         for (const category of state.config.categories) {
           for (let index = 0; index < category.products.length; index += 1) {
@@ -924,13 +955,21 @@
               continue;
             }
 
-            if (normalizeProductCode(category.products[index].code) === normalizedCode) {
+            if (normalizer(category.products[index][field]) === normalizedValue) {
               return { category, index, product: category.products[index] };
             }
           }
         }
 
         return null;
+      }
+
+      function findDuplicateProductCode(code, excludedCategoryId = null, excludedIndex = null) {
+        return findDuplicateProduct("code", code, excludedCategoryId, excludedIndex);
+      }
+
+      function findDuplicateProductName(name, excludedCategoryId = null, excludedIndex = null) {
+        return findDuplicateProduct("name", name, excludedCategoryId, excludedIndex);
       }
 
       function hasAnotherProductWithCode(code, categoryId, index) {
@@ -944,6 +983,85 @@
               normalizeProductCode(product.code) === normalizedCode
           )
         );
+      }
+
+      function hasAnotherProductWithName(name, categoryId, index) {
+        const normalizedName = normalizeProductName(name);
+        if (!normalizedName) return false;
+
+        return state.config.categories.some((category) =>
+          category.products.some(
+            (product, productIndex) =>
+              !(category.id === categoryId && productIndex === index) &&
+              normalizeProductName(product.name) === normalizedName
+          )
+        );
+      }
+
+      function getEditingLocation() {
+        return {
+          categoryId: state.editing?.categoryId ?? null,
+          index: state.editing?.index ?? null,
+        };
+      }
+
+      function updateFieldMessage(input, message, type = "") {
+        input.textContent = message;
+        input.className = `field-message ${type}`.trim();
+      }
+
+      function validateProductIdentityFields() {
+        if (!state.config) return { codeDuplicate: null, nameDuplicate: null };
+
+        const { categoryId, index } = getEditingLocation();
+        const code = els.productCode.value.trim();
+        const name = els.productName.value.trim();
+        const currentProduct =
+          index === null
+            ? null
+            : state.config.categories.find((category) => category.id === categoryId)?.products[index];
+        const unchangedCode =
+          index !== null && normalizeProductCode(code) === normalizeProductCode(currentProduct?.code);
+        const unchangedName =
+          index !== null && normalizeProductName(name) === normalizeProductName(currentProduct?.name);
+        const historicalCodeDuplicate = unchangedCode && hasAnotherProductWithCode(code, categoryId, index);
+        const historicalNameDuplicate = unchangedName && hasAnotherProductWithName(name, categoryId, index);
+        const codeDuplicate =
+          historicalCodeDuplicate
+            ? null
+            : findDuplicateProductCode(code, categoryId, index);
+        const nameDuplicate =
+          historicalNameDuplicate
+            ? null
+            : findDuplicateProductName(name, categoryId, index);
+
+        els.productCode.classList.toggle("is-duplicate", Boolean(codeDuplicate));
+        els.productName.classList.toggle("is-duplicate", Boolean(nameDuplicate));
+
+        updateFieldMessage(
+          els.productCodeMessage,
+          code
+            ? codeDuplicate
+              ? `编号已被「${codeDuplicate.product.name || codeDuplicate.product.code}」占用。`
+              : historicalCodeDuplicate
+                ? "历史重复编号：保持当前编号可继续维护，修改为新编号时必须唯一。"
+              : "编号可用。"
+            : "请输入商品编号。",
+          codeDuplicate ? "error" : code ? "success" : ""
+        );
+        updateFieldMessage(
+          els.productNameMessage,
+          name
+            ? nameDuplicate
+              ? `商品名已存在于「${nameDuplicate.category.name}」分类。`
+              : historicalNameDuplicate
+                ? "历史同名商品：保持当前名称可继续维护，修改为新名称时必须唯一。"
+              : "商品名可用。"
+            : "请输入英文商品名。",
+          nameDuplicate ? "error" : name ? "success" : ""
+        );
+
+        return { codeDuplicate, nameDuplicate };
       }
 
       function getFileExtension(file) {
@@ -979,7 +1097,9 @@
               ?.products[oldIndex]
           : null;
         const originalCode = normalizeProductCode(originalProduct?.code);
+        const originalName = normalizeProductName(originalProduct?.name);
         const editedCode = normalizeProductCode(product.code);
+        const editedName = normalizeProductName(product.name);
         const unchangedHistoricalDuplicate =
           isEditingExistingProduct &&
           editedCode === originalCode &&
@@ -990,6 +1110,21 @@
         if (duplicate) {
           setStatus(
             `商品编号“${product.code}”已被 ${duplicate.category.name} 中的“${duplicate.product.name || duplicate.product.code}”使用，不能重复添加。`,
+            "error"
+          );
+          return;
+        }
+
+        const unchangedHistoricalNameDuplicate =
+          isEditingExistingProduct &&
+          editedName === originalName &&
+          hasAnotherProductWithName(originalName, oldCategoryId, oldIndex);
+        const nameDuplicate = unchangedHistoricalNameDuplicate
+          ? null
+          : findDuplicateProductName(product.name, oldCategoryId, oldIndex);
+        if (nameDuplicate) {
+          setStatus(
+            `商品名“${product.name}”已存在于 ${nameDuplicate.category.name} 分类中，不能重复添加。`,
             "error"
           );
           return;
@@ -1108,6 +1243,8 @@
       els.loadBtn.addEventListener("click", loadCatalog);
       els.saveBtn.addEventListener("click", saveToGitHub);
       els.addProductBtn.addEventListener("click", () => openEditor(state.selectedCategoryId, null));
+      els.productCode.addEventListener("input", validateProductIdentityFields);
+      els.productName.addEventListener("input", validateProductIdentityFields);
       els.catalogSearch.addEventListener("input", () => {
         const query = els.catalogSearch.value;
         els.clearCatalogSearchBtn.hidden = !query;
