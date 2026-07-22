@@ -111,6 +111,33 @@
       </section>
     </main>
 
+    <div
+      id="product-detail-modal"
+      class="product-detail-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="product-detail-title"
+      hidden
+    >
+      <div id="product-detail-backdrop" class="product-detail-backdrop"></div>
+      <section class="product-detail-dialog">
+        <button id="product-detail-close" class="product-detail-close" type="button" aria-label="Close product details">×</button>
+        <div class="product-detail-gallery">
+          <div class="product-detail-main-image-wrap">
+            <img id="product-detail-main-image" src="assets/images/placeholder.svg" alt="" />
+          </div>
+          <div id="product-detail-thumbnails" class="product-detail-thumbnails" aria-label="Product image gallery"></div>
+        </div>
+        <div class="product-detail-content">
+          <p id="product-detail-category" class="product-detail-category"></p>
+          <p id="product-detail-code" class="product-detail-code"></p>
+          <h2 id="product-detail-title"></h2>
+          <div id="product-detail-specifications" class="product-detail-specifications"></div>
+          <div id="product-detail-description" class="product-detail-description"></div>
+        </div>
+      </section>
+    </div>
+
     <footer class="site-footer">
       <div class="container">
         <span id="footer-text">© Pet Supplies Product Catalog</span>

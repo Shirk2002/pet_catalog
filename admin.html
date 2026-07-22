@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
@@ -476,6 +476,36 @@
         background: #f1e4d7;
       }
 
+      .image-preview-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+      }
+
+      .image-preview-item {
+        display: grid;
+        gap: 7px;
+      }
+
+      .image-preview-item img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        object-fit: cover;
+        background: #f1e4d7;
+      }
+
+      .image-preview-item button {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 7px 9px;
+        color: var(--danger);
+        background: #ffffff;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
       .help-list {
         margin: 10px 0 0;
         padding-left: 20px;
@@ -615,17 +645,26 @@
             <p id="productNameMessage" class="field-message" aria-live="polite"></p>
           </div>
           <div class="field wide">
-            <label for="productImageInput">图片路径</label>
-            <input id="productImageInput" placeholder="assets/images/catalog/example.png" required />
+            <label for="productImageInput">主图路径</label>
+            <input id="productImageInput" placeholder="assets/images/catalog/example.png" />
           </div>
           <div class="field wide">
-            <label for="imageFileInput">上传新图片</label>
-            <input id="imageFileInput" type="file" accept="image/*" />
+            <label for="imageFileInput">上传图库图片</label>
+            <input id="imageFileInput" type="file" accept="image/*" multiple />
+            <p class="description">可一次选择多张图片；第一张图片会作为商品卡片主图。</p>
           </div>
           <div class="field wide preview">
-            <label>预览</label>
-            <img id="imagePreview" src="assets/images/placeholder.svg" alt="商品图片预览" />
-            <p class="description">如果上传新图片，保存商品时会自动生成图片路径。</p>
+            <label>图库预览</label>
+            <div id="imagePreviewList" class="image-preview-list"></div>
+          </div>
+          <div class="field wide">
+            <label for="productDescriptionInput">产品描述</label>
+            <textarea id="productDescriptionInput" placeholder="请输入产品描述"></textarea>
+          </div>
+          <div class="field wide">
+            <label for="productSpecificationsInput">产品规格</label>
+            <textarea id="productSpecificationsInput" placeholder="每行一项，例如：Material: Stainless Steel"></textarea>
+            <p class="description">每行填写“规格名称: 规格内容”。</p>
           </div>
         </div>
 
@@ -646,7 +685,7 @@
         configSha: null,
         selectedCategoryId: null,
         editing: null,
-        pendingImageFile: null,
+        galleryImages: [],
         pendingUploads: [],
         dirty: false,
       };
@@ -678,7 +717,9 @@
         productNameMessage: $("productNameMessage"),
         productImage: $("productImageInput"),
         imageFile: $("imageFileInput"),
-        imagePreview: $("imagePreview"),
+        imagePreviewList: $("imagePreviewList"),
+        productDescription: $("productDescriptionInput"),
+        productSpecifications: $("productSpecificationsInput"),
         deleteProductBtn: $("deleteProductBtn"),
       };
 
@@ -902,17 +943,20 @@
         els.productCategory.value = categoryId;
         els.productCode.value = product?.code || "";
         els.productName.value = product?.name || "";
-        els.productImage.value = product?.image || "";
+        const images = [...new Set([product?.image, ...(Array.isArray(product?.images) ? product.images : [])].filter(Boolean))];
+        state.galleryImages = images.map((path) => ({ path }));
+        els.productImage.value = images[0] || "";
+        els.productDescription.value = product?.description || "";
+        els.productSpecifications.value = formatSpecifications(product?.specifications);
         els.imageFile.value = "";
-        state.pendingImageFile = null;
-        updatePreview();
+        renderImagePreviews();
         els.deleteProductBtn.style.display = product ? "inline-flex" : "none";
         els.modalBackdrop.classList.add("open");
       }
 
       function closeEditor() {
         els.modalBackdrop.classList.remove("open");
-        state.pendingImageFile = null;
+        state.galleryImages = [];
       }
 
       function deleteProduct(categoryId, index) {
@@ -1079,10 +1123,16 @@
         const oldIndex = state.editing.index;
         const newCategoryId = els.productCategory.value;
         const targetCategory = state.config.categories.find((category) => category.id === newCategoryId);
+        const images = state.galleryImages.map((image) => image.path).filter(Boolean);
         const product = {
           code: els.productCode.value.trim(),
           name: els.productName.value.trim(),
-          image: els.productImage.value.trim(),
+          image: images[0] || els.productImage.value.trim(),
+          ...(images.length > 1 ? { images } : {}),
+          ...(els.productDescription.value.trim() ? { description: els.productDescription.value.trim() } : {}),
+          ...(parseSpecifications(els.productSpecifications.value).length
+            ? { specifications: parseSpecifications(els.productSpecifications.value) }
+            : {}),
         };
 
         if (!product.code || !product.name) {
@@ -1130,13 +1180,22 @@
           return;
         }
 
-        if (state.pendingImageFile) {
-          const extension = getFileExtension(state.pendingImageFile);
-          const filename = `${Date.now()}-${cleanFileName(product.code)}.${extension}`;
-          product.image = `${IMAGE_DIR}/${filename}`;
+        const pendingImages = state.galleryImages.filter((image) => image.file);
+        if (pendingImages.length) {
+          const timestamp = Date.now();
+          pendingImages.forEach((image, index) => {
+            const extension = getFileExtension(image.file);
+            image.path = `${IMAGE_DIR}/${timestamp}-${cleanFileName(product.code)}-${index + 1}.${extension}`;
+            state.pendingUploads.push({ file: image.file, path: image.path });
+          });
+          product.images = state.galleryImages.map((image) => image.path);
+          product.image = product.images[0];
           els.productImage.value = product.image;
-          state.pendingUploads.push({ file: state.pendingImageFile, path: product.image });
-          state.pendingImageFile = null;
+        }
+
+        if (!product.image) {
+          setStatus("请至少填写一张图片路径或上传一张图片。", "error");
+          return;
         }
 
         if (oldIndex === null) {
@@ -1222,9 +1281,69 @@
         });
       }
 
-      function updatePreview() {
-        const imagePath = els.productImage.value.trim() || PLACEHOLDER_IMAGE;
-        els.imagePreview.src = imagePath;
+      function parseSpecifications(value) {
+        return String(value || "")
+          .split("\n")
+          .map((line) => line.trim())
+          .filter(Boolean)
+          .map((line) => {
+            const separator = line.indexOf(":");
+            if (separator < 0) return null;
+            const label = line.slice(0, separator).trim();
+            const specificationValue = line.slice(separator + 1).trim();
+            return label && specificationValue ? { label, value: specificationValue } : null;
+          })
+          .filter(Boolean);
+      }
+
+      function formatSpecifications(specifications) {
+        if (Array.isArray(specifications)) {
+          return specifications
+            .filter((item) => item?.label && item?.value)
+            .map((item) => `${item.label}: ${item.value}`)
+            .join("\n");
+        }
+        if (specifications && typeof specifications === "object") {
+          return Object.entries(specifications)
+            .filter(([, value]) => value)
+            .map(([label, value]) => `${label}: ${value}`)
+            .join("\n");
+        }
+        return "";
+      }
+
+      function renderImagePreviews() {
+        els.imagePreviewList.innerHTML = "";
+        const images = state.galleryImages.length
+          ? state.galleryImages
+          : els.productImage.value.trim()
+            ? [{ path: els.productImage.value.trim() }]
+            : [{ path: PLACEHOLDER_IMAGE }];
+
+        images.forEach((image, index) => {
+          const item = document.createElement("div");
+          item.className = "image-preview-item";
+          const preview = document.createElement("img");
+          preview.src = image.previewUrl || image.path;
+          preview.alt = `商品图片 ${index + 1}`;
+          preview.onerror = () => {
+            preview.src = PLACEHOLDER_IMAGE;
+          };
+          item.appendChild(preview);
+
+          if (state.galleryImages.length) {
+            const removeButton = document.createElement("button");
+            removeButton.type = "button";
+            removeButton.textContent = "移除图片";
+            removeButton.addEventListener("click", () => {
+              state.galleryImages.splice(index, 1);
+              els.productImage.value = state.galleryImages[0]?.path || "";
+              renderImagePreviews();
+            });
+            item.appendChild(removeButton);
+          }
+          els.imagePreviewList.appendChild(item);
+        });
       }
 
       function escapeHtml(value) {
@@ -1264,18 +1383,20 @@
           deleteProduct(state.editing.categoryId, state.editing.index);
         }
       });
-      els.productImage.addEventListener("input", updatePreview);
-      els.imageFile.addEventListener("change", () => {
-        const file = els.imageFile.files?.[0];
-        state.pendingImageFile = file || null;
-        if (file) {
-          const extension = getFileExtension(file);
-          const code = cleanFileName(els.productCode.value || "product");
-          els.productImage.value = `${IMAGE_DIR}/${Date.now()}-${code}.${extension}`;
-          els.imagePreview.src = URL.createObjectURL(file);
-        } else {
-          updatePreview();
+      els.productImage.addEventListener("input", () => {
+        if (state.galleryImages.length) {
+          state.galleryImages[0].path = els.productImage.value.trim();
         }
+        renderImagePreviews();
+      });
+      els.imageFile.addEventListener("change", () => {
+        const files = [...(els.imageFile.files || [])];
+        if (!files.length) return;
+        state.galleryImages.push(
+          ...files.map((file) => ({ file, path: "", previewUrl: URL.createObjectURL(file) }))
+        );
+        renderImagePreviews();
+        els.imageFile.value = "";
       });
       window.addEventListener("beforeunload", (event) => {
         if (state.dirty) {

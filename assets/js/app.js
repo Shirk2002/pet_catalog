@@ -16,6 +16,22 @@
   const productGrid = document.getElementById("product-grid");
   const productSearchInput = document.getElementById("product-search-input");
   const clearSearchButton = document.getElementById("clear-search-button");
+  const detailModal = document.getElementById("product-detail-modal");
+  const detailBackdrop = document.getElementById("product-detail-backdrop");
+  const detailCloseButton = document.getElementById("product-detail-close");
+  const detailMainImage = document.getElementById("product-detail-main-image");
+  const detailThumbnails = document.getElementById("product-detail-thumbnails");
+  const detailCategory = document.getElementById("product-detail-category");
+  const detailCode = document.getElementById("product-detail-code");
+  const detailTitle = document.getElementById("product-detail-title");
+  const detailSpecifications = document.getElementById("product-detail-specifications");
+  const detailDescription = document.getElementById("product-detail-description");
+
+  function getProductImages(product) {
+    const images = Array.isArray(product.images) ? product.images : [];
+    const uniqueImages = [...new Set([product.image, ...images].filter(Boolean))];
+    return uniqueImages.length ? uniqueImages : ["assets/images/placeholder.svg"];
+  }
 
   function setSiteInfo() {
     document.title = config.site?.title || "Pet Supplies Product Catalog";
@@ -72,7 +88,7 @@
 
     const image = document.createElement("img");
     image.className = "product-image";
-    image.src = product.image || "assets/images/placeholder.svg";
+    image.src = getProductImages(product)[0];
     image.alt = product.name || "Pet supplies product image";
     image.loading = "lazy";
     image.addEventListener("error", () => {
@@ -103,8 +119,95 @@
     imageWrap.appendChild(image);
     details.appendChild(name);
     card.append(imageWrap, details);
+    card.tabIndex = 0;
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", `View details for ${product.name || "product"}`);
+    card.addEventListener("click", () => openProductDetails(product, categoryName || product.categoryName));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openProductDetails(product, categoryName || product.categoryName);
+      }
+    });
 
     return card;
+  }
+
+  function normalizeSpecifications(specifications) {
+    if (Array.isArray(specifications)) {
+      return specifications.filter((item) => item?.label && item?.value);
+    }
+
+    if (specifications && typeof specifications === "object") {
+      return Object.entries(specifications)
+        .filter(([, value]) => value)
+        .map(([label, value]) => ({ label, value }));
+    }
+
+    return [];
+  }
+
+  function selectDetailImage(images, selectedImage, productName) {
+    detailMainImage.src = selectedImage;
+    detailMainImage.alt = productName || "Product image";
+    detailMainImage.onerror = () => {
+      detailMainImage.src = "assets/images/placeholder.svg";
+    };
+    [...detailThumbnails.children].forEach((button) => {
+      button.setAttribute("aria-pressed", String(button.dataset.image === selectedImage));
+    });
+  }
+
+  function openProductDetails(product, categoryName = "") {
+    const images = getProductImages(product);
+    detailCategory.textContent = categoryName || "";
+    detailCategory.hidden = !categoryName;
+    detailCode.textContent = product.code ? `Item No. ${product.code}` : "";
+    detailCode.hidden = !product.code;
+    detailTitle.textContent = product.name || "Unnamed Product";
+    detailDescription.textContent = product.description || "No product description has been added yet.";
+
+    const specifications = normalizeSpecifications(product.specifications);
+    detailSpecifications.innerHTML = "";
+    if (specifications.length) {
+      const list = document.createElement("dl");
+      specifications.forEach((item) => {
+        const label = document.createElement("dt");
+        label.textContent = item.label;
+        const value = document.createElement("dd");
+        value.textContent = item.value;
+        list.append(label, value);
+      });
+      detailSpecifications.appendChild(list);
+    }
+
+    detailThumbnails.innerHTML = "";
+    images.forEach((imagePath, index) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "product-detail-thumbnail";
+      button.dataset.image = imagePath;
+      button.setAttribute("aria-label", `View image ${index + 1}`);
+      const image = document.createElement("img");
+      image.src = imagePath;
+      image.alt = `${product.name || "Product"} image ${index + 1}`;
+      image.onerror = () => {
+        image.src = "assets/images/placeholder.svg";
+      };
+      button.appendChild(image);
+      button.addEventListener("click", () => selectDetailImage(images, imagePath, product.name));
+      detailThumbnails.appendChild(button);
+    });
+
+    selectDetailImage(images, images[0], product.name);
+    detailModal.hidden = false;
+    document.body.classList.add("modal-open");
+    detailCloseButton.focus();
+  }
+
+  function closeProductDetails() {
+    detailModal.hidden = true;
+    document.body.classList.remove("modal-open");
   }
 
   function renderProducts(products, categoryName = "") {
@@ -176,6 +279,14 @@
     clearSearchButton.hidden = true;
     renderPage(getSelectedCategory());
     productSearchInput.focus();
+  });
+
+  detailCloseButton.addEventListener("click", closeProductDetails);
+  detailBackdrop.addEventListener("click", closeProductDetails);
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !detailModal.hidden) {
+      closeProductDetails();
+    }
   });
 
   window.addEventListener("popstate", () => {
