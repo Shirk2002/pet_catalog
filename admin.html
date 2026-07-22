@@ -902,6 +902,7 @@
         specifications: [],
         specificationEditor: null,
         pendingUploads: [],
+        pendingImageDeletes: [],
         dirty: false,
       };
 
@@ -1018,6 +1019,63 @@
         return config;
       }
 
+      function getProductImagePaths(product) {
+        return [...new Set([product?.image, ...(Array.isArray(product?.images) ? product.images : [])].filter(Boolean))];
+      }
+
+      function isCatalogImagePath(path) {
+        return typeof path === "string" && path.startsWith(`${IMAGE_DIR}/`);
+      }
+
+      function getReferencedCatalogImagePaths(config) {
+        const referenced = new Set();
+        config.categories?.forEach((category) => {
+          category.products?.forEach((product) => {
+            getProductImagePaths(product).forEach((path) => {
+              if (isCatalogImagePath(path)) referenced.add(path);
+            });
+          });
+        });
+        return referenced;
+      }
+
+      async function deleteRepositoryImage(path) {
+        const branch = encodeURIComponent(els.branch.value.trim());
+        const file = await githubRequest(`${path}?ref=${branch}`);
+        await githubRequest(path, {
+          method: "DELETE",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: `Delete unused product image ${path}`,
+            sha: file.sha,
+            branch: els.branch.value.trim(),
+          }),
+        });
+      }
+
+      async function deleteUnreferencedPendingImages() {
+        if (!state.pendingImageDeletes.length) return { deleted: 0, failed: 0 };
+        const branch = encodeURIComponent(els.branch.value.trim());
+        const data = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
+        const remoteConfig = parseConfig(decodeBase64ToText(data.content));
+        const referenced = getReferencedCatalogImagePaths(remoteConfig);
+        const candidates = [...new Set(state.pendingImageDeletes)].filter(
+          (path) => isCatalogImagePath(path) && !referenced.has(path)
+        );
+        const failedPaths = [];
+        let deleted = 0;
+        for (const path of candidates) {
+          try {
+            await deleteRepositoryImage(path);
+            deleted += 1;
+          } catch (error) {
+            failedPaths.push(path);
+          }
+        }
+        state.pendingImageDeletes = failedPaths;
+        return { deleted, failed: failedPaths.length };
+      }
+
       function buildConfigFile(config) {
         return [
           "// Product catalog configuration",
@@ -1036,6 +1094,8 @@
           state.config = parseConfig(jsText);
           sortAllProducts();
           state.configSha = data.sha;
+          state.pendingUploads = [];
+          state.pendingImageDeletes = [];
           state.selectedCategoryId = state.config.categories[0]?.id || null;
           state.dirty = false;
           els.saveBtn.disabled = true;
@@ -1206,6 +1266,7 @@
         const category = state.config.categories.find((item) => item.id === categoryId);
         const product = category.products[index];
         if (!confirm(`确定删除 ${product.code || product.name} 吗？`)) return;
+        state.pendingImageDeletes.push(...getProductImagePaths(product).filter(isCatalogImagePath));
         category.products.splice(index, 1);
         state.dirty = true;
         els.saveBtn.disabled = false;
@@ -1443,6 +1504,15 @@
           return;
         }
 
+        if (originalProduct) {
+          const updatedImagePaths = new Set(getProductImagePaths(product));
+          state.pendingImageDeletes.push(
+            ...getProductImagePaths(originalProduct).filter(
+              (path) => isCatalogImagePath(path) && !updatedImagePaths.has(path)
+            )
+          );
+        }
+
         const actionTitle = oldIndex === null ? "新增商品已完成" : "商品修改已暂存";
         const actionMessage = oldIndex === null
           ? `“${product.name}”已添加到当前目录，请继续发布到 GitHub。`
@@ -1494,9 +1564,16 @@
             }),
           });
           state.configSha = result.content.sha;
-          state.dirty = false;
-          setStatus("已提交到 GitHub。请等待 GitHub Pages 部署完成后刷新前台；产品描述需点击商品卡片，在详情小窗中查看。", "success");
-          showCompletion("已提交并开始部署", "目录修改已提交到 GitHub。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。");
+          const cleanup = await deleteUnreferencedPendingImages();
+          state.dirty = cleanup.failed > 0;
+          const cleanupMessage = cleanup.deleted
+            ? `，并清理了 ${cleanup.deleted} 张无引用图库图片`
+            : "";
+          const failedMessage = cleanup.failed
+            ? `；${cleanup.failed} 张无引用图片暂未删除，可再次点击发布重试`
+            : "";
+          setStatus(`已提交到 GitHub${cleanupMessage}${failedMessage}。请等待 GitHub Pages 部署完成后刷新前台。`, "success");
+          showCompletion("已提交并开始部署", `目录修改已提交到 GitHub${cleanupMessage}${failedMessage}。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。`);
         } catch (error) {
           setStatus(error.message, "error");
         } finally {
