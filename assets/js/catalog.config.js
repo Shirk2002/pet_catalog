@@ -165,12 +165,6 @@ window.PET_CATALOG_CONFIG = {
           "description": "2.5L Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
         },
         {
-          "code": "XZY-03",
-          "name": "Silicone Pet Lick Mat with Suction Cups",
-          "image": "assets/images/catalog/089-xzy-03.png",
-          "description": "Silicone Pet Lick Mat with Suction Cups is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "XZY-05",
           "name": "Maple Leaf Silicone Slow Feeder Bowl",
           "image": "assets/images/catalog/090-xzy-05.png",
@@ -226,6 +220,22 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "Specification",
+              "value": "123"
+            }
+          ]
+        },
+        {
+          "code": "XZY-03",
+          "name": "Silicone Pet Lick Mat with Suction Cups",
+          "image": "assets/images/catalog/089-xzy-03.png",
+          "description": "Silicone Pet Lick Mat with Suction Cups is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "m",
+              "value": "123"
+            },
+            {
+              "label": "a",
               "value": "123"
             }
           ]
