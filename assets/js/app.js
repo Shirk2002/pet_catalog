@@ -34,7 +34,7 @@
   }
 
   function getCatalogThumbnailPath(path) {
-    const match = String(path || "").match(/^assets\/images\/catalog\/(.+)\.png$/i);
+    const match = String(path || "").match(/^assets\/images\/catalog\/(.+)\.(png|jpe?g|webp|gif)$/i);
     return match ? `assets/images/catalog/thumbnails/${match[1]}.webp` : path;
   }
 
