@@ -17,12 +17,7 @@ window.PET_CATALOG_CONFIG = {
           "code": "TZ-13",
           "name": "Electric Pet Nail Grinder and Grooming Tool",
           "image": "assets/images/catalog/077-tz-13.png",
-          "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
-          "images": [
-            "assets/images/catalog/077-tz-13.png",
-            "assets/images/catalog/1784739355934-tz-13-1.png",
-            "assets/images/catalog/1784739355934-tz-13-2.png"
-          ]
+          "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "REC2.4G",
