@@ -33,6 +33,11 @@
     return uniqueImages.length ? uniqueImages : ["assets/images/placeholder.svg"];
   }
 
+  function getCatalogThumbnailPath(path) {
+    const match = String(path || "").match(/^assets\/images\/catalog\/(.+)\.png$/i);
+    return match ? `assets/images/catalog/thumbnails/${match[1]}.webp` : path;
+  }
+
   function setSiteInfo() {
     document.title = config.site?.title || "Pet Supplies Product Catalog";
     siteTitle.textContent = config.site?.title || "Pet Supplies Product Catalog";
@@ -87,11 +92,20 @@
     imageWrap.className = "product-image-wrap";
 
     const image = document.createElement("img");
+    const imagePath = getProductImages(product)[0];
+    const thumbnailPath = getCatalogThumbnailPath(imagePath);
+    let fallbackAttempted = false;
     image.className = "product-image";
-    image.src = getProductImages(product)[0];
+    image.src = thumbnailPath;
     image.alt = product.name || "Pet supplies product image";
     image.loading = "lazy";
+    image.decoding = "async";
     image.addEventListener("error", () => {
+      if (!fallbackAttempted && thumbnailPath !== imagePath) {
+        fallbackAttempted = true;
+        image.src = imagePath;
+        return;
+      }
       image.src = "assets/images/placeholder.svg";
     });
 
