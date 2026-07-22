@@ -588,14 +588,31 @@
         background: #f1e4d7;
       }
 
+      .image-preview-controls {
+        display: grid;
+        gap: 7px;
+      }
+
       .image-preview-item button {
         border: 1px solid var(--border);
         border-radius: 10px;
         padding: 7px 9px;
-        color: var(--danger);
         background: #ffffff;
         cursor: pointer;
         font-weight: 700;
+      }
+
+      .image-preview-item .image-primary-button {
+        color: var(--accent-dark);
+      }
+
+      .image-preview-item .image-primary-button:disabled {
+        color: var(--muted);
+        cursor: default;
+      }
+
+      .image-preview-item .image-remove-button {
+        color: var(--danger);
       }
 
       .specification-manager {
@@ -846,7 +863,7 @@
           <div class="field wide">
             <label for="imageFileInput">上传图库图片</label>
             <input id="imageFileInput" type="file" accept="image/*" multiple />
-            <p class="description">可一次选择多张图片；第一张图片会作为商品卡片主图。</p>
+            <p class="description">可一次选择多张图片；可在下方图库中将任意一张设为商品卡片主图。</p>
           </div>
           <div class="field wide preview">
             <label>图库预览</label>
@@ -1673,15 +1690,34 @@
           item.appendChild(preview);
 
           if (state.galleryImages.length) {
+            const controls = document.createElement("div");
+            controls.className = "image-preview-controls";
+
+            const primaryButton = document.createElement("button");
+            primaryButton.type = "button";
+            primaryButton.className = "image-primary-button";
+            primaryButton.textContent = index === 0 ? "当前主图" : "设为主图";
+            primaryButton.disabled = index === 0;
+            primaryButton.addEventListener("click", () => {
+              const [primaryImage] = state.galleryImages.splice(index, 1);
+              state.galleryImages.unshift(primaryImage);
+              els.productImage.value = primaryImage.path;
+              renderImagePreviews();
+            });
+
             const removeButton = document.createElement("button");
             removeButton.type = "button";
+            removeButton.className = "image-remove-button";
             removeButton.textContent = "移除图片";
             removeButton.addEventListener("click", () => {
+              if (!confirm(`确定移除第 ${index + 1} 张图片吗？`)) return;
               state.galleryImages.splice(index, 1);
               els.productImage.value = state.galleryImages[0]?.path || "";
               renderImagePreviews();
             });
-            item.appendChild(removeButton);
+
+            controls.append(primaryButton, removeButton);
+            item.appendChild(controls);
           }
           els.imagePreviewList.appendChild(item);
         });
@@ -1737,9 +1773,9 @@
       els.imageFile.addEventListener("change", () => {
         const files = [...(els.imageFile.files || [])];
         if (!files.length) return;
-        state.galleryImages.push(
-          ...files.map((file) => ({ file, path: "", previewUrl: URL.createObjectURL(file) }))
-        );
+        const uploadedImages = files.map((file) => ({ file, path: "", previewUrl: URL.createObjectURL(file) }));
+        state.galleryImages.unshift(...uploadedImages);
+        els.productImage.value = "";
         renderImagePreviews();
         els.imageFile.value = "";
       });
