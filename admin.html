@@ -900,6 +900,7 @@
         editing: null,
         galleryImages: [],
         specifications: [],
+        specificationsDirty: false,
         specificationEditor: null,
         pendingUploads: [],
         pendingImageDeletes: [],
@@ -1248,6 +1249,7 @@
         els.productImage.value = images[0] || "";
         els.productDescription.value = product?.description || "";
         state.specifications = normalizeSpecifications(product?.specifications);
+        state.specificationsDirty = false;
         els.imageFile.value = "";
         renderImagePreviews();
         renderSpecifications();
@@ -1259,6 +1261,7 @@
         els.modalBackdrop.classList.remove("open");
         state.galleryImages = [];
         state.specifications = [];
+        state.specificationsDirty = false;
         state.specificationEditor = null;
       }
 
@@ -1438,7 +1441,6 @@
           image: images[0] || els.productImage.value.trim(),
           ...(images.length > 1 ? { images } : {}),
           ...(els.productDescription.value.trim() ? { description: els.productDescription.value.trim() } : {}),
-          ...(specifications.length ? { specifications } : {}),
         };
 
         if (!product.code || !product.name) {
@@ -1452,6 +1454,14 @@
               .find((category) => category.id === oldCategoryId)
               ?.products[oldIndex]
           : null;
+        if (originalProduct && !state.specificationsDirty) {
+          if (Object.hasOwn(originalProduct, "specifications")) {
+            product.specifications = originalProduct.specifications;
+          }
+        } else if (specifications.length) {
+          product.specifications = specifications;
+        }
+
         const originalCode = normalizeProductCode(originalProduct?.code);
         const originalName = normalizeProductName(originalProduct?.name);
         const editedCode = normalizeProductCode(product.code);
@@ -1708,6 +1718,7 @@
         deleteButton.addEventListener("click", () => {
           if (!confirm(`确定删除规格“${specification.label}”吗？`)) return;
           state.specifications.splice(index, 1);
+          state.specificationsDirty = true;
           renderSpecifications();
         });
         actions.append(editButton, deleteButton);
@@ -1739,6 +1750,7 @@
             state.specifications[index] = { label, value };
           }
           state.specificationEditor = null;
+          state.specificationsDirty = true;
           setStatus("规格已更新到当前商品暂存内容。", "success");
           renderSpecifications();
         });
