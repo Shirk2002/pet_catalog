@@ -598,6 +598,99 @@
         font-weight: 700;
       }
 
+      .specification-manager {
+        display: grid;
+        gap: 10px;
+      }
+
+      .specification-row {
+        display: grid;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr) auto;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 11px 12px;
+        background: #fffaf4;
+      }
+
+      .specification-header {
+        border: 0;
+        border-radius: 0;
+        padding: 0 12px 2px;
+        color: var(--muted);
+        background: transparent;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .specification-key {
+        color: var(--muted);
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .specification-value {
+        min-width: 0;
+        overflow-wrap: anywhere;
+      }
+
+      .specification-row input {
+        width: 100%;
+        min-width: 0;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 9px 10px;
+        color: var(--text);
+        background: #ffffff;
+        outline: none;
+      }
+
+      .specification-row input:focus {
+        border-color: rgba(224, 122, 63, 0.75);
+        box-shadow: 0 0 0 3px rgba(224, 122, 63, 0.12);
+      }
+
+      .specification-actions {
+        display: flex;
+        gap: 7px;
+      }
+
+      .specification-icon-button,
+      .specification-save-button,
+      .specification-add-button {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 800;
+      }
+
+      .specification-icon-button {
+        width: 34px;
+        height: 34px;
+        color: var(--brand-dark);
+        background: #ffffff;
+        font-size: 17px;
+      }
+
+      .specification-icon-button.delete {
+        color: var(--danger);
+      }
+
+      .specification-save-button {
+        min-width: 58px;
+        height: 36px;
+        color: #ffffff;
+        background: var(--brand-dark);
+      }
+
+      .specification-add-button {
+        width: 100%;
+        padding: 11px 14px;
+        color: var(--brand-dark);
+        background: #fff0e6;
+      }
+
       .help-list {
         margin: 10px 0 0;
         padding-left: 20px;
@@ -764,10 +857,9 @@
             <textarea id="productDescriptionInput" placeholder="请输入产品描述"></textarea>
           </div>
             <div class="field wide">
-              <label for="productSpecificationsInput">产品规格</label>
-              <textarea id="productSpecificationsInput" placeholder="每行一项，例如：Material: Stainless Steel"></textarea>
+              <label>产品规格</label>
+              <div id="specificationManager" class="specification-manager"></div>
               <p id="productSpecificationsSummary" class="description"></p>
-              <p class="description">每行填写“规格名称: 规格内容”或“规格名称：规格内容”，中英文冒号均可。</p>
             </div>
           </div>
 
@@ -790,6 +882,8 @@
         selectedCategoryId: null,
         editing: null,
         galleryImages: [],
+        specifications: [],
+        specificationEditor: null,
         pendingUploads: [],
         dirty: false,
       };
@@ -827,7 +921,7 @@
         imageFile: $("imageFileInput"),
         imagePreviewList: $("imagePreviewList"),
         productDescription: $("productDescriptionInput"),
-        productSpecifications: $("productSpecificationsInput"),
+        specificationManager: $("specificationManager"),
         productSpecificationsSummary: $("productSpecificationsSummary"),
         deleteProductBtn: $("deleteProductBtn"),
       };
@@ -923,6 +1017,7 @@
           const data = await githubRequest(`${CONFIG_PATH}?ref=${encodeURIComponent(els.branch.value.trim())}`);
           const jsText = decodeBase64ToText(data.content);
           state.config = parseConfig(jsText);
+          sortAllProducts();
           state.configSha = data.sha;
           state.selectedCategoryId = state.config.categories[0]?.id || null;
           state.dirty = false;
@@ -966,6 +1061,14 @@
           });
           els.categoryList.appendChild(button);
         });
+      }
+
+      function sortCategoryProducts(category) {
+        category.products.sort((left, right) => String(left.name || "").localeCompare(String(right.name || ""), "en", { sensitivity: "base" }));
+      }
+
+      function sortAllProducts() {
+        state.config?.categories.forEach(sortCategoryProducts);
       }
 
       function renderProducts() {
@@ -1067,12 +1170,10 @@
         state.galleryImages = images.map((path) => ({ path }));
         els.productImage.value = images[0] || "";
         els.productDescription.value = product?.description || "";
-        els.productSpecifications.value = formatSpecifications(product?.specifications);
-        els.productSpecificationsSummary.textContent = product?.specifications?.length
-          ? `已加载 ${product.specifications.length} 条已保存规格。`
-          : "当前商品尚未保存规格。";
+        state.specifications = normalizeSpecifications(product?.specifications);
         els.imageFile.value = "";
         renderImagePreviews();
+        renderSpecifications();
         els.deleteProductBtn.style.display = product ? "inline-flex" : "none";
         els.modalBackdrop.classList.add("open");
       }
@@ -1080,6 +1181,8 @@
       function closeEditor() {
         els.modalBackdrop.classList.remove("open");
         state.galleryImages = [];
+        state.specifications = [];
+        state.specificationEditor = null;
       }
 
       function deleteProduct(categoryId, index) {
@@ -1248,15 +1351,16 @@
         const newCategoryId = els.productCategory.value;
         const targetCategory = state.config.categories.find((category) => category.id === newCategoryId);
         const images = state.galleryImages.map((image) => image.path).filter(Boolean);
+        const specifications = state.specifications
+          .filter((specification) => specification.label && specification.value)
+          .map(({ label, value }) => ({ label, value }));
         const product = {
           code: els.productCode.value.trim(),
           name: els.productName.value.trim(),
           image: images[0] || els.productImage.value.trim(),
           ...(images.length > 1 ? { images } : {}),
           ...(els.productDescription.value.trim() ? { description: els.productDescription.value.trim() } : {}),
-          ...(parseSpecifications(els.productSpecifications.value).length
-            ? { specifications: parseSpecifications(els.productSpecifications.value) }
-            : {}),
+          ...(specifications.length ? { specifications } : {}),
         };
 
         if (!product.code || !product.name) {
@@ -1333,6 +1437,7 @@
           oldCategory.products.splice(oldIndex, 1);
           targetCategory.products.push(product);
         }
+        sortAllProducts();
 
         state.selectedCategoryId = newCategoryId;
         state.dirty = true;
@@ -1412,37 +1517,140 @@
         });
       }
 
-      function parseSpecifications(value) {
-        return String(value || "")
-          .split("\n")
-          .map((line) => line.trim())
-          .filter(Boolean)
-          .map((line) => {
-            const match = line.match(/^\s*([^:：]+?)\s*[:：]\s*(.+?)\s*$/);
-            if (match) {
-              return { label: match[1].trim(), value: match[2].trim() };
-            }
-            return { label: "Specification", value: line };
-          });
-      }
-
-      function formatSpecifications(specifications) {
+      function normalizeSpecifications(specifications) {
         if (Array.isArray(specifications)) {
           return specifications
             .map((item) => {
-              if (typeof item === "string") return item.trim();
-              return item?.label && item?.value ? `${item.label}: ${item.value}` : "";
+              if (typeof item === "string") return { label: "Specification", value: item.trim() };
+              return item?.label && item?.value
+                ? { label: String(item.label).trim(), value: String(item.value).trim() }
+                : null;
             })
-            .filter(Boolean)
-            .join("\n");
+            .filter(Boolean);
         }
         if (specifications && typeof specifications === "object") {
           return Object.entries(specifications)
             .filter(([, value]) => value)
-            .map(([label, value]) => `${label}: ${value}`)
-            .join("\n");
+            .map(([label, value]) => ({ label: String(label).trim(), value: String(value).trim() }));
         }
-        return specifications ? String(specifications).trim() : "";
+        return specifications ? [{ label: "Specification", value: String(specifications).trim() }] : [];
+      }
+
+      function updateSpecificationsSummary() {
+        const count = state.specifications.length;
+        els.productSpecificationsSummary.textContent = count
+          ? `当前已添加 ${count} 条规格，点击编辑图标可修改，点击减号可删除。`
+          : "当前商品尚未添加规格。";
+      }
+
+      function createSpecificationInput(placeholder, value = "") {
+        const input = document.createElement("input");
+        input.type = "text";
+        input.placeholder = placeholder;
+        input.value = value;
+        return input;
+      }
+
+      function renderSpecifications() {
+        els.specificationManager.innerHTML = "";
+        if (state.specifications.length) {
+          const header = document.createElement("div");
+          header.className = "specification-row specification-header";
+          header.innerHTML = "<span>规格名称</span><span>规格值</span><span>操作</span>";
+          els.specificationManager.appendChild(header);
+        }
+
+        state.specifications.forEach((specification, index) => {
+          const row = state.specificationEditor?.index === index
+            ? createSpecificationEditorRow(index)
+            : createSpecificationPreviewRow(specification, index);
+          els.specificationManager.appendChild(row);
+        });
+
+        if (state.specificationEditor?.index === null) {
+          els.specificationManager.appendChild(createSpecificationEditorRow(null));
+        }
+
+        const addButton = document.createElement("button");
+        addButton.type = "button";
+        addButton.className = "specification-add-button";
+        addButton.textContent = "添加规格";
+        addButton.disabled = Boolean(state.specificationEditor);
+        addButton.addEventListener("click", () => {
+          state.specificationEditor = { index: null };
+          renderSpecifications();
+        });
+        els.specificationManager.appendChild(addButton);
+        updateSpecificationsSummary();
+      }
+
+      function renderSpecificationEditor(index) {
+        state.specificationEditor = { index };
+        renderSpecifications();
+      }
+
+      function createSpecificationPreviewRow(specification, index) {
+        const row = document.createElement("div");
+        row.className = "specification-row";
+        const key = document.createElement("span");
+        key.className = "specification-key";
+        key.textContent = specification.label;
+        const value = document.createElement("span");
+        value.className = "specification-value";
+        value.textContent = specification.value;
+        const actions = document.createElement("div");
+        actions.className = "specification-actions";
+        const editButton = document.createElement("button");
+        editButton.type = "button";
+        editButton.className = "specification-icon-button";
+        editButton.textContent = "⚙";
+        editButton.setAttribute("aria-label", `编辑${specification.label}`);
+        editButton.addEventListener("click", () => renderSpecificationEditor(index));
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.className = "specification-icon-button delete";
+        deleteButton.textContent = "−";
+        deleteButton.setAttribute("aria-label", `删除${specification.label}`);
+        deleteButton.addEventListener("click", () => {
+          if (!confirm(`确定删除规格“${specification.label}”吗？`)) return;
+          state.specifications.splice(index, 1);
+          renderSpecifications();
+        });
+        actions.append(editButton, deleteButton);
+        row.append(key, value, actions);
+        return row;
+      }
+
+      function createSpecificationEditorRow(index) {
+        const current = index === null ? { label: "", value: "" } : state.specifications[index];
+        const editor = document.createElement("div");
+        editor.className = "specification-row";
+        const labelInput = createSpecificationInput("规格名称", current.label);
+        const valueInput = createSpecificationInput("规格值", current.value);
+        const saveButton = document.createElement("button");
+        saveButton.type = "button";
+        saveButton.className = "specification-save-button";
+        saveButton.textContent = index === null ? "+" : "保存";
+        saveButton.addEventListener("click", () => {
+          const label = labelInput.value.trim();
+          const value = valueInput.value.trim();
+          if (!label || !value) {
+            setStatus("规格名称和规格值不能为空。", "error");
+            labelInput.focus();
+            return;
+          }
+          if (index === null) {
+            state.specifications.push({ label, value });
+          } else {
+            state.specifications[index] = { label, value };
+          }
+          state.specificationEditor = null;
+          setStatus("规格已更新到当前商品暂存内容。", "success");
+          renderSpecifications();
+        });
+        editor.append(labelInput, valueInput, saveButton);
+        requestAnimationFrame(() => labelInput.focus());
+        return editor;
       }
 
       function renderImagePreviews() {
