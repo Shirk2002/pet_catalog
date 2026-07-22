@@ -618,7 +618,7 @@
         </div>
         <div class="actions">
           <button class="btn" id="loadBtn" type="button">加载商品目录</button>
-          <button class="btn secondary" id="saveBtn" type="button" disabled>保存并发布到前台</button>
+          <button class="btn secondary" id="saveBtn" type="button" disabled>发布暂存修改到 GitHub</button>
         </div>
       </section>
 
@@ -843,7 +843,7 @@
           state.configSha = data.sha;
           state.selectedCategoryId = state.config.categories[0]?.id || null;
           state.dirty = false;
-          els.saveBtn.disabled = false;
+          els.saveBtn.disabled = true;
           els.addProductBtn.disabled = false;
           els.catalogSearch.disabled = false;
           render();
@@ -857,7 +857,7 @@
         renderCategories();
         renderProducts();
         renderCategoryOptions();
-        els.saveBtn.disabled = !state.config;
+        els.saveBtn.disabled = !state.config || !state.dirty;
         els.addProductBtn.disabled = !state.config;
         els.catalogSearch.disabled = !state.config;
       }
@@ -1002,6 +1002,7 @@
         if (!confirm(`确定删除 ${product.code || product.name} 吗？`)) return;
         category.products.splice(index, 1);
         state.dirty = true;
+        els.saveBtn.disabled = false;
         if (els.catalogSearch.value.trim()) {
           renderSearchResults(els.catalogSearch.value);
         } else {
@@ -1245,13 +1246,14 @@
 
         state.selectedCategoryId = newCategoryId;
         state.dirty = true;
+        els.saveBtn.disabled = false;
         closeEditor();
         if (els.catalogSearch.value.trim()) {
           renderSearchResults(els.catalogSearch.value);
         } else {
           render();
         }
-        setStatus("商品已暂存。请点击“保存并发布到前台”，完成 GitHub 提交与网站发布。", "success");
+        setStatus("商品修改仅暂存于当前页面，尚未发布。请点击顶部“发布暂存修改到 GitHub”，等待 Pages 部署完成后前台才会更新。", "success");
       }
 
       async function saveToGitHub() {
@@ -1280,11 +1282,11 @@
           });
           state.configSha = result.content.sha;
           state.dirty = false;
-          setStatus("已提交到 GitHub。前台将在 GitHub Pages 部署完成后自动更新，通常需要约 1 分钟。", "success");
+          setStatus("已提交到 GitHub。请等待 GitHub Pages 部署完成后刷新前台；产品描述需点击商品卡片，在详情小窗中查看。", "success");
         } catch (error) {
           setStatus(error.message, "error");
         } finally {
-          els.saveBtn.disabled = false;
+          els.saveBtn.disabled = !state.dirty;
         }
       }
 
