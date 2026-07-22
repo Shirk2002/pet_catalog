@@ -123,12 +123,6 @@ window.PET_CATALOG_CONFIG = {
           "description": "Foldable Adjustable Pet Feeding Table with Bowls is designed for organized daily feeding and hydration. The product listing highlights a foldable design, easy-care removable parts, stainless-steel components. A practical choice for pet owners and retail assortments."
         },
         {
-          "code": "LC-06",
-          "name": "Elevated Wooden Pet Bowl Stand with Stainless Steel Bowls",
-          "image": "assets/images/catalog/014-lc-06.png",
-          "description": "Elevated Wooden Pet Bowl Stand with Stainless Steel Bowls is designed for organized daily feeding and hydration. The product listing highlights stainless-steel components, a large-capacity design. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "LC-07",
           "name": "Removable Stainless Steel Double Pet Bowl",
           "image": "assets/images/catalog/015-lc-07.png",
@@ -211,6 +205,12 @@ window.PET_CATALOG_CONFIG = {
           "name": "Silicone Slow Feeder Lick Mat",
           "image": "assets/images/catalog/092-xzy-07.png",
           "description": "Silicone Slow Feeder Lick Mat is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments."
+        },
+        {
+          "code": "LC-06",
+          "name": "Elevated Wooden Pet Bowl Stand with Stainless Steel Bowls",
+          "image": "assets/images/catalog/014-lc-06.png",
+          "description": "Elevated Wooden Pet Bowl Stand with Stainless Steel Bowls is designed for organized daily feeding and hydration. The product listing highlights stainless-steel components, a large-capacity design. A practical choice for pet owners and retail assortments."
         }
       ]
     },
