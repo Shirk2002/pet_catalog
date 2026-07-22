@@ -99,16 +99,56 @@ window.PET_CATALOG_CONFIG = {
       "description": "Bowls, feeders, fountains, and feeding accessories for daily use.",
       "products": [
         {
+          "code": "TZ-08",
+          "name": "123456",
+          "image": "assets/images/catalog/1784738031192-tz-08-1.png",
+          "description": "123",
+          "specifications": [
+            {
+              "label": "123",
+              "value": "123"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784738031192-tz-08-1.png"
+          ]
+        },
+        {
           "code": "TZ-16",
           "name": "2.5L Smart Sensor Pet Water Fountain",
           "image": "assets/images/catalog/080-tz-16.png",
-          "description": "2.5L Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "description": "2.5L Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "123",
+              "value": "123"
+            },
+            {
+              "label": "245",
+              "value": "245"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/080-tz-16.png",
+            "assets/images/catalog/1784737997252-tz-16-1.png",
+            "assets/images/catalog/1784737997252-tz-16-2.png"
+          ]
         },
         {
           "code": "PT23W",
           "name": "3L Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/019-pt23w.png",
-          "description": "3L Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784738010246-pt23w-1.png",
+          "description": "3L Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "123",
+              "value": "123"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784738010246-pt23w-1.png",
+            "assets/images/catalog/019-pt23w.png"
+          ]
         },
         {
           "code": "LC-04",
