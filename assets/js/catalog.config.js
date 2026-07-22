@@ -99,18 +99,6 @@ window.PET_CATALOG_CONFIG = {
       "description": "Bowls, feeders, fountains, and feeding accessories for daily use.",
       "products": [
         {
-          "code": "LC-03",
-          "name": "Large Stainless Steel No-Spill Pet Water Bowl",
-          "image": "assets/images/catalog/011-lc-03.png",
-          "description": "Large Stainless Steel No-Spill Pet Water Bowl is designed for organized daily feeding and hydration. The product listing highlights stainless-steel components, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "LC-04",
-          "name": "4.5L No-Spill Floating Pet Water Bowl",
-          "image": "assets/images/catalog/012-lc-04.png",
-          "description": "4.5L No-Spill Floating Pet Water Bowl is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "LC-05",
           "name": "Foldable Adjustable Pet Feeding Table with Bowls",
           "image": "assets/images/catalog/013-lc-05.png",
@@ -214,6 +202,30 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "M",
+              "value": "123"
+            }
+          ]
+        },
+        {
+          "code": "LC-03",
+          "name": "Large Stainless Steel No-Spill Pet Water Bowl",
+          "image": "assets/images/catalog/011-lc-03.png",
+          "description": "Large Stainless Steel No-Spill Pet Water Bowl is designed for organized daily feeding and hydration. The product listing highlights stainless-steel components, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Specification",
+              "value": "123"
+            }
+          ]
+        },
+        {
+          "code": "LC-04",
+          "name": "4.5L No-Spill Floating Pet Water Bowl",
+          "image": "assets/images/catalog/012-lc-04.png",
+          "description": "4.5L No-Spill Floating Pet Water Bowl is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Specification",
               "value": "123"
             }
           ]
