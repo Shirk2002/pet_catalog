@@ -408,6 +408,10 @@ h1 {
   background: #ffffff;
 }
 
+.product-detail-main-image-wrap img.is-loading {
+  visibility: hidden;
+}
+
 .product-detail-thumbnails {
   display: flex;
   gap: 10px;

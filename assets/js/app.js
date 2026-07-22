@@ -162,11 +162,16 @@
   }
 
   function selectDetailImage(images, selectedImage, productName) {
-    detailMainImage.src = selectedImage;
+    detailMainImage.classList.add("is-loading");
     detailMainImage.alt = productName || "Product image";
+    detailMainImage.onload = () => {
+      detailMainImage.classList.remove("is-loading");
+    };
     detailMainImage.onerror = () => {
+      detailMainImage.onerror = null;
       detailMainImage.src = "assets/images/placeholder.svg";
     };
+    detailMainImage.src = selectedImage;
     [...detailThumbnails.children].forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.image === selectedImage));
     });
