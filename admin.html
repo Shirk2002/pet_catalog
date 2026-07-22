@@ -434,6 +434,63 @@
         display: flex;
       }
 
+      .completion-backdrop {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background: rgba(37, 33, 28, 0.22);
+        z-index: 20;
+      }
+
+      .completion-backdrop.open {
+        display: flex;
+      }
+
+      .completion-dialog {
+        width: min(390px, 100%);
+        padding: 28px;
+        text-align: center;
+        animation: completion-pop 0.24s ease-out;
+      }
+
+      .completion-mark {
+        display: grid;
+        width: 54px;
+        height: 54px;
+        place-items: center;
+        border-radius: 50%;
+        margin: 0 auto 16px;
+        color: #ffffff;
+        background: var(--success);
+        box-shadow: 0 12px 24px rgba(42, 126, 83, 0.24);
+        font-size: 29px;
+        font-weight: 900;
+      }
+
+      .completion-dialog h2 {
+        margin: 0 0 8px;
+      }
+
+      .completion-dialog p {
+        margin: 0 0 20px;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      @keyframes completion-pop {
+        from {
+          opacity: 0;
+          transform: translateY(10px) scale(0.96);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
       .modal {
         display: flex;
         flex-direction: column;
@@ -654,6 +711,15 @@
       </section>
     </main>
 
+    <div id="completionBackdrop" class="completion-backdrop" role="dialog" aria-modal="true" aria-labelledby="completionTitle">
+      <section class="panel completion-dialog">
+        <div class="completion-mark" aria-hidden="true">✓</div>
+        <h2 id="completionTitle">操作完成</h2>
+        <p id="completionMessage"></p>
+        <button class="btn" id="completionCloseBtn" type="button">知道了</button>
+      </section>
+    </div>
+
     <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <form id="productForm" class="panel modal">
         <div class="modal-header">
@@ -743,6 +809,10 @@
         productGrid: $("productGrid"),
         currentTitle: $("currentCategoryTitle"),
         currentDescription: $("currentCategoryDescription"),
+        completionBackdrop: $("completionBackdrop"),
+        completionTitle: $("completionTitle"),
+        completionMessage: $("completionMessage"),
+        completionCloseBtn: $("completionCloseBtn"),
         modalBackdrop: $("modalBackdrop"),
         productForm: $("productForm"),
         closeModalBtn: $("closeModalBtn"),
@@ -762,7 +832,18 @@
 
       function setStatus(message, type = "") {
         els.status.textContent = message;
-        els.status.className = `status ${type}`.trim();
+        els.status.className = `status ${type}`;
+      }
+
+      function showCompletion(title, message) {
+        els.completionTitle.textContent = title;
+        els.completionMessage.textContent = message;
+        els.completionBackdrop.classList.add("open");
+        els.completionCloseBtn.focus();
+      }
+
+      function closeCompletion() {
+        els.completionBackdrop.classList.remove("open");
       }
 
       function githubHeaders() {
@@ -1236,6 +1317,10 @@
           return;
         }
 
+        const actionTitle = oldIndex === null ? "新增商品已完成" : "商品修改已暂存";
+        const actionMessage = oldIndex === null
+          ? `“${product.name}”已添加到当前目录，请继续发布到 GitHub。`
+          : `“${product.name}”的修改已暂存，请继续发布到 GitHub。`;
         if (oldIndex === null) {
           targetCategory.products.push(product);
         } else {
@@ -1254,6 +1339,7 @@
           render();
         }
         setStatus("商品修改仅暂存于当前页面，尚未发布。请点击顶部“发布暂存修改到 GitHub”，等待 Pages 部署完成后前台才会更新。", "success");
+        showCompletion(actionTitle, actionMessage);
       }
 
       async function saveToGitHub() {
@@ -1283,6 +1369,7 @@
           state.configSha = result.content.sha;
           state.dirty = false;
           setStatus("已提交到 GitHub。请等待 GitHub Pages 部署完成后刷新前台；产品描述需点击商品卡片，在详情小窗中查看。", "success");
+          showCompletion("已提交并开始部署", "目录修改已提交到 GitHub。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。");
         } catch (error) {
           setStatus(error.message, "error");
         } finally {
@@ -1402,6 +1489,10 @@
 
       els.loadBtn.addEventListener("click", loadCatalog);
       els.saveBtn.addEventListener("click", saveToGitHub);
+      els.completionCloseBtn.addEventListener("click", closeCompletion);
+      els.completionBackdrop.addEventListener("click", (event) => {
+        if (event.target === els.completionBackdrop) closeCompletion();
+      });
       els.addProductBtn.addEventListener("click", () => openEditor(state.selectedCategoryId, null));
       els.productCode.addEventListener("input", validateProductIdentityFields);
       els.productName.addEventListener("input", validateProductIdentityFields);
