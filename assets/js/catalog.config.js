@@ -99,12 +99,6 @@ window.PET_CATALOG_CONFIG = {
       "description": "Bowls, feeders, fountains, and feeding accessories for daily use.",
       "products": [
         {
-          "code": "MJ-08",
-          "name": "Food-Grade Silicone Slow Feeder Mat",
-          "image": "assets/images/catalog/007-mj-08.png",
-          "description": "Food-Grade Silicone Slow Feeder Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "LC-03",
           "name": "Large Stainless Steel No-Spill Pet Water Bowl",
           "image": "assets/images/catalog/011-lc-03.png",
@@ -211,6 +205,18 @@ window.PET_CATALOG_CONFIG = {
           "name": "Elevated Wooden Pet Bowl Stand with Stainless Steel Bowls",
           "image": "assets/images/catalog/014-lc-06.png",
           "description": "Elevated Wooden Pet Bowl Stand with Stainless Steel Bowls is designed for organized daily feeding and hydration. The product listing highlights stainless-steel components, a large-capacity design. A practical choice for pet owners and retail assortments."
+        },
+        {
+          "code": "MJ-08",
+          "name": "Food-Grade Silicone Slow Feeder Mat",
+          "image": "assets/images/catalog/007-mj-08.png",
+          "description": "Food-Grade Silicone Slow Feeder Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "M",
+              "value": "123"
+            }
+          ]
         }
       ]
     },
