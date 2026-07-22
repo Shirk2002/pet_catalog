@@ -766,7 +766,8 @@
             <div class="field wide">
               <label for="productSpecificationsInput">产品规格</label>
               <textarea id="productSpecificationsInput" placeholder="每行一项，例如：Material: Stainless Steel"></textarea>
-            <p class="description">每行填写“规格名称: 规格内容”或“规格名称：规格内容”，中英文冒号均可。</p>
+              <p id="productSpecificationsSummary" class="description"></p>
+              <p class="description">每行填写“规格名称: 规格内容”或“规格名称：规格内容”，中英文冒号均可。</p>
             </div>
           </div>
 
@@ -827,6 +828,7 @@
         imagePreviewList: $("imagePreviewList"),
         productDescription: $("productDescriptionInput"),
         productSpecifications: $("productSpecificationsInput"),
+        productSpecificationsSummary: $("productSpecificationsSummary"),
         deleteProductBtn: $("deleteProductBtn"),
       };
 
@@ -1066,6 +1068,9 @@
         els.productImage.value = images[0] || "";
         els.productDescription.value = product?.description || "";
         els.productSpecifications.value = formatSpecifications(product?.specifications);
+        els.productSpecificationsSummary.textContent = product?.specifications?.length
+          ? `已加载 ${product.specifications.length} 条已保存规格。`
+          : "当前商品尚未保存规格。";
         els.imageFile.value = "";
         renderImagePreviews();
         els.deleteProductBtn.style.display = product ? "inline-flex" : "none";
