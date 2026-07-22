@@ -700,7 +700,7 @@
             <div class="field wide">
               <label for="productSpecificationsInput">产品规格</label>
               <textarea id="productSpecificationsInput" placeholder="每行一项，例如：Material: Stainless Steel"></textarea>
-              <p class="description">每行填写“规格名称: 规格内容”。</p>
+            <p class="description">每行填写“规格名称: 规格内容”或“规格名称：规格内容”，中英文冒号均可。</p>
             </div>
           </div>
 
@@ -1326,20 +1326,22 @@
           .map((line) => line.trim())
           .filter(Boolean)
           .map((line) => {
-            const separator = line.indexOf(":");
-            if (separator < 0) return null;
-            const label = line.slice(0, separator).trim();
-            const specificationValue = line.slice(separator + 1).trim();
-            return label && specificationValue ? { label, value: specificationValue } : null;
-          })
-          .filter(Boolean);
+            const match = line.match(/^\s*([^:：]+?)\s*[:：]\s*(.+?)\s*$/);
+            if (match) {
+              return { label: match[1].trim(), value: match[2].trim() };
+            }
+            return { label: "Specification", value: line };
+          });
       }
 
       function formatSpecifications(specifications) {
         if (Array.isArray(specifications)) {
           return specifications
-            .filter((item) => item?.label && item?.value)
-            .map((item) => `${item.label}: ${item.value}`)
+            .map((item) => {
+              if (typeof item === "string") return item.trim();
+              return item?.label && item?.value ? `${item.label}: ${item.value}` : "";
+            })
+            .filter(Boolean)
             .join("\n");
         }
         if (specifications && typeof specifications === "object") {
@@ -1348,7 +1350,7 @@
             .map(([label, value]) => `${label}: ${value}`)
             .join("\n");
         }
-        return "";
+        return specifications ? String(specifications).trim() : "";
       }
 
       function renderImagePreviews() {
