@@ -101,11 +101,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-16",
           "name": "2.5L Smart Sensor Pet Water Fountain",
-          "image": "assets/images/catalog/1784736413489-tz-16-1.png",
-          "images": [
-            "assets/images/catalog/1784736413489-tz-16-1.png",
-            "assets/images/catalog/080-tz-16.png"
-          ],
+          "image": "assets/images/catalog/080-tz-16.png",
           "description": "2.5L Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
         },
         {
