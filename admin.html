@@ -200,6 +200,11 @@
         background: #fff0e6;
       }
 
+      .btn.is-primary-action {
+        color: #ffffff;
+        background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      }
+
       .btn.danger {
         color: #ffffff;
         background: var(--danger);
@@ -1087,6 +1092,14 @@
         ].join("\n");
       }
 
+      function updateCatalogActionButtons() {
+        const loaded = Boolean(state.config);
+        els.loadBtn.classList.toggle("secondary", loaded);
+        els.loadBtn.classList.remove("is-primary-action");
+        els.saveBtn.classList.toggle("is-primary-action", loaded);
+        els.saveBtn.classList.toggle("secondary", !loaded);
+      }
+
       async function loadCatalog() {
         try {
           setStatus("正在从 GitHub 加载商品目录...");
@@ -1100,6 +1113,7 @@
           state.selectedCategoryId = state.config.categories[0]?.id || null;
           state.dirty = false;
           els.saveBtn.disabled = true;
+          updateCatalogActionButtons();
           els.addProductBtn.disabled = false;
           els.catalogSearch.disabled = false;
           render();
@@ -1825,6 +1839,7 @@
         return escapeHtml(value);
       }
 
+      updateCatalogActionButtons();
       els.loadBtn.addEventListener("click", loadCatalog);
       els.saveBtn.addEventListener("click", saveToGitHub);
       els.completionCloseBtn.addEventListener("click", closeCompletion);
