@@ -287,8 +287,27 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PK10K",
           "name": "Dual-Bowl Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/061-pk10k.png",
-          "description": "Dual-Bowl Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784797964068-pk10k-1.jpg",
+          "description": "Dual-Bowl Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "PT10K 按键版【无远程APP】",
+              "value": "2000g"
+            },
+            {
+              "label": "PT10W WiFi版【涂鸦智能APP不含摄像头】",
+              "value": "2000g"
+            },
+            {
+              "label": "PT10V【涂鸦100万像素上视频版】",
+              "value": "2000g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784797964068-pk10k-1.jpg",
+            "assets/images/catalog/1784797964068-pk10k-2.jpg",
+            "assets/images/catalog/1784797964068-pk10k-3.jpg"
+          ]
         },
         {
           "code": "LC-06",
