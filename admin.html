@@ -897,6 +897,7 @@
       const CONFIG_PATH = "assets/js/catalog.config.js";
       const IMAGE_DIR = "assets/images/catalog";
       const PLACEHOLDER_IMAGE = "assets/images/placeholder.svg";
+      const MAX_UPLOAD_IMAGE_SIZE = 5 * 1024 * 1024;
 
       const state = {
         config: null,
@@ -1569,12 +1570,21 @@
           setStatus("正在提交商品目录并发布到前台...");
           els.saveBtn.disabled = true;
 
-          if (state.pendingUploads.length) {
-            setStatus(`正在上传 ${state.pendingUploads.length} 张图片...`);
-            for (const upload of state.pendingUploads) {
+          const uploadTotal = state.pendingUploads.length;
+          let uploadedCount = 0;
+          while (state.pendingUploads.length) {
+            const upload = state.pendingUploads[0];
+            setStatus(`正在上传图片 ${uploadedCount + 1}/${uploadTotal}：${upload.file.name}`);
+            try {
               await uploadImageFile(upload.file, upload.path);
+            } catch (error) {
+              throw new Error(`图片“${upload.file.name}”上传失败：${error.message}`);
             }
-            state.pendingUploads = [];
+            state.pendingUploads.shift();
+            uploadedCount += 1;
+            if (state.pendingUploads.length) {
+              await new Promise((resolve) => window.setTimeout(resolve, 600));
+            }
           }
 
           const content = encodeTextToBase64(buildConfigFile(state.config));
@@ -1608,20 +1618,13 @@
       async function uploadImageFile(file, path) {
         if (!file || !path) return;
         const content = await readFileAsBase64(file);
-        let sha;
-        try {
-          const existing = await githubRequest(`${path}?ref=${encodeURIComponent(els.branch.value.trim())}`);
-          sha = existing.sha;
-        } catch (error) {
-          if (!/not found/i.test(error.message)) throw error;
-        }
         await githubRequest(path, {
           method: "PUT",
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             message: `Upload product image ${path}`,
             content,
             branch: els.branch.value.trim(),
-            ...(sha ? { sha } : {}),
           }),
         });
       }
@@ -1877,6 +1880,13 @@
       els.imageFile.addEventListener("change", () => {
         const files = [...(els.imageFile.files || [])];
         if (!files.length) return;
+        const invalidFile = files.find((file) => !file.type.startsWith("image/") || file.size > MAX_UPLOAD_IMAGE_SIZE);
+        if (invalidFile) {
+          const sizeInMegabytes = (invalidFile.size / 1024 / 1024).toFixed(1);
+          setStatus(`图片“${invalidFile.name}”无效。请选择小于 5MB 的图片文件；当前大小为 ${sizeInMegabytes}MB。`, "error");
+          els.imageFile.value = "";
+          return;
+        }
         const uploadedImages = files.map((file) => ({ file, path: "", previewUrl: URL.createObjectURL(file) }));
         state.galleryImages.unshift(...uploadedImages);
         els.productImage.value = "";
