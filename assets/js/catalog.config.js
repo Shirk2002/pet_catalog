@@ -276,26 +276,13 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT23W",
           "name": "3L Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/019-pt23w.png",
-          "description": "3L Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "LC-04",
-          "name": "4.5L No-Spill Floating Pet Water Bowl",
-          "image": "assets/images/catalog/012-lc-04.png",
-          "description": "4.5L No-Spill Floating Pet Water Bowl is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design. A practical choice for pet owners and retail assortments.",
-          "specifications": [
-            {
-              "label": "Specification",
-              "value": "123"
-            }
+          "image": "assets/images/catalog/1784797522476-pt23w-1.jpg",
+          "description": "3L Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784797522476-pt23w-1.jpg",
+            "assets/images/catalog/1784797522476-pt23w-2.jpg",
+            "assets/images/catalog/1784797522476-pt23w-3.jpg"
           ]
-        },
-        {
-          "code": "C5",
-          "name": "Custom Smart Sensor Pet Water Fountain",
-          "image": "assets/images/catalog/055-c5.png",
-          "description": "Custom Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation, customization options. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "PK10K",
