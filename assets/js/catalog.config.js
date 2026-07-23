@@ -118,8 +118,19 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "T30",
           "name": "USB Pet Nail Grinder and Paw Trimmer",
-          "image": "assets/images/catalog/058-t30.png",
-          "description": "USB Pet Nail Grinder and Paw Trimmer is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784790145910-t30-1.jpg",
+          "description": "USB Pet Nail Grinder and Paw Trimmer is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "150g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784790145910-t30-1.jpg",
+            "assets/images/catalog/1784790145910-t30-2.jpg",
+            "assets/images/catalog/1784790145910-t30-3.jpg"
+          ]
         }
       ]
     },
