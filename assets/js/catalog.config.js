@@ -160,8 +160,24 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "T20",
           "name": "Quiet USB Paw Hair Trimmer",
-          "image": "assets/images/catalog/056-t20.png",
-          "description": "Quiet USB Paw Hair Trimmer is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power, quiet operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784795885663-t20-1.jpg",
+          "description": "Quiet USB Paw Hair Trimmer is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power, quiet operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "T20不带灯（一个档位）",
+              "value": "113g"
+            },
+            {
+              "label": "T50 带灯款（两个档位）",
+              "value": "113g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784795885663-t20-1.jpg",
+            "assets/images/catalog/1784795885663-t20-2.jpg",
+            "assets/images/catalog/1784795885663-t20-3.jpg",
+            "assets/images/catalog/1784795885663-t20-4.jpg"
+          ]
         },
         {
           "code": "T65",
