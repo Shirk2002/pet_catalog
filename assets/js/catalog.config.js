@@ -167,21 +167,21 @@ window.PET_CATALOG_CONFIG = {
           "code": "T65",
           "name": "Rechargeable Pet Grooming Clipper Kit",
           "image": "assets/images/catalog/1784795210104-t65-1.jpg",
-          "description": "Rechargeable Pet Grooming Clipper Kit is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
-          "specifications": [
-            {
-              "label": "T65重量",
-              "value": "230g"
-            },
-            {
-              "label": "T70重量",
-              "value": "230g"
-            }
-          ],
           "images": [
             "assets/images/catalog/1784795210104-t65-1.jpg",
             "assets/images/catalog/1784795210104-t65-2.jpg",
             "assets/images/catalog/1784795210104-t65-3.jpg"
+          ],
+          "description": "Rechargeable Pet Grooming Clipper Kit is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "T65",
+              "value": "230g"
+            },
+            {
+              "label": "T70",
+              "value": "230g"
+            }
           ]
         },
         {
