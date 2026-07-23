@@ -188,12 +188,22 @@ window.PET_CATALOG_CONFIG = {
           "code": "PT108W",
           "name": "Smart Self-Cleaning Cat Litter Box with App Control",
           "image": "assets/images/catalog/1784790383931-pt108w-1.jpg",
-          "description": "Smart Self-Cleaning Cat Litter Box with App Control is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
           "images": [
             "assets/images/catalog/1784790383931-pt108w-1.jpg",
             "assets/images/catalog/1784790383931-pt108w-2.jpg",
             "assets/images/catalog/1784790383931-pt108w-3.jpg",
             "assets/images/catalog/1784790383931-pt108w-4.jpg"
+          ],
+          "description": "Smart Self-Cleaning Cat Litter Box with App Control is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "PT108W",
+              "value": "20000g"
+            },
+            {
+              "label": "PT108v",
+              "value": "20000g"
+            }
           ]
         },
         {
