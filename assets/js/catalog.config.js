@@ -58,7 +58,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "REC",
           "name": "Fully Automatic Smart Cat Litter Box",
-          "image": "assets/images/catalog/1784791104657-rec-1.jpg",
+          "image": "assets/images/catalog/1784792232191-rec-1.jpg",
           "description": "Fully Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -71,9 +71,9 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784791104657-rec-1.jpg",
-            "assets/images/catalog/1784791104657-rec-2.jpg",
-            "assets/images/catalog/1784791104657-rec-3.jpg"
+            "assets/images/catalog/1784792232191-rec-1.jpg",
+            "assets/images/catalog/1784792232191-rec-2.jpg",
+            "assets/images/catalog/1784792189776-rec-1.jpg"
           ]
         },
         {
