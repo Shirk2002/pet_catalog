@@ -17,6 +17,11 @@ window.PET_CATALOG_CONFIG = {
           "code": "TZ-13",
           "name": "Electric Pet Nail Grinder and Grooming Tool",
           "image": "assets/images/catalog/1784776579519-tz-13-1.jpg",
+          "images": [
+            "assets/images/catalog/1784776579519-tz-13-1.jpg",
+            "assets/images/catalog/1784776579519-tz-13-2.jpg",
+            "assets/images/catalog/1784776579519-tz-13-3.jpg"
+          ],
           "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -26,12 +31,11 @@ window.PET_CATALOG_CONFIG = {
             {
               "label": "体积",
               "value": "48.463cm³"
+            },
+            {
+              "label": "重量",
+              "value": "220g"
             }
-          ],
-          "images": [
-            "assets/images/catalog/1784776579519-tz-13-1.jpg",
-            "assets/images/catalog/1784776579519-tz-13-2.jpg",
-            "assets/images/catalog/1784776579519-tz-13-3.jpg"
           ]
         },
         {
