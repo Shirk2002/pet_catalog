@@ -56,28 +56,37 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "LC-09",
-          "name": "Extra-Large Stainless Steel Cat Litter Box",
-          "image": "assets/images/catalog/017-lc-09.png",
-          "description": "Extra-Large Stainless Steel Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights stainless-steel components, spill-reducing details. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "PT108W2.4",
-          "name": "Fast Self-Cleaning Smart Cat Litter Box with App Control",
-          "image": "assets/images/catalog/052-pt108w2-4.png",
-          "description": "Fast Self-Cleaning Smart Cat Litter Box with App Control is designed for daily pet care and grooming routines. The product listing highlights remote app control, camera monitoring, smart automatic operation. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "REC",
           "name": "Fully Automatic Smart Cat Litter Box",
-          "image": "assets/images/catalog/053-rec.png",
-          "description": "Fully Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784791104657-rec-1.jpg",
+          "description": "Fully Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "2.4G 72L"
+            },
+            {
+              "label": "尺寸",
+              "value": "55*59*60cm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784791104657-rec-1.jpg",
+            "assets/images/catalog/1784791104657-rec-2.jpg",
+            "assets/images/catalog/1784791104657-rec-3.jpg"
+          ]
         },
         {
           "code": "T10",
           "name": "High-Power Electric Pet Nail Grinder",
-          "image": "assets/images/catalog/059-t10.png",
-          "description": "High-Power Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784791225953-t10-1.jpg",
+          "description": "High-Power Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784791225953-t10-1.jpg",
+            "assets/images/catalog/1784791225953-t10-2.jpg",
+            "assets/images/catalog/1784791225953-t10-3.jpg",
+            "assets/images/catalog/1784791225953-t10-4.jpg"
+          ]
         },
         {
           "code": "TZ-16",
