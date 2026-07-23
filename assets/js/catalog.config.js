@@ -134,8 +134,28 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "CQ102",
           "name": "Open-Top Automatic Smart Cat Litter Box",
-          "image": "assets/images/catalog/051-cq102.png",
-          "description": "Open-Top Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784794855764-cq102-1.jpg",
+          "description": "Open-Top Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "8L"
+            },
+            {
+              "label": "尺寸",
+              "value": "47.50*55.60*56.20 cm"
+            },
+            {
+              "label": "重量",
+              "value": "10000g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784794855764-cq102-1.jpg",
+            "assets/images/catalog/1784794855764-cq102-2.jpg",
+            "assets/images/catalog/1784794855764-cq102-3.jpg",
+            "assets/images/catalog/1784794855764-cq102-4.jpg"
+          ]
         },
         {
           "code": "T20",
