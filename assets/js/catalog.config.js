@@ -91,8 +91,18 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-16",
           "name": "LED Electric Pet Nail Grinder",
-          "image": "assets/images/catalog/082-tz-16.png",
-          "description": "LED Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784792739831-tz-16-1.jpg",
+          "description": "LED Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "225*176*173MM"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784792739831-tz-16-1.jpg",
+            "assets/images/catalog/1784792739831-tz-16-2.jpg"
+          ]
         },
         {
           "code": "CQ103",
