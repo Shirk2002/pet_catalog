@@ -328,18 +328,6 @@ window.PET_CATALOG_CONFIG = {
           "description": "HD Camera Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments."
         },
         {
-          "code": "LC-03",
-          "name": "Large Stainless Steel No-Spill Pet Water Bowl",
-          "image": "assets/images/catalog/011-lc-03.png",
-          "description": "Large Stainless Steel No-Spill Pet Water Bowl is designed for organized daily feeding and hydration. The product listing highlights stainless-steel components, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments.",
-          "specifications": [
-            {
-              "label": "Specification",
-              "value": "123"
-            }
-          ]
-        },
-        {
           "code": "XZY-06",
           "name": "Large Thick Slow Feeder Pet Plate",
           "image": "assets/images/catalog/091-xzy-06.png",
@@ -352,22 +340,10 @@ window.PET_CATALOG_CONFIG = {
           "description": "Maple Leaf Silicone Slow Feeder Bowl is designed for organized daily feeding and hydration. The product listing highlights slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments."
         },
         {
-          "code": "LC-08",
-          "name": "Portable Pet Travel Water Bottle",
-          "image": "assets/images/catalog/016-lc-08.png",
-          "description": "Portable Pet Travel Water Bottle is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "C2-L",
           "name": "Rechargeable Smart Pet Water Fountain",
           "image": "assets/images/catalog/054-c2-l.png",
           "description": "Rechargeable Smart Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights easy-care removable parts, smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "LC-07",
-          "name": "Removable Stainless Steel Double Pet Bowl",
-          "image": "assets/images/catalog/015-lc-07.png",
-          "description": "Removable Stainless Steel Double Pet Bowl is designed for organized daily feeding and hydration. The product listing highlights easy-care removable parts, stainless-steel components, slow-feeding enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "XZY-03",
