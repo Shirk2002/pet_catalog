@@ -107,8 +107,29 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "CQ103",
           "name": "Open-Top Automatic Self-Cleaning Cat Litter Box",
-          "image": "assets/images/catalog/023-cq103.png",
-          "description": "Open-Top Automatic Self-Cleaning Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights easy-care removable parts, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784794542894-cq103-1.jpg",
+          "description": "Open-Top Automatic Self-Cleaning Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights easy-care removable parts, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "8L"
+            },
+            {
+              "label": "尺寸",
+              "value": "47.50*55.60*56.20 cm"
+            },
+            {
+              "label": "重量",
+              "value": "10000g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784794542894-cq103-1.jpg",
+            "assets/images/catalog/1784794542894-cq103-2.jpg",
+            "assets/images/catalog/1784794542894-cq103-3.jpg",
+            "assets/images/catalog/1784794542894-cq103-4.jpg",
+            "assets/images/catalog/1784794542894-cq103-5.jpg"
+          ]
         },
         {
           "code": "CQ102",
