@@ -16,14 +16,44 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-13",
           "name": "Electric Pet Nail Grinder and Grooming Tool",
-          "image": "assets/images/catalog/077-tz-13.png",
-          "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784776579519-tz-13-1.jpg",
+          "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "4.7*4.3*2.3cm"
+            },
+            {
+              "label": "体积",
+              "value": "48.463cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784776579519-tz-13-1.jpg",
+            "assets/images/catalog/1784776579519-tz-13-2.jpg",
+            "assets/images/catalog/1784776579519-tz-13-3.jpg"
+          ]
         },
         {
           "code": "REC2.4G",
           "name": "Enclosed Smart Cat Litter Box with Camera",
-          "image": "assets/images/catalog/050-rec2-4g.png",
-          "description": "Enclosed Smart Cat Litter Box with Camera is designed for daily pet care and grooming routines. The product listing highlights camera monitoring, smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784777140051-rec2-4g-1.jpg",
+          "description": "Enclosed Smart Cat Litter Box with Camera is designed for daily pet care and grooming routines. The product listing highlights camera monitoring, smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "55*59*60cm"
+            },
+            {
+              "label": "体积",
+              "value": "194700cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784777140051-rec2-4g-1.jpg",
+            "assets/images/catalog/1784777140051-rec2-4g-2.jpg",
+            "assets/images/catalog/1784777140051-rec2-4g-3.jpg"
+          ]
         },
         {
           "code": "LC-09",
