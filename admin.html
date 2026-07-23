@@ -915,6 +915,7 @@
       const IMAGE_DIR = "assets/images/catalog";
       const PLACEHOLDER_IMAGE = "assets/images/placeholder.svg";
       const MAX_UPLOAD_IMAGE_SIZE = 5 * 1024 * 1024;
+      const MAX_UPLOAD_BATCH_SIZE = 20 * 1024 * 1024;
 
       const state = {
         config: null,
@@ -1472,11 +1473,31 @@
         return { codeDuplicate, nameDuplicate };
       }
 
-      function getFileExtension(file) {
-        const fromName = file.name.split(".").pop();
+      function getFileExtension(image) {
+        const fromName = image.name?.split(".").pop();
         if (fromName && fromName.length <= 5) return fromName.toLowerCase();
         const map = { "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif" };
-        return map[file.type] || "png";
+        return map[image.mimeType] || "png";
+      }
+
+      function readFileAsDataUrl(file) {
+        return new Promise((resolve, reject) => {
+          if (!(file instanceof Blob)) {
+            reject(new Error("所选图片不可读取，请重新选择本地图片文件。"));
+            return;
+          }
+          const reader = new FileReader();
+          reader.addEventListener("load", () => {
+            if (typeof reader.result !== "string" || !reader.result.includes(",")) {
+              reject(new Error(`图片“${file.name}”读取结果无效，请重新选择。`));
+              return;
+            }
+            resolve(reader.result);
+          });
+          reader.addEventListener("error", () => reject(reader.error || new Error(`无法读取图片“${file.name}”。`)));
+          reader.addEventListener("abort", () => reject(new Error(`读取图片“${file.name}”时被取消。`)));
+          reader.readAsDataURL(file);
+        });
       }
 
       async function applyProductForm(event) {
@@ -1552,13 +1573,13 @@
           return;
         }
 
-        const pendingImages = state.galleryImages.filter((image) => image.file);
+        const pendingImages = state.galleryImages.filter((image) => image.content);
         if (pendingImages.length) {
           const timestamp = Date.now();
           pendingImages.forEach((image, index) => {
-            const extension = getFileExtension(image.file);
+            const extension = getFileExtension(image);
             image.path = `${IMAGE_DIR}/${timestamp}-${cleanFileName(product.code)}-${index + 1}.${extension}`;
-            state.pendingUploads.push({ file: image.file, path: image.path });
+            state.pendingUploads.push({ name: image.name, content: image.content, path: image.path });
           });
           product.images = state.galleryImages.map((image) => image.path);
           product.image = product.images[0];
@@ -1611,15 +1632,17 @@
           setStatus("正在提交商品目录并发布到前台...");
           els.saveBtn.disabled = true;
 
+          const referencedImages = getReferencedCatalogImagePaths(state.config);
+          state.pendingUploads = state.pendingUploads.filter((upload) => referencedImages.has(upload.path));
           const uploadTotal = state.pendingUploads.length;
           let uploadedCount = 0;
           while (state.pendingUploads.length) {
             const upload = state.pendingUploads[0];
-            setStatus(`正在上传图片 ${uploadedCount + 1}/${uploadTotal}：${upload.file.name}`);
+            setStatus(`正在上传图片 ${uploadedCount + 1}/${uploadTotal}：${upload.name}`);
             try {
-              await uploadImageFile(upload.file, upload.path);
+              await uploadImageContent(upload);
             } catch (error) {
-              throw new Error(`图片“${upload.file.name}”上传失败：${error.message}`);
+              throw new Error(`图片“${upload.name}”上传失败：${error.message}`);
             }
             state.pendingUploads.shift();
             uploadedCount += 1;
@@ -1656,26 +1679,18 @@
         }
       }
 
-      async function uploadImageFile(file, path) {
-        if (!file || !path) return;
-        const content = await readFileAsBase64(file);
-        await githubRequest(path, {
+      async function uploadImageContent(upload) {
+        if (!upload?.content || !upload?.path) {
+          throw new Error("图片内容未暂存，请重新选择该图片。");
+        }
+        await githubRequest(upload.path, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            message: `Upload product image ${path}`,
-            content,
+            message: `Upload product image ${upload.path}`,
+            content: upload.content,
             branch: els.branch.value.trim(),
           }),
-        });
-      }
-
-      function readFileAsBase64(file) {
-        return new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve(String(reader.result).split(",")[1]);
-          reader.onerror = () => reject(reader.error);
-          reader.readAsDataURL(file);
         });
       }
 
@@ -1919,21 +1934,41 @@
         }
         renderImagePreviews();
       });
-      els.imageFile.addEventListener("change", () => {
+      els.imageFile.addEventListener("change", async () => {
         const files = [...(els.imageFile.files || [])];
         if (!files.length) return;
         const invalidFile = files.find((file) => !file.type.startsWith("image/") || file.size > MAX_UPLOAD_IMAGE_SIZE);
-        if (invalidFile) {
-          const sizeInMegabytes = (invalidFile.size / 1024 / 1024).toFixed(1);
-          setStatus(`图片“${invalidFile.name}”无效。请选择小于 5MB 的图片文件；当前大小为 ${sizeInMegabytes}MB。`, "error");
+        const totalSize = files.reduce((sum, file) => sum + file.size, 0);
+        if (invalidFile || totalSize > MAX_UPLOAD_BATCH_SIZE) {
+          const message = invalidFile
+            ? `图片“${invalidFile.name}”无效。请选择小于 5MB 的图片文件。`
+            : "单次选择的图片总大小不能超过 20MB，请分批上传。";
+          setStatus(message, "error");
           els.imageFile.value = "";
           return;
         }
-        const uploadedImages = files.map((file) => ({ file, path: "", previewUrl: URL.createObjectURL(file) }));
-        state.galleryImages.unshift(...uploadedImages);
-        els.productImage.value = "";
-        renderImagePreviews();
-        els.imageFile.value = "";
+        try {
+          setStatus(`正在读取并暂存 ${files.length} 张图片，请勿关闭页面...`);
+          const uploadedImages = [];
+          for (const file of files) {
+            const previewUrl = await readFileAsDataUrl(file);
+            uploadedImages.push({
+              path: "",
+              name: file.name,
+              mimeType: file.type,
+              content: previewUrl.slice(previewUrl.indexOf(",") + 1),
+              previewUrl,
+            });
+          }
+          state.galleryImages.unshift(...uploadedImages);
+          els.productImage.value = "";
+          renderImagePreviews();
+          setStatus(`已安全暂存 ${uploadedImages.length} 张图片，可继续编辑并发布。`, "success");
+        } catch (error) {
+          setStatus(`图片读取失败：${error.message}。请将图片复制到本机普通目录后重新选择。`, "error");
+        } finally {
+          els.imageFile.value = "";
+        }
       });
       window.addEventListener("beforeunload", (event) => {
         if (state.dirty) {
