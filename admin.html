@@ -96,6 +96,19 @@
         white-space: nowrap;
       }
 
+      .visitor-stat {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 8px 11px;
+        color: var(--brand-dark);
+        background: #fffaf4;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
       .panel {
         border: 1px solid var(--border);
         border-radius: 24px;
@@ -789,6 +802,10 @@
           <input id="tokenInput" type="password" placeholder="粘贴本次使用的 Token" autocomplete="off" />
         </div>
         <div class="actions">
+          <span id="adminVisitorCount" class="visitor-stat">Total Views: 加载中</span>
+          <span id="busuanzi_container_site_pv" hidden aria-hidden="true">
+            <span id="busuanzi_value_site_pv"></span>
+          </span>
           <button class="btn" id="loadBtn" type="button">加载商品目录</button>
           <button class="btn secondary" id="saveBtn" type="button" disabled>发布暂存修改到 GitHub</button>
         </div>
@@ -949,7 +966,31 @@
         specificationManager: $("specificationManager"),
         productSpecificationsSummary: $("productSpecificationsSummary"),
         deleteProductBtn: $("deleteProductBtn"),
+        adminVisitorCount: $("adminVisitorCount"),
       };
+
+      function loadVisitorCount() {
+        const script = document.createElement("script");
+        script.src = "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js";
+        script.async = true;
+        script.addEventListener("load", () => {
+          let attempts = 0;
+          const updateCount = () => {
+            const value = document.getElementById("busuanzi_value_site_pv")?.textContent?.trim();
+            if (value && /^\d+$/.test(value)) {
+              els.adminVisitorCount.textContent = `Total Views: ${value}`;
+              return;
+            }
+            attempts += 1;
+            if (attempts < 20) window.setTimeout(updateCount, 250);
+          };
+          updateCount();
+        });
+        script.addEventListener("error", () => {
+          els.adminVisitorCount.textContent = "Total Views: 暂不可用";
+        });
+        document.head.appendChild(script);
+      }
 
       function setStatus(message, type = "") {
         els.status.textContent = message;
@@ -1843,6 +1884,7 @@
       }
 
       updateCatalogActionButtons();
+      loadVisitorCount();
       els.loadBtn.addEventListener("click", loadCatalog);
       els.saveBtn.addEventListener("click", saveToGitHub);
       els.completionCloseBtn.addEventListener("click", closeCompletion);
