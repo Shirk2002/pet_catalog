@@ -632,13 +632,25 @@ window.PET_CATALOG_CONFIG = {
           "code": "MJ-15",
           "name": "Kitten-Shaped Semi-Enclosed Pet House",
           "image": "assets/images/catalog/120-mj-15.png",
-          "description": "Kitten-Shaped Semi-Enclosed Pet House is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Kitten-Shaped Semi-Enclosed Pet House is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/120-mj-15.png",
+            "assets/images/catalog/1784873713763-mj-15-1.jpg",
+            "assets/images/catalog/1784873713763-mj-15-2.jpg"
+          ]
         },
         {
           "code": "YQ-08",
           "name": "Large Corrugated Cardboard Cat Scratcher Bed",
           "image": "assets/images/catalog/106-yq-08.png",
-          "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/106-yq-08.png",
+            "assets/images/catalog/1784873879819-yq-08-1.jpg",
+            "assets/images/catalog/1784873879819-yq-08-2.jpg",
+            "assets/images/catalog/1784873879819-yq-08-3.jpg",
+            "assets/images/catalog/1784873879819-yq-08-4.jpg"
+          ]
         },
         {
           "code": "MJ-11",
@@ -662,13 +674,29 @@ window.PET_CATALOG_CONFIG = {
           "code": "YQ-06",
           "name": "Round Long-Plush Winter Pet Bed",
           "image": "assets/images/catalog/104-yq-06.png",
-          "description": "Round Long-Plush Winter Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments."
+          "description": "Round Long-Plush Winter Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/104-yq-06.png",
+            "assets/images/catalog/1784874314383-yq-06-1.jpg",
+            "assets/images/catalog/1784874314383-yq-06-2.jpg",
+            "assets/images/catalog/1784874314383-yq-06-3.jpg",
+            "assets/images/catalog/1784874314383-yq-06-4.jpg",
+            "assets/images/catalog/1784874314383-yq-06-5.jpg"
+          ]
         },
         {
           "code": "JH-08",
           "name": "Round Upright Corrugated Cat Scratcher",
           "image": "assets/images/catalog/108-jh-08.png",
-          "description": "Round Upright Corrugated Cat Scratcher is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Round Upright Corrugated Cat Scratcher is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/108-jh-08.png",
+            "assets/images/catalog/1784874645536-jh-08-1.jpg",
+            "assets/images/catalog/1784874645536-jh-08-2.jpg",
+            "assets/images/catalog/1784874645536-jh-08-3.jpg",
+            "assets/images/catalog/1784874645536-jh-08-4.jpg",
+            "assets/images/catalog/1784874645536-jh-08-5.jpg"
+          ]
         },
         {
           "code": "MJ-11",
@@ -680,55 +708,115 @@ window.PET_CATALOG_CONFIG = {
           "code": "MJ-12",
           "name": "Short-Plush Winter Cat and Dog Bed",
           "image": "assets/images/catalog/118-mj-12.png",
-          "description": "Short-Plush Winter Cat and Dog Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments."
+          "description": "Short-Plush Winter Cat and Dog Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/118-mj-12.png",
+            "assets/images/catalog/1784874804150-mj-12-1.jpg",
+            "assets/images/catalog/1784874804150-mj-12-2.jpg",
+            "assets/images/catalog/1784874804150-mj-12-3.jpg"
+          ]
         },
         {
           "code": "GJ-06",
           "name": "Soft Pet Textile Cushion",
           "image": "assets/images/catalog/025-gj-06.png",
-          "description": "Soft Pet Textile Cushion is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Soft Pet Textile Cushion is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/025-gj-06.png",
+            "assets/images/catalog/1784874999328-gj-06-1.jpg",
+            "assets/images/catalog/1784874999328-gj-06-2.jpg",
+            "assets/images/catalog/1784874999328-gj-06-3.jpg",
+            "assets/images/catalog/1784875231966-gj-06-1.jpg"
+          ]
         },
         {
           "code": "YQ-03",
           "name": "Summer Linen Cooling Pet Bed",
           "image": "assets/images/catalog/103-yq-03.png",
-          "description": "Summer Linen Cooling Pet Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Summer Linen Cooling Pet Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/103-yq-03.png",
+            "assets/images/catalog/1784875461167-yq-03-1.jpg",
+            "assets/images/catalog/1784875461167-yq-03-2.jpg",
+            "assets/images/catalog/1784875461167-yq-03-3.jpg",
+            "assets/images/catalog/1784875461167-yq-03-4.jpg"
+          ]
         },
         {
           "code": "YQ-07",
           "name": "Thick Coral Fleece Pet Blanket Mat",
           "image": "assets/images/catalog/105-yq-07.png",
-          "description": "Thick Coral Fleece Pet Blanket Mat is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments."
+          "description": "Thick Coral Fleece Pet Blanket Mat is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/105-yq-07.png",
+            "assets/images/catalog/1784875730044-yq-07-1.jpg",
+            "assets/images/catalog/1784875730044-yq-07-2.jpg",
+            "assets/images/catalog/1784875730044-yq-07-3.jpg",
+            "assets/images/catalog/1784875730044-yq-07-4.jpg"
+          ]
         },
         {
           "code": "XX-03",
           "name": "Vertical Sisal Cat Scratching Board",
           "image": "assets/images/catalog/107-xx-03.png",
-          "description": "Vertical Sisal Cat Scratching Board is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Vertical Sisal Cat Scratching Board is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/107-xx-03.png",
+            "assets/images/catalog/1784875897123-xx-03-1.jpg",
+            "assets/images/catalog/1784875897123-xx-03-2.jpg",
+            "assets/images/catalog/1784875897123-xx-03-3.jpg",
+            "assets/images/catalog/1784875897123-xx-03-4.jpg"
+          ]
         },
         {
           "code": "BK-11",
           "name": "Warm Elevated Cat Hammock Bed",
           "image": "assets/images/catalog/043-bk-11.png",
-          "description": "Warm Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments."
+          "description": "Warm Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/043-bk-11.png",
+            "assets/images/catalog/1784876019813-bk-11-1.jpg",
+            "assets/images/catalog/1784876019813-bk-11-2.jpg",
+            "assets/images/catalog/1784876019813-bk-11-3.jpg"
+          ]
         },
         {
           "code": "JH-09",
           "name": "Washable Semi-Enclosed Cat House Bed",
           "image": "assets/images/catalog/109-jh-09.png",
-          "description": "Washable Semi-Enclosed Cat House Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments."
+          "description": "Washable Semi-Enclosed Cat House Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/109-jh-09.png",
+            "assets/images/catalog/1784876225646-jh-09-1.jpg",
+            "assets/images/catalog/1784876225646-jh-09-2.jpg",
+            "assets/images/catalog/1784876225646-jh-09-3.jpg"
+          ]
         },
         {
           "code": "MJ-16",
           "name": "Washable Winter Pet Sofa Bed",
           "image": "assets/images/catalog/121-mj-16.png",
-          "description": "Washable Winter Pet Sofa Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments."
+          "description": "Washable Winter Pet Sofa Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/121-mj-16.png",
+            "assets/images/catalog/1784876460922-mj-16-1.png",
+            "assets/images/catalog/1784876460922-mj-16-2.png",
+            "assets/images/catalog/1784876460922-mj-16-3.png"
+          ]
         },
         {
           "code": "MJ-10",
           "name": "Window-Mounted Cat Hammock Bed",
           "image": "assets/images/catalog/009-mj-10.png",
-          "description": "Window-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights breathable material, easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments."
+          "description": "Window-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights breathable material, easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/009-mj-10.png",
+            "assets/images/catalog/1784876583214-mj-10-1.jpg",
+            "assets/images/catalog/1784876583214-mj-10-2.jpg",
+            "assets/images/catalog/1784876583214-mj-10-3.jpg",
+            "assets/images/catalog/1784876583214-mj-10-4.jpg",
+            "assets/images/catalog/1784876583214-mj-10-5.jpg"
+          ]
         }
       ]
     },
@@ -741,7 +829,12 @@ window.PET_CATALOG_CONFIG = {
           "code": "BP-02",
           "name": "Bacon-Flavored TPR Bone Chew Toy",
           "image": "assets/images/catalog/063-bp-02.png",
-          "description": "Bacon-Flavored TPR Bone Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments."
+          "description": "Bacon-Flavored TPR Bone Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/063-bp-02.png",
+            "assets/images/catalog/1784877582224-bp-02-1.jpg",
+            "assets/images/catalog/1784877582224-bp-02-2.jpg"
+          ]
         },
         {
           "code": "JX-03",
@@ -753,43 +846,92 @@ window.PET_CATALOG_CONFIG = {
           "code": "PT-09",
           "name": "Electric Rolling Feather Cat Teaser Toy",
           "image": "assets/images/catalog/068-pt-09.png",
-          "description": "Electric Rolling Feather Cat Teaser Toy is designed for interactive play and enrichment. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "description": "Electric Rolling Feather Cat Teaser Toy is designed for interactive play and enrichment. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/068-pt-09.png",
+            "assets/images/catalog/1784877807492-pt-09-1.jpg",
+            "assets/images/catalog/1784877807492-pt-09-2.jpg",
+            "assets/images/catalog/1784877807492-pt-09-3.jpg",
+            "assets/images/catalog/1784877807492-pt-09-4.jpg",
+            "assets/images/catalog/1784877807492-pt-09-5.jpg"
+          ]
         },
         {
           "code": "PT-10",
           "name": "Electric Tumbler Treat-Dispensing Cat Toy",
           "image": "assets/images/catalog/069-pt-10.png",
-          "description": "Electric Tumbler Treat-Dispensing Cat Toy is designed for interactive play and enrichment. The product listing highlights slow-feeding enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Electric Tumbler Treat-Dispensing Cat Toy is designed for interactive play and enrichment. The product listing highlights slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/069-pt-10.png",
+            "assets/images/catalog/1784877965549-pt-10-1.jpg",
+            "assets/images/catalog/1784877965549-pt-10-2.jpg",
+            "assets/images/catalog/1784877965549-pt-10-3.jpg"
+          ]
         },
         {
           "code": "BP-03",
           "name": "Freezable Dumbbell Cooling Chew Toy",
           "image": "assets/images/catalog/064-bp-03.png",
-          "description": "Freezable Dumbbell Cooling Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Freezable Dumbbell Cooling Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/064-bp-03.png",
+            "assets/images/catalog/1784877217451-bp-03-1.jpg",
+            "assets/images/catalog/1784877217451-bp-03-2.jpg"
+          ]
         },
         {
           "code": "PT-12",
           "name": "LED Feather Running Wheel Cat Toy",
           "image": "assets/images/catalog/071-pt-12.png",
-          "description": "LED Feather Running Wheel Cat Toy is designed for interactive play and enrichment. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments."
+          "description": "LED Feather Running Wheel Cat Toy is designed for interactive play and enrichment. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/071-pt-12.png",
+            "assets/images/catalog/1784878118831-pt-12-1.jpg"
+          ]
         },
         {
           "code": "PT-13",
           "name": "Light-Up Bell Ball Electric Cat Toy",
           "image": "assets/images/catalog/072-pt-13.png",
-          "description": "Light-Up Bell Ball Electric Cat Toy is designed for interactive play and enrichment. The product listing highlights LED visibility. A practical choice for pet owners and retail assortments."
+          "description": "Light-Up Bell Ball Electric Cat Toy is designed for interactive play and enrichment. The product listing highlights LED visibility. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/072-pt-13.png",
+            "assets/images/catalog/1784878515815-pt-13-1.jpg",
+            "assets/images/catalog/1784878515815-pt-13-2.jpg",
+            "assets/images/catalog/1784878515815-pt-13-3.jpg",
+            "assets/images/catalog/1784878515815-pt-13-4.jpg"
+          ]
         },
         {
           "code": "MM-07",
           "name": "Plush Squeaky Chew Toy Set",
           "image": "assets/images/catalog/033-mm-07.png",
-          "description": "Plush Squeaky Chew Toy Set is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments."
+          "description": "Plush Squeaky Chew Toy Set is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/033-mm-07.png",
+            "assets/images/catalog/1784880803627-mm-07-1.jpg",
+            "assets/images/catalog/1784880803627-mm-07-10.jpg",
+            "assets/images/catalog/1784880803627-mm-07-2.jpg",
+            "assets/images/catalog/1784880803627-mm-07-3.jpg",
+            "assets/images/catalog/1784880803627-mm-07-4.jpg",
+            "assets/images/catalog/1784880803627-mm-07-5.jpg",
+            "assets/images/catalog/1784880803627-mm-07-6.jpg",
+            "assets/images/catalog/1784880803627-mm-07-7.jpg",
+            "assets/images/catalog/1784880803627-mm-07-8.jpg",
+            "assets/images/catalog/1784880803627-mm-07-9.jpg"
+          ]
         },
         {
           "code": "MM-15",
           "name": "Plush Squeaky Duck Chew Toy",
           "image": "assets/images/catalog/041-mm-15.png",
-          "description": "Plush Squeaky Duck Chew Toy is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments."
+          "description": "Plush Squeaky Duck Chew Toy is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/041-mm-15.png",
+            "assets/images/catalog/1784881196565-mm-15-1.jpg",
+            "assets/images/catalog/1784881196565-mm-15-2.jpg",
+            "assets/images/catalog/1784881196565-mm-15-3.jpg"
+          ]
         },
         {
           "code": "LC-10",
@@ -801,7 +943,17 @@ window.PET_CATALOG_CONFIG = {
           "code": "JX-05",
           "name": "Smart Electric Rolling Cat Ball",
           "image": "assets/images/catalog/112-jx-05.png",
-          "description": "Smart Electric Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, durable chew-friendly material. A practical choice for pet owners and retail assortments."
+          "description": "Smart Electric Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, durable chew-friendly material. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/112-jx-05.png",
+            "assets/images/catalog/1784883424447-jx-05-1.jpg",
+            "assets/images/catalog/1784883424447-jx-05-2.jpg",
+            "assets/images/catalog/1784883424447-jx-05-3.jpg",
+            "assets/images/catalog/1784883424447-jx-05-4.jpg",
+            "assets/images/catalog/1784883424447-jx-05-5.jpg",
+            "assets/images/catalog/1784883424447-jx-05-6.jpg",
+            "assets/images/catalog/1784883424447-jx-05-7.jpg"
+          ]
         },
         {
           "code": "JX-01",
@@ -813,19 +965,35 @@ window.PET_CATALOG_CONFIG = {
           "code": "BP-01",
           "name": "Square Ring Chew and Dental Dog Toy",
           "image": "assets/images/catalog/062-bp-01.png",
-          "description": "Square Ring Chew and Dental Dog Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments."
+          "description": "Square Ring Chew and Dental Dog Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/062-bp-01.png",
+            "assets/images/catalog/1784881650293-bp-01-1.jpg",
+            "assets/images/catalog/1784881650293-bp-01-2.jpg",
+            "assets/images/catalog/1784881650293-bp-01-3.jpg"
+          ]
         },
         {
           "code": "PT-08",
           "name": "USB Rechargeable Automatic Laser Cat Toy",
           "image": "assets/images/catalog/067-pt-08.png",
-          "description": "USB Rechargeable Automatic Laser Cat Toy is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments."
+          "description": "USB Rechargeable Automatic Laser Cat Toy is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/067-pt-08.png",
+            "assets/images/catalog/1784881855720-pt-08-1.jpg",
+            "assets/images/catalog/1784881855720-pt-08-2.jpg"
+          ]
         },
         {
           "code": "PT-11",
           "name": "USB Rechargeable LED Rolling Cat Ball",
           "image": "assets/images/catalog/070-pt-11.png",
-          "description": "USB Rechargeable LED Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments."
+          "description": "USB Rechargeable LED Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/070-pt-11.png",
+            "assets/images/catalog/1784882034313-pt-11-1.jpg",
+            "assets/images/catalog/1784882034313-pt-11-2.jpg"
+          ]
         }
       ]
     },
@@ -838,19 +1006,41 @@ window.PET_CATALOG_CONFIG = {
           "code": "MM-08",
           "name": "Breathable Front Pet Carrier Backpack",
           "image": "assets/images/catalog/034-mm-08.png",
-          "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
+          "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/034-mm-08.png",
+            "assets/images/catalog/1784882780803-mm-08-1.jpg"
+          ]
         },
         {
           "code": "MJ-04",
           "name": "Breathable Single-Shoulder Pet Travel Carrier",
           "image": "assets/images/catalog/003-mj-04.png",
-          "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
+          "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/003-mj-04.png",
+            "assets/images/catalog/1784884076728-mj-04-1.jpg",
+            "assets/images/catalog/1784884076728-mj-04-2.jpg",
+            "assets/images/catalog/1784884076728-mj-04-3.jpg",
+            "assets/images/catalog/1784884076728-mj-04-4.jpg",
+            "assets/images/catalog/1784884076728-mj-04-5.jpg",
+            "assets/images/catalog/1784884076728-mj-04-6.jpg"
+          ]
         },
         {
           "code": "SA-01",
           "name": "Foldable Summer Pet Sling Carrier",
           "image": "assets/images/catalog/100-sa-01.png",
-          "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
+          "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/100-sa-01.png",
+            "assets/images/catalog/1784884907702-sa-01-1.jpg",
+            "assets/images/catalog/1784884907702-sa-01-2.jpg",
+            "assets/images/catalog/1784884907702-sa-01-3.jpg",
+            "assets/images/catalog/1784884907702-sa-01-4.jpg",
+            "assets/images/catalog/1784884907702-sa-01-5.jpg",
+            "assets/images/catalog/1784884907702-sa-01-6.jpg"
+          ]
         },
         {
           "code": "YW-08",
@@ -862,25 +1052,52 @@ window.PET_CATALOG_CONFIG = {
           "code": "YW-05",
           "name": "Full-Cover Front Seat Pet Car Cushion",
           "image": "assets/images/catalog/095-yw-05.png",
-          "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
+          "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/095-yw-05.png",
+            "assets/images/catalog/1784888461159-yw-05-1.png",
+            "assets/images/catalog/1784888461159-yw-05-2.jpg",
+            "assets/images/catalog/1784888461159-yw-05-3.jpg"
+          ]
         },
         {
           "code": "SA-03",
           "name": "Lightweight Foldable Pet Backpack Carrier",
           "image": "assets/images/catalog/102-sa-03.png",
-          "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
+          "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/102-sa-03.png",
+            "assets/images/catalog/1784888576585-sa-03-1.jpg",
+            "assets/images/catalog/1784888576585-sa-03-2.jpg",
+            "assets/images/catalog/1784888576585-sa-03-3.jpg",
+            "assets/images/catalog/1784888576585-sa-03-4.jpg"
+          ]
         },
         {
           "code": "MJ-06",
           "name": "Pet Safety Car Seat Bed for Back Seat",
           "image": "assets/images/catalog/005-mj-06.png",
-          "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/005-mj-06.png",
+            "assets/images/catalog/1784888780802-mj-06-1.jpg",
+            "assets/images/catalog/1784888780802-mj-06-2.jpg",
+            "assets/images/catalog/1784888780802-mj-06-3.jpg",
+            "assets/images/catalog/1784888780802-mj-06-4.jpg"
+          ]
         },
         {
           "code": "SA-02",
           "name": "Pet Shoulder Sling Carrier Bag",
           "image": "assets/images/catalog/101-sa-02.png",
-          "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments."
+          "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/101-sa-02.png",
+            "assets/images/catalog/1784888953688-sa-02-1.jpg",
+            "assets/images/catalog/1784888953688-sa-02-2.jpg",
+            "assets/images/catalog/1784888953688-sa-02-3.jpg",
+            "assets/images/catalog/1784888953688-sa-02-4.jpg"
+          ]
         },
         {
           "code": "YW-04",
@@ -1234,3 +1451,4 @@ window.PET_CATALOG_CONFIG = {
     }
   ]
 };
+
