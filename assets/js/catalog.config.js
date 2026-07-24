@@ -593,14 +593,40 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BK-16",
           "name": "Four-Season Elevated Cat Hammock Bed",
-          "image": "assets/images/catalog/048-bk-16.png",
-          "description": "Four-Season Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784858878868-bk-16-1.jpg",
+          "description": "Four-Season Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "63*46*47cm"
+            },
+            {
+              "label": "体积",
+              "value": "136206cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784858878868-bk-16-1.jpg",
+            "assets/images/catalog/1784858878868-bk-16-2.jpg",
+            "assets/images/catalog/1784858878868-bk-16-3.jpg"
+          ]
         },
         {
           "code": "BK-12",
           "name": "Four-Season Suction Cup Cat Window Hammock",
-          "image": "assets/images/catalog/044-bk-12.png",
-          "description": "Four-Season Suction Cup Cat Window Hammock is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784859177650-bk-12-1.jpg",
+          "description": "Four-Season Suction Cup Cat Window Hammock is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "30*45cm,30*52cm,30*60cm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784859177650-bk-12-1.jpg",
+            "assets/images/catalog/1784859177650-bk-12-2.jpg",
+            "assets/images/catalog/1784859177650-bk-12-3.jpg"
+          ]
         },
         {
           "code": "MJ-15",
