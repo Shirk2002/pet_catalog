@@ -903,14 +903,45 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "LS-09",
           "name": "2-in-1 Remote Anti-Bark Training Collar",
-          "image": "assets/images/catalog/088-ls-09.png",
-          "description": "2-in-1 Remote Anti-Bark Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights water-resistant construction, rechargeable USB power, anti-bark training support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784853124358-ls-09-1.jpg",
+          "description": "2-in-1 Remote Anti-Bark Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights water-resistant construction, rechargeable USB power, anti-bark training support. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "18.60\t5.20\t2.50"
+            },
+            {
+              "label": "体积",
+              "value": "241800cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784853124358-ls-09-1.jpg",
+            "assets/images/catalog/1784853124358-ls-09-2.jpg",
+            "assets/images/catalog/1784853124358-ls-09-3.jpg",
+            "assets/images/catalog/1784853124358-ls-09-4.jpg"
+          ]
         },
         {
           "code": "FD-06",
           "name": "Anti-Lost Pet GPS Tracker Collar",
-          "image": "assets/images/catalog/125-fd-06.png",
-          "description": "Anti-Lost Pet GPS Tracker Collar is designed for comfortable walks and outdoor activities. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784853289080-fd-06-1.jpg",
+          "description": "Anti-Lost Pet GPS Tracker Collar is designed for comfortable walks and outdoor activities. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "52*2\t*0.50"
+            },
+            {
+              "label": "体积",
+              "value": "50(cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784853289080-fd-06-1.jpg",
+            "assets/images/catalog/1784853289080-fd-06-2.jpg",
+            "assets/images/catalog/1784853289080-fd-06-3.jpg"
+          ]
         },
         {
           "code": "TZ-16",
