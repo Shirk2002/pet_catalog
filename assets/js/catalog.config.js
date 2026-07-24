@@ -975,20 +975,44 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-10",
           "name": "Pet GPS Tracker and Anti-Lost Locator",
-          "image": "assets/images/catalog/074-tz-10.png",
-          "description": "Pet GPS Tracker and Anti-Lost Locator is designed for everyday pet training and safety needs. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784853818995-tz-10-1.jpg",
+          "description": "Pet GPS Tracker and Anti-Lost Locator is designed for everyday pet training and safety needs. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "48*32*21mm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784853818995-tz-10-1.jpg",
+            "assets/images/catalog/1784853818995-tz-10-2.jpg",
+            "assets/images/catalog/1784853818995-tz-10-3.jpg",
+            "assets/images/catalog/1784853818995-tz-10-4.jpg"
+          ]
         },
         {
           "code": "TZ-15",
           "name": "Portable Ultrasonic Dog Trainer",
-          "image": "assets/images/catalog/079-tz-15.png",
-          "description": "Portable Ultrasonic Dog Trainer is designed for everyday pet training and safety needs. The product listing highlights ultrasonic training support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784853946573-tz-15-1.jpg",
+          "description": "Portable Ultrasonic Dog Trainer is designed for everyday pet training and safety needs. The product listing highlights ultrasonic training support. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784853946573-tz-15-1.jpg",
+            "assets/images/catalog/1784853946573-tz-15-2.jpg",
+            "assets/images/catalog/1784853946573-tz-15-3.jpg",
+            "assets/images/catalog/1784853946573-tz-15-4.jpg"
+          ]
         },
         {
           "code": "TZ-09",
           "name": "Portable Ultrasonic Dog Training Deterrent",
-          "image": "assets/images/catalog/073-tz-09.png",
-          "description": "Portable Ultrasonic Dog Training Deterrent is designed for everyday pet training and safety needs. The product listing highlights anti-bark training support, ultrasonic training support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784854060562-tz-09-1.jpg",
+          "description": "Portable Ultrasonic Dog Training Deterrent is designed for everyday pet training and safety needs. The product listing highlights anti-bark training support, ultrasonic training support. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784854060562-tz-09-1.jpg",
+            "assets/images/catalog/1784854060562-tz-09-2.jpg",
+            "assets/images/catalog/1784854060562-tz-09-3.jpg",
+            "assets/images/catalog/1784854060562-tz-09-4.jpg"
+          ]
         },
         {
           "code": "TZ-14",
