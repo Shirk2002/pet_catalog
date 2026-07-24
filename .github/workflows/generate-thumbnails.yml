@@ -5,11 +5,11 @@ on:
     branches:
       - main
     paths:
-      - "assets/images/catalog/*.png"
-      - "assets/images/catalog/*.jpg"
-      - "assets/images/catalog/*.jpeg"
-      - "assets/images/catalog/*.webp"
-      - "assets/images/catalog/*.gif"
+      - "assets/images/catalog/**/*.png"
+      - "assets/images/catalog/**/*.jpg"
+      - "assets/images/catalog/**/*.jpeg"
+      - "assets/images/catalog/**/*.webp"
+      - "assets/images/catalog/**/*.gif"
   workflow_dispatch:
 
 permissions:
@@ -47,25 +47,36 @@ jobs:
           thumbnails.mkdir(exist_ok=True)
           optimized.mkdir(exist_ok=True)
 
+          extensions = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
+
           image_paths = [
               path
-              for pattern in ("*.png", "*.jpg", "*.jpeg", "*.webp", "*.gif")
-              for path in source.glob(pattern)
-              if path.parent == source
+              for path in source.rglob("*")
+              if path.is_file()
+              and path.suffix.lower() in extensions
+              and thumbnails not in path.parents
+              and optimized not in path.parents
           ]
 
           for image_path in image_paths:
+              relative = image_path.relative_to(source)
+              thumbnail_target = thumbnails / relative.with_suffix(".webp")
+              optimized_target = optimized / relative.with_suffix(".webp")
+
+              thumbnail_target.parent.mkdir(parents=True, exist_ok=True)
+              optimized_target.parent.mkdir(parents=True, exist_ok=True)
+
               with Image.open(image_path) as image:
                   if image.mode not in ("RGB", "RGBA"):
                       image = image.convert("RGBA" if "transparency" in image.info else "RGB")
 
                   thumbnail_image = image.copy()
                   thumbnail_image.thumbnail((640, 480), Image.Resampling.LANCZOS)
-                  thumbnail_image.save(thumbnails / f"{image_path.stem}.webp", "WEBP", quality=74, method=6)
+                  thumbnail_image.save(thumbnail_target, "WEBP", quality=74, method=6)
 
                   optimized_image = image.copy()
                   optimized_image.thumbnail((1200, 1200), Image.Resampling.LANCZOS)
-                  optimized_image.save(optimized / f"{image_path.stem}.webp", "WEBP", quality=82, method=6)
+                  optimized_image.save(optimized_target, "WEBP", quality=82, method=6)
           PY
 
       - name: Commit generated thumbnails

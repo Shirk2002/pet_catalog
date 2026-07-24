@@ -35,7 +35,12 @@
 
   function getCatalogImageDerivativePath(path, type) {
     const match = String(path || "").match(/^assets\/images\/catalog\/(.+)\.(png|jpe?g|webp|gif)$/i);
-    return match ? `assets/images/catalog/${type}/${match[1]}.webp` : path;
+    if (!match) return path;
+    const inner = match[1];
+    if (inner.startsWith("thumbnails/") || inner.startsWith("optimized/")) {
+      return path;
+    }
+    return `assets/images/catalog/${type}/${inner}.webp`;
   }
 
   function getCatalogThumbnailPath(path) {
