@@ -523,14 +523,44 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "FD-01",
           "name": "All-Season Cat and Dog Bed",
-          "image": "assets/images/catalog/122-fd-01.png",
-          "description": "All-Season Cat and Dog Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784857708450-fd-01-1.jpg",
+          "description": "All-Season Cat and Dog Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "75*58*19cm"
+            },
+            {
+              "label": "体积",
+              "value": "82650cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784857708450-fd-01-1.jpg",
+            "assets/images/catalog/1784857708450-fd-01-2.jpg",
+            "assets/images/catalog/1784857708450-fd-01-3.jpg",
+            "assets/images/catalog/1784857708450-fd-01-4.jpg"
+          ]
         },
         {
           "code": "MJ-13",
           "name": "Compressed Sofa-Style Pet Bed",
-          "image": "assets/images/catalog/119-mj-13.png",
-          "description": "Compressed Sofa-Style Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784857928682-mj-13-1.jpg",
+          "description": "Compressed Sofa-Style Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "50*50*16cm"
+            },
+            {
+              "label": "体积",
+              "value": "40000cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784857928682-mj-13-1.jpg",
+            "assets/images/catalog/1784857928682-mj-13-2.jpg"
+          ]
         },
         {
           "code": "GJ-08",
