@@ -1017,14 +1017,36 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-14",
           "name": "Smart Automatic Anti-Bark Vibration Collar",
-          "image": "assets/images/catalog/078-tz-14.png",
-          "description": "Smart Automatic Anti-Bark Vibration Collar is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, anti-bark training support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784854248692-tz-14-1.jpg",
+          "description": "Smart Automatic Anti-Bark Vibration Collar is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, anti-bark training support. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784854248692-tz-14-1.jpg",
+            "assets/images/catalog/1784854248692-tz-14-2.jpg",
+            "assets/images/catalog/1784854248692-tz-14-3.jpg",
+            "assets/images/catalog/1784854248692-tz-14-4.jpg"
+          ]
         },
         {
           "code": "TZ-12",
           "name": "Ultrasonic Smart Anti-Bark Training Collar",
-          "image": "assets/images/catalog/076-tz-12.png",
-          "description": "Ultrasonic Smart Anti-Bark Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation, anti-bark training support, ultrasonic training support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784854418710-tz-12-1.jpg",
+          "description": "Ultrasonic Smart Anti-Bark Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation, anti-bark training support, ultrasonic training support. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "67.9*37.3*32.5MM"
+            },
+            {
+              "label": "重量",
+              "value": "150g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784854418710-tz-12-1.jpg",
+            "assets/images/catalog/1784854418710-tz-12-2.jpg",
+            "assets/images/catalog/1784854418710-tz-12-3.jpg",
+            "assets/images/catalog/1784854418710-tz-12-4.jpg"
+          ]
         }
       ]
     }
