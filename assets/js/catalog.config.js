@@ -505,8 +505,20 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BK-14",
           "name": "Adjustable Round Desk Cat Hammock",
-          "image": "assets/images/catalog/046-bk-14.png",
-          "description": "Adjustable Round Desk Cat Hammock is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784857323228-bk-14-1.jpg",
+          "description": "Adjustable Round Desk Cat Hammock is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "直径40cm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784857323228-bk-14-1.jpg",
+            "assets/images/catalog/1784857323228-bk-14-2.jpg",
+            "assets/images/catalog/1784857323228-bk-14-3.jpg",
+            "assets/images/catalog/1784857323228-bk-14-4.jpg"
+          ]
         },
         {
           "code": "FD-01",
