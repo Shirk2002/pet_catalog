@@ -42,8 +42,10 @@ jobs:
           from PIL import Image
 
           source = Path("assets/images/catalog")
-          target = source / "thumbnails"
-          target.mkdir(exist_ok=True)
+          thumbnails = source / "thumbnails"
+          optimized = source / "optimized"
+          thumbnails.mkdir(exist_ok=True)
+          optimized.mkdir(exist_ok=True)
 
           image_paths = [
               path
@@ -53,24 +55,26 @@ jobs:
           ]
 
           for image_path in image_paths:
-              thumbnail_path = target / f"{image_path.stem}.webp"
-              if thumbnail_path.exists():
-                  continue
-
               with Image.open(image_path) as image:
-                  image.thumbnail((640, 480), Image.Resampling.LANCZOS)
                   if image.mode not in ("RGB", "RGBA"):
                       image = image.convert("RGBA" if "transparency" in image.info else "RGB")
-                  image.save(thumbnail_path, "WEBP", quality=78, method=6)
+
+                  thumbnail_image = image.copy()
+                  thumbnail_image.thumbnail((640, 480), Image.Resampling.LANCZOS)
+                  thumbnail_image.save(thumbnails / f"{image_path.stem}.webp", "WEBP", quality=74, method=6)
+
+                  optimized_image = image.copy()
+                  optimized_image.thumbnail((1200, 1200), Image.Resampling.LANCZOS)
+                  optimized_image.save(optimized / f"{image_path.stem}.webp", "WEBP", quality=82, method=6)
           PY
 
       - name: Commit generated thumbnails
         run: |
-          if git diff --quiet -- assets/images/catalog/thumbnails; then
+          if git diff --quiet -- assets/images/catalog/thumbnails assets/images/catalog/optimized; then
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/images/catalog/thumbnails
+          git add assets/images/catalog/thumbnails assets/images/catalog/optimized
           git commit -m "Generate catalog thumbnails"
           git push

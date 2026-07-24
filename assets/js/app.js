@@ -33,9 +33,17 @@
     return uniqueImages.length ? uniqueImages : ["assets/images/placeholder.svg"];
   }
 
-  function getCatalogThumbnailPath(path) {
+  function getCatalogImageDerivativePath(path, type) {
     const match = String(path || "").match(/^assets\/images\/catalog\/(.+)\.(png|jpe?g|webp|gif)$/i);
-    return match ? `assets/images/catalog/thumbnails/${match[1]}.webp` : path;
+    return match ? `assets/images/catalog/${type}/${match[1]}.webp` : path;
+  }
+
+  function getCatalogThumbnailPath(path) {
+    return getCatalogImageDerivativePath(path, "thumbnails");
+  }
+
+  function getCatalogOptimizedImagePath(path) {
+    return getCatalogImageDerivativePath(path, "optimized");
   }
 
   function setSiteInfo() {
@@ -162,16 +170,23 @@
   }
 
   function selectDetailImage(images, selectedImage, productName) {
+    const optimizedImage = getCatalogOptimizedImagePath(selectedImage);
+    let fallbackAttempted = false;
     detailMainImage.classList.add("is-loading");
     detailMainImage.alt = productName || "Product image";
     detailMainImage.onload = () => {
       detailMainImage.classList.remove("is-loading");
     };
     detailMainImage.onerror = () => {
+      if (!fallbackAttempted && optimizedImage !== selectedImage) {
+        fallbackAttempted = true;
+        detailMainImage.src = selectedImage;
+        return;
+      }
       detailMainImage.onerror = null;
       detailMainImage.src = "assets/images/placeholder.svg";
     };
-    detailMainImage.src = selectedImage;
+    detailMainImage.src = optimizedImage;
     [...detailThumbnails.children].forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.image === selectedImage));
     });
@@ -208,9 +223,18 @@
       button.dataset.image = imagePath;
       button.setAttribute("aria-label", `View image ${index + 1}`);
       const image = document.createElement("img");
-      image.src = imagePath;
+      const thumbnailPath = getCatalogThumbnailPath(imagePath);
+      let fallbackAttempted = false;
+      image.src = thumbnailPath;
       image.alt = `${product.name || "Product"} image ${index + 1}`;
+      image.loading = "lazy";
+      image.decoding = "async";
       image.onerror = () => {
+        if (!fallbackAttempted && thumbnailPath !== imagePath) {
+          fallbackAttempted = true;
+          image.src = imagePath;
+          return;
+        }
         image.src = "assets/images/placeholder.svg";
       };
       button.appendChild(image);

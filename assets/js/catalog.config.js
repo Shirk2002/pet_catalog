@@ -25,11 +25,11 @@ window.PET_CATALOG_CONFIG = {
           "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
-              "value": "4.7*4.3*2.3cm"
+              "label": "Dimensions",
+              "value": "4.7 × 4.3 × 2.3cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "48.463cm³"
             },
             {
@@ -45,11 +45,11 @@ window.PET_CATALOG_CONFIG = {
           "description": "Enclosed Smart Cat Litter Box with Camera is designed for daily pet care and grooming routines. The product listing highlights camera monitoring, smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
-              "value": "55*59*60cm"
+              "label": "Dimensions",
+              "value": "55 × 59 × 60cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "194700cm³"
             }
           ],
@@ -66,12 +66,12 @@ window.PET_CATALOG_CONFIG = {
           "description": "Fully Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "2.4G 72L"
             },
             {
               "label": "尺寸",
-              "value": "55*59*60cm"
+              "value": "55 × 59 × 60cm"
             }
           ],
           "images": [
@@ -99,7 +99,7 @@ window.PET_CATALOG_CONFIG = {
           "description": "LED Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "225*176*173MM"
             }
           ],
@@ -115,12 +115,12 @@ window.PET_CATALOG_CONFIG = {
           "description": "Open-Top Automatic Self-Cleaning Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights easy-care removable parts, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "8L"
             },
             {
               "label": "尺寸",
-              "value": "47.50*55.60*56.20 cm"
+              "value": "47.50 × 55.60 × 56.20 cm"
             },
             {
               "label": "重量",
@@ -142,12 +142,12 @@ window.PET_CATALOG_CONFIG = {
           "description": "Open-Top Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "8L"
             },
             {
               "label": "尺寸",
-              "value": "47.50*55.60*56.20 cm"
+              "value": "47.50 × 55.60 × 56.20 cm"
             },
             {
               "label": "重量",
@@ -257,7 +257,7 @@ window.PET_CATALOG_CONFIG = {
           "description": "2.5L Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "225*176*173MM"
             },
             {
@@ -323,10 +323,10 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "30.20*20*1.40cm"
+              "value": "30.20 × 20 × 1.40cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "560-845.6cm³"
             }
           ]
@@ -386,7 +386,7 @@ window.PET_CATALOG_CONFIG = {
           "description": "Rechargeable Smart Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights easy-care removable parts, smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "2.6L"
             }
           ],
@@ -405,15 +405,15 @@ window.PET_CATALOG_CONFIG = {
           "description": "Silicone Pet Lick Mat with Suction Cups is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "200*200*5mm"
             },
             {
               "label": "尺寸",
-              "value": "20*20*1.50cm"
+              "value": "20 × 20 × 1.50cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "600cm³"
             }
           ],
@@ -488,10 +488,10 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "14-30*14-28*1cm"
+              "value": "14-30 × 14-28 × 1cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "192-720cm³"
             }
           ],
@@ -509,7 +509,7 @@ window.PET_CATALOG_CONFIG = {
           "description": "Adjustable Round Desk Cat Hammock is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "规格",
+              "label": "Dimensions",
               "value": "直径40cm"
             }
           ],
@@ -528,10 +528,10 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "75*58*19cm"
+              "value": "75 × 58 × 19cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "82650cm³"
             }
           ],
@@ -550,10 +550,10 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "50*50*16cm"
+              "value": "50 × 50 × 16cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "40000cm³"
             }
           ],
@@ -581,7 +581,7 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "30*45cm,30*52cm,30*60cm"
+              "value": "30 × 45cm,30 × 52cm,30 × 60cm"
             }
           ],
           "images": [
@@ -598,10 +598,10 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "63*46*47cm"
+              "value": "63 × 46 × 47cm"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "136206cm³"
             }
           ],
@@ -619,7 +619,7 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "30*45cm,30*52cm,30*60cm"
+              "value": "30 × 45cm,30 × 52cm,30 × 60cm"
             }
           ],
           "images": [
@@ -1093,7 +1093,7 @@ window.PET_CATALOG_CONFIG = {
               "value": "18.60\t5.20\t2.50"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "241800cm³"
             }
           ],
@@ -1120,7 +1120,7 @@ window.PET_CATALOG_CONFIG = {
               "value": "52*2\t*0.50"
             },
             {
-              "label": "体积",
+              "label": "Volume",
               "value": "50(cm³"
             }
           ]
