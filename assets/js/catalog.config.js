@@ -1005,42 +1005,36 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-08",
           "name": "Breathable Front Pet Carrier Backpack",
-          "image": "assets/images/catalog/034-mm-08.png",
-          "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
-          "images": [
-            "assets/images/catalog/034-mm-08.png",
-            "assets/images/catalog/1784882780803-mm-08-1.jpg"
-          ]
+          "image": "assets/images/catalog/1784882780803-mm-08-1.jpg",
+          "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MJ-04",
           "name": "Breathable Single-Shoulder Pet Travel Carrier",
-          "image": "assets/images/catalog/003-mj-04.png",
-          "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784884076728-mj-04-1.jpg",
           "images": [
-            "assets/images/catalog/003-mj-04.png",
             "assets/images/catalog/1784884076728-mj-04-1.jpg",
             "assets/images/catalog/1784884076728-mj-04-2.jpg",
             "assets/images/catalog/1784884076728-mj-04-3.jpg",
             "assets/images/catalog/1784884076728-mj-04-4.jpg",
             "assets/images/catalog/1784884076728-mj-04-5.jpg",
             "assets/images/catalog/1784884076728-mj-04-6.jpg"
-          ]
+          ],
+          "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "SA-01",
           "name": "Foldable Summer Pet Sling Carrier",
-          "image": "assets/images/catalog/100-sa-01.png",
-          "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784884907702-sa-01-1.jpg",
           "images": [
-            "assets/images/catalog/100-sa-01.png",
             "assets/images/catalog/1784884907702-sa-01-1.jpg",
             "assets/images/catalog/1784884907702-sa-01-2.jpg",
             "assets/images/catalog/1784884907702-sa-01-3.jpg",
             "assets/images/catalog/1784884907702-sa-01-4.jpg",
             "assets/images/catalog/1784884907702-sa-01-5.jpg",
             "assets/images/catalog/1784884907702-sa-01-6.jpg"
-          ]
+          ],
+          "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YW-08",
@@ -1051,53 +1045,49 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YW-05",
           "name": "Full-Cover Front Seat Pet Car Cushion",
-          "image": "assets/images/catalog/095-yw-05.png",
-          "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784888461159-yw-05-1.png",
           "images": [
-            "assets/images/catalog/095-yw-05.png",
             "assets/images/catalog/1784888461159-yw-05-1.png",
             "assets/images/catalog/1784888461159-yw-05-2.jpg",
             "assets/images/catalog/1784888461159-yw-05-3.jpg"
-          ]
+          ],
+          "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "SA-03",
           "name": "Lightweight Foldable Pet Backpack Carrier",
-          "image": "assets/images/catalog/102-sa-03.png",
-          "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784888576585-sa-03-1.jpg",
           "images": [
-            "assets/images/catalog/102-sa-03.png",
             "assets/images/catalog/1784888576585-sa-03-1.jpg",
             "assets/images/catalog/1784888576585-sa-03-2.jpg",
             "assets/images/catalog/1784888576585-sa-03-3.jpg",
             "assets/images/catalog/1784888576585-sa-03-4.jpg"
-          ]
+          ],
+          "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MJ-06",
           "name": "Pet Safety Car Seat Bed for Back Seat",
-          "image": "assets/images/catalog/005-mj-06.png",
-          "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784888780802-mj-06-1.jpg",
           "images": [
-            "assets/images/catalog/005-mj-06.png",
             "assets/images/catalog/1784888780802-mj-06-1.jpg",
             "assets/images/catalog/1784888780802-mj-06-2.jpg",
             "assets/images/catalog/1784888780802-mj-06-3.jpg",
             "assets/images/catalog/1784888780802-mj-06-4.jpg"
-          ]
+          ],
+          "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "SA-02",
           "name": "Pet Shoulder Sling Carrier Bag",
-          "image": "assets/images/catalog/101-sa-02.png",
-          "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784888953688-sa-02-1.jpg",
           "images": [
-            "assets/images/catalog/101-sa-02.png",
             "assets/images/catalog/1784888953688-sa-02-1.jpg",
             "assets/images/catalog/1784888953688-sa-02-2.jpg",
             "assets/images/catalog/1784888953688-sa-02-3.jpg",
             "assets/images/catalog/1784888953688-sa-02-4.jpg"
-          ]
+          ],
+          "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YW-04",
@@ -1451,4 +1441,3 @@ window.PET_CATALOG_CONFIG = {
     }
   ]
 };
-
