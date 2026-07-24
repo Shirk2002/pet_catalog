@@ -925,7 +925,12 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "FD-06",
           "name": "Anti-Lost Pet GPS Tracker Collar",
-          "image": "assets/images/catalog/1784853289080-fd-06-1.jpg",
+          "image": "assets/images/catalog/1784853289080-fd-06-2.jpg",
+          "images": [
+            "assets/images/catalog/1784853289080-fd-06-2.jpg",
+            "assets/images/catalog/1784853289080-fd-06-1.jpg",
+            "assets/images/catalog/1784853289080-fd-06-3.jpg"
+          ],
           "description": "Anti-Lost Pet GPS Tracker Collar is designed for comfortable walks and outdoor activities. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -936,24 +941,36 @@ window.PET_CATALOG_CONFIG = {
               "label": "体积",
               "value": "50(cm³"
             }
-          ],
-          "images": [
-            "assets/images/catalog/1784853289080-fd-06-1.jpg",
-            "assets/images/catalog/1784853289080-fd-06-2.jpg",
-            "assets/images/catalog/1784853289080-fd-06-3.jpg"
           ]
         },
         {
           "code": "TZ-16",
           "name": "Color Screen Remote Dog Training Collar",
-          "image": "assets/images/catalog/081-tz-16.png",
-          "description": "Color Screen Remote Dog Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784853521187-tz-16-1.jpg",
+          "description": "Color Screen Remote Dog Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "25*176*173mm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784853521187-tz-16-1.jpg",
+            "assets/images/catalog/1784853521187-tz-16-2.jpg",
+            "assets/images/catalog/1784853521187-tz-16-3.jpg",
+            "assets/images/catalog/1784853521187-tz-16-4.jpg"
+          ]
         },
         {
           "code": "TZ-11",
           "name": "Color Screen Waterproof Anti-Bark Collar",
-          "image": "assets/images/catalog/075-tz-11.png",
-          "description": "Color Screen Waterproof Anti-Bark Collar is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, anti-bark training support. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784853632418-tz-11-1.jpg",
+          "description": "Color Screen Waterproof Anti-Bark Collar is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, anti-bark training support. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784853632418-tz-11-1.jpg",
+            "assets/images/catalog/1784853632418-tz-11-2.jpg",
+            "assets/images/catalog/1784853632418-tz-11-3.jpg"
+          ]
         },
         {
           "code": "TZ-10",
