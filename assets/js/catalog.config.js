@@ -312,13 +312,23 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-08",
           "name": "Food-Grade Silicone Slow Feeder Mat",
-          "image": "assets/images/catalog/007-mj-08.png",
+          "image": "assets/images/catalog/1784855278695-mj-08-1.jpg",
           "description": "Food-Grade Silicone Slow Feeder Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "M",
-              "value": "123"
+              "label": "尺寸",
+              "value": "30.20*20*1.40cm"
+            },
+            {
+              "label": "体积",
+              "value": "560-845.6cm³"
             }
+          ],
+          "images": [
+            "assets/images/catalog/1784855278695-mj-08-1.jpg",
+            "assets/images/catalog/1784855278695-mj-08-2.jpg",
+            "assets/images/catalog/1784855278695-mj-08-3.jpg",
+            "assets/images/catalog/1784855278695-mj-08-4.jpg"
           ]
         },
         {
@@ -354,14 +364,39 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "XZY-05",
           "name": "Maple Leaf Silicone Slow Feeder Bowl",
-          "image": "assets/images/catalog/090-xzy-05.png",
-          "description": "Maple Leaf Silicone Slow Feeder Bowl is designed for organized daily feeding and hydration. The product listing highlights slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784855417599-xzy-05-1.jpg",
+          "description": "Maple Leaf Silicone Slow Feeder Bowl is designed for organized daily feeding and hydration. The product listing highlights slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "100g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784855417599-xzy-05-1.jpg",
+            "assets/images/catalog/1784855417599-xzy-05-2.jpg",
+            "assets/images/catalog/1784855417599-xzy-05-3.jpg",
+            "assets/images/catalog/1784855417599-xzy-05-4.jpg"
+          ]
         },
         {
           "code": "C2-L",
           "name": "Rechargeable Smart Pet Water Fountain",
-          "image": "assets/images/catalog/054-c2-l.png",
-          "description": "Rechargeable Smart Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights easy-care removable parts, smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784855548296-c2-l-1.jpg",
+          "description": "Rechargeable Smart Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights easy-care removable parts, smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "规格",
+              "value": "2.6L"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784855548296-c2-l-1.jpg",
+            "assets/images/catalog/1784855548296-c2-l-2.jpg",
+            "assets/images/catalog/1784855548296-c2-l-3.jpg",
+            "assets/images/catalog/1784855548296-c2-l-4.jpg",
+            "assets/images/catalog/1784855548296-c2-l-5.jpg"
+          ]
         },
         {
           "code": "XZY-03",
