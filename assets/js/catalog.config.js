@@ -313,6 +313,12 @@ window.PET_CATALOG_CONFIG = {
           "code": "MJ-08",
           "name": "Food-Grade Silicone Slow Feeder Mat",
           "image": "assets/images/catalog/1784855278695-mj-08-1.jpg",
+          "images": [
+            "assets/images/catalog/1784855278695-mj-08-1.jpg",
+            "assets/images/catalog/1784855278695-mj-08-2.jpg",
+            "assets/images/catalog/1784855278695-mj-08-3.jpg",
+            "assets/images/catalog/1784855278695-mj-08-4.jpg"
+          ],
           "description": "Food-Grade Silicone Slow Feeder Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -323,12 +329,6 @@ window.PET_CATALOG_CONFIG = {
               "label": "体积",
               "value": "560-845.6cm³"
             }
-          ],
-          "images": [
-            "assets/images/catalog/1784855278695-mj-08-1.jpg",
-            "assets/images/catalog/1784855278695-mj-08-2.jpg",
-            "assets/images/catalog/1784855278695-mj-08-3.jpg",
-            "assets/images/catalog/1784855278695-mj-08-4.jpg"
           ]
         },
         {
@@ -401,36 +401,65 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "XZY-03",
           "name": "Silicone Pet Lick Mat with Suction Cups",
-          "image": "assets/images/catalog/089-xzy-03.png",
+          "image": "assets/images/catalog/1784855837956-xzy-03-1.jpg",
           "description": "Silicone Pet Lick Mat with Suction Cups is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "m",
-              "value": "123"
+              "label": "规格",
+              "value": "200*200*5mm"
             },
             {
-              "label": "a",
-              "value": "123"
+              "label": "尺寸",
+              "value": "20*20*1.50cm"
+            },
+            {
+              "label": "体积",
+              "value": "600cm³"
             }
+          ],
+          "images": [
+            "assets/images/catalog/1784855837956-xzy-03-1.jpg",
+            "assets/images/catalog/1784855837956-xzy-03-2.jpg"
           ]
         },
         {
           "code": "XZY-07",
           "name": "Silicone Slow Feeder Lick Mat",
-          "image": "assets/images/catalog/092-xzy-07.png",
-          "description": "Silicone Slow Feeder Lick Mat is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784855980994-xzy-07-1.jpg",
+          "description": "Silicone Slow Feeder Lick Mat is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "113g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784855980994-xzy-07-1.jpg",
+            "assets/images/catalog/1784855980994-xzy-07-2.jpg",
+            "assets/images/catalog/1784855980994-xzy-07-3.jpg",
+            "assets/images/catalog/1784855980994-xzy-07-4.jpg"
+          ]
         },
         {
           "code": "PT03W",
           "name": "Smart Pet Feeder with Camera and Remote Control",
-          "image": "assets/images/catalog/021-pt03w.png",
-          "description": "Smart Pet Feeder with Camera and Remote Control is designed for organized daily feeding and hydration. The product listing highlights scheduled portion control, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784856261771-pt03w-1.jpg",
+          "description": "Smart Pet Feeder with Camera and Remote Control is designed for organized daily feeding and hydration. The product listing highlights scheduled portion control, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784856261771-pt03w-1.jpg",
+            "assets/images/catalog/1784856261771-pt03w-2.jpg"
+          ]
         },
         {
           "code": "PT08W",
           "name": "WiFi Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/022-pt08w.png",
-          "description": "WiFi Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights scheduled portion control, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784856397033-pt08w-1.jpg",
+          "description": "WiFi Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights scheduled portion control, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784856397033-pt08w-1.jpg",
+            "assets/images/catalog/1784856397033-pt08w-2.jpg",
+            "assets/images/catalog/1784856397033-pt08w-3.jpg"
+          ]
         }
       ]
     },
