@@ -563,22 +563,32 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "GJ-08",
-          "name": "Cozy Pet Bedding Textile Mat",
-          "image": "assets/images/catalog/027-gj-08.png",
-          "description": "Cozy Pet Bedding Textile Mat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "BK-13",
           "name": "Desk-Mounted Cat Hammock Bed",
-          "image": "assets/images/catalog/045-bk-13.png",
-          "description": "Desk-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784858433725-bk-13-1.jpg",
+          "description": "Desk-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784858433725-bk-13-1.jpg",
+            "assets/images/catalog/1784858433725-bk-13-2.jpg",
+            "assets/images/catalog/1784858433725-bk-13-3.jpg"
+          ]
         },
         {
           "code": "BK-15",
           "name": "Foldable Dual-Suction Cat Window Hammock",
-          "image": "assets/images/catalog/047-bk-15.png",
-          "description": "Foldable Dual-Suction Cat Window Hammock is designed for comfortable rest and home enrichment. The product listing highlights a foldable design, secure suction-cup mounting. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784858657220-bk-15-1.jpg",
+          "description": "Foldable Dual-Suction Cat Window Hammock is designed for comfortable rest and home enrichment. The product listing highlights a foldable design, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "30*45cm,30*52cm,30*60cm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784858657220-bk-15-1.jpg",
+            "assets/images/catalog/1784858657220-bk-15-2.jpg",
+            "assets/images/catalog/1784858657220-bk-15-3.jpg"
+          ]
         },
         {
           "code": "BK-16",
