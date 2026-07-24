@@ -324,14 +324,32 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT05K",
           "name": "HD Camera Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/060-pt05k.png",
-          "description": "HD Camera Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784854821109-pt05k-1.jpg",
+          "description": "HD Camera Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784854821109-pt05k-1.jpg",
+            "assets/images/catalog/1784854821109-pt05k-2.jpg",
+            "assets/images/catalog/1784854821109-pt05k-3.jpg"
+          ]
         },
         {
           "code": "XZY-06",
           "name": "Large Thick Slow Feeder Pet Plate",
-          "image": "assets/images/catalog/091-xzy-06.png",
-          "description": "Large Thick Slow Feeder Pet Plate is designed for organized daily feeding and hydration. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784854977718-xzy-06-1.jpg",
+          "description": "Large Thick Slow Feeder Pet Plate is designed for organized daily feeding and hydration. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "360g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784854977718-xzy-06-1.jpg",
+            "assets/images/catalog/1784854977718-xzy-06-2.jpg",
+            "assets/images/catalog/1784854977718-xzy-06-3.jpg",
+            "assets/images/catalog/1784854977718-xzy-06-4.jpg",
+            "assets/images/catalog/1784854977718-xzy-06-5.jpg"
+          ]
         },
         {
           "code": "XZY-05",
