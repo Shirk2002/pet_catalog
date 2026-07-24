@@ -471,14 +471,36 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BK-17",
           "name": "360-Degree Rotating Adjustable Desk Cat Bed",
-          "image": "assets/images/catalog/049-bk-17.png",
-          "description": "360-Degree Rotating Adjustable Desk Cat Bed is designed for comfortable rest and home enrichment. The product listing highlights adjustable fitting. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784856841331-bk-17-1.jpg",
+          "description": "360-Degree Rotating Adjustable Desk Cat Bed is designed for comfortable rest and home enrichment. The product listing highlights adjustable fitting. A practical choice for pet owners and retail assortments.",
+          "images": [
+            "assets/images/catalog/1784856841331-bk-17-1.jpg",
+            "assets/images/catalog/1784856841331-bk-17-2.jpg",
+            "assets/images/catalog/1784856841331-bk-17-3.jpg",
+            "assets/images/catalog/1784856841331-bk-17-4.jpg"
+          ]
         },
         {
           "code": "MJ-09",
           "name": "Adjustable Plush Cat Cage Hammock",
-          "image": "assets/images/catalog/008-mj-09.png",
-          "description": "Adjustable Plush Cat Cage Hammock is designed for comfortable rest and home enrichment. The product listing highlights breathable material, warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/1784857089681-mj-09-1.jpg",
+          "description": "Adjustable Plush Cat Cage Hammock is designed for comfortable rest and home enrichment. The product listing highlights breathable material, warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "14-30*14-28*1cm"
+            },
+            {
+              "label": "体积",
+              "value": "192-720cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/1784857089681-mj-09-1.jpg",
+            "assets/images/catalog/1784857089681-mj-09-2.jpg",
+            "assets/images/catalog/1784857089681-mj-09-3.jpg",
+            "assets/images/catalog/1784857089681-mj-09-4.jpg"
+          ]
         },
         {
           "code": "BK-14",
