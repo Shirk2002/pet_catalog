@@ -1209,7 +1209,9 @@
           }
 
           const remoteProduct = remoteEntries[0].product;
-          const images = mergeUniqueValues([...getProductImagePaths(remoteProduct), ...getProductImagePaths(localProduct)]);
+          const removedImages = new Set(state.pendingImageDeletes);
+          const images = mergeUniqueValues([...getProductImagePaths(remoteProduct), ...getProductImagePaths(localProduct)])
+            .filter((path) => !removedImages.has(path));
           const specifications = mergeSpecifications(remoteProduct.specifications, localProduct.specifications);
           Object.assign(remoteProduct, localProduct, { image: images[0], images });
           if (specifications.length) {
@@ -1236,7 +1238,9 @@
           if (localEntries.length !== 1 || remoteEntries.length !== 1) return false;
           const localProduct = localEntries[0].product;
           const remoteProduct = remoteEntries[0].product;
-          return getProductImagePaths(localProduct).every((path) => getProductImagePaths(remoteProduct).includes(path))
+          const remoteImages = getProductImagePaths(remoteProduct);
+          return getProductImagePaths(localProduct).every((path) => remoteImages.includes(path))
+            && state.pendingImageDeletes.every((path) => !remoteImages.includes(path))
             && mergeSpecifications(localProduct.specifications, remoteProduct.specifications).length
               === normalizeSpecifications(remoteProduct.specifications).length;
         });
