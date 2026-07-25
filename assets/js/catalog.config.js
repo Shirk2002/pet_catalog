@@ -708,12 +708,6 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "MJ-11",
-          "name": "Screw-Mount Cat Window Hammock Bed",
-          "image": "assets/images/catalog/mj-11/010-mj-11.png",
-          "description": "Screw-Mount Cat Window Hammock Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "MJ-12",
           "name": "Short-Plush Winter Cat and Dog Bed",
           "image": "assets/images/catalog/mj-12/1784874804150-mj-12-1.jpg",
