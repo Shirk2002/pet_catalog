@@ -1165,24 +1165,6 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "MJ-07",
-          "name": "Waterproof Rear Seat Pet Travel Mat",
-          "image": "assets/images/catalog/mj-07/1784901675764-mj-07-1.jpg",
-          "description": "Waterproof Rear Seat Pet Travel Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
-          "images": [
-            "assets/images/catalog/mj-07/1784901675764-mj-07-1.jpg",
-            "assets/images/catalog/mj-07/1784901675764-mj-07-2.jpg",
-            "assets/images/catalog/mj-07/1784901675764-mj-07-3.jpg",
-            "assets/images/catalog/mj-07/1784901675764-mj-07-4.jpg"
-          ],
-          "specifications": [
-            {
-              "label": "Dimensions",
-              "value": "140*135cm"
-            }
-          ]
-        },
-        {
           "code": "MM-08",
           "name": "Breathable Front Pet Carrier Backpack",
           "image": "assets/images/catalog/mm-08/1784882780803-mm-08-1.jpg",
@@ -1354,8 +1336,20 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YW-08",
           "name": "Foldable Waterproof Trunk Pet Cargo Liner",
-          "image": "assets/images/catalog/yw-08/098-yw-08.png",
-          "description": "Foldable Waterproof Trunk Pet Cargo Liner is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a foldable design. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/yw-08/yw-08-1.jpg",
+          "description": "Foldable Waterproof Trunk Pet Cargo Liner is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a foldable design. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "150*135cm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/yw-08/yw-08-1.jpg",
+            "assets/images/catalog/yw-08/yw-08-2.jpg",
+            "assets/images/catalog/yw-08/yw-08-3.jpg",
+            "assets/images/catalog/yw-08/yw-08-4.jpg"
+          ]
         }
       ]
     },
