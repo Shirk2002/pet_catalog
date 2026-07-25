@@ -1022,6 +1022,10 @@
         els.completionBackdrop.classList.remove("open");
       }
 
+      function isCatalogUpdateInProgressError(error) {
+        return /assets\/js\/catalog\.config\.js does not match/i.test(String(error?.message || error));
+      }
+
       function githubHeaders() {
         const token = els.token.value.trim();
         if (!token) throw new Error("请先粘贴 GitHub Token。");
@@ -1853,7 +1857,13 @@
           setStatus(`已安全提交并完成线上校验${cleanupMessage}${failedMessage}。请等待 GitHub Pages 部署完成后刷新前台。`, "success");
           showCompletion("已提交并开始部署", `商品、图片和规格已完成线上校验${cleanupMessage}${failedMessage}。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。`);
         } catch (error) {
-          setStatus(`发布未完成：${error.message}。当前页面修改仍会保留，可修正后再次发布。`, "error");
+          if (isCatalogUpdateInProgressError(error)) {
+            const message = "后台仍在处理上一个上传请求，请稍后再试。当前页面修改会保留。";
+            setStatus(message, "error");
+            showCompletion("后台仍在处理中", message);
+          } else {
+            setStatus(`发布未完成：${error.message}。当前页面修改仍会保留，可修正后再次发布。`, "error");
+          }
           state.dirty = true;
         } finally {
           els.saveBtn.disabled = !state.dirty;
