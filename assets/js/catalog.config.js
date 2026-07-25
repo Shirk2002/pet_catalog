@@ -477,10 +477,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BK-11",
           "name": "Warm Elevated Cat Hammock Bed",
-          "image": "assets/images/catalog/bk-11/043-bk-11.png",
+          "image": "assets/images/catalog/bk-11/1784876019813-bk-11-1.jpg",
           "description": "Warm Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/bk-11/043-bk-11.png",
             "assets/images/catalog/bk-11/1784876019813-bk-11-1.jpg",
             "assets/images/catalog/bk-11/1784876019813-bk-11-2.jpg",
             "assets/images/catalog/bk-11/1784876019813-bk-11-3.jpg"
@@ -632,10 +631,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "JH-08",
           "name": "Round Upright Corrugated Cat Scratcher",
-          "image": "assets/images/catalog/jh-08/108-jh-08.png",
+          "image": "assets/images/catalog/jh-08/1784874645536-jh-08-1.jpg",
           "description": "Round Upright Corrugated Cat Scratcher is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/jh-08/108-jh-08.png",
             "assets/images/catalog/jh-08/1784874645536-jh-08-1.jpg",
             "assets/images/catalog/jh-08/1784874645536-jh-08-2.jpg",
             "assets/images/catalog/jh-08/1784874645536-jh-08-3.jpg",
@@ -646,10 +644,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "JH-09",
           "name": "Washable Semi-Enclosed Cat House Bed",
-          "image": "assets/images/catalog/jh-09/109-jh-09.png",
+          "image": "assets/images/catalog/jh-09/1784876225646-jh-09-1.jpg",
           "description": "Washable Semi-Enclosed Cat House Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/jh-09/109-jh-09.png",
             "assets/images/catalog/jh-09/1784876225646-jh-09-1.jpg",
             "assets/images/catalog/jh-09/1784876225646-jh-09-2.jpg",
             "assets/images/catalog/jh-09/1784876225646-jh-09-3.jpg"
@@ -680,10 +677,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-10",
           "name": "Window-Mounted Cat Hammock Bed",
-          "image": "assets/images/catalog/mj-10/009-mj-10.png",
+          "image": "assets/images/catalog/mj-10/1784876583214-mj-10-1.jpg",
           "description": "Window-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights breathable material, easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mj-10/009-mj-10.png",
             "assets/images/catalog/mj-10/1784876583214-mj-10-1.jpg",
             "assets/images/catalog/mj-10/1784876583214-mj-10-2.jpg",
             "assets/images/catalog/mj-10/1784876583214-mj-10-3.jpg",
@@ -773,10 +769,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-16",
           "name": "Washable Winter Pet Sofa Bed",
-          "image": "assets/images/catalog/mj-16/121-mj-16.png",
+          "image": "assets/images/catalog/mj-16/1784876460922-mj-16-1.png",
           "description": "Washable Winter Pet Sofa Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mj-16/121-mj-16.png",
             "assets/images/catalog/mj-16/1784876460922-mj-16-1.png",
             "assets/images/catalog/mj-16/1784876460922-mj-16-2.png",
             "assets/images/catalog/mj-16/1784876460922-mj-16-3.png"
@@ -785,10 +780,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "XX-03",
           "name": "Vertical Sisal Cat Scratching Board",
-          "image": "assets/images/catalog/xx-03/107-xx-03.png",
+          "image": "assets/images/catalog/xx-03/1784875897123-xx-03-1.jpg",
           "description": "Vertical Sisal Cat Scratching Board is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/xx-03/107-xx-03.png",
             "assets/images/catalog/xx-03/1784875897123-xx-03-1.jpg",
             "assets/images/catalog/xx-03/1784875897123-xx-03-2.jpg",
             "assets/images/catalog/xx-03/1784875897123-xx-03-3.jpg",
@@ -811,10 +805,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YQ-06",
           "name": "Round Long-Plush Winter Pet Bed",
-          "image": "assets/images/catalog/yq-06/104-yq-06.png",
+          "image": "assets/images/catalog/yq-06/1784874314383-yq-06-1.jpg",
           "description": "Round Long-Plush Winter Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yq-06/104-yq-06.png",
             "assets/images/catalog/yq-06/1784874314383-yq-06-1.jpg",
             "assets/images/catalog/yq-06/1784874314383-yq-06-2.jpg",
             "assets/images/catalog/yq-06/1784874314383-yq-06-3.jpg",
@@ -825,10 +818,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YQ-07",
           "name": "Thick Coral Fleece Pet Blanket Mat",
-          "image": "assets/images/catalog/yq-07/105-yq-07.png",
+          "image": "assets/images/catalog/yq-07/1784875730044-yq-07-1.jpg",
           "description": "Thick Coral Fleece Pet Blanket Mat is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yq-07/105-yq-07.png",
             "assets/images/catalog/yq-07/1784875730044-yq-07-1.jpg",
             "assets/images/catalog/yq-07/1784875730044-yq-07-2.jpg",
             "assets/images/catalog/yq-07/1784875730044-yq-07-3.jpg",
