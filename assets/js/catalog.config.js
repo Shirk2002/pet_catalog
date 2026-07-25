@@ -1439,6 +1439,28 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mm-02/1784942697920-mm-02-2.jpg",
             "assets/images/catalog/mm-02/1784942697920-mm-02-3.jpg",
             "assets/images/catalog/mm-02/1784942697920-mm-02-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "20*32*23cm"
+            },
+            {
+              "label": "M",
+              "value": "25*37*26cm"
+            },
+            {
+              "label": "L",
+              "value": "30*42*29cm"
+            },
+            {
+              "label": "XL",
+              "value": "35*47*32cm"
+            },
+            {
+              "label": "XXL",
+              "value": "40*52*35cm"
+            }
           ]
         },
         {
@@ -1586,36 +1608,6 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/nb-01/1784903937955-nb-01-1.png",
             "assets/images/catalog/nb-01/1784903937955-nb-01-2.jpg"
           ]
-        },
-        {
-          "code": "PR-05",
-          "name": "Pet Collar Harness and Leash Set",
-          "image": "assets/images/catalog/pr-05/083-pr-05.png",
-          "description": "Pet Collar Harness and Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "PR-06",
-          "name": "Waterproof Outdoor Pet Collar",
-          "image": "assets/images/catalog/pr-06/084-pr-06.png",
-          "description": "Waterproof Outdoor Pet Collar is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "PR-07",
-          "name": "Custom Printed Tactical Pet Harness Set",
-          "image": "assets/images/catalog/pr-07/085-pr-07.png",
-          "description": "Custom Printed Tactical Pet Harness Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material, customization options. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "PR-08",
-          "name": "Daisy Print Adjustable Harness and Leash Set",
-          "image": "assets/images/catalog/pr-08/086-pr-08.png",
-          "description": "Daisy Print Adjustable Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights adjustable fitting. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "PR-09",
-          "name": "Breathable Six-Piece Harness and Leash Set",
-          "image": "assets/images/catalog/pr-09/087-pr-09.png",
-          "description": "Breathable Six-Piece Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "XH-01",
