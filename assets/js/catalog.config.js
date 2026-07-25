@@ -1614,6 +1614,20 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/xh-01/1784903718591-xh-01-3.png",
             "assets/images/catalog/xh-01/1784903718591-xh-01-4.jpg",
             "assets/images/catalog/xh-01/1784903718591-xh-01-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "30cm"
+            },
+            {
+              "label": "M",
+              "value": "50cm"
+            },
+            {
+              "label": "L",
+              "value": "65cm"
+            }
           ]
         }
       ]
