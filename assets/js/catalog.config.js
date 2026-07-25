@@ -631,32 +631,55 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-15",
           "name": "Kitten-Shaped Semi-Enclosed Pet House",
-          "image": "assets/images/catalog/120-mj-15.png",
-          "description": "Kitten-Shaped Semi-Enclosed Pet House is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784873713763-mj-15-1.jpg",
           "images": [
-            "assets/images/catalog/120-mj-15.png",
             "assets/images/catalog/1784873713763-mj-15-1.jpg",
             "assets/images/catalog/1784873713763-mj-15-2.jpg"
+          ],
+          "description": "Kitten-Shaped Semi-Enclosed Pet House is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "40*40*40cm"
+            },
+            {
+              "label": "体积",
+              "value": "64000cm³"
+            }
           ]
         },
         {
           "code": "YQ-08",
           "name": "Large Corrugated Cardboard Cat Scratcher Bed",
-          "image": "assets/images/catalog/106-yq-08.png",
-          "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "image": "assets/images/catalog/1784873879819-yq-08-1.jpg",
           "images": [
-            "assets/images/catalog/106-yq-08.png",
             "assets/images/catalog/1784873879819-yq-08-1.jpg",
             "assets/images/catalog/1784873879819-yq-08-2.jpg",
             "assets/images/catalog/1784873879819-yq-08-3.jpg",
             "assets/images/catalog/1784873879819-yq-08-4.jpg"
-          ]
+          ],
+          "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MJ-11",
           "name": "Memory Foam Senior Dog Bed",
-          "image": "assets/images/catalog/117-mj-11.png",
-          "description": "Memory Foam Senior Dog Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/mj-11/mj-11-1.jpg",
+          "description": "Memory Foam Senior Dog Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "40*10*8.50cm"
+            },
+            {
+              "label": "体积",
+              "value": "3400cm³"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/mj-11/mj-11-1.jpg",
+            "assets/images/catalog/mj-11/mj-11-2.jpg",
+            "assets/images/catalog/mj-11/mj-11-3.jpg"
+          ]
         },
         {
           "code": "GJ-07",
