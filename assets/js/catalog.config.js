@@ -846,6 +846,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/bp-01/1784881650293-bp-01-1.jpg",
             "assets/images/catalog/bp-01/1784881650293-bp-01-2.jpg",
             "assets/images/catalog/bp-01/1784881650293-bp-01-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "100*70*65mm"
+            }
           ]
         },
         {
