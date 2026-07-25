@@ -612,10 +612,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "GJ-06",
           "name": "Soft Pet Textile Cushion",
-          "image": "assets/images/catalog/gj-06/025-gj-06.png",
+          "image": "assets/images/catalog/gj-06/1784874999328-gj-06-1.jpg",
           "description": "Soft Pet Textile Cushion is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/gj-06/025-gj-06.png",
             "assets/images/catalog/gj-06/1784874999328-gj-06-1.jpg",
             "assets/images/catalog/gj-06/1784874999328-gj-06-2.jpg",
             "assets/images/catalog/gj-06/1784874999328-gj-06-3.jpg",
@@ -717,10 +716,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-12",
           "name": "Short-Plush Winter Cat and Dog Bed",
-          "image": "assets/images/catalog/mj-12/118-mj-12.png",
+          "image": "assets/images/catalog/mj-12/1784874804150-mj-12-1.jpg",
           "description": "Short-Plush Winter Cat and Dog Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mj-12/118-mj-12.png",
             "assets/images/catalog/mj-12/1784874804150-mj-12-1.jpg",
             "assets/images/catalog/mj-12/1784874804150-mj-12-2.jpg",
             "assets/images/catalog/mj-12/1784874804150-mj-12-3.jpg"
@@ -792,10 +790,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YQ-03",
           "name": "Summer Linen Cooling Pet Bed",
-          "image": "assets/images/catalog/yq-03/103-yq-03.png",
+          "image": "assets/images/catalog/yq-03/1784875461167-yq-03-1.jpg",
           "description": "Summer Linen Cooling Pet Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yq-03/103-yq-03.png",
             "assets/images/catalog/yq-03/1784875461167-yq-03-1.jpg",
             "assets/images/catalog/yq-03/1784875461167-yq-03-2.jpg",
             "assets/images/catalog/yq-03/1784875461167-yq-03-3.jpg",
@@ -1218,10 +1215,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "FD-03",
           "name": "Custom Leopard Print Dog Walking Set",
-          "image": "assets/images/catalog/fd-03/123-fd-03.png",
+          "image": "assets/images/catalog/fd-03/1784902499631-fd-03-1.jpg",
           "description": "Custom Leopard Print Dog Walking Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/fd-03/123-fd-03.png",
             "assets/images/catalog/fd-03/1784902499631-fd-03-1.jpg",
             "assets/images/catalog/fd-03/1784902499631-fd-03-2.png",
             "assets/images/catalog/fd-03/1784902499631-fd-03-3.jpg"
