@@ -1962,6 +1962,8 @@
           const uploads = pendingChanges.pendingUploads.filter((upload) => referencedImages.has(upload.path));
           setStatus("正在合并线上最新商品、图片和规格...");
           const branch = encodeURIComponent(els.branch.value.trim());
+          const headRef = await githubApiRequest(`/git/ref/heads/${branch}`);
+          const expectedHeadSha = headRef.object.sha;
           const latest = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
           const remoteConfig = parseConfig(decodeBase64ToText(latest.content));
           const mergedConfig = mergePendingChangesIntoRemoteConfig(remoteConfig, pendingChanges);
@@ -1973,7 +1975,7 @@
             (path) => isCatalogImagePath(path) && !mergedReferences.has(path)
           );
           setStatus(`正在一次性提交目录、${uploads.length} 张新图和 ${deletedPaths.length} 张删除图片...`);
-          const result = await createCatalogCommit(mergedConfig, uploads, deletedPaths, latest.sha);
+          const result = await createCatalogCommit(mergedConfig, uploads, deletedPaths, expectedHeadSha);
 
           state.config = mergedConfig;
           state.configSha = result.sha;
