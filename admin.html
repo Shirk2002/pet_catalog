@@ -1089,6 +1089,11 @@
         return typeof path === "string" && path.startsWith(`${IMAGE_DIR}/`);
       }
 
+      function isProductCatalogImagePath(path, code) {
+        const folderCode = cleanFileName(code);
+        return typeof path === "string" && path.startsWith(`${IMAGE_DIR}/${folderCode}/`);
+      }
+
       function getReferencedCatalogImagePaths(config) {
         const referenced = new Set();
         config.categories?.forEach((category) => {
@@ -1675,6 +1680,12 @@
 
         if (!product.code || !product.name) {
           setStatus("商品编号和商品名不能为空。", "error");
+          return;
+        }
+
+        const invalidImagePath = images.find((path) => !isProductCatalogImagePath(path, product.code));
+        if (invalidImagePath) {
+          setStatus(`图片必须存放在“${IMAGE_DIR}/${cleanFileName(product.code)}/”文件夹中，不能使用其他商品或根目录路径。`, "error");
           return;
         }
 

@@ -16,11 +16,11 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-13",
           "name": "Electric Pet Nail Grinder and Grooming Tool",
-          "image": "assets/images/catalog/1784776579519-tz-13-1.jpg",
+          "image": "assets/images/catalog/tz-13/1784776579519-tz-13-1.jpg",
           "images": [
-            "assets/images/catalog/1784776579519-tz-13-1.jpg",
-            "assets/images/catalog/1784776579519-tz-13-2.jpg",
-            "assets/images/catalog/1784776579519-tz-13-3.jpg"
+            "assets/images/catalog/tz-13/1784776579519-tz-13-1.jpg",
+            "assets/images/catalog/tz-13/1784776579519-tz-13-2.jpg",
+            "assets/images/catalog/tz-13/1784776579519-tz-13-3.jpg"
           ],
           "description": "Electric Pet Nail Grinder and Grooming Tool is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
           "specifications": [
@@ -41,7 +41,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "REC2.4G",
           "name": "Enclosed Smart Cat Litter Box with Camera",
-          "image": "assets/images/catalog/1784777140051-rec2-4g-1.jpg",
+          "image": "assets/images/catalog/rec2-4g/1784777140051-rec2-4g-1.jpg",
           "description": "Enclosed Smart Cat Litter Box with Camera is designed for daily pet care and grooming routines. The product listing highlights camera monitoring, smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -54,15 +54,15 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784777140051-rec2-4g-1.jpg",
-            "assets/images/catalog/1784777140051-rec2-4g-2.jpg",
-            "assets/images/catalog/1784777140051-rec2-4g-3.jpg"
+            "assets/images/catalog/rec2-4g/1784777140051-rec2-4g-1.jpg",
+            "assets/images/catalog/rec2-4g/1784777140051-rec2-4g-2.jpg",
+            "assets/images/catalog/rec2-4g/1784777140051-rec2-4g-3.jpg"
           ]
         },
         {
           "code": "REC",
           "name": "Fully Automatic Smart Cat Litter Box",
-          "image": "assets/images/catalog/1784792232191-rec-1.jpg",
+          "image": "assets/images/catalog/rec/1784792232191-rec-1.jpg",
           "description": "Fully Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -75,27 +75,27 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784792232191-rec-1.jpg",
-            "assets/images/catalog/1784792232191-rec-2.jpg",
-            "assets/images/catalog/1784792189776-rec-1.jpg"
+            "assets/images/catalog/rec/1784792232191-rec-1.jpg",
+            "assets/images/catalog/rec/1784792232191-rec-2.jpg",
+            "assets/images/catalog/rec/1784792189776-rec-1.jpg"
           ]
         },
         {
           "code": "T10",
           "name": "High-Power Electric Pet Nail Grinder",
-          "image": "assets/images/catalog/1784791225953-t10-1.jpg",
+          "image": "assets/images/catalog/t10/1784791225953-t10-1.jpg",
           "description": "High-Power Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784791225953-t10-1.jpg",
-            "assets/images/catalog/1784791225953-t10-2.jpg",
-            "assets/images/catalog/1784791225953-t10-3.jpg",
-            "assets/images/catalog/1784791225953-t10-4.jpg"
+            "assets/images/catalog/t10/1784791225953-t10-1.jpg",
+            "assets/images/catalog/t10/1784791225953-t10-2.jpg",
+            "assets/images/catalog/t10/1784791225953-t10-3.jpg",
+            "assets/images/catalog/t10/1784791225953-t10-4.jpg"
           ]
         },
         {
           "code": "TZ-16",
           "name": "LED Electric Pet Nail Grinder",
-          "image": "assets/images/catalog/1784792739831-tz-16-1.jpg",
+          "image": "assets/images/catalog/tz-16/1784792739831-tz-16-1.jpg",
           "description": "LED Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -104,14 +104,14 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784792739831-tz-16-1.jpg",
-            "assets/images/catalog/1784792739831-tz-16-2.jpg"
+            "assets/images/catalog/tz-16/1784792739831-tz-16-1.jpg",
+            "assets/images/catalog/tz-16/1784792739831-tz-16-2.jpg"
           ]
         },
         {
           "code": "CQ103",
           "name": "Open-Top Automatic Self-Cleaning Cat Litter Box",
-          "image": "assets/images/catalog/1784794542894-cq103-1.jpg",
+          "image": "assets/images/catalog/cq103/1784794542894-cq103-1.jpg",
           "description": "Open-Top Automatic Self-Cleaning Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights easy-care removable parts, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -128,17 +128,17 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784794542894-cq103-1.jpg",
-            "assets/images/catalog/1784794542894-cq103-2.jpg",
-            "assets/images/catalog/1784794542894-cq103-3.jpg",
-            "assets/images/catalog/1784794542894-cq103-4.jpg",
-            "assets/images/catalog/1784794542894-cq103-5.jpg"
+            "assets/images/catalog/cq103/1784794542894-cq103-1.jpg",
+            "assets/images/catalog/cq103/1784794542894-cq103-2.jpg",
+            "assets/images/catalog/cq103/1784794542894-cq103-3.jpg",
+            "assets/images/catalog/cq103/1784794542894-cq103-4.jpg",
+            "assets/images/catalog/cq103/1784794542894-cq103-5.jpg"
           ]
         },
         {
           "code": "CQ102",
           "name": "Open-Top Automatic Smart Cat Litter Box",
-          "image": "assets/images/catalog/1784794855764-cq102-1.jpg",
+          "image": "assets/images/catalog/cq102/1784794855764-cq102-1.jpg",
           "description": "Open-Top Automatic Smart Cat Litter Box is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -155,16 +155,16 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784794855764-cq102-1.jpg",
-            "assets/images/catalog/1784794855764-cq102-2.jpg",
-            "assets/images/catalog/1784794855764-cq102-3.jpg",
-            "assets/images/catalog/1784794855764-cq102-4.jpg"
+            "assets/images/catalog/cq102/1784794855764-cq102-1.jpg",
+            "assets/images/catalog/cq102/1784794855764-cq102-2.jpg",
+            "assets/images/catalog/cq102/1784794855764-cq102-3.jpg",
+            "assets/images/catalog/cq102/1784794855764-cq102-4.jpg"
           ]
         },
         {
           "code": "T20",
           "name": "Quiet USB Paw Hair Trimmer",
-          "image": "assets/images/catalog/1784795885663-t20-1.jpg",
+          "image": "assets/images/catalog/t20/1784795885663-t20-1.jpg",
           "description": "Quiet USB Paw Hair Trimmer is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power, quiet operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -177,20 +177,20 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784795885663-t20-1.jpg",
-            "assets/images/catalog/1784795885663-t20-2.jpg",
-            "assets/images/catalog/1784795885663-t20-3.jpg",
-            "assets/images/catalog/1784795885663-t20-4.jpg"
+            "assets/images/catalog/t20/1784795885663-t20-1.jpg",
+            "assets/images/catalog/t20/1784795885663-t20-2.jpg",
+            "assets/images/catalog/t20/1784795885663-t20-3.jpg",
+            "assets/images/catalog/t20/1784795885663-t20-4.jpg"
           ]
         },
         {
           "code": "T65",
           "name": "Rechargeable Pet Grooming Clipper Kit",
-          "image": "assets/images/catalog/1784795210104-t65-1.jpg",
+          "image": "assets/images/catalog/t65/1784795210104-t65-1.jpg",
           "images": [
-            "assets/images/catalog/1784795210104-t65-1.jpg",
-            "assets/images/catalog/1784795210104-t65-2.jpg",
-            "assets/images/catalog/1784795210104-t65-3.jpg"
+            "assets/images/catalog/t65/1784795210104-t65-1.jpg",
+            "assets/images/catalog/t65/1784795210104-t65-2.jpg",
+            "assets/images/catalog/t65/1784795210104-t65-3.jpg"
           ],
           "description": "Rechargeable Pet Grooming Clipper Kit is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "specifications": [
@@ -207,12 +207,12 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT108W",
           "name": "Smart Self-Cleaning Cat Litter Box with App Control",
-          "image": "assets/images/catalog/1784790383931-pt108w-1.jpg",
+          "image": "assets/images/catalog/pt108w/1784790383931-pt108w-1.jpg",
           "images": [
-            "assets/images/catalog/1784790383931-pt108w-1.jpg",
-            "assets/images/catalog/1784790383931-pt108w-2.jpg",
-            "assets/images/catalog/1784790383931-pt108w-3.jpg",
-            "assets/images/catalog/1784790383931-pt108w-4.jpg"
+            "assets/images/catalog/pt108w/1784790383931-pt108w-1.jpg",
+            "assets/images/catalog/pt108w/1784790383931-pt108w-2.jpg",
+            "assets/images/catalog/pt108w/1784790383931-pt108w-3.jpg",
+            "assets/images/catalog/pt108w/1784790383931-pt108w-4.jpg"
           ],
           "description": "Smart Self-Cleaning Cat Litter Box with App Control is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
           "specifications": [
@@ -229,7 +229,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "T30",
           "name": "USB Pet Nail Grinder and Paw Trimmer",
-          "image": "assets/images/catalog/1784790145910-t30-1.jpg",
+          "image": "assets/images/catalog/t30/1784790145910-t30-1.jpg",
           "description": "USB Pet Nail Grinder and Paw Trimmer is designed for daily pet care and grooming routines. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -238,9 +238,9 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784790145910-t30-1.jpg",
-            "assets/images/catalog/1784790145910-t30-2.jpg",
-            "assets/images/catalog/1784790145910-t30-3.jpg"
+            "assets/images/catalog/t30/1784790145910-t30-1.jpg",
+            "assets/images/catalog/t30/1784790145910-t30-2.jpg",
+            "assets/images/catalog/t30/1784790145910-t30-3.jpg"
           ]
         }
       ]
@@ -253,7 +253,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-16",
           "name": "2.5L Smart Sensor Pet Water Fountain",
-          "image": "assets/images/catalog/1784796232443-tz-16-1.jpg",
+          "image": "assets/images/catalog/tz-16/1784796232443-tz-16-1.jpg",
           "description": "2.5L Smart Sensor Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -266,22 +266,22 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784796232443-tz-16-1.jpg",
-            "assets/images/catalog/1784796232443-tz-16-2.jpg",
-            "assets/images/catalog/1784796232443-tz-16-3.jpg",
-            "assets/images/catalog/1784796232443-tz-16-4.jpg",
-            "assets/images/catalog/1784796232443-tz-16-5.jpg"
+            "assets/images/catalog/tz-16/1784796232443-tz-16-1.jpg",
+            "assets/images/catalog/tz-16/1784796232443-tz-16-2.jpg",
+            "assets/images/catalog/tz-16/1784796232443-tz-16-3.jpg",
+            "assets/images/catalog/tz-16/1784796232443-tz-16-4.jpg",
+            "assets/images/catalog/tz-16/1784796232443-tz-16-5.jpg"
           ]
         },
         {
           "code": "PT23W",
           "name": "3L Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/1784797522476-pt23w-1.jpg",
+          "image": "assets/images/catalog/pt23w/1784797522476-pt23w-1.jpg",
           "description": "3L Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784797522476-pt23w-1.jpg",
-            "assets/images/catalog/1784797522476-pt23w-2.jpg",
-            "assets/images/catalog/1784797522476-pt23w-3.jpg"
+            "assets/images/catalog/pt23w/1784797522476-pt23w-1.jpg",
+            "assets/images/catalog/pt23w/1784797522476-pt23w-2.jpg",
+            "assets/images/catalog/pt23w/1784797522476-pt23w-3.jpg"
           ],
           "specifications": [
             {
@@ -293,7 +293,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PK10K",
           "name": "Dual-Bowl Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/1784797964068-pk10k-1.jpg",
+          "image": "assets/images/catalog/pk10k/1784797964068-pk10k-1.jpg",
           "description": "Dual-Bowl Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -310,20 +310,20 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784797964068-pk10k-1.jpg",
-            "assets/images/catalog/1784797964068-pk10k-2.jpg",
-            "assets/images/catalog/1784797964068-pk10k-3.jpg"
+            "assets/images/catalog/pk10k/1784797964068-pk10k-1.jpg",
+            "assets/images/catalog/pk10k/1784797964068-pk10k-2.jpg",
+            "assets/images/catalog/pk10k/1784797964068-pk10k-3.jpg"
           ]
         },
         {
           "code": "MJ-08",
           "name": "Food-Grade Silicone Slow Feeder Mat",
-          "image": "assets/images/catalog/1784855278695-mj-08-1.jpg",
+          "image": "assets/images/catalog/mj-08/1784855278695-mj-08-1.jpg",
           "images": [
-            "assets/images/catalog/1784855278695-mj-08-1.jpg",
-            "assets/images/catalog/1784855278695-mj-08-2.jpg",
-            "assets/images/catalog/1784855278695-mj-08-3.jpg",
-            "assets/images/catalog/1784855278695-mj-08-4.jpg"
+            "assets/images/catalog/mj-08/1784855278695-mj-08-1.jpg",
+            "assets/images/catalog/mj-08/1784855278695-mj-08-2.jpg",
+            "assets/images/catalog/mj-08/1784855278695-mj-08-3.jpg",
+            "assets/images/catalog/mj-08/1784855278695-mj-08-4.jpg"
           ],
           "description": "Food-Grade Silicone Slow Feeder Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a non-slip base, spill-reducing details. A practical choice for pet owners and retail assortments.",
           "specifications": [
@@ -340,18 +340,18 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT05K",
           "name": "HD Camera Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/1784854821109-pt05k-1.jpg",
+          "image": "assets/images/catalog/pt05k/1784854821109-pt05k-1.jpg",
           "description": "HD Camera Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights a large-capacity design, scheduled portion control, remote app control. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784854821109-pt05k-1.jpg",
-            "assets/images/catalog/1784854821109-pt05k-2.jpg",
-            "assets/images/catalog/1784854821109-pt05k-3.jpg"
+            "assets/images/catalog/pt05k/1784854821109-pt05k-1.jpg",
+            "assets/images/catalog/pt05k/1784854821109-pt05k-2.jpg",
+            "assets/images/catalog/pt05k/1784854821109-pt05k-3.jpg"
           ]
         },
         {
           "code": "XZY-06",
           "name": "Large Thick Slow Feeder Pet Plate",
-          "image": "assets/images/catalog/1784854977718-xzy-06-1.jpg",
+          "image": "assets/images/catalog/xzy-06/1784854977718-xzy-06-1.jpg",
           "description": "Large Thick Slow Feeder Pet Plate is designed for organized daily feeding and hydration. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -360,17 +360,17 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784854977718-xzy-06-1.jpg",
-            "assets/images/catalog/1784854977718-xzy-06-2.jpg",
-            "assets/images/catalog/1784854977718-xzy-06-3.jpg",
-            "assets/images/catalog/1784854977718-xzy-06-4.jpg",
-            "assets/images/catalog/1784854977718-xzy-06-5.jpg"
+            "assets/images/catalog/xzy-06/1784854977718-xzy-06-1.jpg",
+            "assets/images/catalog/xzy-06/1784854977718-xzy-06-2.jpg",
+            "assets/images/catalog/xzy-06/1784854977718-xzy-06-3.jpg",
+            "assets/images/catalog/xzy-06/1784854977718-xzy-06-4.jpg",
+            "assets/images/catalog/xzy-06/1784854977718-xzy-06-5.jpg"
           ]
         },
         {
           "code": "XZY-05",
           "name": "Maple Leaf Silicone Slow Feeder Bowl",
-          "image": "assets/images/catalog/1784855417599-xzy-05-1.jpg",
+          "image": "assets/images/catalog/xzy-05/1784855417599-xzy-05-1.jpg",
           "description": "Maple Leaf Silicone Slow Feeder Bowl is designed for organized daily feeding and hydration. The product listing highlights slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -379,16 +379,16 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784855417599-xzy-05-1.jpg",
-            "assets/images/catalog/1784855417599-xzy-05-2.jpg",
-            "assets/images/catalog/1784855417599-xzy-05-3.jpg",
-            "assets/images/catalog/1784855417599-xzy-05-4.jpg"
+            "assets/images/catalog/xzy-05/1784855417599-xzy-05-1.jpg",
+            "assets/images/catalog/xzy-05/1784855417599-xzy-05-2.jpg",
+            "assets/images/catalog/xzy-05/1784855417599-xzy-05-3.jpg",
+            "assets/images/catalog/xzy-05/1784855417599-xzy-05-4.jpg"
           ]
         },
         {
           "code": "C2-L",
           "name": "Rechargeable Smart Pet Water Fountain",
-          "image": "assets/images/catalog/1784855548296-c2-l-1.jpg",
+          "image": "assets/images/catalog/c2-l/1784855548296-c2-l-1.jpg",
           "description": "Rechargeable Smart Pet Water Fountain is designed for organized daily feeding and hydration. The product listing highlights easy-care removable parts, smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -397,17 +397,17 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784855548296-c2-l-1.jpg",
-            "assets/images/catalog/1784855548296-c2-l-2.jpg",
-            "assets/images/catalog/1784855548296-c2-l-3.jpg",
-            "assets/images/catalog/1784855548296-c2-l-4.jpg",
-            "assets/images/catalog/1784855548296-c2-l-5.jpg"
+            "assets/images/catalog/c2-l/1784855548296-c2-l-1.jpg",
+            "assets/images/catalog/c2-l/1784855548296-c2-l-2.jpg",
+            "assets/images/catalog/c2-l/1784855548296-c2-l-3.jpg",
+            "assets/images/catalog/c2-l/1784855548296-c2-l-4.jpg",
+            "assets/images/catalog/c2-l/1784855548296-c2-l-5.jpg"
           ]
         },
         {
           "code": "XZY-03",
           "name": "Silicone Pet Lick Mat with Suction Cups",
-          "image": "assets/images/catalog/1784855837956-xzy-03-1.jpg",
+          "image": "assets/images/catalog/xzy-03/1784855837956-xzy-03-1.jpg",
           "description": "Silicone Pet Lick Mat with Suction Cups is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -424,14 +424,14 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784855837956-xzy-03-1.jpg",
-            "assets/images/catalog/1784855837956-xzy-03-2.jpg"
+            "assets/images/catalog/xzy-03/1784855837956-xzy-03-1.jpg",
+            "assets/images/catalog/xzy-03/1784855837956-xzy-03-2.jpg"
           ]
         },
         {
           "code": "XZY-07",
           "name": "Silicone Slow Feeder Lick Mat",
-          "image": "assets/images/catalog/1784855980994-xzy-07-1.jpg",
+          "image": "assets/images/catalog/xzy-07/1784855980994-xzy-07-1.jpg",
           "description": "Silicone Slow Feeder Lick Mat is designed for organized daily feeding and hydration. The product listing highlights secure suction-cup mounting, slow-feeding enrichment, food-grade silicone. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -440,31 +440,31 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784855980994-xzy-07-1.jpg",
-            "assets/images/catalog/1784855980994-xzy-07-2.jpg",
-            "assets/images/catalog/1784855980994-xzy-07-3.jpg",
-            "assets/images/catalog/1784855980994-xzy-07-4.jpg"
+            "assets/images/catalog/xzy-07/1784855980994-xzy-07-1.jpg",
+            "assets/images/catalog/xzy-07/1784855980994-xzy-07-2.jpg",
+            "assets/images/catalog/xzy-07/1784855980994-xzy-07-3.jpg",
+            "assets/images/catalog/xzy-07/1784855980994-xzy-07-4.jpg"
           ]
         },
         {
           "code": "PT03W",
           "name": "Smart Pet Feeder with Camera and Remote Control",
-          "image": "assets/images/catalog/1784856261771-pt03w-1.jpg",
+          "image": "assets/images/catalog/pt03w/1784856261771-pt03w-1.jpg",
           "description": "Smart Pet Feeder with Camera and Remote Control is designed for organized daily feeding and hydration. The product listing highlights scheduled portion control, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784856261771-pt03w-1.jpg",
-            "assets/images/catalog/1784856261771-pt03w-2.jpg"
+            "assets/images/catalog/pt03w/1784856261771-pt03w-1.jpg",
+            "assets/images/catalog/pt03w/1784856261771-pt03w-2.jpg"
           ]
         },
         {
           "code": "PT08W",
           "name": "WiFi Smart Automatic Pet Feeder",
-          "image": "assets/images/catalog/1784856397033-pt08w-1.jpg",
+          "image": "assets/images/catalog/pt08w/1784856397033-pt08w-1.jpg",
           "description": "WiFi Smart Automatic Pet Feeder is designed for organized daily feeding and hydration. The product listing highlights scheduled portion control, remote app control, smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784856397033-pt08w-1.jpg",
-            "assets/images/catalog/1784856397033-pt08w-2.jpg",
-            "assets/images/catalog/1784856397033-pt08w-3.jpg"
+            "assets/images/catalog/pt08w/1784856397033-pt08w-1.jpg",
+            "assets/images/catalog/pt08w/1784856397033-pt08w-2.jpg",
+            "assets/images/catalog/pt08w/1784856397033-pt08w-3.jpg"
           ]
         }
       ]
@@ -477,19 +477,19 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BK-17",
           "name": "360-Degree Rotating Adjustable Desk Cat Bed",
-          "image": "assets/images/catalog/1784856841331-bk-17-1.jpg",
+          "image": "assets/images/catalog/bk-17/1784856841331-bk-17-1.jpg",
           "description": "360-Degree Rotating Adjustable Desk Cat Bed is designed for comfortable rest and home enrichment. The product listing highlights adjustable fitting. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784856841331-bk-17-1.jpg",
-            "assets/images/catalog/1784856841331-bk-17-2.jpg",
-            "assets/images/catalog/1784856841331-bk-17-3.jpg",
-            "assets/images/catalog/1784856841331-bk-17-4.jpg"
+            "assets/images/catalog/bk-17/1784856841331-bk-17-1.jpg",
+            "assets/images/catalog/bk-17/1784856841331-bk-17-2.jpg",
+            "assets/images/catalog/bk-17/1784856841331-bk-17-3.jpg",
+            "assets/images/catalog/bk-17/1784856841331-bk-17-4.jpg"
           ]
         },
         {
           "code": "MJ-09",
           "name": "Adjustable Plush Cat Cage Hammock",
-          "image": "assets/images/catalog/1784857089681-mj-09-1.jpg",
+          "image": "assets/images/catalog/mj-09/1784857089681-mj-09-1.jpg",
           "description": "Adjustable Plush Cat Cage Hammock is designed for comfortable rest and home enrichment. The product listing highlights breathable material, warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -502,16 +502,16 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784857089681-mj-09-1.jpg",
-            "assets/images/catalog/1784857089681-mj-09-2.jpg",
-            "assets/images/catalog/1784857089681-mj-09-3.jpg",
-            "assets/images/catalog/1784857089681-mj-09-4.jpg"
+            "assets/images/catalog/mj-09/1784857089681-mj-09-1.jpg",
+            "assets/images/catalog/mj-09/1784857089681-mj-09-2.jpg",
+            "assets/images/catalog/mj-09/1784857089681-mj-09-3.jpg",
+            "assets/images/catalog/mj-09/1784857089681-mj-09-4.jpg"
           ]
         },
         {
           "code": "BK-14",
           "name": "Adjustable Round Desk Cat Hammock",
-          "image": "assets/images/catalog/1784857323228-bk-14-1.jpg",
+          "image": "assets/images/catalog/bk-14/1784857323228-bk-14-1.jpg",
           "description": "Adjustable Round Desk Cat Hammock is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort, adjustable fitting. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -520,16 +520,16 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784857323228-bk-14-1.jpg",
-            "assets/images/catalog/1784857323228-bk-14-2.jpg",
-            "assets/images/catalog/1784857323228-bk-14-3.jpg",
-            "assets/images/catalog/1784857323228-bk-14-4.jpg"
+            "assets/images/catalog/bk-14/1784857323228-bk-14-1.jpg",
+            "assets/images/catalog/bk-14/1784857323228-bk-14-2.jpg",
+            "assets/images/catalog/bk-14/1784857323228-bk-14-3.jpg",
+            "assets/images/catalog/bk-14/1784857323228-bk-14-4.jpg"
           ]
         },
         {
           "code": "FD-01",
           "name": "All-Season Cat and Dog Bed",
-          "image": "assets/images/catalog/1784857708450-fd-01-1.jpg",
+          "image": "assets/images/catalog/fd-01/1784857708450-fd-01-1.jpg",
           "description": "All-Season Cat and Dog Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -542,16 +542,16 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784857708450-fd-01-1.jpg",
-            "assets/images/catalog/1784857708450-fd-01-2.jpg",
-            "assets/images/catalog/1784857708450-fd-01-3.jpg",
-            "assets/images/catalog/1784857708450-fd-01-4.jpg"
+            "assets/images/catalog/fd-01/1784857708450-fd-01-1.jpg",
+            "assets/images/catalog/fd-01/1784857708450-fd-01-2.jpg",
+            "assets/images/catalog/fd-01/1784857708450-fd-01-3.jpg",
+            "assets/images/catalog/fd-01/1784857708450-fd-01-4.jpg"
           ]
         },
         {
           "code": "MJ-13",
           "name": "Compressed Sofa-Style Pet Bed",
-          "image": "assets/images/catalog/1784857928682-mj-13-1.jpg",
+          "image": "assets/images/catalog/mj-13/1784857928682-mj-13-1.jpg",
           "description": "Compressed Sofa-Style Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -564,25 +564,25 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784857928682-mj-13-1.jpg",
-            "assets/images/catalog/1784857928682-mj-13-2.jpg"
+            "assets/images/catalog/mj-13/1784857928682-mj-13-1.jpg",
+            "assets/images/catalog/mj-13/1784857928682-mj-13-2.jpg"
           ]
         },
         {
           "code": "BK-13",
           "name": "Desk-Mounted Cat Hammock Bed",
-          "image": "assets/images/catalog/1784858433725-bk-13-1.jpg",
+          "image": "assets/images/catalog/bk-13/1784858433725-bk-13-1.jpg",
           "description": "Desk-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784858433725-bk-13-1.jpg",
-            "assets/images/catalog/1784858433725-bk-13-2.jpg",
-            "assets/images/catalog/1784858433725-bk-13-3.jpg"
+            "assets/images/catalog/bk-13/1784858433725-bk-13-1.jpg",
+            "assets/images/catalog/bk-13/1784858433725-bk-13-2.jpg",
+            "assets/images/catalog/bk-13/1784858433725-bk-13-3.jpg"
           ]
         },
         {
           "code": "BK-15",
           "name": "Foldable Dual-Suction Cat Window Hammock",
-          "image": "assets/images/catalog/1784858657220-bk-15-1.jpg",
+          "image": "assets/images/catalog/bk-15/1784858657220-bk-15-1.jpg",
           "description": "Foldable Dual-Suction Cat Window Hammock is designed for comfortable rest and home enrichment. The product listing highlights a foldable design, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -591,15 +591,15 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784858657220-bk-15-1.jpg",
-            "assets/images/catalog/1784858657220-bk-15-2.jpg",
-            "assets/images/catalog/1784858657220-bk-15-3.jpg"
+            "assets/images/catalog/bk-15/1784858657220-bk-15-1.jpg",
+            "assets/images/catalog/bk-15/1784858657220-bk-15-2.jpg",
+            "assets/images/catalog/bk-15/1784858657220-bk-15-3.jpg"
           ]
         },
         {
           "code": "BK-16",
           "name": "Four-Season Elevated Cat Hammock Bed",
-          "image": "assets/images/catalog/1784858878868-bk-16-1.jpg",
+          "image": "assets/images/catalog/bk-16/1784858878868-bk-16-1.jpg",
           "description": "Four-Season Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -612,15 +612,15 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784858878868-bk-16-1.jpg",
-            "assets/images/catalog/1784858878868-bk-16-2.jpg",
-            "assets/images/catalog/1784858878868-bk-16-3.jpg"
+            "assets/images/catalog/bk-16/1784858878868-bk-16-1.jpg",
+            "assets/images/catalog/bk-16/1784858878868-bk-16-2.jpg",
+            "assets/images/catalog/bk-16/1784858878868-bk-16-3.jpg"
           ]
         },
         {
           "code": "BK-12",
           "name": "Four-Season Suction Cup Cat Window Hammock",
-          "image": "assets/images/catalog/1784859177650-bk-12-1.jpg",
+          "image": "assets/images/catalog/bk-12/1784859177650-bk-12-1.jpg",
           "description": "Four-Season Suction Cup Cat Window Hammock is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -629,18 +629,18 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784859177650-bk-12-1.jpg",
-            "assets/images/catalog/1784859177650-bk-12-2.jpg",
-            "assets/images/catalog/1784859177650-bk-12-3.jpg"
+            "assets/images/catalog/bk-12/1784859177650-bk-12-1.jpg",
+            "assets/images/catalog/bk-12/1784859177650-bk-12-2.jpg",
+            "assets/images/catalog/bk-12/1784859177650-bk-12-3.jpg"
           ]
         },
         {
           "code": "MJ-15",
           "name": "Kitten-Shaped Semi-Enclosed Pet House",
-          "image": "assets/images/catalog/1784873713763-mj-15-1.jpg",
+          "image": "assets/images/catalog/mj-15/1784873713763-mj-15-1.jpg",
           "images": [
-            "assets/images/catalog/1784873713763-mj-15-1.jpg",
-            "assets/images/catalog/1784873713763-mj-15-2.jpg"
+            "assets/images/catalog/mj-15/1784873713763-mj-15-1.jpg",
+            "assets/images/catalog/mj-15/1784873713763-mj-15-2.jpg"
           ],
           "description": "Kitten-Shaped Semi-Enclosed Pet House is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "specifications": [
@@ -657,12 +657,12 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YQ-08",
           "name": "Large Corrugated Cardboard Cat Scratcher Bed",
-          "image": "assets/images/catalog/1784873879819-yq-08-1.jpg",
+          "image": "assets/images/catalog/yq-08/1784873879819-yq-08-1.jpg",
           "images": [
-            "assets/images/catalog/1784873879819-yq-08-1.jpg",
-            "assets/images/catalog/1784873879819-yq-08-2.jpg",
-            "assets/images/catalog/1784873879819-yq-08-3.jpg",
-            "assets/images/catalog/1784873879819-yq-08-4.jpg"
+            "assets/images/catalog/yq-08/1784873879819-yq-08-1.jpg",
+            "assets/images/catalog/yq-08/1784873879819-yq-08-2.jpg",
+            "assets/images/catalog/yq-08/1784873879819-yq-08-3.jpg",
+            "assets/images/catalog/yq-08/1784873879819-yq-08-4.jpg"
           ],
           "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
@@ -690,161 +690,161 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "GJ-07",
           "name": "Pet Home Textile Sleeping Pad",
-          "image": "assets/images/catalog/026-gj-07.png",
+          "image": "assets/images/catalog/gj-07/026-gj-07.png",
           "description": "Pet Home Textile Sleeping Pad is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "GJ-05",
           "name": "Premium Pet Textile Comfort Mat",
-          "image": "assets/images/catalog/024-gj-05.png",
+          "image": "assets/images/catalog/gj-05/024-gj-05.png",
           "description": "Premium Pet Textile Comfort Mat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YQ-06",
           "name": "Round Long-Plush Winter Pet Bed",
-          "image": "assets/images/catalog/104-yq-06.png",
+          "image": "assets/images/catalog/yq-06/104-yq-06.png",
           "description": "Round Long-Plush Winter Pet Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/104-yq-06.png",
-            "assets/images/catalog/1784874314383-yq-06-1.jpg",
-            "assets/images/catalog/1784874314383-yq-06-2.jpg",
-            "assets/images/catalog/1784874314383-yq-06-3.jpg",
-            "assets/images/catalog/1784874314383-yq-06-4.jpg",
-            "assets/images/catalog/1784874314383-yq-06-5.jpg"
+            "assets/images/catalog/yq-06/104-yq-06.png",
+            "assets/images/catalog/yq-06/1784874314383-yq-06-1.jpg",
+            "assets/images/catalog/yq-06/1784874314383-yq-06-2.jpg",
+            "assets/images/catalog/yq-06/1784874314383-yq-06-3.jpg",
+            "assets/images/catalog/yq-06/1784874314383-yq-06-4.jpg",
+            "assets/images/catalog/yq-06/1784874314383-yq-06-5.jpg"
           ]
         },
         {
           "code": "JH-08",
           "name": "Round Upright Corrugated Cat Scratcher",
-          "image": "assets/images/catalog/108-jh-08.png",
+          "image": "assets/images/catalog/jh-08/108-jh-08.png",
           "description": "Round Upright Corrugated Cat Scratcher is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/108-jh-08.png",
-            "assets/images/catalog/1784874645536-jh-08-1.jpg",
-            "assets/images/catalog/1784874645536-jh-08-2.jpg",
-            "assets/images/catalog/1784874645536-jh-08-3.jpg",
-            "assets/images/catalog/1784874645536-jh-08-4.jpg",
-            "assets/images/catalog/1784874645536-jh-08-5.jpg"
+            "assets/images/catalog/jh-08/108-jh-08.png",
+            "assets/images/catalog/jh-08/1784874645536-jh-08-1.jpg",
+            "assets/images/catalog/jh-08/1784874645536-jh-08-2.jpg",
+            "assets/images/catalog/jh-08/1784874645536-jh-08-3.jpg",
+            "assets/images/catalog/jh-08/1784874645536-jh-08-4.jpg",
+            "assets/images/catalog/jh-08/1784874645536-jh-08-5.jpg"
           ]
         },
         {
           "code": "MJ-11",
           "name": "Screw-Mount Cat Window Hammock Bed",
-          "image": "assets/images/catalog/010-mj-11.png",
+          "image": "assets/images/catalog/mj-11/010-mj-11.png",
           "description": "Screw-Mount Cat Window Hammock Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MJ-12",
           "name": "Short-Plush Winter Cat and Dog Bed",
-          "image": "assets/images/catalog/118-mj-12.png",
+          "image": "assets/images/catalog/mj-12/118-mj-12.png",
           "description": "Short-Plush Winter Cat and Dog Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/118-mj-12.png",
-            "assets/images/catalog/1784874804150-mj-12-1.jpg",
-            "assets/images/catalog/1784874804150-mj-12-2.jpg",
-            "assets/images/catalog/1784874804150-mj-12-3.jpg"
+            "assets/images/catalog/mj-12/118-mj-12.png",
+            "assets/images/catalog/mj-12/1784874804150-mj-12-1.jpg",
+            "assets/images/catalog/mj-12/1784874804150-mj-12-2.jpg",
+            "assets/images/catalog/mj-12/1784874804150-mj-12-3.jpg"
           ]
         },
         {
           "code": "GJ-06",
           "name": "Soft Pet Textile Cushion",
-          "image": "assets/images/catalog/025-gj-06.png",
+          "image": "assets/images/catalog/gj-06/025-gj-06.png",
           "description": "Soft Pet Textile Cushion is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/025-gj-06.png",
-            "assets/images/catalog/1784874999328-gj-06-1.jpg",
-            "assets/images/catalog/1784874999328-gj-06-2.jpg",
-            "assets/images/catalog/1784874999328-gj-06-3.jpg",
-            "assets/images/catalog/1784875231966-gj-06-1.jpg"
+            "assets/images/catalog/gj-06/025-gj-06.png",
+            "assets/images/catalog/gj-06/1784874999328-gj-06-1.jpg",
+            "assets/images/catalog/gj-06/1784874999328-gj-06-2.jpg",
+            "assets/images/catalog/gj-06/1784874999328-gj-06-3.jpg",
+            "assets/images/catalog/gj-06/1784875231966-gj-06-1.jpg"
           ]
         },
         {
           "code": "YQ-03",
           "name": "Summer Linen Cooling Pet Bed",
-          "image": "assets/images/catalog/103-yq-03.png",
+          "image": "assets/images/catalog/yq-03/103-yq-03.png",
           "description": "Summer Linen Cooling Pet Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/103-yq-03.png",
-            "assets/images/catalog/1784875461167-yq-03-1.jpg",
-            "assets/images/catalog/1784875461167-yq-03-2.jpg",
-            "assets/images/catalog/1784875461167-yq-03-3.jpg",
-            "assets/images/catalog/1784875461167-yq-03-4.jpg"
+            "assets/images/catalog/yq-03/103-yq-03.png",
+            "assets/images/catalog/yq-03/1784875461167-yq-03-1.jpg",
+            "assets/images/catalog/yq-03/1784875461167-yq-03-2.jpg",
+            "assets/images/catalog/yq-03/1784875461167-yq-03-3.jpg",
+            "assets/images/catalog/yq-03/1784875461167-yq-03-4.jpg"
           ]
         },
         {
           "code": "YQ-07",
           "name": "Thick Coral Fleece Pet Blanket Mat",
-          "image": "assets/images/catalog/105-yq-07.png",
+          "image": "assets/images/catalog/yq-07/105-yq-07.png",
           "description": "Thick Coral Fleece Pet Blanket Mat is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/105-yq-07.png",
-            "assets/images/catalog/1784875730044-yq-07-1.jpg",
-            "assets/images/catalog/1784875730044-yq-07-2.jpg",
-            "assets/images/catalog/1784875730044-yq-07-3.jpg",
-            "assets/images/catalog/1784875730044-yq-07-4.jpg"
+            "assets/images/catalog/yq-07/105-yq-07.png",
+            "assets/images/catalog/yq-07/1784875730044-yq-07-1.jpg",
+            "assets/images/catalog/yq-07/1784875730044-yq-07-2.jpg",
+            "assets/images/catalog/yq-07/1784875730044-yq-07-3.jpg",
+            "assets/images/catalog/yq-07/1784875730044-yq-07-4.jpg"
           ]
         },
         {
           "code": "XX-03",
           "name": "Vertical Sisal Cat Scratching Board",
-          "image": "assets/images/catalog/107-xx-03.png",
+          "image": "assets/images/catalog/xx-03/107-xx-03.png",
           "description": "Vertical Sisal Cat Scratching Board is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/107-xx-03.png",
-            "assets/images/catalog/1784875897123-xx-03-1.jpg",
-            "assets/images/catalog/1784875897123-xx-03-2.jpg",
-            "assets/images/catalog/1784875897123-xx-03-3.jpg",
-            "assets/images/catalog/1784875897123-xx-03-4.jpg"
+            "assets/images/catalog/xx-03/107-xx-03.png",
+            "assets/images/catalog/xx-03/1784875897123-xx-03-1.jpg",
+            "assets/images/catalog/xx-03/1784875897123-xx-03-2.jpg",
+            "assets/images/catalog/xx-03/1784875897123-xx-03-3.jpg",
+            "assets/images/catalog/xx-03/1784875897123-xx-03-4.jpg"
           ]
         },
         {
           "code": "BK-11",
           "name": "Warm Elevated Cat Hammock Bed",
-          "image": "assets/images/catalog/043-bk-11.png",
+          "image": "assets/images/catalog/bk-11/043-bk-11.png",
           "description": "Warm Elevated Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/043-bk-11.png",
-            "assets/images/catalog/1784876019813-bk-11-1.jpg",
-            "assets/images/catalog/1784876019813-bk-11-2.jpg",
-            "assets/images/catalog/1784876019813-bk-11-3.jpg"
+            "assets/images/catalog/bk-11/043-bk-11.png",
+            "assets/images/catalog/bk-11/1784876019813-bk-11-1.jpg",
+            "assets/images/catalog/bk-11/1784876019813-bk-11-2.jpg",
+            "assets/images/catalog/bk-11/1784876019813-bk-11-3.jpg"
           ]
         },
         {
           "code": "JH-09",
           "name": "Washable Semi-Enclosed Cat House Bed",
-          "image": "assets/images/catalog/109-jh-09.png",
+          "image": "assets/images/catalog/jh-09/109-jh-09.png",
           "description": "Washable Semi-Enclosed Cat House Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/109-jh-09.png",
-            "assets/images/catalog/1784876225646-jh-09-1.jpg",
-            "assets/images/catalog/1784876225646-jh-09-2.jpg",
-            "assets/images/catalog/1784876225646-jh-09-3.jpg"
+            "assets/images/catalog/jh-09/109-jh-09.png",
+            "assets/images/catalog/jh-09/1784876225646-jh-09-1.jpg",
+            "assets/images/catalog/jh-09/1784876225646-jh-09-2.jpg",
+            "assets/images/catalog/jh-09/1784876225646-jh-09-3.jpg"
           ]
         },
         {
           "code": "MJ-16",
           "name": "Washable Winter Pet Sofa Bed",
-          "image": "assets/images/catalog/121-mj-16.png",
+          "image": "assets/images/catalog/mj-16/121-mj-16.png",
           "description": "Washable Winter Pet Sofa Bed is designed for comfortable rest and home enrichment. The product listing highlights easy-care removable parts, warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/121-mj-16.png",
-            "assets/images/catalog/1784876460922-mj-16-1.png",
-            "assets/images/catalog/1784876460922-mj-16-2.png",
-            "assets/images/catalog/1784876460922-mj-16-3.png"
+            "assets/images/catalog/mj-16/121-mj-16.png",
+            "assets/images/catalog/mj-16/1784876460922-mj-16-1.png",
+            "assets/images/catalog/mj-16/1784876460922-mj-16-2.png",
+            "assets/images/catalog/mj-16/1784876460922-mj-16-3.png"
           ]
         },
         {
           "code": "MJ-10",
           "name": "Window-Mounted Cat Hammock Bed",
-          "image": "assets/images/catalog/009-mj-10.png",
+          "image": "assets/images/catalog/mj-10/009-mj-10.png",
           "description": "Window-Mounted Cat Hammock Bed is designed for comfortable rest and home enrichment. The product listing highlights breathable material, easy-care removable parts, secure suction-cup mounting. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/009-mj-10.png",
-            "assets/images/catalog/1784876583214-mj-10-1.jpg",
-            "assets/images/catalog/1784876583214-mj-10-2.jpg",
-            "assets/images/catalog/1784876583214-mj-10-3.jpg",
-            "assets/images/catalog/1784876583214-mj-10-4.jpg",
-            "assets/images/catalog/1784876583214-mj-10-5.jpg"
+            "assets/images/catalog/mj-10/009-mj-10.png",
+            "assets/images/catalog/mj-10/1784876583214-mj-10-1.jpg",
+            "assets/images/catalog/mj-10/1784876583214-mj-10-2.jpg",
+            "assets/images/catalog/mj-10/1784876583214-mj-10-3.jpg",
+            "assets/images/catalog/mj-10/1784876583214-mj-10-4.jpg",
+            "assets/images/catalog/mj-10/1784876583214-mj-10-5.jpg"
           ]
         }
       ]
@@ -857,179 +857,179 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BP-02",
           "name": "Bacon-Flavored TPR Bone Chew Toy",
-          "image": "assets/images/catalog/063-bp-02.png",
+          "image": "assets/images/catalog/bp-02/063-bp-02.png",
           "description": "Bacon-Flavored TPR Bone Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/063-bp-02.png",
-            "assets/images/catalog/1784877582224-bp-02-1.jpg",
-            "assets/images/catalog/1784877582224-bp-02-2.jpg"
+            "assets/images/catalog/bp-02/063-bp-02.png",
+            "assets/images/catalog/bp-02/1784877582224-bp-02-1.jpg",
+            "assets/images/catalog/bp-02/1784877582224-bp-02-2.jpg"
           ]
         },
         {
           "code": "JX-03",
           "name": "Electric Hide-and-Seek Cat Teaser Toy",
-          "image": "assets/images/catalog/111-jx-03.png",
+          "image": "assets/images/catalog/jx-03/111-jx-03.png",
           "description": "Electric Hide-and-Seek Cat Teaser Toy is designed for interactive play and enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "PT-09",
           "name": "Electric Rolling Feather Cat Teaser Toy",
-          "image": "assets/images/catalog/068-pt-09.png",
+          "image": "assets/images/catalog/pt-09/068-pt-09.png",
           "description": "Electric Rolling Feather Cat Teaser Toy is designed for interactive play and enrichment. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/068-pt-09.png",
-            "assets/images/catalog/1784877807492-pt-09-1.jpg",
-            "assets/images/catalog/1784877807492-pt-09-2.jpg",
-            "assets/images/catalog/1784877807492-pt-09-3.jpg",
-            "assets/images/catalog/1784877807492-pt-09-4.jpg",
-            "assets/images/catalog/1784877807492-pt-09-5.jpg"
+            "assets/images/catalog/pt-09/068-pt-09.png",
+            "assets/images/catalog/pt-09/1784877807492-pt-09-1.jpg",
+            "assets/images/catalog/pt-09/1784877807492-pt-09-2.jpg",
+            "assets/images/catalog/pt-09/1784877807492-pt-09-3.jpg",
+            "assets/images/catalog/pt-09/1784877807492-pt-09-4.jpg",
+            "assets/images/catalog/pt-09/1784877807492-pt-09-5.jpg"
           ]
         },
         {
           "code": "PT-10",
           "name": "Electric Tumbler Treat-Dispensing Cat Toy",
-          "image": "assets/images/catalog/069-pt-10.png",
+          "image": "assets/images/catalog/pt-10/069-pt-10.png",
           "description": "Electric Tumbler Treat-Dispensing Cat Toy is designed for interactive play and enrichment. The product listing highlights slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/069-pt-10.png",
-            "assets/images/catalog/1784877965549-pt-10-1.jpg",
-            "assets/images/catalog/1784877965549-pt-10-2.jpg",
-            "assets/images/catalog/1784877965549-pt-10-3.jpg"
+            "assets/images/catalog/pt-10/069-pt-10.png",
+            "assets/images/catalog/pt-10/1784877965549-pt-10-1.jpg",
+            "assets/images/catalog/pt-10/1784877965549-pt-10-2.jpg",
+            "assets/images/catalog/pt-10/1784877965549-pt-10-3.jpg"
           ]
         },
         {
           "code": "BP-03",
           "name": "Freezable Dumbbell Cooling Chew Toy",
-          "image": "assets/images/catalog/064-bp-03.png",
+          "image": "assets/images/catalog/bp-03/064-bp-03.png",
           "description": "Freezable Dumbbell Cooling Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/064-bp-03.png",
-            "assets/images/catalog/1784877217451-bp-03-1.jpg",
-            "assets/images/catalog/1784877217451-bp-03-2.jpg"
+            "assets/images/catalog/bp-03/064-bp-03.png",
+            "assets/images/catalog/bp-03/1784877217451-bp-03-1.jpg",
+            "assets/images/catalog/bp-03/1784877217451-bp-03-2.jpg"
           ]
         },
         {
           "code": "PT-12",
           "name": "LED Feather Running Wheel Cat Toy",
-          "image": "assets/images/catalog/071-pt-12.png",
+          "image": "assets/images/catalog/pt-12/071-pt-12.png",
           "description": "LED Feather Running Wheel Cat Toy is designed for interactive play and enrichment. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/071-pt-12.png",
-            "assets/images/catalog/1784878118831-pt-12-1.jpg"
+            "assets/images/catalog/pt-12/071-pt-12.png",
+            "assets/images/catalog/pt-12/1784878118831-pt-12-1.jpg"
           ]
         },
         {
           "code": "PT-13",
           "name": "Light-Up Bell Ball Electric Cat Toy",
-          "image": "assets/images/catalog/072-pt-13.png",
+          "image": "assets/images/catalog/pt-13/072-pt-13.png",
           "description": "Light-Up Bell Ball Electric Cat Toy is designed for interactive play and enrichment. The product listing highlights LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/072-pt-13.png",
-            "assets/images/catalog/1784878515815-pt-13-1.jpg",
-            "assets/images/catalog/1784878515815-pt-13-2.jpg",
-            "assets/images/catalog/1784878515815-pt-13-3.jpg",
-            "assets/images/catalog/1784878515815-pt-13-4.jpg"
+            "assets/images/catalog/pt-13/072-pt-13.png",
+            "assets/images/catalog/pt-13/1784878515815-pt-13-1.jpg",
+            "assets/images/catalog/pt-13/1784878515815-pt-13-2.jpg",
+            "assets/images/catalog/pt-13/1784878515815-pt-13-3.jpg",
+            "assets/images/catalog/pt-13/1784878515815-pt-13-4.jpg"
           ]
         },
         {
           "code": "MM-07",
           "name": "Plush Squeaky Chew Toy Set",
-          "image": "assets/images/catalog/033-mm-07.png",
+          "image": "assets/images/catalog/mm-07/033-mm-07.png",
           "description": "Plush Squeaky Chew Toy Set is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/033-mm-07.png",
-            "assets/images/catalog/1784880803627-mm-07-1.jpg",
-            "assets/images/catalog/1784880803627-mm-07-10.jpg",
-            "assets/images/catalog/1784880803627-mm-07-2.jpg",
-            "assets/images/catalog/1784880803627-mm-07-3.jpg",
-            "assets/images/catalog/1784880803627-mm-07-4.jpg",
-            "assets/images/catalog/1784880803627-mm-07-5.jpg",
-            "assets/images/catalog/1784880803627-mm-07-6.jpg",
-            "assets/images/catalog/1784880803627-mm-07-7.jpg",
-            "assets/images/catalog/1784880803627-mm-07-8.jpg",
-            "assets/images/catalog/1784880803627-mm-07-9.jpg"
+            "assets/images/catalog/mm-07/033-mm-07.png",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-1.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-10.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-2.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-3.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-4.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-5.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-6.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-7.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-8.jpg",
+            "assets/images/catalog/mm-07/1784880803627-mm-07-9.jpg"
           ]
         },
         {
           "code": "MM-15",
           "name": "Plush Squeaky Duck Chew Toy",
-          "image": "assets/images/catalog/041-mm-15.png",
+          "image": "assets/images/catalog/mm-15/041-mm-15.png",
           "description": "Plush Squeaky Duck Chew Toy is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/041-mm-15.png",
-            "assets/images/catalog/1784881196565-mm-15-1.jpg",
-            "assets/images/catalog/1784881196565-mm-15-2.jpg",
-            "assets/images/catalog/1784881196565-mm-15-3.jpg"
+            "assets/images/catalog/mm-15/041-mm-15.png",
+            "assets/images/catalog/mm-15/1784881196565-mm-15-1.jpg",
+            "assets/images/catalog/mm-15/1784881196565-mm-15-2.jpg",
+            "assets/images/catalog/mm-15/1784881196565-mm-15-3.jpg"
           ]
         },
         {
           "code": "LC-10",
           "name": "Rubber Chew Dental Treat-Dispensing Dog Toy",
-          "image": "assets/images/catalog/018-lc-10.png",
+          "image": "assets/images/catalog/lc-10/018-lc-10.png",
           "description": "Rubber Chew Dental Treat-Dispensing Dog Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "JX-05",
           "name": "Smart Electric Rolling Cat Ball",
-          "image": "assets/images/catalog/112-jx-05.png",
+          "image": "assets/images/catalog/jx-05/112-jx-05.png",
           "description": "Smart Electric Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, durable chew-friendly material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/112-jx-05.png",
-            "assets/images/catalog/1784883424447-jx-05-1.jpg",
-            "assets/images/catalog/1784883424447-jx-05-2.jpg",
-            "assets/images/catalog/1784883424447-jx-05-3.jpg",
-            "assets/images/catalog/1784883424447-jx-05-4.jpg",
-            "assets/images/catalog/1784883424447-jx-05-5.jpg",
-            "assets/images/catalog/1784883424447-jx-05-6.jpg",
-            "assets/images/catalog/1784883424447-jx-05-7.jpg"
+            "assets/images/catalog/jx-05/112-jx-05.png",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-1.jpg",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-2.jpg",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-3.jpg",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-4.jpg",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-5.jpg",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-6.jpg",
+            "assets/images/catalog/jx-05/1784883424447-jx-05-7.jpg"
           ]
         },
         {
           "code": "JX-01",
           "name": "Smart Rolling Cat Ball with Teaser Rope",
-          "image": "assets/images/catalog/110-jx-01.png",
+          "image": "assets/images/catalog/jx-01/110-jx-01.png",
           "description": "Smart Rolling Cat Ball with Teaser Rope is designed for interactive play and enrichment. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/110-jx-01.png",
-            "assets/images/catalog/1784904832964-jx-01-1.jpg",
-            "assets/images/catalog/1784904832964-jx-01-2.jpg",
-            "assets/images/catalog/1784904832964-jx-01-3.jpg",
-            "assets/images/catalog/1784904832964-jx-01-4.jpg",
-            "assets/images/catalog/1784904832964-jx-01-5.jpg"
+            "assets/images/catalog/jx-01/110-jx-01.png",
+            "assets/images/catalog/jx-01/1784904832964-jx-01-1.jpg",
+            "assets/images/catalog/jx-01/1784904832964-jx-01-2.jpg",
+            "assets/images/catalog/jx-01/1784904832964-jx-01-3.jpg",
+            "assets/images/catalog/jx-01/1784904832964-jx-01-4.jpg",
+            "assets/images/catalog/jx-01/1784904832964-jx-01-5.jpg"
           ]
         },
         {
           "code": "BP-01",
           "name": "Square Ring Chew and Dental Dog Toy",
-          "image": "assets/images/catalog/062-bp-01.png",
+          "image": "assets/images/catalog/bp-01/062-bp-01.png",
           "description": "Square Ring Chew and Dental Dog Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/062-bp-01.png",
-            "assets/images/catalog/1784881650293-bp-01-1.jpg",
-            "assets/images/catalog/1784881650293-bp-01-2.jpg",
-            "assets/images/catalog/1784881650293-bp-01-3.jpg"
+            "assets/images/catalog/bp-01/062-bp-01.png",
+            "assets/images/catalog/bp-01/1784881650293-bp-01-1.jpg",
+            "assets/images/catalog/bp-01/1784881650293-bp-01-2.jpg",
+            "assets/images/catalog/bp-01/1784881650293-bp-01-3.jpg"
           ]
         },
         {
           "code": "PT-08",
           "name": "USB Rechargeable Automatic Laser Cat Toy",
-          "image": "assets/images/catalog/067-pt-08.png",
+          "image": "assets/images/catalog/pt-08/067-pt-08.png",
           "description": "USB Rechargeable Automatic Laser Cat Toy is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/067-pt-08.png",
-            "assets/images/catalog/1784881855720-pt-08-1.jpg",
-            "assets/images/catalog/1784881855720-pt-08-2.jpg"
+            "assets/images/catalog/pt-08/067-pt-08.png",
+            "assets/images/catalog/pt-08/1784881855720-pt-08-1.jpg",
+            "assets/images/catalog/pt-08/1784881855720-pt-08-2.jpg"
           ]
         },
         {
           "code": "PT-11",
           "name": "USB Rechargeable LED Rolling Cat Ball",
-          "image": "assets/images/catalog/070-pt-11.png",
+          "image": "assets/images/catalog/pt-11/070-pt-11.png",
           "description": "USB Rechargeable LED Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/070-pt-11.png",
-            "assets/images/catalog/1784882034313-pt-11-1.jpg",
-            "assets/images/catalog/1784882034313-pt-11-2.jpg"
+            "assets/images/catalog/pt-11/070-pt-11.png",
+            "assets/images/catalog/pt-11/1784882034313-pt-11-1.jpg",
+            "assets/images/catalog/pt-11/1784882034313-pt-11-2.jpg"
           ]
         }
       ]
@@ -1042,174 +1042,174 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-08",
           "name": "Breathable Front Pet Carrier Backpack",
-          "image": "assets/images/catalog/1784882780803-mm-08-1.jpg",
+          "image": "assets/images/catalog/mm-08/1784882780803-mm-08-1.jpg",
           "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MJ-04",
           "name": "Breathable Single-Shoulder Pet Travel Carrier",
-          "image": "assets/images/catalog/1784884076728-mj-04-1.jpg",
+          "image": "assets/images/catalog/mj-04/1784884076728-mj-04-1.jpg",
           "images": [
-            "assets/images/catalog/1784884076728-mj-04-1.jpg",
-            "assets/images/catalog/1784884076728-mj-04-2.jpg",
-            "assets/images/catalog/1784884076728-mj-04-3.jpg",
-            "assets/images/catalog/1784884076728-mj-04-4.jpg",
-            "assets/images/catalog/1784884076728-mj-04-5.jpg",
-            "assets/images/catalog/1784884076728-mj-04-6.jpg"
+            "assets/images/catalog/mj-04/1784884076728-mj-04-1.jpg",
+            "assets/images/catalog/mj-04/1784884076728-mj-04-2.jpg",
+            "assets/images/catalog/mj-04/1784884076728-mj-04-3.jpg",
+            "assets/images/catalog/mj-04/1784884076728-mj-04-4.jpg",
+            "assets/images/catalog/mj-04/1784884076728-mj-04-5.jpg",
+            "assets/images/catalog/mj-04/1784884076728-mj-04-6.jpg"
           ],
           "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "SA-01",
           "name": "Foldable Summer Pet Sling Carrier",
-          "image": "assets/images/catalog/1784884907702-sa-01-1.jpg",
+          "image": "assets/images/catalog/sa-01/1784884907702-sa-01-1.jpg",
           "images": [
-            "assets/images/catalog/1784884907702-sa-01-1.jpg",
-            "assets/images/catalog/1784884907702-sa-01-2.jpg",
-            "assets/images/catalog/1784884907702-sa-01-3.jpg",
-            "assets/images/catalog/1784884907702-sa-01-4.jpg",
-            "assets/images/catalog/1784884907702-sa-01-5.jpg",
-            "assets/images/catalog/1784884907702-sa-01-6.jpg"
+            "assets/images/catalog/sa-01/1784884907702-sa-01-1.jpg",
+            "assets/images/catalog/sa-01/1784884907702-sa-01-2.jpg",
+            "assets/images/catalog/sa-01/1784884907702-sa-01-3.jpg",
+            "assets/images/catalog/sa-01/1784884907702-sa-01-4.jpg",
+            "assets/images/catalog/sa-01/1784884907702-sa-01-5.jpg",
+            "assets/images/catalog/sa-01/1784884907702-sa-01-6.jpg"
           ],
           "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YW-08",
           "name": "Foldable Waterproof Trunk Pet Cargo Liner",
-          "image": "assets/images/catalog/098-yw-08.png",
+          "image": "assets/images/catalog/yw-08/098-yw-08.png",
           "description": "Foldable Waterproof Trunk Pet Cargo Liner is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a foldable design. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YW-05",
           "name": "Full-Cover Front Seat Pet Car Cushion",
-          "image": "assets/images/catalog/1784888461159-yw-05-1.png",
+          "image": "assets/images/catalog/yw-05/1784888461159-yw-05-1.png",
           "images": [
-            "assets/images/catalog/1784888461159-yw-05-1.png",
-            "assets/images/catalog/1784888461159-yw-05-2.jpg",
-            "assets/images/catalog/1784888461159-yw-05-3.jpg"
+            "assets/images/catalog/yw-05/1784888461159-yw-05-1.png",
+            "assets/images/catalog/yw-05/1784888461159-yw-05-2.jpg",
+            "assets/images/catalog/yw-05/1784888461159-yw-05-3.jpg"
           ],
           "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "SA-03",
           "name": "Lightweight Foldable Pet Backpack Carrier",
-          "image": "assets/images/catalog/1784888576585-sa-03-1.jpg",
+          "image": "assets/images/catalog/sa-03/1784888576585-sa-03-1.jpg",
           "images": [
-            "assets/images/catalog/1784888576585-sa-03-1.jpg",
-            "assets/images/catalog/1784888576585-sa-03-2.jpg",
-            "assets/images/catalog/1784888576585-sa-03-3.jpg",
-            "assets/images/catalog/1784888576585-sa-03-4.jpg"
+            "assets/images/catalog/sa-03/1784888576585-sa-03-1.jpg",
+            "assets/images/catalog/sa-03/1784888576585-sa-03-2.jpg",
+            "assets/images/catalog/sa-03/1784888576585-sa-03-3.jpg",
+            "assets/images/catalog/sa-03/1784888576585-sa-03-4.jpg"
           ],
           "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MJ-06",
           "name": "Pet Safety Car Seat Bed for Back Seat",
-          "image": "assets/images/catalog/1784888780802-mj-06-1.jpg",
+          "image": "assets/images/catalog/mj-06/1784888780802-mj-06-1.jpg",
           "images": [
-            "assets/images/catalog/1784888780802-mj-06-1.jpg",
-            "assets/images/catalog/1784888780802-mj-06-2.jpg",
-            "assets/images/catalog/1784888780802-mj-06-3.jpg",
-            "assets/images/catalog/1784888780802-mj-06-4.jpg"
+            "assets/images/catalog/mj-06/1784888780802-mj-06-1.jpg",
+            "assets/images/catalog/mj-06/1784888780802-mj-06-2.jpg",
+            "assets/images/catalog/mj-06/1784888780802-mj-06-3.jpg",
+            "assets/images/catalog/mj-06/1784888780802-mj-06-4.jpg"
           ],
           "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "SA-02",
           "name": "Pet Shoulder Sling Carrier Bag",
-          "image": "assets/images/catalog/1784888953688-sa-02-1.jpg",
+          "image": "assets/images/catalog/sa-02/1784888953688-sa-02-1.jpg",
           "images": [
-            "assets/images/catalog/1784888953688-sa-02-1.jpg",
-            "assets/images/catalog/1784888953688-sa-02-2.jpg",
-            "assets/images/catalog/1784888953688-sa-02-3.jpg",
-            "assets/images/catalog/1784888953688-sa-02-4.jpg"
+            "assets/images/catalog/sa-02/1784888953688-sa-02-1.jpg",
+            "assets/images/catalog/sa-02/1784888953688-sa-02-2.jpg",
+            "assets/images/catalog/sa-02/1784888953688-sa-02-3.jpg",
+            "assets/images/catalog/sa-02/1784888953688-sa-02-4.jpg"
           ],
           "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YW-04",
           "name": "Thick Non-Slip Rear Seat Pet Car Cover",
-          "image": "assets/images/catalog/094-yw-04.png",
+          "image": "assets/images/catalog/yw-04/094-yw-04.png",
           "description": "Thick Non-Slip Rear Seat Pet Car Cover is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction, Oxford fabric, a non-slip base. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/094-yw-04.png",
-            "assets/images/catalog/1784900793676-yw-04-1.jpg",
-            "assets/images/catalog/1784900793676-yw-04-2.jpg",
-            "assets/images/catalog/1784900793676-yw-04-3.jpg",
-            "assets/images/catalog/1784900793676-yw-04-4.jpg"
+            "assets/images/catalog/yw-04/094-yw-04.png",
+            "assets/images/catalog/yw-04/1784900793676-yw-04-1.jpg",
+            "assets/images/catalog/yw-04/1784900793676-yw-04-2.jpg",
+            "assets/images/catalog/yw-04/1784900793676-yw-04-3.jpg",
+            "assets/images/catalog/yw-04/1784900793676-yw-04-4.jpg"
           ]
         },
         {
           "code": "YW-06",
           "name": "Waterproof Oxford Front Seat Pet Mat",
-          "image": "assets/images/catalog/096-yw-06.png",
+          "image": "assets/images/catalog/yw-06/096-yw-06.png",
           "description": "Waterproof Oxford Front Seat Pet Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, Oxford fabric. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/096-yw-06.png",
-            "assets/images/catalog/1784900912659-yw-06-1.jpg",
-            "assets/images/catalog/1784900912659-yw-06-2.jpg",
-            "assets/images/catalog/1784900912659-yw-06-3.jpg"
+            "assets/images/catalog/yw-06/096-yw-06.png",
+            "assets/images/catalog/yw-06/1784900912659-yw-06-1.jpg",
+            "assets/images/catalog/yw-06/1784900912659-yw-06-2.jpg",
+            "assets/images/catalog/yw-06/1784900912659-yw-06-3.jpg"
           ]
         },
         {
           "code": "MJ-03",
           "name": "Waterproof Oxford Front Seat Pet Travel Mat",
-          "image": "assets/images/catalog/002-mj-03.png",
+          "image": "assets/images/catalog/mj-03/002-mj-03.png",
           "description": "Waterproof Oxford Front Seat Pet Travel Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, Oxford fabric. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/002-mj-03.png",
-            "assets/images/catalog/1784901097724-mj-03-1.jpg",
-            "assets/images/catalog/1784901097724-mj-03-2.jpg",
-            "assets/images/catalog/1784901097724-mj-03-3.jpg"
+            "assets/images/catalog/mj-03/002-mj-03.png",
+            "assets/images/catalog/mj-03/1784901097724-mj-03-1.jpg",
+            "assets/images/catalog/mj-03/1784901097724-mj-03-2.jpg",
+            "assets/images/catalog/mj-03/1784901097724-mj-03-3.jpg"
           ]
         },
         {
           "code": "YW-03",
           "name": "Waterproof Rear Car Seat Pet Cover",
-          "image": "assets/images/catalog/093-yw-03.png",
+          "image": "assets/images/catalog/yw-03/093-yw-03.png",
           "description": "Waterproof Rear Car Seat Pet Cover is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/093-yw-03.png",
-            "assets/images/catalog/1784901331033-yw-03-1.jpg",
-            "assets/images/catalog/1784901331033-yw-03-2.jpg",
-            "assets/images/catalog/1784901331033-yw-03-3.jpg"
+            "assets/images/catalog/yw-03/093-yw-03.png",
+            "assets/images/catalog/yw-03/1784901331033-yw-03-1.jpg",
+            "assets/images/catalog/yw-03/1784901331033-yw-03-2.jpg",
+            "assets/images/catalog/yw-03/1784901331033-yw-03-3.jpg"
           ]
         },
         {
           "code": "MJ-05",
           "name": "Waterproof Rear Seat Pet Car Hammock",
-          "image": "assets/images/catalog/004-mj-05.png",
+          "image": "assets/images/catalog/mj-05/004-mj-05.png",
           "description": "Waterproof Rear Seat Pet Car Hammock is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "YW-07",
           "name": "Waterproof Rear Seat Pet Car Mat",
-          "image": "assets/images/catalog/097-yw-07.png",
+          "image": "assets/images/catalog/yw-07/097-yw-07.png",
           "description": "Waterproof Rear Seat Pet Car Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/097-yw-07.png",
-            "assets/images/catalog/1784901498341-yw-07-1.jpg",
-            "assets/images/catalog/1784901498341-yw-07-2.jpg",
-            "assets/images/catalog/1784901498341-yw-07-3.jpg"
+            "assets/images/catalog/yw-07/097-yw-07.png",
+            "assets/images/catalog/yw-07/1784901498341-yw-07-1.jpg",
+            "assets/images/catalog/yw-07/1784901498341-yw-07-2.jpg",
+            "assets/images/catalog/yw-07/1784901498341-yw-07-3.jpg"
           ]
         },
         {
           "code": "MJ-07",
           "name": "Waterproof Rear Seat Pet Travel Mat",
-          "image": "assets/images/catalog/006-mj-07.png",
+          "image": "assets/images/catalog/mj-07/006-mj-07.png",
           "description": "Waterproof Rear Seat Pet Travel Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/006-mj-07.png",
-            "assets/images/catalog/1784901675764-mj-07-1.jpg",
-            "assets/images/catalog/1784901675764-mj-07-2.jpg",
-            "assets/images/catalog/1784901675764-mj-07-3.jpg",
-            "assets/images/catalog/1784901675764-mj-07-4.jpg"
+            "assets/images/catalog/mj-07/006-mj-07.png",
+            "assets/images/catalog/mj-07/1784901675764-mj-07-1.jpg",
+            "assets/images/catalog/mj-07/1784901675764-mj-07-2.jpg",
+            "assets/images/catalog/mj-07/1784901675764-mj-07-3.jpg",
+            "assets/images/catalog/mj-07/1784901675764-mj-07-4.jpg"
           ]
         },
         {
           "code": "YW-08",
           "name": "Waterproof SUV Trunk Pet Cargo Liner",
-          "image": "assets/images/catalog/099-yw-08.png",
+          "image": "assets/images/catalog/yw-08/099-yw-08.png",
           "description": "Waterproof SUV Trunk Pet Cargo Liner is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a foldable design. A practical choice for pet owners and retail assortments."
         }
       ]
@@ -1222,263 +1222,263 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PR-09",
           "name": "Breathable Six-Piece Harness and Leash Set",
-          "image": "assets/images/catalog/087-pr-09.png",
+          "image": "assets/images/catalog/pr-09/087-pr-09.png",
           "description": "Breathable Six-Piece Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "FD-03",
           "name": "Custom Leopard Print Dog Walking Set",
-          "image": "assets/images/catalog/123-fd-03.png",
+          "image": "assets/images/catalog/fd-03/123-fd-03.png",
           "description": "Custom Leopard Print Dog Walking Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/123-fd-03.png",
-            "assets/images/catalog/1784902499631-fd-03-1.jpg",
-            "assets/images/catalog/1784902499631-fd-03-2.png",
-            "assets/images/catalog/1784902499631-fd-03-3.jpg"
+            "assets/images/catalog/fd-03/123-fd-03.png",
+            "assets/images/catalog/fd-03/1784902499631-fd-03-1.jpg",
+            "assets/images/catalog/fd-03/1784902499631-fd-03-2.png",
+            "assets/images/catalog/fd-03/1784902499631-fd-03-3.jpg"
           ]
         },
         {
           "code": "FD-05",
           "name": "Custom Logo Harness and Leash Set",
-          "image": "assets/images/catalog/124-fd-05.png",
+          "image": "assets/images/catalog/fd-05/124-fd-05.png",
           "description": "Custom Logo Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights customization options. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/124-fd-05.png",
-            "assets/images/catalog/1784902578354-fd-05-1.jpg",
-            "assets/images/catalog/1784902578354-fd-05-2.jpg",
-            "assets/images/catalog/1784902578354-fd-05-3.jpg"
+            "assets/images/catalog/fd-05/124-fd-05.png",
+            "assets/images/catalog/fd-05/1784902578354-fd-05-1.jpg",
+            "assets/images/catalog/fd-05/1784902578354-fd-05-2.jpg",
+            "assets/images/catalog/fd-05/1784902578354-fd-05-3.jpg"
           ]
         },
         {
           "code": "PR-07",
           "name": "Custom Printed Tactical Pet Harness Set",
-          "image": "assets/images/catalog/085-pr-07.png",
+          "image": "assets/images/catalog/pr-07/085-pr-07.png",
           "description": "Custom Printed Tactical Pet Harness Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material, customization options. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "PR-08",
           "name": "Daisy Print Adjustable Harness and Leash Set",
-          "image": "assets/images/catalog/086-pr-08.png",
+          "image": "assets/images/catalog/pr-08/086-pr-08.png",
           "description": "Daisy Print Adjustable Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights adjustable fitting. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MM-11",
           "name": "Escape-Proof Breathable Harness and Leash Set",
-          "image": "assets/images/catalog/037-mm-11.png",
+          "image": "assets/images/catalog/mm-11/037-mm-11.png",
           "description": "Escape-Proof Breathable Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/037-mm-11.png",
-            "assets/images/catalog/1784902838026-mm-11-1.jpg",
-            "assets/images/catalog/1784902838026-mm-11-2.jpg",
-            "assets/images/catalog/1784902838026-mm-11-3.jpg"
+            "assets/images/catalog/mm-11/037-mm-11.png",
+            "assets/images/catalog/mm-11/1784902838026-mm-11-1.jpg",
+            "assets/images/catalog/mm-11/1784902838026-mm-11-2.jpg",
+            "assets/images/catalog/mm-11/1784902838026-mm-11-3.jpg"
           ]
         },
         {
           "code": "BP-04",
           "name": "Gradient Collar Harness and Leash Set",
-          "image": "assets/images/catalog/065-bp-04.png",
+          "image": "assets/images/catalog/bp-04/065-bp-04.png",
           "description": "Gradient Collar Harness and Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/065-bp-04.png",
-            "assets/images/catalog/1784903026399-bp-04-1.jpg",
-            "assets/images/catalog/1784903026399-bp-04-2.jpg",
-            "assets/images/catalog/1784903026399-bp-04-3.jpg"
+            "assets/images/catalog/bp-04/065-bp-04.png",
+            "assets/images/catalog/bp-04/1784903026399-bp-04-1.jpg",
+            "assets/images/catalog/bp-04/1784903026399-bp-04-2.jpg",
+            "assets/images/catalog/bp-04/1784903026399-bp-04-3.jpg"
           ]
         },
         {
           "code": "BP-05",
           "name": "Jacquard Pattern Comfortable Dog Leash Set",
-          "image": "assets/images/catalog/066-bp-05.png",
+          "image": "assets/images/catalog/bp-05/066-bp-05.png",
           "description": "Jacquard Pattern Comfortable Dog Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/066-bp-05.png",
-            "assets/images/catalog/1784903160538-bp-05-1.jpg",
-            "assets/images/catalog/1784903160538-bp-05-2.png"
+            "assets/images/catalog/bp-05/066-bp-05.png",
+            "assets/images/catalog/bp-05/1784903160538-bp-05-1.jpg",
+            "assets/images/catalog/bp-05/1784903160538-bp-05-2.png"
           ]
         },
         {
           "code": "MM-10",
           "name": "Lightweight Breathable Pet Shoes",
-          "image": "assets/images/catalog/036-mm-10.png",
+          "image": "assets/images/catalog/mm-10/036-mm-10.png",
           "description": "Lightweight Breathable Pet Shoes is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/036-mm-10.png",
-            "assets/images/catalog/1784903307002-mm-10-1.jpg",
-            "assets/images/catalog/1784903307002-mm-10-2.jpg",
-            "assets/images/catalog/1784903307002-mm-10-3.jpg",
-            "assets/images/catalog/1784903307002-mm-10-4.jpg"
+            "assets/images/catalog/mm-10/036-mm-10.png",
+            "assets/images/catalog/mm-10/1784903307002-mm-10-1.jpg",
+            "assets/images/catalog/mm-10/1784903307002-mm-10-2.jpg",
+            "assets/images/catalog/mm-10/1784903307002-mm-10-3.jpg",
+            "assets/images/catalog/mm-10/1784903307002-mm-10-4.jpg"
           ]
         },
         {
           "code": "PR-05",
           "name": "Pet Collar Harness and Leash Set",
-          "image": "assets/images/catalog/083-pr-05.png",
+          "image": "assets/images/catalog/pr-05/083-pr-05.png",
           "description": "Pet Collar Harness and Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MM-12",
           "name": "Rainbow Striped Warm Pet Fleece Shirt",
-          "image": "assets/images/catalog/038-mm-12.png",
+          "image": "assets/images/catalog/mm-12/038-mm-12.png",
           "description": "Rainbow Striped Warm Pet Fleece Shirt is designed for everyday pet training and safety needs. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/038-mm-12.png",
-            "assets/images/catalog/1784903563958-mm-12-1.jpg",
-            "assets/images/catalog/1784903563958-mm-12-2.jpg",
-            "assets/images/catalog/1784903563958-mm-12-3.jpg",
-            "assets/images/catalog/1784903563958-mm-12-4.jpg",
-            "assets/images/catalog/1784903563958-mm-12-5.jpg",
-            "assets/images/catalog/1784903563958-mm-12-6.jpg"
+            "assets/images/catalog/mm-12/038-mm-12.png",
+            "assets/images/catalog/mm-12/1784903563958-mm-12-1.jpg",
+            "assets/images/catalog/mm-12/1784903563958-mm-12-2.jpg",
+            "assets/images/catalog/mm-12/1784903563958-mm-12-3.jpg",
+            "assets/images/catalog/mm-12/1784903563958-mm-12-4.jpg",
+            "assets/images/catalog/mm-12/1784903563958-mm-12-5.jpg",
+            "assets/images/catalog/mm-12/1784903563958-mm-12-6.jpg"
           ]
         },
         {
           "code": "XH-01",
           "name": "Rechargeable LED Night Walking Dog Collar",
-          "image": "assets/images/catalog/128-xh-01.png",
+          "image": "assets/images/catalog/xh-01/128-xh-01.png",
           "description": "Rechargeable LED Night Walking Dog Collar is designed for comfortable walks and outdoor activities. The product listing highlights rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/128-xh-01.png",
-            "assets/images/catalog/1784903718591-xh-01-1.jpg",
-            "assets/images/catalog/1784903718591-xh-01-2.jpg",
-            "assets/images/catalog/1784903718591-xh-01-3.png",
-            "assets/images/catalog/1784903718591-xh-01-4.jpg",
-            "assets/images/catalog/1784903718591-xh-01-5.jpg"
+            "assets/images/catalog/xh-01/128-xh-01.png",
+            "assets/images/catalog/xh-01/1784903718591-xh-01-1.jpg",
+            "assets/images/catalog/xh-01/1784903718591-xh-01-2.jpg",
+            "assets/images/catalog/xh-01/1784903718591-xh-01-3.png",
+            "assets/images/catalog/xh-01/1784903718591-xh-01-4.jpg",
+            "assets/images/catalog/xh-01/1784903718591-xh-01-5.jpg"
           ]
         },
         {
           "code": "NB-01",
           "name": "Rechargeable LED Safety Dog Collar",
-          "image": "assets/images/catalog/127-nb-01.png",
+          "image": "assets/images/catalog/nb-01/127-nb-01.png",
           "description": "Rechargeable LED Safety Dog Collar is designed for comfortable walks and outdoor activities. The product listing highlights rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/127-nb-01.png",
-            "assets/images/catalog/1784903937955-nb-01-1.png",
-            "assets/images/catalog/1784903937955-nb-01-2.jpg"
+            "assets/images/catalog/nb-01/127-nb-01.png",
+            "assets/images/catalog/nb-01/1784903937955-nb-01-1.png",
+            "assets/images/catalog/nb-01/1784903937955-nb-01-2.jpg"
           ]
         },
         {
           "code": "MM-03",
           "name": "Reflective Breathable Pet Harness and Leash",
-          "image": "assets/images/catalog/029-mm-03.png",
+          "image": "assets/images/catalog/mm-03/029-mm-03.png",
           "description": "Reflective Breathable Pet Harness and Leash is designed for comfortable walks and outdoor activities. The product listing highlights breathable material, reflective safety detailing. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/029-mm-03.png",
-            "assets/images/catalog/1784904337327-mm-03-1.jpg",
-            "assets/images/catalog/1784904337327-mm-03-2.jpg",
-            "assets/images/catalog/1784904337327-mm-03-3.jpg",
-            "assets/images/catalog/1784904337327-mm-03-4.jpg",
-            "assets/images/catalog/1784904337327-mm-03-5.jpg"
+            "assets/images/catalog/mm-03/029-mm-03.png",
+            "assets/images/catalog/mm-03/1784904337327-mm-03-1.jpg",
+            "assets/images/catalog/mm-03/1784904337327-mm-03-2.jpg",
+            "assets/images/catalog/mm-03/1784904337327-mm-03-3.jpg",
+            "assets/images/catalog/mm-03/1784904337327-mm-03-4.jpg",
+            "assets/images/catalog/mm-03/1784904337327-mm-03-5.jpg"
           ]
         },
         {
           "code": "MM-16",
           "name": "Reflective Vest-Style Dog Harness and Leash",
-          "image": "assets/images/catalog/042-mm-16.png",
+          "image": "assets/images/catalog/mm-16/042-mm-16.png",
           "description": "Reflective Vest-Style Dog Harness and Leash is designed for comfortable walks and outdoor activities. The product listing highlights reflective safety detailing. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/042-mm-16.png",
-            "assets/images/catalog/1784904444429-mm-16-1.jpg",
-            "assets/images/catalog/1784904444429-mm-16-2.jpg",
-            "assets/images/catalog/1784904444429-mm-16-3.jpg",
-            "assets/images/catalog/1784904444429-mm-16-4.jpg",
-            "assets/images/catalog/1784904444429-mm-16-5.jpg"
+            "assets/images/catalog/mm-16/042-mm-16.png",
+            "assets/images/catalog/mm-16/1784904444429-mm-16-1.jpg",
+            "assets/images/catalog/mm-16/1784904444429-mm-16-2.jpg",
+            "assets/images/catalog/mm-16/1784904444429-mm-16-3.jpg",
+            "assets/images/catalog/mm-16/1784904444429-mm-16-4.jpg",
+            "assets/images/catalog/mm-16/1784904444429-mm-16-5.jpg"
           ]
         },
         {
           "code": "MM-05",
           "name": "Small Dog Harness and Leash Set",
-          "image": "assets/images/catalog/031-mm-05.png",
+          "image": "assets/images/catalog/mm-05/031-mm-05.png",
           "description": "Small Dog Harness and Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/031-mm-05.png",
-            "assets/images/catalog/1784904636355-mm-05-1.jpg",
-            "assets/images/catalog/1784904636355-mm-05-2.jpg",
-            "assets/images/catalog/1784904636355-mm-05-3.jpg",
-            "assets/images/catalog/1784904636355-mm-05-4.jpg",
-            "assets/images/catalog/1784904636355-mm-05-5.jpg"
+            "assets/images/catalog/mm-05/031-mm-05.png",
+            "assets/images/catalog/mm-05/1784904636355-mm-05-1.jpg",
+            "assets/images/catalog/mm-05/1784904636355-mm-05-2.jpg",
+            "assets/images/catalog/mm-05/1784904636355-mm-05-3.jpg",
+            "assets/images/catalog/mm-05/1784904636355-mm-05-4.jpg",
+            "assets/images/catalog/mm-05/1784904636355-mm-05-5.jpg"
           ]
         },
         {
           "code": "MM-14",
           "name": "Soft Breathable Chest-Protective Harness Set",
-          "image": "assets/images/catalog/040-mm-14.png",
+          "image": "assets/images/catalog/mm-14/040-mm-14.png",
           "description": "Soft Breathable Chest-Protective Harness Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/040-mm-14.png",
-            "assets/images/catalog/1784942320357-mm-14-1.jpg",
-            "assets/images/catalog/1784942320357-mm-14-2.jpg",
-            "assets/images/catalog/1784942320357-mm-14-3.jpg",
-            "assets/images/catalog/1784942320357-mm-14-4.jpg"
+            "assets/images/catalog/mm-14/040-mm-14.png",
+            "assets/images/catalog/mm-14/1784942320357-mm-14-1.jpg",
+            "assets/images/catalog/mm-14/1784942320357-mm-14-2.jpg",
+            "assets/images/catalog/mm-14/1784942320357-mm-14-3.jpg",
+            "assets/images/catalog/mm-14/1784942320357-mm-14-4.jpg"
           ]
         },
         {
           "code": "MM-06",
           "name": "Suede Reflective Breathable Pet Harness",
-          "image": "assets/images/catalog/032-mm-06.png",
+          "image": "assets/images/catalog/mm-06/032-mm-06.png",
           "description": "Suede Reflective Breathable Pet Harness is designed for comfortable walks and outdoor activities. The product listing highlights breathable material, reflective safety detailing. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/032-mm-06.png",
-            "assets/images/catalog/1784942456318-mm-06-1.jpg",
-            "assets/images/catalog/1784942456318-mm-06-2.jpg",
-            "assets/images/catalog/1784942456318-mm-06-3.jpg",
-            "assets/images/catalog/1784942456318-mm-06-4.jpg"
+            "assets/images/catalog/mm-06/032-mm-06.png",
+            "assets/images/catalog/mm-06/1784942456318-mm-06-1.jpg",
+            "assets/images/catalog/mm-06/1784942456318-mm-06-2.jpg",
+            "assets/images/catalog/mm-06/1784942456318-mm-06-3.jpg",
+            "assets/images/catalog/mm-06/1784942456318-mm-06-4.jpg"
           ]
         },
         {
           "code": "MM-04",
           "name": "V-Neck Knitted Pet Sweater Vest",
-          "image": "assets/images/catalog/030-mm-04.png",
+          "image": "assets/images/catalog/mm-04/030-mm-04.png",
           "description": "V-Neck Knitted Pet Sweater Vest is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/030-mm-04.png",
-            "assets/images/catalog/1784942567471-mm-04-1.jpg",
-            "assets/images/catalog/1784942567471-mm-04-2.jpg",
-            "assets/images/catalog/1784942567471-mm-04-3.jpg",
-            "assets/images/catalog/1784942567471-mm-04-4.jpg"
+            "assets/images/catalog/mm-04/030-mm-04.png",
+            "assets/images/catalog/mm-04/1784942567471-mm-04-1.jpg",
+            "assets/images/catalog/mm-04/1784942567471-mm-04-2.jpg",
+            "assets/images/catalog/mm-04/1784942567471-mm-04-3.jpg",
+            "assets/images/catalog/mm-04/1784942567471-mm-04-4.jpg"
           ]
         },
         {
           "code": "MM-02",
           "name": "Waffle Knit Summer Pet Vest",
-          "image": "assets/images/catalog/028-mm-02.png",
+          "image": "assets/images/catalog/mm-02/028-mm-02.png",
           "description": "Waffle Knit Summer Pet Vest is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/028-mm-02.png",
-            "assets/images/catalog/1784942697920-mm-02-1.jpg",
-            "assets/images/catalog/1784942697920-mm-02-2.jpg",
-            "assets/images/catalog/1784942697920-mm-02-3.jpg",
-            "assets/images/catalog/1784942697920-mm-02-4.jpg"
+            "assets/images/catalog/mm-02/028-mm-02.png",
+            "assets/images/catalog/mm-02/1784942697920-mm-02-1.jpg",
+            "assets/images/catalog/mm-02/1784942697920-mm-02-2.jpg",
+            "assets/images/catalog/mm-02/1784942697920-mm-02-3.jpg",
+            "assets/images/catalog/mm-02/1784942697920-mm-02-4.jpg"
           ]
         },
         {
           "code": "MM-13",
           "name": "Warm Pet Costume Hoodie",
-          "image": "assets/images/catalog/039-mm-13.png",
+          "image": "assets/images/catalog/mm-13/039-mm-13.png",
           "description": "Warm Pet Costume Hoodie is designed for everyday pet training and safety needs. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/039-mm-13.png",
-            "assets/images/catalog/1784942821376-mm-13-1.jpg",
-            "assets/images/catalog/1784942821376-mm-13-2.jpg",
-            "assets/images/catalog/1784942821376-mm-13-3.jpg",
-            "assets/images/catalog/1784942821376-mm-13-4.jpg"
+            "assets/images/catalog/mm-13/039-mm-13.png",
+            "assets/images/catalog/mm-13/1784942821376-mm-13-1.jpg",
+            "assets/images/catalog/mm-13/1784942821376-mm-13-2.jpg",
+            "assets/images/catalog/mm-13/1784942821376-mm-13-3.jpg",
+            "assets/images/catalog/mm-13/1784942821376-mm-13-4.jpg"
           ]
         },
         {
           "code": "MM-09",
           "name": "Warm Winter Pet Ski Jacket",
-          "image": "assets/images/catalog/035-mm-09.png",
+          "image": "assets/images/catalog/mm-09/035-mm-09.png",
           "description": "Warm Winter Pet Ski Jacket is designed for comfortable walks and outdoor activities. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/035-mm-09.png",
-            "assets/images/catalog/1784942965600-mm-09-1.jpg",
-            "assets/images/catalog/1784942965600-mm-09-2.jpg",
-            "assets/images/catalog/1784942965600-mm-09-3.jpg",
-            "assets/images/catalog/1784942965600-mm-09-4.jpg"
+            "assets/images/catalog/mm-09/035-mm-09.png",
+            "assets/images/catalog/mm-09/1784942965600-mm-09-1.jpg",
+            "assets/images/catalog/mm-09/1784942965600-mm-09-2.jpg",
+            "assets/images/catalog/mm-09/1784942965600-mm-09-3.jpg",
+            "assets/images/catalog/mm-09/1784942965600-mm-09-4.jpg"
           ]
         },
         {
           "code": "PR-06",
           "name": "Waterproof Outdoor Pet Collar",
-          "image": "assets/images/catalog/084-pr-06.png",
+          "image": "assets/images/catalog/pr-06/084-pr-06.png",
           "description": "Waterproof Outdoor Pet Collar is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
         }
       ]
@@ -1491,7 +1491,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "LS-09",
           "name": "2-in-1 Remote Anti-Bark Training Collar",
-          "image": "assets/images/catalog/1784853124358-ls-09-1.jpg",
+          "image": "assets/images/catalog/ls-09/1784853124358-ls-09-1.jpg",
           "description": "2-in-1 Remote Anti-Bark Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights water-resistant construction, rechargeable USB power, anti-bark training support. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -1504,20 +1504,20 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784853124358-ls-09-1.jpg",
-            "assets/images/catalog/1784853124358-ls-09-2.jpg",
-            "assets/images/catalog/1784853124358-ls-09-3.jpg",
-            "assets/images/catalog/1784853124358-ls-09-4.jpg"
+            "assets/images/catalog/ls-09/1784853124358-ls-09-1.jpg",
+            "assets/images/catalog/ls-09/1784853124358-ls-09-2.jpg",
+            "assets/images/catalog/ls-09/1784853124358-ls-09-3.jpg",
+            "assets/images/catalog/ls-09/1784853124358-ls-09-4.jpg"
           ]
         },
         {
           "code": "FD-06",
           "name": "Anti-Lost Pet GPS Tracker Collar",
-          "image": "assets/images/catalog/1784853289080-fd-06-2.jpg",
+          "image": "assets/images/catalog/fd-06/1784853289080-fd-06-2.jpg",
           "images": [
-            "assets/images/catalog/1784853289080-fd-06-2.jpg",
-            "assets/images/catalog/1784853289080-fd-06-1.jpg",
-            "assets/images/catalog/1784853289080-fd-06-3.jpg"
+            "assets/images/catalog/fd-06/1784853289080-fd-06-2.jpg",
+            "assets/images/catalog/fd-06/1784853289080-fd-06-1.jpg",
+            "assets/images/catalog/fd-06/1784853289080-fd-06-3.jpg"
           ],
           "description": "Anti-Lost Pet GPS Tracker Collar is designed for comfortable walks and outdoor activities. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments.",
           "specifications": [
@@ -1534,7 +1534,7 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "TZ-16",
           "name": "Color Screen Remote Dog Training Collar",
-          "image": "assets/images/catalog/1784853521187-tz-16-1.jpg",
+          "image": "assets/images/catalog/tz-16/1784853521187-tz-16-1.jpg",
           "description": "Color Screen Remote Dog Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -1543,27 +1543,27 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784853521187-tz-16-1.jpg",
-            "assets/images/catalog/1784853521187-tz-16-2.jpg",
-            "assets/images/catalog/1784853521187-tz-16-3.jpg",
-            "assets/images/catalog/1784853521187-tz-16-4.jpg"
+            "assets/images/catalog/tz-16/1784853521187-tz-16-1.jpg",
+            "assets/images/catalog/tz-16/1784853521187-tz-16-2.jpg",
+            "assets/images/catalog/tz-16/1784853521187-tz-16-3.jpg",
+            "assets/images/catalog/tz-16/1784853521187-tz-16-4.jpg"
           ]
         },
         {
           "code": "TZ-11",
           "name": "Color Screen Waterproof Anti-Bark Collar",
-          "image": "assets/images/catalog/1784853632418-tz-11-1.jpg",
+          "image": "assets/images/catalog/tz-11/1784853632418-tz-11-1.jpg",
           "description": "Color Screen Waterproof Anti-Bark Collar is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, anti-bark training support. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784853632418-tz-11-1.jpg",
-            "assets/images/catalog/1784853632418-tz-11-2.jpg",
-            "assets/images/catalog/1784853632418-tz-11-3.jpg"
+            "assets/images/catalog/tz-11/1784853632418-tz-11-1.jpg",
+            "assets/images/catalog/tz-11/1784853632418-tz-11-2.jpg",
+            "assets/images/catalog/tz-11/1784853632418-tz-11-3.jpg"
           ]
         },
         {
           "code": "TZ-10",
           "name": "Pet GPS Tracker and Anti-Lost Locator",
-          "image": "assets/images/catalog/1784853818995-tz-10-1.jpg",
+          "image": "assets/images/catalog/tz-10/1784853818995-tz-10-1.jpg",
           "description": "Pet GPS Tracker and Anti-Lost Locator is designed for everyday pet training and safety needs. The product listing highlights anti-lost tracking support. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -1572,52 +1572,52 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784853818995-tz-10-1.jpg",
-            "assets/images/catalog/1784853818995-tz-10-2.jpg",
-            "assets/images/catalog/1784853818995-tz-10-3.jpg",
-            "assets/images/catalog/1784853818995-tz-10-4.jpg"
+            "assets/images/catalog/tz-10/1784853818995-tz-10-1.jpg",
+            "assets/images/catalog/tz-10/1784853818995-tz-10-2.jpg",
+            "assets/images/catalog/tz-10/1784853818995-tz-10-3.jpg",
+            "assets/images/catalog/tz-10/1784853818995-tz-10-4.jpg"
           ]
         },
         {
           "code": "TZ-15",
           "name": "Portable Ultrasonic Dog Trainer",
-          "image": "assets/images/catalog/1784853946573-tz-15-1.jpg",
+          "image": "assets/images/catalog/tz-15/1784853946573-tz-15-1.jpg",
           "description": "Portable Ultrasonic Dog Trainer is designed for everyday pet training and safety needs. The product listing highlights ultrasonic training support. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784853946573-tz-15-1.jpg",
-            "assets/images/catalog/1784853946573-tz-15-2.jpg",
-            "assets/images/catalog/1784853946573-tz-15-3.jpg",
-            "assets/images/catalog/1784853946573-tz-15-4.jpg"
+            "assets/images/catalog/tz-15/1784853946573-tz-15-1.jpg",
+            "assets/images/catalog/tz-15/1784853946573-tz-15-2.jpg",
+            "assets/images/catalog/tz-15/1784853946573-tz-15-3.jpg",
+            "assets/images/catalog/tz-15/1784853946573-tz-15-4.jpg"
           ]
         },
         {
           "code": "TZ-09",
           "name": "Portable Ultrasonic Dog Training Deterrent",
-          "image": "assets/images/catalog/1784854060562-tz-09-1.jpg",
+          "image": "assets/images/catalog/tz-09/1784854060562-tz-09-1.jpg",
           "description": "Portable Ultrasonic Dog Training Deterrent is designed for everyday pet training and safety needs. The product listing highlights anti-bark training support, ultrasonic training support. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784854060562-tz-09-1.jpg",
-            "assets/images/catalog/1784854060562-tz-09-2.jpg",
-            "assets/images/catalog/1784854060562-tz-09-3.jpg",
-            "assets/images/catalog/1784854060562-tz-09-4.jpg"
+            "assets/images/catalog/tz-09/1784854060562-tz-09-1.jpg",
+            "assets/images/catalog/tz-09/1784854060562-tz-09-2.jpg",
+            "assets/images/catalog/tz-09/1784854060562-tz-09-3.jpg",
+            "assets/images/catalog/tz-09/1784854060562-tz-09-4.jpg"
           ]
         },
         {
           "code": "TZ-14",
           "name": "Smart Automatic Anti-Bark Vibration Collar",
-          "image": "assets/images/catalog/1784854248692-tz-14-1.jpg",
+          "image": "assets/images/catalog/tz-14/1784854248692-tz-14-1.jpg",
           "description": "Smart Automatic Anti-Bark Vibration Collar is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, anti-bark training support. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/1784854248692-tz-14-1.jpg",
-            "assets/images/catalog/1784854248692-tz-14-2.jpg",
-            "assets/images/catalog/1784854248692-tz-14-3.jpg",
-            "assets/images/catalog/1784854248692-tz-14-4.jpg"
+            "assets/images/catalog/tz-14/1784854248692-tz-14-1.jpg",
+            "assets/images/catalog/tz-14/1784854248692-tz-14-2.jpg",
+            "assets/images/catalog/tz-14/1784854248692-tz-14-3.jpg",
+            "assets/images/catalog/tz-14/1784854248692-tz-14-4.jpg"
           ]
         },
         {
           "code": "TZ-12",
           "name": "Ultrasonic Smart Anti-Bark Training Collar",
-          "image": "assets/images/catalog/1784854418710-tz-12-1.jpg",
+          "image": "assets/images/catalog/tz-12/1784854418710-tz-12-1.jpg",
           "description": "Ultrasonic Smart Anti-Bark Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation, anti-bark training support, ultrasonic training support. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
@@ -1630,10 +1630,10 @@ window.PET_CATALOG_CONFIG = {
             }
           ],
           "images": [
-            "assets/images/catalog/1784854418710-tz-12-1.jpg",
-            "assets/images/catalog/1784854418710-tz-12-2.jpg",
-            "assets/images/catalog/1784854418710-tz-12-3.jpg",
-            "assets/images/catalog/1784854418710-tz-12-4.jpg"
+            "assets/images/catalog/tz-12/1784854418710-tz-12-1.jpg",
+            "assets/images/catalog/tz-12/1784854418710-tz-12-2.jpg",
+            "assets/images/catalog/tz-12/1784854418710-tz-12-3.jpg",
+            "assets/images/catalog/tz-12/1784854418710-tz-12-4.jpg"
           ]
         }
       ]
