@@ -914,12 +914,6 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "JX-03",
-          "name": "Electric Hide-and-Seek Cat Teaser Toy",
-          "image": "assets/images/catalog/jx-03/111-jx-03.png",
-          "description": "Electric Hide-and-Seek Cat Teaser Toy is designed for interactive play and enrichment. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "JX-05",
           "name": "Smart Electric Rolling Cat Ball",
           "image": "assets/images/catalog/jx-05/1784883424447-jx-05-1.jpg",
@@ -939,12 +933,6 @@ window.PET_CATALOG_CONFIG = {
               "value": "40g"
             }
           ]
-        },
-        {
-          "code": "LC-10",
-          "name": "Rubber Chew Dental Treat-Dispensing Dog Toy",
-          "image": "assets/images/catalog/lc-10/018-lc-10.png",
-          "description": "Rubber Chew Dental Treat-Dispensing Dog Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "MM-07",
@@ -1108,6 +1096,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-03/1784901097724-mj-03-1.jpg",
             "assets/images/catalog/mj-03/1784901097724-mj-03-2.jpg",
             "assets/images/catalog/mj-03/1784901097724-mj-03-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "106*49*0.2cm"
+            },
+            {
+              "label": "Weight",
+              "value": "190g"
+            }
           ]
         },
         {
@@ -1122,7 +1120,13 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-04/1784884076728-mj-04-5.jpg",
             "assets/images/catalog/mj-04/1784884076728-mj-04-6.jpg"
           ],
-          "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
+          "description": "Breathable Single-Shoulder Pet Travel Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "260g"
+            }
+          ]
         },
         {
           "code": "MJ-05",
@@ -1158,7 +1162,28 @@ window.PET_CATALOG_CONFIG = {
           "code": "MM-08",
           "name": "Breathable Front Pet Carrier Backpack",
           "image": "assets/images/catalog/mm-08/1784882780803-mm-08-1.jpg",
-          "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments."
+          "description": "Breathable Front Pet Carrier Backpack is designed for comfortable everyday travel with pets. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "S(Weight)",
+              "value": "180g"
+            },
+            {
+              "label": "M(Weight)",
+              "value": "205g"
+            },
+            {
+              "label": "L(Weight)",
+              "value": "225g"
+            },
+            {
+              "label": "XL(Weight)",
+              "value": "240g"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/mm-08/1784882780803-mm-08-1.jpg"
+          ]
         },
         {
           "code": "SA-01",
@@ -1172,7 +1197,17 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/sa-01/1784884907702-sa-01-5.jpg",
             "assets/images/catalog/sa-01/1784884907702-sa-01-6.jpg"
           ],
-          "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
+          "description": "Foldable Summer Pet Sling Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "76*72*24cm"
+            },
+            {
+              "label": "Weight",
+              "value": "215g"
+            }
+          ]
         },
         {
           "code": "SA-02",
