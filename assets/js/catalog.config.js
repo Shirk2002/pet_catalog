@@ -604,12 +604,6 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "GJ-05",
-          "name": "Premium Pet Textile Comfort Mat",
-          "image": "assets/images/catalog/gj-05/024-gj-05.png",
-          "description": "Premium Pet Textile Comfort Mat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
-        },
-        {
           "code": "GJ-06",
           "name": "Soft Pet Textile Cushion",
           "image": "assets/images/catalog/gj-06/1784874999328-gj-06-1.jpg",
@@ -620,12 +614,6 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/gj-06/1784874999328-gj-06-3.jpg",
             "assets/images/catalog/gj-06/1784875231966-gj-06-1.jpg"
           ]
-        },
-        {
-          "code": "GJ-07",
-          "name": "Pet Home Textile Sleeping Pad",
-          "image": "assets/images/catalog/gj-07/026-gj-07.png",
-          "description": "Pet Home Textile Sleeping Pad is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
         },
         {
           "code": "JH-08",
