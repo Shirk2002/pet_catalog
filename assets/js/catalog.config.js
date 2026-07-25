@@ -1559,6 +1559,28 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mm-05/1784904636355-mm-05-3.jpg",
             "assets/images/catalog/mm-05/1784904636355-mm-05-4.jpg",
             "assets/images/catalog/mm-05/1784904636355-mm-05-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "XS",
+              "value": "28~34*32~36cm"
+            },
+            {
+              "label": "S",
+              "value": "32~38*36~42cm"
+            },
+            {
+              "label": "M",
+              "value": "36~42*42~46cm"
+            },
+            {
+              "label": "L",
+              "value": "40~46*44~52cm"
+            },
+            {
+              "label": "XL",
+              "value": "44~50*50*62cm"
+            }
           ]
         },
         {
