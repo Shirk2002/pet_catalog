@@ -1840,6 +1840,20 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/nb-01/1784903937955-nb-01-1.png",
             "assets/images/catalog/nb-01/1784903937955-nb-01-2.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "40cm"
+            },
+            {
+              "label": "M",
+              "value": "50cm"
+            },
+            {
+              "label": "L",
+              "value": "60cm"
+            }
           ]
         },
         {
