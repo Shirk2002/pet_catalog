@@ -849,10 +849,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BP-01",
           "name": "Square Ring Chew and Dental Dog Toy",
-          "image": "assets/images/catalog/bp-01/062-bp-01.png",
+          "image": "assets/images/catalog/bp-01/1784881650293-bp-01-1.jpg",
           "description": "Square Ring Chew and Dental Dog Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/bp-01/062-bp-01.png",
             "assets/images/catalog/bp-01/1784881650293-bp-01-1.jpg",
             "assets/images/catalog/bp-01/1784881650293-bp-01-2.jpg",
             "assets/images/catalog/bp-01/1784881650293-bp-01-3.jpg"
@@ -861,10 +860,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BP-02",
           "name": "Bacon-Flavored TPR Bone Chew Toy",
-          "image": "assets/images/catalog/bp-02/063-bp-02.png",
+          "image": "assets/images/catalog/bp-02/1784877582224-bp-02-1.jpg",
           "description": "Bacon-Flavored TPR Bone Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/bp-02/063-bp-02.png",
             "assets/images/catalog/bp-02/1784877582224-bp-02-1.jpg",
             "assets/images/catalog/bp-02/1784877582224-bp-02-2.jpg"
           ]
@@ -872,10 +870,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BP-03",
           "name": "Freezable Dumbbell Cooling Chew Toy",
-          "image": "assets/images/catalog/bp-03/064-bp-03.png",
+          "image": "assets/images/catalog/bp-03/1784877217451-bp-03-1.jpg",
           "description": "Freezable Dumbbell Cooling Chew Toy is designed for interactive play and enrichment. The product listing highlights durable chew-friendly material, slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/bp-03/064-bp-03.png",
             "assets/images/catalog/bp-03/1784877217451-bp-03-1.jpg",
             "assets/images/catalog/bp-03/1784877217451-bp-03-2.jpg"
           ]
@@ -883,10 +880,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "JX-01",
           "name": "Smart Rolling Cat Ball with Teaser Rope",
-          "image": "assets/images/catalog/jx-01/110-jx-01.png",
+          "image": "assets/images/catalog/jx-01/1784904832964-jx-01-1.jpg",
           "description": "Smart Rolling Cat Ball with Teaser Rope is designed for interactive play and enrichment. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/jx-01/110-jx-01.png",
             "assets/images/catalog/jx-01/1784904832964-jx-01-1.jpg",
             "assets/images/catalog/jx-01/1784904832964-jx-01-2.jpg",
             "assets/images/catalog/jx-01/1784904832964-jx-01-3.jpg",
@@ -903,10 +899,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "JX-05",
           "name": "Smart Electric Rolling Cat Ball",
-          "image": "assets/images/catalog/jx-05/112-jx-05.png",
+          "image": "assets/images/catalog/jx-05/1784883424447-jx-05-1.jpg",
           "description": "Smart Electric Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, durable chew-friendly material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/jx-05/112-jx-05.png",
             "assets/images/catalog/jx-05/1784883424447-jx-05-1.jpg",
             "assets/images/catalog/jx-05/1784883424447-jx-05-2.jpg",
             "assets/images/catalog/jx-05/1784883424447-jx-05-3.jpg",
@@ -925,10 +920,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-07",
           "name": "Plush Squeaky Chew Toy Set",
-          "image": "assets/images/catalog/mm-07/033-mm-07.png",
+          "image": "assets/images/catalog/mm-07/1784880803627-mm-07-1.jpg",
           "description": "Plush Squeaky Chew Toy Set is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-07/033-mm-07.png",
             "assets/images/catalog/mm-07/1784880803627-mm-07-1.jpg",
             "assets/images/catalog/mm-07/1784880803627-mm-07-10.jpg",
             "assets/images/catalog/mm-07/1784880803627-mm-07-2.jpg",
@@ -944,10 +938,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-15",
           "name": "Plush Squeaky Duck Chew Toy",
-          "image": "assets/images/catalog/mm-15/041-mm-15.png",
+          "image": "assets/images/catalog/mm-15/1784881196565-mm-15-1.jpg",
           "description": "Plush Squeaky Duck Chew Toy is designed for interactive play and enrichment. The product listing highlights warm plush comfort, durable chew-friendly material, sound-making play. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-15/041-mm-15.png",
             "assets/images/catalog/mm-15/1784881196565-mm-15-1.jpg",
             "assets/images/catalog/mm-15/1784881196565-mm-15-2.jpg",
             "assets/images/catalog/mm-15/1784881196565-mm-15-3.jpg"
@@ -956,10 +949,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT-08",
           "name": "USB Rechargeable Automatic Laser Cat Toy",
-          "image": "assets/images/catalog/pt-08/067-pt-08.png",
+          "image": "assets/images/catalog/pt-08/1784881855720-pt-08-1.jpg",
           "description": "USB Rechargeable Automatic Laser Cat Toy is designed for comfortable rest and home enrichment. The product listing highlights smart automatic operation, rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/pt-08/067-pt-08.png",
             "assets/images/catalog/pt-08/1784881855720-pt-08-1.jpg",
             "assets/images/catalog/pt-08/1784881855720-pt-08-2.jpg"
           ]
@@ -967,10 +959,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT-09",
           "name": "Electric Rolling Feather Cat Teaser Toy",
-          "image": "assets/images/catalog/pt-09/068-pt-09.png",
+          "image": "assets/images/catalog/pt-09/1784877807492-pt-09-1.jpg",
           "description": "Electric Rolling Feather Cat Teaser Toy is designed for interactive play and enrichment. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/pt-09/068-pt-09.png",
             "assets/images/catalog/pt-09/1784877807492-pt-09-1.jpg",
             "assets/images/catalog/pt-09/1784877807492-pt-09-2.jpg",
             "assets/images/catalog/pt-09/1784877807492-pt-09-3.jpg",
@@ -981,10 +972,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT-10",
           "name": "Electric Tumbler Treat-Dispensing Cat Toy",
-          "image": "assets/images/catalog/pt-10/069-pt-10.png",
+          "image": "assets/images/catalog/pt-10/1784877965549-pt-10-1.jpg",
           "description": "Electric Tumbler Treat-Dispensing Cat Toy is designed for interactive play and enrichment. The product listing highlights slow-feeding enrichment. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/pt-10/069-pt-10.png",
             "assets/images/catalog/pt-10/1784877965549-pt-10-1.jpg",
             "assets/images/catalog/pt-10/1784877965549-pt-10-2.jpg",
             "assets/images/catalog/pt-10/1784877965549-pt-10-3.jpg"
@@ -993,10 +983,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT-11",
           "name": "USB Rechargeable LED Rolling Cat Ball",
-          "image": "assets/images/catalog/pt-11/070-pt-11.png",
+          "image": "assets/images/catalog/pt-11/1784882034313-pt-11-1.jpg",
           "description": "USB Rechargeable LED Rolling Cat Ball is designed for interactive play and enrichment. The product listing highlights smart automatic operation, rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/pt-11/070-pt-11.png",
             "assets/images/catalog/pt-11/1784882034313-pt-11-1.jpg",
             "assets/images/catalog/pt-11/1784882034313-pt-11-2.jpg"
           ]
@@ -1004,20 +993,18 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "PT-12",
           "name": "LED Feather Running Wheel Cat Toy",
-          "image": "assets/images/catalog/pt-12/071-pt-12.png",
+          "image": "assets/images/catalog/pt-12/1784878118831-pt-12-1.jpg",
           "description": "LED Feather Running Wheel Cat Toy is designed for interactive play and enrichment. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/pt-12/071-pt-12.png",
             "assets/images/catalog/pt-12/1784878118831-pt-12-1.jpg"
           ]
         },
         {
           "code": "PT-13",
           "name": "Light-Up Bell Ball Electric Cat Toy",
-          "image": "assets/images/catalog/pt-13/072-pt-13.png",
+          "image": "assets/images/catalog/pt-13/1784878515815-pt-13-1.jpg",
           "description": "Light-Up Bell Ball Electric Cat Toy is designed for interactive play and enrichment. The product listing highlights LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/pt-13/072-pt-13.png",
             "assets/images/catalog/pt-13/1784878515815-pt-13-1.jpg",
             "assets/images/catalog/pt-13/1784878515815-pt-13-2.jpg",
             "assets/images/catalog/pt-13/1784878515815-pt-13-3.jpg",
