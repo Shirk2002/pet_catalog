@@ -15,21 +15,24 @@ concurrency:
 
 jobs:
   generate:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+        if: github.actor != 'github-actions[bot]'
         uses: actions/checkout@v4
 
       - name: Set up Python
+        if: github.actor != 'github-actions[bot]'
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
       - name: Install image tools
+        if: github.actor != 'github-actions[bot]'
         run: python -m pip install --disable-pip-version-check Pillow
 
       - name: Generate and clean catalog thumbnails
+        if: github.actor != 'github-actions[bot]'
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -78,6 +81,7 @@ jobs:
           PY
 
       - name: Commit generated thumbnails
+        if: github.actor != 'github-actions[bot]'
         run: |
           if git diff --quiet -- assets/images/catalog/thumbnails assets/images/catalog/optimized; then
             exit 0
