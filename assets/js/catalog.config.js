@@ -1391,6 +1391,20 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/bp-05/1784903160538-bp-05-1.jpg",
             "assets/images/catalog/bp-05/1784903160538-bp-05-2.png"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "1.5*12-16cm"
+            },
+            {
+              "label": "M",
+              "value": "2.0*14-20cm"
+            },
+            {
+              "label": "L",
+              "value": "2.5*18-26cm"
+            }
           ]
         },
         {
