@@ -1131,8 +1131,19 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-05",
           "name": "Waterproof Rear Seat Pet Car Hammock",
-          "image": "assets/images/catalog/mj-05/004-mj-05.png",
-          "description": "Waterproof Rear Seat Pet Car Hammock is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
+          "image": "assets/images/catalog/mj-05/mj-05-1.jpg",
+          "description": "Waterproof Rear Seat Pet Car Hammock is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "140*135cm"
+            }
+          ],
+          "images": [
+            "assets/images/catalog/mj-05/mj-05-1.jpg",
+            "assets/images/catalog/mj-05/mj-05-2.jpg",
+            "assets/images/catalog/mj-05/mj-05-3.jpg"
+          ]
         },
         {
           "code": "MJ-06",
