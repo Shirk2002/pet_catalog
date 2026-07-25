@@ -856,6 +856,20 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/bp-02/1784877582224-bp-02-1.jpg",
             "assets/images/catalog/bp-02/1784877582224-bp-02-2.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S(Dimensions/weight)",
+              "value": "93*37*17mm/24g"
+            },
+            {
+              "label": "M(Dimensions/weight)",
+              "value": "123*49*24mm/54g"
+            },
+            {
+              "label": "L(Dimensions/weight) 1",
+              "value": "165*65*39mm/128g"
+            }
           ]
         },
         {
