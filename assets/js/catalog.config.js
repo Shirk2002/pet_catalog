@@ -1684,8 +1684,25 @@ window.PET_CATALOG_CONFIG = {
           "description": "Escape-Proof Breathable Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
             "assets/images/catalog/mm-11/1784902838026-mm-11-1.jpg",
-            "assets/images/catalog/mm-11/1784902838026-mm-11-2.jpg",
             "assets/images/catalog/mm-11/1784902838026-mm-11-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "20~24*24~30cm"
+            },
+            {
+              "label": "M",
+              "value": "24~28*30~36cm"
+            },
+            {
+              "label": "L",
+              "value": "28~32*36~44cm"
+            },
+            {
+              "label": "XL",
+              "value": "32~40*44~60cm"
+            }
           ]
         },
         {
