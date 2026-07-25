@@ -1153,9 +1153,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-06/1784888780802-mj-06-1.jpg",
             "assets/images/catalog/mj-06/1784888780802-mj-06-2.jpg",
             "assets/images/catalog/mj-06/1784888780802-mj-06-3.jpg",
-            "assets/images/catalog/mj-06/1784888780802-mj-06-4.jpg"
+            "assets/images/catalog/mj-06/1784888780802-mj-06-4.jpg",
+            "assets/images/catalog/mj-06/mj-06-1.jpg"
           ],
-          "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Pet Safety Car Seat Bed for Back Seat is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "40*32*22cm"
+            }
+          ]
         },
         {
           "code": "MJ-07",
@@ -1167,6 +1174,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-07/1784901675764-mj-07-2.jpg",
             "assets/images/catalog/mj-07/1784901675764-mj-07-3.jpg",
             "assets/images/catalog/mj-07/1784901675764-mj-07-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "140*135cm"
+            }
           ]
         },
         {
@@ -1240,9 +1253,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/sa-03/1784888576585-sa-03-1.jpg",
             "assets/images/catalog/sa-03/1784888576585-sa-03-2.jpg",
             "assets/images/catalog/sa-03/1784888576585-sa-03-3.jpg",
-            "assets/images/catalog/sa-03/1784888576585-sa-03-4.jpg"
+            "assets/images/catalog/sa-03/1784888576585-sa-03-4.jpg",
+            "assets/images/catalog/sa-03/sa-03-1.jpg"
           ],
-          "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments."
+          "description": "Lightweight Foldable Pet Backpack Carrier is designed for comfortable everyday travel with pets. The product listing highlights breathable material, a foldable design. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "85*60*45cm"
+            }
+          ]
         },
         {
           "code": "YW-03",
@@ -1274,9 +1294,16 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/yw-05/1784888461159-yw-05-1.png",
             "assets/images/catalog/yw-05/1784888461159-yw-05-2.jpg",
-            "assets/images/catalog/yw-05/1784888461159-yw-05-3.jpg"
+            "assets/images/catalog/yw-05/1784888461159-yw-05-3.jpg",
+            "assets/images/catalog/yw-05/yw-05-1.jpg"
           ],
-          "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments."
+          "description": "Full-Cover Front Seat Pet Car Cushion is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "57*50*24*42cm"
+            }
+          ]
         },
         {
           "code": "YW-06",
@@ -1305,12 +1332,6 @@ window.PET_CATALOG_CONFIG = {
           "name": "Foldable Waterproof Trunk Pet Cargo Liner",
           "image": "assets/images/catalog/yw-08/098-yw-08.png",
           "description": "Foldable Waterproof Trunk Pet Cargo Liner is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a foldable design. A practical choice for pet owners and retail assortments."
-        },
-        {
-          "code": "YW-08",
-          "name": "Waterproof SUV Trunk Pet Cargo Liner",
-          "image": "assets/images/catalog/yw-08/099-yw-08.png",
-          "description": "Waterproof SUV Trunk Pet Cargo Liner is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, a foldable design. A practical choice for pet owners and retail assortments."
         }
       ]
     },
