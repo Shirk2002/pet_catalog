@@ -937,9 +937,11 @@
         specificationEditor: null,
         pendingUploads: [],
         pendingImageDeletes: [],
+        pendingSpecificationDeletes: [],
         changedProductCodes: new Set(),
-        deletedProductCodes: new Set(),
+        deletedProducts: [],
         dirty: false,
+        isSaving: false,
       };
 
       const $ = (id) => document.getElementById(id);
@@ -1023,7 +1025,7 @@
       }
 
       function isCatalogUpdateInProgressError(error) {
-        return /assets\/js\/catalog\.config\.js does not match/i.test(String(error?.message || error));
+        return /assets\/js\/catalog\.config\.js does not match|reference update failed/i.test(String(error?.message || error));
       }
 
       function githubHeaders() {
@@ -1036,10 +1038,14 @@
         };
       }
 
-      function githubUrl(path) {
+      function githubApiUrl(path) {
         const owner = encodeURIComponent(els.owner.value.trim());
         const repo = encodeURIComponent(els.repo.value.trim());
-        return `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+        return `https://api.github.com/repos/${owner}/${repo}${path}`;
+      }
+
+      function githubUrl(path) {
+        return `${githubApiUrl("/contents")}/${path}`;
       }
 
       async function githubRequest(path, options = {}) {
@@ -1110,41 +1116,72 @@
         return referenced;
       }
 
-      async function deleteRepositoryImage(path) {
-        const branch = encodeURIComponent(els.branch.value.trim());
-        const file = await githubRequest(`${path}?ref=${branch}`);
-        await githubRequest(path, {
-          method: "DELETE",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message: `Delete unused product image ${path}`,
-            sha: file.sha,
-            branch: els.branch.value.trim(),
-          }),
+      async function githubApiRequest(path, options = {}) {
+        const response = await fetch(githubApiUrl(path), {
+          ...options,
+          headers: {
+            ...githubHeaders(),
+            ...(options.headers || {}),
+          },
         });
+
+        const text = await response.text();
+        const data = text ? JSON.parse(text) : null;
+        if (!response.ok) {
+          throw new Error(data?.message || `GitHub API 请求失败：${response.status}`);
+        }
+        return data;
       }
 
-      async function deleteUnreferencedPendingImages() {
-        if (!state.pendingImageDeletes.length) return { deleted: 0, failed: 0 };
+      function getBase64Data(content) {
+        const separator = content.indexOf(",");
+        return separator < 0 ? content : content.slice(separator + 1);
+      }
+
+      async function createCatalogCommit(config, uploads, deletedPaths, expectedHeadSha) {
         const branch = encodeURIComponent(els.branch.value.trim());
-        const data = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
-        const remoteConfig = parseConfig(decodeBase64ToText(data.content));
-        const referenced = getReferencedCatalogImagePaths(remoteConfig);
-        const candidates = [...new Set(state.pendingImageDeletes)].filter(
-          (path) => isCatalogImagePath(path) && !referenced.has(path)
-        );
-        const failedPaths = [];
-        let deleted = 0;
-        for (const path of candidates) {
-          try {
-            await deleteRepositoryImage(path);
-            deleted += 1;
-          } catch (error) {
-            failedPaths.push(path);
-          }
+        const ref = await githubApiRequest(`/git/ref/heads/${branch}`);
+        const headSha = ref.object.sha;
+        if (expectedHeadSha && headSha !== expectedHeadSha) {
+          throw new Error("线上商品目录在合并期间已更新，请重新发布以合并最新修改。");
         }
-        state.pendingImageDeletes = failedPaths;
-        return { deleted, failed: failedPaths.length };
+        const headCommit = await githubApiRequest(`/git/commits/${headSha}`);
+        const tree = [];
+        const configBlob = await githubApiRequest("/git/blobs", {
+          method: "POST",
+          body: JSON.stringify({ content: encodeTextToBase64(buildConfigFile(config)), encoding: "base64" }),
+        });
+        tree.push({ path: CONFIG_PATH, mode: "100644", type: "blob", sha: configBlob.sha });
+
+        for (const upload of uploads) {
+          if (!upload?.content || !upload?.path) {
+            throw new Error("图片内容未暂存，请重新选择该图片。");
+          }
+          const blob = await githubApiRequest("/git/blobs", {
+            method: "POST",
+            body: JSON.stringify({ content: getBase64Data(upload.content), encoding: "base64" }),
+          });
+          tree.push({ path: upload.path, mode: "100644", type: "blob", sha: blob.sha });
+        }
+
+        deletedPaths.forEach((path) => tree.push({ path, sha: null }));
+        const nextTree = await githubApiRequest("/git/trees", {
+          method: "POST",
+          body: JSON.stringify({ base_tree: headCommit.tree.sha, tree }),
+        });
+        const commit = await githubApiRequest("/git/commits", {
+          method: "POST",
+          body: JSON.stringify({
+            message: "Update catalog from admin page",
+            tree: nextTree.sha,
+            parents: [headSha],
+          }),
+        });
+        await githubApiRequest(`/git/refs/heads/${branch}`, {
+          method: "PATCH",
+          body: JSON.stringify({ sha: commit.sha, force: false }),
+        });
+        return commit;
       }
 
       function buildConfigFile(config) {
@@ -1161,17 +1198,43 @@
         return [...new Set(values.filter(Boolean))];
       }
 
-      function mergeSpecifications(remoteSpecifications, localSpecifications) {
+      function specificationKey(specification) {
+        return `${specification.label}\u0000${specification.value}`;
+      }
+
+      function mergeSpecifications(remoteSpecifications, localSpecifications, removedSpecifications = []) {
+        const removed = new Set(removedSpecifications.map(specificationKey));
         const merged = [];
         const seen = new Set();
         [...normalizeSpecifications(remoteSpecifications), ...normalizeSpecifications(localSpecifications)].forEach((specification) => {
-          const key = `${specification.label}\u0000${specification.value}`;
-          if (!seen.has(key)) {
+          const key = specificationKey(specification);
+          if (!removed.has(key) && !seen.has(key)) {
             seen.add(key);
             merged.push(specification);
           }
         });
         return merged;
+      }
+
+      function escapeRegExp(value) {
+        return String(value).replace(/[.*+?^$()|[\]\\]/g, "\\$&");
+      }
+
+      function getNextCatalogImagePath(code, extension, reservedPaths = new Set()) {
+        const folderCode = cleanFileName(code);
+        const prefix = `${IMAGE_DIR}/${folderCode}/${folderCode}-`;
+        const pattern = new RegExp(`^${escapeRegExp(prefix)}(\\d+)\\.[^.]+$`);
+        const usedIndexes = new Set();
+        const addIndex = (path) => {
+          const match = String(path || "").match(pattern);
+          if (match) usedIndexes.add(Number(match[1]));
+        };
+        getReferencedCatalogImagePaths(state.config).forEach(addIndex);
+        state.pendingUploads.forEach((upload) => addIndex(upload.path));
+        reservedPaths.forEach(addIndex);
+        let index = 1;
+        while (usedIndexes.has(index)) index += 1;
+        return `${prefix}${index}.${extension}`;
       }
 
       function findProductEntriesByCode(config, code) {
@@ -1187,13 +1250,37 @@
         return entries;
       }
 
-      function mergePendingChangesIntoRemoteConfig(remoteConfig) {
-        if (state.deletedProductCodes.size) {
-          throw new Error("为保护线上数据，检测到删除操作。请重新加载目录后单独删除商品，再发布。");
+      function findProductEntryByIdentity(config, identity) {
+        const normalizedCode = normalizeProductCodeLoose(identity.code);
+        const matches = [];
+        config.categories.forEach((category) => {
+          category.products.forEach((product, index) => {
+            if (normalizeProductCodeLoose(product.code) === normalizedCode) {
+              matches.push({ category, product, index });
+            }
+          });
+        });
+        if (matches.length > 1) {
+          throw new Error(`商品“${identity.code}”在线上存在重复记录，无法安全删除。`);
         }
+        if (!matches.length) return null;
+        const match = matches[0];
+        if (normalizeProductName(match.product.name) !== normalizeProductName(identity.name)) {
+          throw new Error(`商品“${identity.code}”在线上名称已变更，已停止删除以避免误删。请先重新加载目录确认后再操作。`);
+        }
+        return match;
+      }
 
-        state.changedProductCodes.forEach((code) => {
-          const localEntries = findProductEntriesByCode(state.config, code);
+      function mergePendingChangesIntoRemoteConfig(remoteConfig, pendingChanges) {
+        pendingChanges.deletedProducts.forEach((deletedProduct) => {
+          const remoteEntry = findProductEntryByIdentity(remoteConfig, deletedProduct);
+          if (remoteEntry) {
+            remoteEntry.category.products.splice(remoteEntry.index, 1);
+          }
+        });
+
+        pendingChanges.changedProductCodes.forEach((code) => {
+          const localEntries = findProductEntriesByCode(pendingChanges.config, code);
           if (localEntries.length !== 1) {
             throw new Error(`商品编号“${code}”在当前目录中不唯一，无法安全发布。`);
           }
@@ -1212,11 +1299,21 @@
             return;
           }
 
-          const remoteProduct = remoteEntries[0].product;
-          const removedImages = new Set(state.pendingImageDeletes);
+          const remoteEntry = remoteEntries[0];
+          const remoteProduct = remoteEntry.product;
+          if (remoteEntry.category.id !== localEntry.category.id) {
+            const targetCategory = remoteConfig.categories.find((category) => category.id === localEntry.category.id);
+            if (!targetCategory) throw new Error(`找不到分类“${localEntry.category.name}”，无法移动商品“${localProduct.code}”。`);
+            remoteEntry.category.products.splice(remoteEntry.index, 1);
+            targetCategory.products.push(remoteProduct);
+          }
+          const removedImages = new Set(pendingChanges.pendingImageDeletes);
+          const removedSpecifications = pendingChanges.pendingSpecificationDeletes
+            .filter((item) => item.code === code)
+            .map((item) => item.specification);
           const images = mergeUniqueValues([...getProductImagePaths(remoteProduct), ...getProductImagePaths(localProduct)])
             .filter((path) => !removedImages.has(path));
-          const specifications = mergeSpecifications(remoteProduct.specifications, localProduct.specifications);
+          const specifications = mergeSpecifications(remoteProduct.specifications, localProduct.specifications, removedSpecifications);
           Object.assign(remoteProduct, localProduct, { image: images[0], images });
           if (specifications.length) {
             remoteProduct.specifications = specifications;
@@ -1235,16 +1332,19 @@
         });
       }
 
-      function configContainsPendingChanges(config) {
-        return [...state.changedProductCodes].every((code) => {
-          const localEntries = findProductEntriesByCode(state.config, code);
+      function configContainsPendingChanges(config, pendingChanges) {
+        const deletedProductsRemoved = pendingChanges.deletedProducts.every(
+          (deletedProduct) => !findProductEntryByIdentity(config, deletedProduct)
+        );
+        return deletedProductsRemoved && [...pendingChanges.changedProductCodes].every((code) => {
+          const localEntries = findProductEntriesByCode(pendingChanges.config, code);
           const remoteEntries = findProductEntriesByCode(config, code);
           if (localEntries.length !== 1 || remoteEntries.length !== 1) return false;
           const localProduct = localEntries[0].product;
           const remoteProduct = remoteEntries[0].product;
           const remoteImages = getProductImagePaths(remoteProduct);
           return getProductImagePaths(localProduct).every((path) => remoteImages.includes(path))
-            && state.pendingImageDeletes.every((path) => !remoteImages.includes(path))
+            && pendingChanges.pendingImageDeletes.every((path) => !remoteImages.includes(path))
             && mergeSpecifications(localProduct.specifications, remoteProduct.specifications).length
               === normalizeSpecifications(remoteProduct.specifications).length;
         });
@@ -1259,6 +1359,8 @@
       }
 
       async function loadCatalog() {
+        if (state.isSaving) return;
+        if (state.dirty && !confirm("当前有未发布的修改。重新加载会丢弃这些修改，是否继续？")) return;
         try {
           setStatus("正在从 GitHub 加载商品目录...");
           const data = await githubRequest(`${CONFIG_PATH}?ref=${encodeURIComponent(els.branch.value.trim())}`);
@@ -1268,8 +1370,9 @@
           state.configSha = data.sha;
           state.pendingUploads = [];
           state.pendingImageDeletes = [];
+          state.pendingSpecificationDeletes = [];
           state.changedProductCodes = new Set();
-          state.deletedProductCodes = new Set();
+          state.deletedProducts = [];
           state.selectedCategoryId = state.config.categories[0]?.id || null;
           state.dirty = false;
           els.saveBtn.disabled = true;
@@ -1287,10 +1390,11 @@
         renderCategories();
         renderProducts();
         renderCategoryOptions();
-        els.saveBtn.disabled = !state.config || !state.dirty;
-        els.addProductBtn.disabled = !state.config;
-        els.batchUploadBtn.disabled = !state.config;
-        els.catalogSearch.disabled = !state.config;
+        els.saveBtn.disabled = !state.config || !state.dirty || state.isSaving;
+        els.loadBtn.disabled = state.isSaving;
+        els.addProductBtn.disabled = !state.config || state.isSaving;
+        els.batchUploadBtn.disabled = !state.config || state.isSaving;
+        els.catalogSearch.disabled = !state.config || state.isSaving;
       }
 
       function getSelectedCategory() {
@@ -1445,7 +1549,12 @@
         const product = category.products[index];
         if (!confirm(`确定删除 ${product.code || product.name} 吗？`)) return;
         state.pendingImageDeletes.push(...getProductImagePaths(product).filter(isCatalogImagePath));
-        state.deletedProductCodes.add(normalizeProductCodeLoose(product.code));
+        state.deletedProducts.push({
+          categoryId,
+          code: product.code,
+          name: product.name,
+        });
+        state.changedProductCodes.delete(normalizeProductCodeLoose(product.code));
         category.products.splice(index, 1);
         state.dirty = true;
         els.saveBtn.disabled = false;
@@ -1714,6 +1823,10 @@
         const originalCode = normalizeProductCode(originalProduct?.code);
         const originalName = normalizeProductName(originalProduct?.name);
         const editedCode = normalizeProductCode(product.code);
+        if (isEditingExistingProduct && editedCode !== originalCode) {
+          setStatus("已有商品的编号不能直接修改，因为图片目录以编号命名。请新增商品后再删除原商品。", "error");
+          return;
+        }
         const editedName = normalizeProductName(product.name);
         const unchangedHistoricalDuplicate =
           isEditingExistingProduct &&
@@ -1747,10 +1860,11 @@
 
         const pendingImages = state.galleryImages.filter((image) => image.content);
         if (pendingImages.length) {
-          const folderCode = cleanFileName(product.code);
-          pendingImages.forEach((image, index) => {
+          const reservedPaths = new Set(state.galleryImages.map((image) => image.path).filter(Boolean));
+          pendingImages.forEach((image) => {
             const extension = getFileExtension(image);
-            image.path = `${IMAGE_DIR}/${folderCode}/${folderCode}-${index + 1}.${extension}`;
+            image.path = getNextCatalogImagePath(product.code, extension, reservedPaths);
+            reservedPaths.add(image.path);
             state.pendingUploads.push({ name: image.name, content: image.content, path: image.path });
           });
           product.images = state.galleryImages.map((image) => image.path);
@@ -1763,6 +1877,16 @@
           return;
         }
 
+        const currentImagePaths = new Set(getProductImagePaths(product));
+        state.pendingImageDeletes = state.pendingImageDeletes.filter((path) => !currentImagePaths.has(path));
+        if (state.specificationsDirty) {
+          const currentSpecificationKeys = new Set(normalizeSpecifications(product.specifications).map(specificationKey));
+          const productCode = normalizeProductCodeLoose(product.code);
+          state.pendingSpecificationDeletes = state.pendingSpecificationDeletes.filter(
+            (item) => item.code !== productCode || !currentSpecificationKeys.has(specificationKey(item.specification))
+          );
+        }
+
         if (originalProduct) {
           const updatedImagePaths = new Set(getProductImagePaths(product));
           state.pendingImageDeletes.push(
@@ -1770,6 +1894,17 @@
               (path) => isCatalogImagePath(path) && !updatedImagePaths.has(path)
             )
           );
+          if (state.specificationsDirty) {
+            const updatedSpecifications = new Set(normalizeSpecifications(product.specifications).map(specificationKey));
+            normalizeSpecifications(originalProduct.specifications).forEach((specification) => {
+              if (!updatedSpecifications.has(specificationKey(specification))) {
+                state.pendingSpecificationDeletes.push({
+                  code: normalizeProductCodeLoose(product.code),
+                  specification,
+                });
+              }
+            });
+          }
         }
 
         const actionTitle = oldIndex === null ? "新增商品已完成" : "商品修改已暂存";
@@ -1785,7 +1920,9 @@
         }
         sortAllProducts();
         state.changedProductCodes.add(normalizeProductCodeLoose(product.code));
-        state.deletedProductCodes.delete(normalizeProductCodeLoose(product.code));
+        state.deletedProducts = state.deletedProducts.filter(
+          (deletedProduct) => normalizeProductCodeLoose(deletedProduct.code) !== normalizeProductCodeLoose(product.code)
+        );
 
         state.selectedCategoryId = newCategoryId;
         state.dirty = true;
@@ -1801,61 +1938,46 @@
       }
 
       async function saveToGitHub() {
-        if (!state.config || !state.changedProductCodes.size) return;
+        if (!state.config || state.isSaving || (!state.changedProductCodes.size && !state.deletedProducts.length)) return;
+        const pendingChanges = {
+          config: structuredClone(state.config),
+          pendingUploads: [...state.pendingUploads],
+          pendingImageDeletes: [...state.pendingImageDeletes],
+          pendingSpecificationDeletes: structuredClone(state.pendingSpecificationDeletes),
+          changedProductCodes: new Set(state.changedProductCodes),
+          deletedProducts: structuredClone(state.deletedProducts),
+        };
+        state.isSaving = true;
+        render();
         try {
           setStatus("正在校验最新商品目录并发布...");
-          els.saveBtn.disabled = true;
-
-          const referencedImages = getReferencedCatalogImagePaths(state.config);
-          state.pendingUploads = state.pendingUploads.filter((upload) => referencedImages.has(upload.path));
-          const uploadTotal = state.pendingUploads.length;
-          let uploadedCount = 0;
-          while (state.pendingUploads.length) {
-            const upload = state.pendingUploads[0];
-            setStatus(`正在上传图片 ${uploadedCount + 1}/${uploadTotal}：${upload.name}`);
-            await uploadImageContent(upload);
-            state.pendingUploads.shift();
-            uploadedCount += 1;
-            if (state.pendingUploads.length) {
-              await new Promise((resolve) => window.setTimeout(resolve, 600));
-            }
-          }
-
+          const referencedImages = getReferencedCatalogImagePaths(pendingChanges.config);
+          const uploads = pendingChanges.pendingUploads.filter((upload) => referencedImages.has(upload.path));
           setStatus("正在合并线上最新商品、图片和规格...");
           const branch = encodeURIComponent(els.branch.value.trim());
           const latest = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
           const remoteConfig = parseConfig(decodeBase64ToText(latest.content));
-          const mergedConfig = mergePendingChangesIntoRemoteConfig(remoteConfig);
-          const result = await githubRequest(CONFIG_PATH, {
-            method: "PUT",
-            body: JSON.stringify({
-              message: "Update catalog from admin page",
-              content: encodeTextToBase64(buildConfigFile(mergedConfig)),
-              branch: els.branch.value.trim(),
-              sha: latest.sha,
-            }),
-          });
-
-          const verification = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
-          const verifiedConfig = parseConfig(decodeBase64ToText(verification.content));
-          if (!configContainsPendingChanges(verifiedConfig)) {
-            throw new Error("线上目录校验失败：本次图片或规格尚未完整关联，请不要关闭页面并重试发布。");
+          const mergedConfig = mergePendingChangesIntoRemoteConfig(remoteConfig, pendingChanges);
+          if (!configContainsPendingChanges(mergedConfig, pendingChanges)) {
+            throw new Error("提交前目录校验失败：本次图片或规格尚未完整关联，请不要关闭页面并重试发布。");
           }
+          const mergedReferences = getReferencedCatalogImagePaths(mergedConfig);
+          const deletedPaths = [...new Set(pendingChanges.pendingImageDeletes)].filter(
+            (path) => isCatalogImagePath(path) && !mergedReferences.has(path)
+          );
+          setStatus(`正在一次性提交目录、${uploads.length} 张新图和 ${deletedPaths.length} 张删除图片...`);
+          const result = await createCatalogCommit(mergedConfig, uploads, deletedPaths, latest.sha);
 
-          state.config = verifiedConfig;
-          state.configSha = result.content.sha;
+          state.config = mergedConfig;
+          state.configSha = result.sha;
+          state.pendingUploads = [];
+          state.pendingImageDeletes = [];
+          state.pendingSpecificationDeletes = [];
           state.changedProductCodes = new Set();
-          state.deletedProductCodes = new Set();
-          const cleanup = await deleteUnreferencedPendingImages();
-          state.dirty = cleanup.failed > 0;
-          const cleanupMessage = cleanup.deleted
-            ? `，并清理了 ${cleanup.deleted} 张无引用图库图片`
-            : "";
-          const failedMessage = cleanup.failed
-            ? `；${cleanup.failed} 张无引用图片暂未删除，可再次点击发布重试`
-            : "";
-          setStatus(`已安全提交并完成线上校验${cleanupMessage}${failedMessage}。请等待 GitHub Pages 部署完成后刷新前台。`, "success");
-          showCompletion("已提交并开始部署", `商品、图片和规格已完成线上校验${cleanupMessage}${failedMessage}。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。`);
+          state.deletedProducts = [];
+          state.dirty = false;
+          setStatus("已一次性提交并完成线上校验。请等待 GitHub Pages 部署完成后刷新前台。", "success");
+          showCompletion("已提交并开始部署", "商品、图片和规格已通过一次提交发布。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。");
         } catch (error) {
           if (isCatalogUpdateInProgressError(error)) {
             const message = "后台仍在处理上一个上传请求，请稍后再试。当前页面修改会保留。";
@@ -1866,23 +1988,9 @@
           }
           state.dirty = true;
         } finally {
-          els.saveBtn.disabled = !state.dirty;
+          state.isSaving = false;
+          render();
         }
-      }
-
-      async function uploadImageContent(upload) {
-        if (!upload?.content || !upload?.path) {
-          throw new Error("图片内容未暂存，请重新选择该图片。");
-        }
-        await githubRequest(upload.path, {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message: `Upload product image ${upload.path}`,
-            content: upload.content,
-            branch: els.branch.value.trim(),
-          }),
-        });
       }
 
       function normalizeSpecifications(specifications) {
@@ -2224,14 +2332,13 @@
             const category = state.config.categories.find((c) => c.id === categoryId);
             const product = category?.products[index];
             if (!product) continue;
-            const folderCode = cleanFileName(product.code);
             const existingPaths = getProductImagePaths(product).filter(isCatalogImagePath);
-            let nextIndex = existingPaths.length;
             const newPaths = [];
+            const reservedPaths = new Set(existingPaths);
             for (const image of images) {
-              nextIndex += 1;
               const extension = (image.name.split(".").pop() || "jpg").toLowerCase().slice(0, 5);
-              const path = `${IMAGE_DIR}/${folderCode}/${folderCode}-${nextIndex}.${extension}`;
+              const path = getNextCatalogImagePath(product.code, extension, reservedPaths);
+              reservedPaths.add(path);
               newPaths.push(path);
               state.pendingUploads.push({ name: image.name, content: image.content, path });
               associated += 1;
