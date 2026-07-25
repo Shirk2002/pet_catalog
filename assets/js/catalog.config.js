@@ -905,6 +905,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/jx-01/1784904832964-jx-01-3.jpg",
             "assets/images/catalog/jx-01/1784904832964-jx-01-4.jpg",
             "assets/images/catalog/jx-01/1784904832964-jx-01-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "weight",
+              "value": "70g"
+            }
           ]
         },
         {
@@ -926,6 +932,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/jx-05/1784883424447-jx-05-5.jpg",
             "assets/images/catalog/jx-05/1784883424447-jx-05-6.jpg",
             "assets/images/catalog/jx-05/1784883424447-jx-05-7.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "40g"
+            }
           ]
         },
         {
@@ -950,6 +962,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mm-07/1784880803627-mm-07-7.jpg",
             "assets/images/catalog/mm-07/1784880803627-mm-07-8.jpg",
             "assets/images/catalog/mm-07/1784880803627-mm-07-9.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "15g"
+            }
           ]
         },
         {
@@ -961,6 +979,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mm-15/1784881196565-mm-15-1.jpg",
             "assets/images/catalog/mm-15/1784881196565-mm-15-2.jpg",
             "assets/images/catalog/mm-15/1784881196565-mm-15-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "200g"
+            }
           ]
         },
         {
@@ -971,6 +995,12 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/pt-08/1784881855720-pt-08-1.jpg",
             "assets/images/catalog/pt-08/1784881855720-pt-08-2.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "210g"
+            }
           ]
         },
         {
@@ -984,6 +1014,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/pt-09/1784877807492-pt-09-3.jpg",
             "assets/images/catalog/pt-09/1784877807492-pt-09-4.jpg",
             "assets/images/catalog/pt-09/1784877807492-pt-09-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "13X6cm"
+            },
+            {
+              "label": "Weight",
+              "value": "240g"
+            }
           ]
         },
         {
@@ -995,6 +1035,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/pt-10/1784877965549-pt-10-1.jpg",
             "assets/images/catalog/pt-10/1784877965549-pt-10-2.jpg",
             "assets/images/catalog/pt-10/1784877965549-pt-10-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "170g"
+            }
           ]
         },
         {
@@ -1005,6 +1051,12 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/pt-11/1784882034313-pt-11-1.jpg",
             "assets/images/catalog/pt-11/1784882034313-pt-11-2.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "240g"
+            }
           ]
         },
         {
@@ -1014,6 +1066,12 @@ window.PET_CATALOG_CONFIG = {
           "description": "LED Feather Running Wheel Cat Toy is designed for interactive play and enrichment. The product listing highlights rechargeable USB power. A practical choice for pet owners and retail assortments.",
           "images": [
             "assets/images/catalog/pt-12/1784878118831-pt-12-1.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "130g"
+            }
           ]
         },
         {
@@ -1026,6 +1084,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/pt-13/1784878515815-pt-13-2.jpg",
             "assets/images/catalog/pt-13/1784878515815-pt-13-3.jpg",
             "assets/images/catalog/pt-13/1784878515815-pt-13-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Weight",
+              "value": "45g"
+            }
           ]
         }
       ]
