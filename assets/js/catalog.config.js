@@ -1034,10 +1034,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-03",
           "name": "Waterproof Oxford Front Seat Pet Travel Mat",
-          "image": "assets/images/catalog/mj-03/002-mj-03.png",
+          "image": "assets/images/catalog/mj-03/1784901097724-mj-03-1.jpg",
           "description": "Waterproof Oxford Front Seat Pet Travel Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, Oxford fabric. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mj-03/002-mj-03.png",
             "assets/images/catalog/mj-03/1784901097724-mj-03-1.jpg",
             "assets/images/catalog/mj-03/1784901097724-mj-03-2.jpg",
             "assets/images/catalog/mj-03/1784901097724-mj-03-3.jpg"
@@ -1078,10 +1077,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MJ-07",
           "name": "Waterproof Rear Seat Pet Travel Mat",
-          "image": "assets/images/catalog/mj-07/006-mj-07.png",
+          "image": "assets/images/catalog/mj-07/1784901675764-mj-07-1.jpg",
           "description": "Waterproof Rear Seat Pet Travel Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mj-07/006-mj-07.png",
             "assets/images/catalog/mj-07/1784901675764-mj-07-1.jpg",
             "assets/images/catalog/mj-07/1784901675764-mj-07-2.jpg",
             "assets/images/catalog/mj-07/1784901675764-mj-07-3.jpg",
@@ -1135,10 +1133,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YW-03",
           "name": "Waterproof Rear Car Seat Pet Cover",
-          "image": "assets/images/catalog/yw-03/093-yw-03.png",
+          "image": "assets/images/catalog/yw-03/1784901331033-yw-03-1.jpg",
           "description": "Waterproof Rear Car Seat Pet Cover is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yw-03/093-yw-03.png",
             "assets/images/catalog/yw-03/1784901331033-yw-03-1.jpg",
             "assets/images/catalog/yw-03/1784901331033-yw-03-2.jpg",
             "assets/images/catalog/yw-03/1784901331033-yw-03-3.jpg"
@@ -1147,10 +1144,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YW-04",
           "name": "Thick Non-Slip Rear Seat Pet Car Cover",
-          "image": "assets/images/catalog/yw-04/094-yw-04.png",
+          "image": "assets/images/catalog/yw-04/1784900793676-yw-04-1.jpg",
           "description": "Thick Non-Slip Rear Seat Pet Car Cover is designed for comfortable everyday travel with pets. The product listing highlights water-resistant construction, Oxford fabric, a non-slip base. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yw-04/094-yw-04.png",
             "assets/images/catalog/yw-04/1784900793676-yw-04-1.jpg",
             "assets/images/catalog/yw-04/1784900793676-yw-04-2.jpg",
             "assets/images/catalog/yw-04/1784900793676-yw-04-3.jpg",
@@ -1171,10 +1167,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YW-06",
           "name": "Waterproof Oxford Front Seat Pet Mat",
-          "image": "assets/images/catalog/yw-06/096-yw-06.png",
+          "image": "assets/images/catalog/yw-06/1784900912659-yw-06-1.jpg",
           "description": "Waterproof Oxford Front Seat Pet Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction, Oxford fabric. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yw-06/096-yw-06.png",
             "assets/images/catalog/yw-06/1784900912659-yw-06-1.jpg",
             "assets/images/catalog/yw-06/1784900912659-yw-06-2.jpg",
             "assets/images/catalog/yw-06/1784900912659-yw-06-3.jpg"
@@ -1183,10 +1178,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "YW-07",
           "name": "Waterproof Rear Seat Pet Car Mat",
-          "image": "assets/images/catalog/yw-07/097-yw-07.png",
+          "image": "assets/images/catalog/yw-07/1784901498341-yw-07-1.jpg",
           "description": "Waterproof Rear Seat Pet Car Mat is designed for organized daily feeding and hydration. The product listing highlights water-resistant construction. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/yw-07/097-yw-07.png",
             "assets/images/catalog/yw-07/1784901498341-yw-07-1.jpg",
             "assets/images/catalog/yw-07/1784901498341-yw-07-2.jpg",
             "assets/images/catalog/yw-07/1784901498341-yw-07-3.jpg"
