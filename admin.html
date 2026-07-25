@@ -1683,7 +1683,7 @@
           return;
         }
 
-        const invalidImagePath = images.find((path) => !isProductCatalogImagePath(path, product.code));
+        const invalidImagePath = getProductImagePaths(product).find((path) => !isProductCatalogImagePath(path, product.code));
         if (invalidImagePath) {
           setStatus(`图片必须存放在“${IMAGE_DIR}/${cleanFileName(product.code)}/”文件夹中，不能使用其他商品或根目录路径。`, "error");
           return;
