@@ -1243,7 +1243,13 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/sa-02/1784888953688-sa-02-3.jpg",
             "assets/images/catalog/sa-02/1784888953688-sa-02-4.jpg"
           ],
-          "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments."
+          "description": "Pet Shoulder Sling Carrier Bag is designed for comfortable everyday travel with pets. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "75*65*30cm"
+            }
+          ]
         },
         {
           "code": "SA-03",
@@ -1273,6 +1279,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yw-03/1784901331033-yw-03-1.jpg",
             "assets/images/catalog/yw-03/1784901331033-yw-03-2.jpg",
             "assets/images/catalog/yw-03/1784901331033-yw-03-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "145*135cm"
+            }
           ]
         },
         {
@@ -1285,6 +1297,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yw-04/1784900793676-yw-04-2.jpg",
             "assets/images/catalog/yw-04/1784900793676-yw-04-3.jpg",
             "assets/images/catalog/yw-04/1784900793676-yw-04-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "147*137cm"
+            }
           ]
         },
         {
@@ -1314,6 +1332,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yw-06/1784900912659-yw-06-1.jpg",
             "assets/images/catalog/yw-06/1784900912659-yw-06-2.jpg",
             "assets/images/catalog/yw-06/1784900912659-yw-06-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "106*49cm"
+            }
           ]
         },
         {
