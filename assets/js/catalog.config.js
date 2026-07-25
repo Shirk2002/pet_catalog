@@ -1192,10 +1192,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BP-04",
           "name": "Gradient Collar Harness and Leash Set",
-          "image": "assets/images/catalog/bp-04/065-bp-04.png",
+          "image": "assets/images/catalog/bp-04/1784903026399-bp-04-1.jpg",
           "description": "Gradient Collar Harness and Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/bp-04/065-bp-04.png",
             "assets/images/catalog/bp-04/1784903026399-bp-04-1.jpg",
             "assets/images/catalog/bp-04/1784903026399-bp-04-2.jpg",
             "assets/images/catalog/bp-04/1784903026399-bp-04-3.jpg"
@@ -1204,10 +1203,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "BP-05",
           "name": "Jacquard Pattern Comfortable Dog Leash Set",
-          "image": "assets/images/catalog/bp-05/066-bp-05.png",
+          "image": "assets/images/catalog/bp-05/1784903160538-bp-05-1.jpg",
           "description": "Jacquard Pattern Comfortable Dog Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/bp-05/066-bp-05.png",
             "assets/images/catalog/bp-05/1784903160538-bp-05-1.jpg",
             "assets/images/catalog/bp-05/1784903160538-bp-05-2.png"
           ]
@@ -1226,10 +1224,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "FD-05",
           "name": "Custom Logo Harness and Leash Set",
-          "image": "assets/images/catalog/fd-05/124-fd-05.png",
+          "image": "assets/images/catalog/fd-05/1784902578354-fd-05-1.jpg",
           "description": "Custom Logo Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights customization options. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/fd-05/124-fd-05.png",
             "assets/images/catalog/fd-05/1784902578354-fd-05-1.jpg",
             "assets/images/catalog/fd-05/1784902578354-fd-05-2.jpg",
             "assets/images/catalog/fd-05/1784902578354-fd-05-3.jpg"
@@ -1238,10 +1235,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-02",
           "name": "Waffle Knit Summer Pet Vest",
-          "image": "assets/images/catalog/mm-02/028-mm-02.png",
+          "image": "assets/images/catalog/mm-02/1784942697920-mm-02-1.jpg",
           "description": "Waffle Knit Summer Pet Vest is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-02/028-mm-02.png",
             "assets/images/catalog/mm-02/1784942697920-mm-02-1.jpg",
             "assets/images/catalog/mm-02/1784942697920-mm-02-2.jpg",
             "assets/images/catalog/mm-02/1784942697920-mm-02-3.jpg",
@@ -1251,10 +1247,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-03",
           "name": "Reflective Breathable Pet Harness and Leash",
-          "image": "assets/images/catalog/mm-03/029-mm-03.png",
+          "image": "assets/images/catalog/mm-03/1784904337327-mm-03-1.jpg",
           "description": "Reflective Breathable Pet Harness and Leash is designed for comfortable walks and outdoor activities. The product listing highlights breathable material, reflective safety detailing. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-03/029-mm-03.png",
             "assets/images/catalog/mm-03/1784904337327-mm-03-1.jpg",
             "assets/images/catalog/mm-03/1784904337327-mm-03-2.jpg",
             "assets/images/catalog/mm-03/1784904337327-mm-03-3.jpg",
@@ -1265,10 +1260,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-04",
           "name": "V-Neck Knitted Pet Sweater Vest",
-          "image": "assets/images/catalog/mm-04/030-mm-04.png",
+          "image": "assets/images/catalog/mm-04/1784942567471-mm-04-1.jpg",
           "description": "V-Neck Knitted Pet Sweater Vest is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-04/030-mm-04.png",
             "assets/images/catalog/mm-04/1784942567471-mm-04-1.jpg",
             "assets/images/catalog/mm-04/1784942567471-mm-04-2.jpg",
             "assets/images/catalog/mm-04/1784942567471-mm-04-3.jpg",
@@ -1278,10 +1272,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-05",
           "name": "Small Dog Harness and Leash Set",
-          "image": "assets/images/catalog/mm-05/031-mm-05.png",
+          "image": "assets/images/catalog/mm-05/1784904636355-mm-05-1.jpg",
           "description": "Small Dog Harness and Leash Set is designed for comfortable walks and outdoor activities. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-05/031-mm-05.png",
             "assets/images/catalog/mm-05/1784904636355-mm-05-1.jpg",
             "assets/images/catalog/mm-05/1784904636355-mm-05-2.jpg",
             "assets/images/catalog/mm-05/1784904636355-mm-05-3.jpg",
@@ -1292,10 +1285,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-06",
           "name": "Suede Reflective Breathable Pet Harness",
-          "image": "assets/images/catalog/mm-06/032-mm-06.png",
+          "image": "assets/images/catalog/mm-06/1784942456318-mm-06-1.jpg",
           "description": "Suede Reflective Breathable Pet Harness is designed for comfortable walks and outdoor activities. The product listing highlights breathable material, reflective safety detailing. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-06/032-mm-06.png",
             "assets/images/catalog/mm-06/1784942456318-mm-06-1.jpg",
             "assets/images/catalog/mm-06/1784942456318-mm-06-2.jpg",
             "assets/images/catalog/mm-06/1784942456318-mm-06-3.jpg",
@@ -1305,10 +1297,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-09",
           "name": "Warm Winter Pet Ski Jacket",
-          "image": "assets/images/catalog/mm-09/035-mm-09.png",
+          "image": "assets/images/catalog/mm-09/1784942965600-mm-09-1.jpg",
           "description": "Warm Winter Pet Ski Jacket is designed for comfortable walks and outdoor activities. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-09/035-mm-09.png",
             "assets/images/catalog/mm-09/1784942965600-mm-09-1.jpg",
             "assets/images/catalog/mm-09/1784942965600-mm-09-2.jpg",
             "assets/images/catalog/mm-09/1784942965600-mm-09-3.jpg",
@@ -1318,10 +1309,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-10",
           "name": "Lightweight Breathable Pet Shoes",
-          "image": "assets/images/catalog/mm-10/036-mm-10.png",
+          "image": "assets/images/catalog/mm-10/1784903307002-mm-10-1.jpg",
           "description": "Lightweight Breathable Pet Shoes is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-10/036-mm-10.png",
             "assets/images/catalog/mm-10/1784903307002-mm-10-1.jpg",
             "assets/images/catalog/mm-10/1784903307002-mm-10-2.jpg",
             "assets/images/catalog/mm-10/1784903307002-mm-10-3.jpg",
@@ -1331,10 +1321,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-11",
           "name": "Escape-Proof Breathable Harness and Leash Set",
-          "image": "assets/images/catalog/mm-11/037-mm-11.png",
+          "image": "assets/images/catalog/mm-11/1784902838026-mm-11-1.jpg",
           "description": "Escape-Proof Breathable Harness and Leash Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-11/037-mm-11.png",
             "assets/images/catalog/mm-11/1784902838026-mm-11-1.jpg",
             "assets/images/catalog/mm-11/1784902838026-mm-11-2.jpg",
             "assets/images/catalog/mm-11/1784902838026-mm-11-3.jpg"
@@ -1343,10 +1332,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-12",
           "name": "Rainbow Striped Warm Pet Fleece Shirt",
-          "image": "assets/images/catalog/mm-12/038-mm-12.png",
+          "image": "assets/images/catalog/mm-12/1784903563958-mm-12-1.jpg",
           "description": "Rainbow Striped Warm Pet Fleece Shirt is designed for everyday pet training and safety needs. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-12/038-mm-12.png",
             "assets/images/catalog/mm-12/1784903563958-mm-12-1.jpg",
             "assets/images/catalog/mm-12/1784903563958-mm-12-2.jpg",
             "assets/images/catalog/mm-12/1784903563958-mm-12-3.jpg",
@@ -1358,10 +1346,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-13",
           "name": "Warm Pet Costume Hoodie",
-          "image": "assets/images/catalog/mm-13/039-mm-13.png",
+          "image": "assets/images/catalog/mm-13/1784942821376-mm-13-1.jpg",
           "description": "Warm Pet Costume Hoodie is designed for everyday pet training and safety needs. The product listing highlights warm plush comfort. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-13/039-mm-13.png",
             "assets/images/catalog/mm-13/1784942821376-mm-13-1.jpg",
             "assets/images/catalog/mm-13/1784942821376-mm-13-2.jpg",
             "assets/images/catalog/mm-13/1784942821376-mm-13-3.jpg",
@@ -1371,10 +1358,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-14",
           "name": "Soft Breathable Chest-Protective Harness Set",
-          "image": "assets/images/catalog/mm-14/040-mm-14.png",
+          "image": "assets/images/catalog/mm-14/1784942320357-mm-14-1.jpg",
           "description": "Soft Breathable Chest-Protective Harness Set is designed for comfortable walks and outdoor activities. The product listing highlights breathable material. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-14/040-mm-14.png",
             "assets/images/catalog/mm-14/1784942320357-mm-14-1.jpg",
             "assets/images/catalog/mm-14/1784942320357-mm-14-2.jpg",
             "assets/images/catalog/mm-14/1784942320357-mm-14-3.jpg",
@@ -1384,10 +1370,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "MM-16",
           "name": "Reflective Vest-Style Dog Harness and Leash",
-          "image": "assets/images/catalog/mm-16/042-mm-16.png",
+          "image": "assets/images/catalog/mm-16/1784904444429-mm-16-1.jpg",
           "description": "Reflective Vest-Style Dog Harness and Leash is designed for comfortable walks and outdoor activities. The product listing highlights reflective safety detailing. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/mm-16/042-mm-16.png",
             "assets/images/catalog/mm-16/1784904444429-mm-16-1.jpg",
             "assets/images/catalog/mm-16/1784904444429-mm-16-2.jpg",
             "assets/images/catalog/mm-16/1784904444429-mm-16-3.jpg",
@@ -1398,10 +1383,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "NB-01",
           "name": "Rechargeable LED Safety Dog Collar",
-          "image": "assets/images/catalog/nb-01/127-nb-01.png",
+          "image": "assets/images/catalog/nb-01/1784903937955-nb-01-1.png",
           "description": "Rechargeable LED Safety Dog Collar is designed for comfortable walks and outdoor activities. The product listing highlights rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/nb-01/127-nb-01.png",
             "assets/images/catalog/nb-01/1784903937955-nb-01-1.png",
             "assets/images/catalog/nb-01/1784903937955-nb-01-2.jpg"
           ]
@@ -1439,10 +1423,9 @@ window.PET_CATALOG_CONFIG = {
         {
           "code": "XH-01",
           "name": "Rechargeable LED Night Walking Dog Collar",
-          "image": "assets/images/catalog/xh-01/128-xh-01.png",
+          "image": "assets/images/catalog/xh-01/1784903718591-xh-01-1.jpg",
           "description": "Rechargeable LED Night Walking Dog Collar is designed for comfortable walks and outdoor activities. The product listing highlights rechargeable USB power, LED visibility. A practical choice for pet owners and retail assortments.",
           "images": [
-            "assets/images/catalog/xh-01/128-xh-01.png",
             "assets/images/catalog/xh-01/1784903718591-xh-01-1.jpg",
             "assets/images/catalog/xh-01/1784903718591-xh-01-2.jpg",
             "assets/images/catalog/xh-01/1784903718591-xh-01-3.png",
