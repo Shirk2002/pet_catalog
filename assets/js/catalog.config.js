@@ -1816,6 +1816,20 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mm-16/1784904444429-mm-16-3.jpg",
             "assets/images/catalog/mm-16/1784904444429-mm-16-4.jpg",
             "assets/images/catalog/mm-16/1784904444429-mm-16-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "150g"
+            },
+            {
+              "label": "M",
+              "value": "150g"
+            },
+            {
+              "label": "L",
+              "value": "150g"
+            }
           ]
         },
         {
