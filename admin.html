@@ -1252,20 +1252,26 @@
 
       function findProductEntryByIdentity(config, identity) {
         const normalizedCode = normalizeProductCodeLoose(identity.code);
+        const normalizedName = normalizeProductName(identity.name);
         const matches = [];
         config.categories.forEach((category) => {
           category.products.forEach((product, index) => {
-            if (normalizeProductCodeLoose(product.code) === normalizedCode) {
-              matches.push({ category, product, index });
-            }
+            if (normalizeProductCodeLoose(product.code) !== normalizedCode) return;
+            if (identity.categoryId && category.id !== identity.categoryId) return;
+            if (normalizedName && normalizeProductName(product.name) !== normalizedName) return;
+            if (identity.image && (product.image || null) !== identity.image) return;
+            matches.push({ category, product, index });
           });
         });
         if (matches.length > 1) {
-          throw new Error(`商品“${identity.code}”在线上存在重复记录，无法安全删除。`);
+          const details = matches
+            .map(({ category, product }) => `  - ${category.name} / ${product.name} / ${product.image || "(无主图)"}`)
+            .join("\n");
+          throw new Error(`商品“${identity.code}”仍有 ${matches.length} 条匹配记录，无法确定删除目标。\n${details}\n请在后台先为每条记录设置不同主图或不同商品名后再删除。`);
         }
         if (!matches.length) return null;
         const match = matches[0];
-        if (normalizeProductName(match.product.name) !== normalizeProductName(identity.name)) {
+        if (normalizedName && normalizeProductName(match.product.name) !== normalizedName) {
           throw new Error(`商品“${identity.code}”在线上名称已变更，已停止删除以避免误删。请先重新加载目录确认后再操作。`);
         }
         return match;
@@ -1553,6 +1559,7 @@
           categoryId,
           code: product.code,
           name: product.name,
+          image: product.image || null,
         });
         state.changedProductCodes.delete(normalizeProductCodeLoose(product.code));
         category.products.splice(index, 1);
