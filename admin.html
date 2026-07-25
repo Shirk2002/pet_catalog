@@ -924,6 +924,7 @@
       const PLACEHOLDER_IMAGE = "assets/images/placeholder.svg";
       const MAX_UPLOAD_IMAGE_SIZE = 5 * 1024 * 1024;
       const MAX_UPLOAD_BATCH_SIZE = 20 * 1024 * 1024;
+      const MAX_UPLOAD_BATCH_COUNT = 20;
 
       const state = {
         config: null,
@@ -936,6 +937,8 @@
         specificationEditor: null,
         pendingUploads: [],
         pendingImageDeletes: [],
+        changedProductCodes: new Set(),
+        deletedProductCodes: new Set(),
         dirty: false,
       };
 
@@ -1145,6 +1148,95 @@
         ].join("\n");
       }
 
+      function mergeUniqueValues(values) {
+        return [...new Set(values.filter(Boolean))];
+      }
+
+      function mergeSpecifications(remoteSpecifications, localSpecifications) {
+        const merged = [];
+        const seen = new Set();
+        [...normalizeSpecifications(remoteSpecifications), ...normalizeSpecifications(localSpecifications)].forEach((specification) => {
+          const key = `${specification.label}\u0000${specification.value}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            merged.push(specification);
+          }
+        });
+        return merged;
+      }
+
+      function findProductEntriesByCode(config, code) {
+        const normalizedCode = normalizeProductCodeLoose(code);
+        const entries = [];
+        config.categories.forEach((category) => {
+          category.products.forEach((product, index) => {
+            if (normalizeProductCodeLoose(product.code) === normalizedCode) {
+              entries.push({ category, product, index });
+            }
+          });
+        });
+        return entries;
+      }
+
+      function mergePendingChangesIntoRemoteConfig(remoteConfig) {
+        if (state.deletedProductCodes.size) {
+          throw new Error("为保护线上数据，检测到删除操作。请重新加载目录后单独删除商品，再发布。");
+        }
+
+        state.changedProductCodes.forEach((code) => {
+          const localEntries = findProductEntriesByCode(state.config, code);
+          if (localEntries.length !== 1) {
+            throw new Error(`商品编号“${code}”在当前目录中不唯一，无法安全发布。`);
+          }
+
+          const localEntry = localEntries[0];
+          const remoteEntries = findProductEntriesByCode(remoteConfig, code);
+          if (remoteEntries.length > 1) {
+            throw new Error(`商品编号“${localEntry.product.code}”在线上存在历史重复记录，无法自动覆盖。`);
+          }
+
+          const localProduct = localEntry.product;
+          if (!remoteEntries.length) {
+            const targetCategory = remoteConfig.categories.find((category) => category.id === localEntry.category.id);
+            if (!targetCategory) throw new Error(`找不到分类“${localEntry.category.name}”，无法发布商品“${localProduct.code}”。`);
+            targetCategory.products.push(localProduct);
+            return;
+          }
+
+          const remoteProduct = remoteEntries[0].product;
+          const images = mergeUniqueValues([...getProductImagePaths(remoteProduct), ...getProductImagePaths(localProduct)]);
+          const specifications = mergeSpecifications(remoteProduct.specifications, localProduct.specifications);
+          Object.assign(remoteProduct, localProduct, { image: images[0], images });
+          if (specifications.length) {
+            remoteProduct.specifications = specifications;
+          } else {
+            delete remoteProduct.specifications;
+          }
+        });
+
+        sortAllProductsInConfig(remoteConfig);
+        return remoteConfig;
+      }
+
+      function sortAllProductsInConfig(config) {
+        config.categories.forEach((category) => {
+          category.products.sort((a, b) => String(a.code || "").localeCompare(String(b.code || ""), undefined, { numeric: true }));
+        });
+      }
+
+      function configContainsPendingChanges(config) {
+        return [...state.changedProductCodes].every((code) => {
+          const localEntries = findProductEntriesByCode(state.config, code);
+          const remoteEntries = findProductEntriesByCode(config, code);
+          if (localEntries.length !== 1 || remoteEntries.length !== 1) return false;
+          const localProduct = localEntries[0].product;
+          const remoteProduct = remoteEntries[0].product;
+          return getProductImagePaths(localProduct).every((path) => getProductImagePaths(remoteProduct).includes(path))
+            && mergeSpecifications(localProduct.specifications, remoteProduct.specifications).length
+              === normalizeSpecifications(remoteProduct.specifications).length;
+        });
+      }
+
       function updateCatalogActionButtons() {
         const loaded = Boolean(state.config);
         els.loadBtn.classList.toggle("secondary", loaded);
@@ -1163,6 +1255,8 @@
           state.configSha = data.sha;
           state.pendingUploads = [];
           state.pendingImageDeletes = [];
+          state.changedProductCodes = new Set();
+          state.deletedProductCodes = new Set();
           state.selectedCategoryId = state.config.categories[0]?.id || null;
           state.dirty = false;
           els.saveBtn.disabled = true;
@@ -1338,6 +1432,7 @@
         const product = category.products[index];
         if (!confirm(`确定删除 ${product.code || product.name} 吗？`)) return;
         state.pendingImageDeletes.push(...getProductImagePaths(product).filter(isCatalogImagePath));
+        state.deletedProductCodes.add(normalizeProductCodeLoose(product.code));
         category.products.splice(index, 1);
         state.dirty = true;
         els.saveBtn.disabled = false;
@@ -1670,6 +1765,8 @@
           targetCategory.products.push(product);
         }
         sortAllProducts();
+        state.changedProductCodes.add(normalizeProductCodeLoose(product.code));
+        state.deletedProductCodes.delete(normalizeProductCodeLoose(product.code));
 
         state.selectedCategoryId = newCategoryId;
         state.dirty = true;
@@ -1685,9 +1782,9 @@
       }
 
       async function saveToGitHub() {
-        if (!state.config) return;
+        if (!state.config || !state.changedProductCodes.size) return;
         try {
-          setStatus("正在提交商品目录并发布到前台...");
+          setStatus("正在校验最新商品目录并发布...");
           els.saveBtn.disabled = true;
 
           const referencedImages = getReferencedCatalogImagePaths(state.config);
@@ -1697,11 +1794,7 @@
           while (state.pendingUploads.length) {
             const upload = state.pendingUploads[0];
             setStatus(`正在上传图片 ${uploadedCount + 1}/${uploadTotal}：${upload.name}`);
-            try {
-              await uploadImageContent(upload);
-            } catch (error) {
-              throw new Error(`图片“${upload.name}”上传失败：${error.message}`);
-            }
+            await uploadImageContent(upload);
             state.pendingUploads.shift();
             uploadedCount += 1;
             if (state.pendingUploads.length) {
@@ -1709,17 +1802,31 @@
             }
           }
 
-          const content = encodeTextToBase64(buildConfigFile(state.config));
+          setStatus("正在合并线上最新商品、图片和规格...");
+          const branch = encodeURIComponent(els.branch.value.trim());
+          const latest = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
+          const remoteConfig = parseConfig(decodeBase64ToText(latest.content));
+          const mergedConfig = mergePendingChangesIntoRemoteConfig(remoteConfig);
           const result = await githubRequest(CONFIG_PATH, {
             method: "PUT",
             body: JSON.stringify({
               message: "Update catalog from admin page",
-              content,
+              content: encodeTextToBase64(buildConfigFile(mergedConfig)),
               branch: els.branch.value.trim(),
-              sha: state.configSha,
+              sha: latest.sha,
             }),
           });
+
+          const verification = await githubRequest(`${CONFIG_PATH}?ref=${branch}`);
+          const verifiedConfig = parseConfig(decodeBase64ToText(verification.content));
+          if (!configContainsPendingChanges(verifiedConfig)) {
+            throw new Error("线上目录校验失败：本次图片或规格尚未完整关联，请不要关闭页面并重试发布。");
+          }
+
+          state.config = verifiedConfig;
           state.configSha = result.content.sha;
+          state.changedProductCodes = new Set();
+          state.deletedProductCodes = new Set();
           const cleanup = await deleteUnreferencedPendingImages();
           state.dirty = cleanup.failed > 0;
           const cleanupMessage = cleanup.deleted
@@ -1728,10 +1835,11 @@
           const failedMessage = cleanup.failed
             ? `；${cleanup.failed} 张无引用图片暂未删除，可再次点击发布重试`
             : "";
-          setStatus(`已提交到 GitHub${cleanupMessage}${failedMessage}。请等待 GitHub Pages 部署完成后刷新前台。`, "success");
-          showCompletion("已提交并开始部署", `目录修改已提交到 GitHub${cleanupMessage}${failedMessage}。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。`);
+          setStatus(`已安全提交并完成线上校验${cleanupMessage}${failedMessage}。请等待 GitHub Pages 部署完成后刷新前台。`, "success");
+          showCompletion("已提交并开始部署", `商品、图片和规格已完成线上校验${cleanupMessage}${failedMessage}。GitHub Pages 正在重新部署，完成后刷新前台即可查看更新。`);
         } catch (error) {
-          setStatus(error.message, "error");
+          setStatus(`发布未完成：${error.message}。当前页面修改仍会保留，可修正后再次发布。`, "error");
+          state.dirty = true;
         } finally {
           els.saveBtn.disabled = !state.dirty;
         }
@@ -1997,10 +2105,12 @@
         if (!files.length) return;
         const invalidFile = files.find((file) => !file.type.startsWith("image/") || file.size > MAX_UPLOAD_IMAGE_SIZE);
         const totalSize = files.reduce((sum, file) => sum + file.size, 0);
-        if (invalidFile || totalSize > MAX_UPLOAD_BATCH_SIZE) {
+        if (invalidFile || totalSize > MAX_UPLOAD_BATCH_SIZE || files.length > MAX_UPLOAD_BATCH_COUNT) {
           const message = invalidFile
             ? `图片“${invalidFile.name}”无效。请选择小于 5MB 的图片文件。`
-            : "单次选择的图片总大小不能超过 20MB，请分批上传。";
+            : files.length > MAX_UPLOAD_BATCH_COUNT
+              ? "单次最多选择 20 张图片，请分批上传。"
+              : "单次选择的图片总大小不能超过 20MB，请分批上传。";
           setStatus(message, "error");
           els.imageFile.value = "";
           return;
@@ -2038,10 +2148,12 @@
         if (!files.length) return;
         const invalidFile = files.find((file) => !file.type.startsWith("image/") || file.size > MAX_UPLOAD_IMAGE_SIZE);
         const totalSize = files.reduce((sum, file) => sum + file.size, 0);
-        if (invalidFile || totalSize > MAX_UPLOAD_BATCH_SIZE) {
+        if (invalidFile || totalSize > MAX_UPLOAD_BATCH_SIZE || files.length > MAX_UPLOAD_BATCH_COUNT) {
           const message = invalidFile
             ? `图片“${invalidFile.name}”无效。请选择小于 5MB 的图片文件。`
-            : "单次选择的图片总大小不能超过 20MB，请分批上传。";
+            : files.length > MAX_UPLOAD_BATCH_COUNT
+              ? "单次最多选择 20 张图片，请分批上传。"
+              : "单次选择的图片总大小不能超过 20MB，请分批上传。";
           setStatus(message, "error");
           els.batchImageFile.value = "";
           return;
@@ -2103,6 +2215,11 @@
             product.images = allPaths;
             product.image = allPaths[0];
           }
+          grouped.forEach((images) => {
+            if (images[0]?.match?.product?.code) {
+              state.changedProductCodes.add(normalizeProductCodeLoose(images[0].match.product.code));
+            }
+          });
           state.dirty = state.dirty || associated > 0;
           els.saveBtn.disabled = !state.dirty;
           const parts = [];

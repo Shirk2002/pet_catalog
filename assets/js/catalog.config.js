@@ -282,6 +282,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/1784797522476-pt23w-1.jpg",
             "assets/images/catalog/1784797522476-pt23w-2.jpg",
             "assets/images/catalog/1784797522476-pt23w-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "123",
+              "value": "123"
+            }
           ]
         },
         {
