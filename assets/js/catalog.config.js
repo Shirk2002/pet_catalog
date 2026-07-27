@@ -1295,6 +1295,10 @@ window.PET_CATALOG_CONFIG = {
             {
               "label": "Weight",
               "value": "260g"
+            },
+            {
+              "label": "尺寸",
+              "value": "51*19cm"
             }
           ]
         },
