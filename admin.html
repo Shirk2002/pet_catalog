@@ -1202,18 +1202,22 @@
         return `${specification.label}\u0000${specification.value}`;
       }
 
+      function specificationLabel(specification) {
+        return specification.label;
+      }
+
       function mergeSpecifications(remoteSpecifications, localSpecifications, removedSpecifications = []) {
-        const removed = new Set(removedSpecifications.map(specificationKey));
-        const merged = [];
-        const seen = new Set();
-        [...normalizeSpecifications(remoteSpecifications), ...normalizeSpecifications(localSpecifications)].forEach((specification) => {
-          const key = specificationKey(specification);
-          if (!removed.has(key) && !seen.has(key)) {
-            seen.add(key);
-            merged.push(specification);
-          }
+        const removedLabels = new Set(removedSpecifications.map(specificationLabel));
+        const byLabel = new Map();
+        normalizeSpecifications(remoteSpecifications).forEach((specification) => {
+          const label = specificationLabel(specification);
+          if (!removedLabels.has(label)) byLabel.set(label, specification);
         });
-        return merged;
+        normalizeSpecifications(localSpecifications).forEach((specification) => {
+          const label = specificationLabel(specification);
+          if (!removedLabels.has(label)) byLabel.set(label, specification);
+        });
+        return [...byLabel.values()];
       }
 
       function escapeRegExp(value) {
@@ -1349,10 +1353,16 @@
           const localProduct = localEntries[0].product;
           const remoteProduct = remoteEntries[0].product;
           const remoteImages = getProductImagePaths(remoteProduct);
+          const localSpecs = normalizeSpecifications(localProduct.specifications);
+          const remoteSpecs = normalizeSpecifications(remoteProduct.specifications);
+          const specificationsMatch = localSpecs.length === remoteSpecs.length
+            && localSpecs.every((localSpec) => {
+              const remoteSpec = remoteSpecs.find((s) => specificationLabel(s) === specificationLabel(localSpec));
+              return remoteSpec && specificationKey(remoteSpec) === specificationKey(localSpec);
+            });
           return getProductImagePaths(localProduct).every((path) => remoteImages.includes(path))
             && pendingChanges.pendingImageDeletes.every((path) => !remoteImages.includes(path))
-            && mergeSpecifications(localProduct.specifications, remoteProduct.specifications).length
-              === normalizeSpecifications(remoteProduct.specifications).length;
+            && specificationsMatch;
         });
       }
 
@@ -1887,10 +1897,10 @@
         const currentImagePaths = new Set(getProductImagePaths(product));
         state.pendingImageDeletes = state.pendingImageDeletes.filter((path) => !currentImagePaths.has(path));
         if (state.specificationsDirty) {
-          const currentSpecificationKeys = new Set(normalizeSpecifications(product.specifications).map(specificationKey));
+          const currentSpecificationLabels = new Set(normalizeSpecifications(product.specifications).map(specificationLabel));
           const productCode = normalizeProductCodeLoose(product.code);
           state.pendingSpecificationDeletes = state.pendingSpecificationDeletes.filter(
-            (item) => item.code !== productCode || !currentSpecificationKeys.has(specificationKey(item.specification))
+            (item) => item.code !== productCode || !currentSpecificationLabels.has(specificationLabel(item.specification))
           );
         }
 
@@ -1902,9 +1912,9 @@
             )
           );
           if (state.specificationsDirty) {
-            const updatedSpecifications = new Set(normalizeSpecifications(product.specifications).map(specificationKey));
+            const updatedSpecificationLabels = new Set(normalizeSpecifications(product.specifications).map(specificationLabel));
             normalizeSpecifications(originalProduct.specifications).forEach((specification) => {
-              if (!updatedSpecifications.has(specificationKey(specification))) {
+              if (!updatedSpecificationLabels.has(specificationLabel(specification))) {
                 state.pendingSpecificationDeletes.push({
                   code: normalizeProductCodeLoose(product.code),
                   specification,
