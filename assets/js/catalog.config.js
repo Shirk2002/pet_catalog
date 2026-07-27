@@ -257,6 +257,10 @@ window.PET_CATALOG_CONFIG = {
             {
               "label": "Dimensions",
               "value": "2.6L"
+            },
+            {
+              "label": "尺寸",
+              "value": "190*190*139mm"
             }
           ],
           "images": [
@@ -281,11 +285,11 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "尺寸",
-              "value": "30.20 × 20 × 1.40cm"
+              "value": "30.20 × 20 × 3.5cm"
             },
             {
-              "label": "Volume",
-              "value": "560-845.6cm³"
+              "label": "重量",
+              "value": "220~350g"
             }
           ]
         },
@@ -297,15 +301,15 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "PT10K 按键版【无远程APP】",
-              "value": "2000g"
+              "value": "36.6*19*29*31.5cm/4L/2.55kg"
             },
             {
               "label": "PT10W WiFi版【涂鸦智能APP不含摄像头】",
-              "value": "2000g"
+              "value": "36.6*19*29*31.5cm/4L/2.55kg"
             },
             {
               "label": "PT10V【涂鸦100万像素上视频版】",
-              "value": "2000g"
+              "value": "36.6*19*29*31.5cm/4L/2.55kg"
             }
           ],
           "images": [
@@ -322,6 +326,16 @@ window.PET_CATALOG_CONFIG = {
           "images": [
             "assets/images/catalog/pt03w/1784856261771-pt03w-1.jpg",
             "assets/images/catalog/pt03w/1784856261771-pt03w-2.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "20*24*32cm"
+            },
+            {
+              "label": "重量",
+              "value": "1.7kg"
+            }
           ]
         },
         {
@@ -333,6 +347,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/pt05k/1784854821109-pt05k-1.jpg",
             "assets/images/catalog/pt05k/1784854821109-pt05k-2.jpg",
             "assets/images/catalog/pt05k/1784854821109-pt05k-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "1500g"
+            }
           ]
         },
         {
@@ -344,6 +364,20 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/pt08w/1784856397033-pt08w-1.jpg",
             "assets/images/catalog/pt08w/1784856397033-pt08w-2.jpg",
             "assets/images/catalog/pt08w/1784856397033-pt08w-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "17.5*18*28cm"
+            },
+            {
+              "label": "容量",
+              "value": "3L"
+            },
+            {
+              "label": "重量",
+              "value": "1.5kg"
+            }
           ]
         },
         {
@@ -358,8 +392,16 @@ window.PET_CATALOG_CONFIG = {
           ],
           "specifications": [
             {
-              "label": "123",
-              "value": "123"
+              "label": "尺寸",
+              "value": "17.5*18*28cm"
+            },
+            {
+              "label": "重量",
+              "value": "1.2kg"
+            },
+            {
+              "label": "容量",
+              "value": "3L"
             }
           ]
         },
@@ -436,7 +478,11 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "重量",
-              "value": "360g"
+              "value": "23g"
+            },
+            {
+              "label": "尺寸",
+              "value": "29.7*20*4.2cm"
             }
           ],
           "images": [
