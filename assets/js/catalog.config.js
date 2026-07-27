@@ -79,12 +79,12 @@ window.PET_CATALOG_CONFIG = {
           "description": "Smart Self-Cleaning Cat Litter Box with App Control is designed for daily pet care and grooming routines. A practical choice for pet owners and retail assortments.",
           "specifications": [
             {
-              "label": "PT108W",
-              "value": "20000g"
+              "label": "PT108W（重量）",
+              "value": "48*53*63cm/12.4kg"
             },
             {
-              "label": "PT108v",
-              "value": "20000g"
+              "label": "PT108v（重量）",
+              "value": "48*53*63cm/12.4kg"
             }
           ]
         },
@@ -140,6 +140,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/t10/1784791225953-t10-2.jpg",
             "assets/images/catalog/t10/1784791225953-t10-3.jpg",
             "assets/images/catalog/t10/1784791225953-t10-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "60g"
+            },
+            {
+              "label": "尺寸",
+              "value": "120×28×22mm"
+            }
           ]
         },
         {
@@ -150,7 +160,7 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "T20不带灯（一个档位）",
-              "value": "113g"
+              "value": "155*78*25mm/113g"
             },
             {
               "label": "T50 带灯款（两个档位）",
@@ -173,6 +183,10 @@ window.PET_CATALOG_CONFIG = {
             {
               "label": "重量",
               "value": "150g"
+            },
+            {
+              "label": "尺寸",
+              "value": "155*78*25mm"
             }
           ],
           "images": [
@@ -194,11 +208,11 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "T65",
-              "value": "230g"
+              "value": "150*33*28mm/85g"
             },
             {
               "label": "T70",
-              "value": "230g"
+              "value": "150*33*28mm/85g"
             }
           ]
         },
@@ -225,22 +239,6 @@ window.PET_CATALOG_CONFIG = {
               "label": "重量",
               "value": "220g"
             }
-          ]
-        },
-        {
-          "code": "TZ-16",
-          "name": "LED Electric Pet Nail Grinder",
-          "image": "assets/images/catalog/tz-16/1784792739831-tz-16-1.jpg",
-          "description": "LED Electric Pet Nail Grinder is designed for daily pet care and grooming routines. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
-          "specifications": [
-            {
-              "label": "Dimensions",
-              "value": "225*176*173MM"
-            }
-          ],
-          "images": [
-            "assets/images/catalog/tz-16/1784792739831-tz-16-1.jpg",
-            "assets/images/catalog/tz-16/1784792739831-tz-16-2.jpg"
           ]
         }
       ]
@@ -1913,7 +1911,7 @@ window.PET_CATALOG_CONFIG = {
             },
             {
               "label": "Volume",
-              "value": "50(cm³"
+              "value": "50(cm³）"
             }
           ]
         },
