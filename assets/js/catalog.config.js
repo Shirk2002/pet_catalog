@@ -1079,7 +1079,7 @@ window.PET_CATALOG_CONFIG = {
           "specifications": [
             {
               "label": "weight",
-              "value": "70g"
+              "value": "55g"
             }
           ]
         },
