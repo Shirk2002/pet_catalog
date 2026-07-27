@@ -674,18 +674,6 @@ window.PET_CATALOG_CONFIG = {
           ]
         },
         {
-          "code": "GJ-06",
-          "name": "Soft Pet Textile Cushion",
-          "image": "assets/images/catalog/gj-06/1784874999328-gj-06-1.jpg",
-          "description": "Soft Pet Textile Cushion is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
-          "images": [
-            "assets/images/catalog/gj-06/1784874999328-gj-06-1.jpg",
-            "assets/images/catalog/gj-06/1784874999328-gj-06-2.jpg",
-            "assets/images/catalog/gj-06/1784874999328-gj-06-3.jpg",
-            "assets/images/catalog/gj-06/1784875231966-gj-06-1.jpg"
-          ]
-        },
-        {
           "code": "JH-08",
           "name": "Round Upright Corrugated Cat Scratcher",
           "image": "assets/images/catalog/jh-08/1784874645536-jh-08-1.jpg",
@@ -717,6 +705,20 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/jh-09/1784876225646-jh-09-1.jpg",
             "assets/images/catalog/jh-09/1784876225646-jh-09-2.jpg",
             "assets/images/catalog/jh-09/1784876225646-jh-09-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "30*30*26cm/310g"
+            },
+            {
+              "label": "M",
+              "value": "39*37*30cm/410g"
+            },
+            {
+              "label": "L",
+              "value": "48*45*33cm/610g"
+            }
           ]
         },
         {
@@ -841,6 +843,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-16/1784876460922-mj-16-1.png",
             "assets/images/catalog/mj-16/1784876460922-mj-16-2.png",
             "assets/images/catalog/mj-16/1784876460922-mj-16-3.png"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "66*55*26cm"
+            },
+            {
+              "label": "重量",
+              "value": "150g"
+            }
           ]
         },
         {
@@ -853,6 +865,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/xx-03/1784875897123-xx-03-2.jpg",
             "assets/images/catalog/xx-03/1784875897123-xx-03-3.jpg",
             "assets/images/catalog/xx-03/1784875897123-xx-03-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "60*33*28cm"
+            },
+            {
+              "label": "重量",
+              "value": "1750g"
+            }
           ]
         },
         {
