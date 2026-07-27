@@ -570,6 +570,10 @@ window.PET_CATALOG_CONFIG = {
             {
               "label": "重量",
               "value": "1000g"
+            },
+            {
+              "label": "直径",
+              "value": "40cm"
             }
           ]
         },
@@ -914,6 +918,32 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yq-07/1784875730044-yq-07-2.jpg",
             "assets/images/catalog/yq-07/1784875730044-yq-07-3.jpg",
             "assets/images/catalog/yq-07/1784875730044-yq-07-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "XS",
+              "value": "35*29cm/100g"
+            },
+            {
+              "label": "S",
+              "value": "48*34cm/140g"
+            },
+            {
+              "label": "M",
+              "value": "58*39cm/170g"
+            },
+            {
+              "label": "L",
+              "value": "69*48cm/190g"
+            },
+            {
+              "label": "XL",
+              "value": "84*57cm/280g"
+            },
+            {
+              "label": "XXL",
+              "value": "100*70cm/370g"
+            }
           ]
         },
         {
