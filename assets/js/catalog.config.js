@@ -1978,6 +1978,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/tz-11/1784853632418-tz-11-1.jpg",
             "assets/images/catalog/tz-11/1784853632418-tz-11-2.jpg",
             "assets/images/catalog/tz-11/1784853632418-tz-11-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimensions",
+              "value": "4*2.5cm"
+            }
           ]
         },
         {
