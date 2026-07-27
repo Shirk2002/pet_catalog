@@ -1949,6 +1949,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/tz-09/1784854060562-tz-09-2.jpg",
             "assets/images/catalog/tz-09/1784854060562-tz-09-3.jpg",
             "assets/images/catalog/tz-09/1784854060562-tz-09-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Size",
+              "value": "109*38mm"
+            },
+            {
+              "label": "重量",
+              "value": "350g"
+            }
           ]
         },
         {
@@ -1960,6 +1970,10 @@ window.PET_CATALOG_CONFIG = {
             {
               "label": "尺寸",
               "value": "48*32*21mm"
+            },
+            {
+              "label": "重量",
+              "value": "180g"
             }
           ],
           "images": [
@@ -1981,8 +1995,12 @@ window.PET_CATALOG_CONFIG = {
           ],
           "specifications": [
             {
-              "label": "Dimensions",
+              "label": "尺寸",
               "value": "4*2.5cm"
+            },
+            {
+              "label": "重量",
+              "value": "100g"
             }
           ]
         },
@@ -2018,6 +2036,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/tz-14/1784854248692-tz-14-2.jpg",
             "assets/images/catalog/tz-14/1784854248692-tz-14-3.jpg",
             "assets/images/catalog/tz-14/1784854248692-tz-14-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "7*4*3cm"
+            },
+            {
+              "label": "重量",
+              "value": "150g"
+            }
           ]
         },
         {
@@ -2030,6 +2058,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/tz-15/1784853946573-tz-15-2.jpg",
             "assets/images/catalog/tz-15/1784853946573-tz-15-3.jpg",
             "assets/images/catalog/tz-15/1784853946573-tz-15-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "10.4*4.4cm"
+            },
+            {
+              "label": "重量",
+              "value": "300g"
+            }
           ]
         },
         {
