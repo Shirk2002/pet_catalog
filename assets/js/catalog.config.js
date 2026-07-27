@@ -1430,7 +1430,7 @@ window.PET_CATALOG_CONFIG = {
           ],
           "specifications": [
             {
-              "label": "1",
+              "label": "Dimensions",
               "value": "107*2.5*20cm"
             }
           ]
