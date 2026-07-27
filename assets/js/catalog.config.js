@@ -1319,6 +1319,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yw-07/1784901498341-yw-07-1.jpg",
             "assets/images/catalog/yw-07/1784901498341-yw-07-2.jpg",
             "assets/images/catalog/yw-07/1784901498341-yw-07-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "Dimension",
+              "value": "135cmx118cm"
+            }
           ]
         },
         {
