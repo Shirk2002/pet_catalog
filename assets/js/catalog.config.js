@@ -527,6 +527,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/bk-11/1784876019813-bk-11-1.jpg",
             "assets/images/catalog/bk-11/1784876019813-bk-11-2.jpg",
             "assets/images/catalog/bk-11/1784876019813-bk-11-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "43*43*24cm"
+            },
+            {
+              "label": "重量",
+              "value": "1300g"
+            }
           ]
         },
         {
@@ -555,6 +565,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/bk-13/1784858433725-bk-13-1.jpg",
             "assets/images/catalog/bk-13/1784858433725-bk-13-2.jpg",
             "assets/images/catalog/bk-13/1784858433725-bk-13-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "重量",
+              "value": "1000g"
+            }
           ]
         },
         {
@@ -623,6 +639,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/bk-17/1784856841331-bk-17-2.jpg",
             "assets/images/catalog/bk-17/1784856841331-bk-17-3.jpg",
             "assets/images/catalog/bk-17/1784856841331-bk-17-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "最大承受重量",
+              "value": "44lb"
+            }
           ]
         },
         {
@@ -670,6 +692,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/jh-08/1784874645536-jh-08-3.jpg",
             "assets/images/catalog/jh-08/1784874645536-jh-08-4.jpg",
             "assets/images/catalog/jh-08/1784874645536-jh-08-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "圆形尺寸",
+              "value": "35*9cm~55*9cm"
+            },
+            {
+              "label": "椭圆尺寸",
+              "value": "30*45*9cm~50*65*9cm"
+            }
           ]
         },
         {
@@ -748,6 +780,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-12/1784874804150-mj-12-1.jpg",
             "assets/images/catalog/mj-12/1784874804150-mj-12-2.jpg",
             "assets/images/catalog/mj-12/1784874804150-mj-12-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "45*45*10cm"
+            }
           ]
         },
         {
@@ -823,6 +861,24 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yq-03/1784875461167-yq-03-2.jpg",
             "assets/images/catalog/yq-03/1784875461167-yq-03-3.jpg",
             "assets/images/catalog/yq-03/1784875461167-yq-03-4.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "S",
+              "value": "39*27*3 cm/0.17kg"
+            },
+            {
+              "label": "M",
+              "value": "47*41*3 cm/0.30kg"
+            },
+            {
+              "label": "L",
+              "value": "58*47*3 cm/0.36kg"
+            },
+            {
+              "label": "XL",
+              "value": "85*59*3 cm/0.47kg"
+            }
           ]
         },
         {
@@ -836,6 +892,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yq-06/1784874314383-yq-06-3.jpg",
             "assets/images/catalog/yq-06/1784874314383-yq-06-4.jpg",
             "assets/images/catalog/yq-06/1784874314383-yq-06-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "直径",
+              "value": "40~100cm"
+            },
+            {
+              "label": "重量",
+              "value": "210~1400g"
+            }
           ]
         },
         {
@@ -860,7 +926,17 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/yq-08/1784873879819-yq-08-3.jpg",
             "assets/images/catalog/yq-08/1784873879819-yq-08-4.jpg"
           ],
-          "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments."
+          "description": "Large Corrugated Cardboard Cat Scratcher Bed is designed for comfortable rest and home enrichment. A practical choice for pet owners and retail assortments.",
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "40*40*9cm/45*45*9cm/50*50*9cm"
+            },
+            {
+              "label": "重量",
+              "value": "1000g"
+            }
+          ]
         }
       ]
     },
