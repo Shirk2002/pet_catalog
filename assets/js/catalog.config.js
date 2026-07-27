@@ -754,6 +754,16 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/mj-10/1784876583214-mj-10-3.jpg",
             "assets/images/catalog/mj-10/1784876583214-mj-10-4.jpg",
             "assets/images/catalog/mj-10/1784876583214-mj-10-5.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "尺寸",
+              "value": "50*31cm"
+            },
+            {
+              "label": "重量",
+              "value": "750g"
+            }
           ]
         },
         {
