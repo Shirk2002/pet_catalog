@@ -1410,6 +1410,12 @@ window.PET_CATALOG_CONFIG = {
             "assets/images/catalog/fd-03/1784902499631-fd-03-1.jpg",
             "assets/images/catalog/fd-03/1784902499631-fd-03-2.png",
             "assets/images/catalog/fd-03/1784902499631-fd-03-3.jpg"
+          ],
+          "specifications": [
+            {
+              "label": "XS",
+              "value": "107*2.5*20cm"
+            }
           ]
         },
         {
