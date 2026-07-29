@@ -197,6 +197,9 @@
       }
 
       .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         border: 0;
         border-radius: 14px;
         padding: 11px 14px;
@@ -204,6 +207,7 @@
         background: linear-gradient(135deg, var(--brand), var(--brand-dark));
         cursor: pointer;
         font-weight: 800;
+        text-decoration: none;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
       }
 
@@ -830,11 +834,15 @@
               <p id="currentCategoryDescription">从 GitHub 加载数据后，商品会显示在这里。</p>
             </div>
             <div class="actions">
-              <button class="btn secondary" id="batchUploadBtn" type="button" disabled>批量上传自动关联</button>
+              <a class="btn secondary" href="outputs/petdora_excel_import_template.csv" download>Download CSV Template</a>
+              <button class="btn secondary" id="importExcelBtn" type="button" disabled>Import Excel / CSV</button>
+              <input id="excelFileInput" type="file" accept=".xlsx,.xls,.csv" hidden />
+              <button class="btn secondary" id="batchUploadBtn" type="button" disabled>Batch Image Upload</button>
               <input id="batchImageFileInput" type="file" accept="image/*" multiple hidden />
-              <button class="btn" id="addProductBtn" type="button" disabled>新增商品</button>
+              <button class="btn" id="addProductBtn" type="button" disabled>Add Product</button>
             </div>
           </div>
+          <p class="description">批量导入请先下载 CSV 模板。Code、Name、Category 为必填；新增商品必须填写 Image，图片路径需放在 assets/images/catalog/商品编号/ 目录下；Specifications 使用 “Label: Value|Label: Value” 格式。</p>
           <label class="catalog-search" for="catalogSearchInput">
             <span class="catalog-search-icon" aria-hidden="true">⌕</span>
             <input
@@ -918,6 +926,7 @@
       </form>
     </div>
 
+    <script src="assets/js/vendor/xlsx.full.min.js"></script>
     <script>
       const CONFIG_PATH = "assets/js/catalog.config.js";
       const IMAGE_DIR = "assets/images/catalog";
@@ -953,6 +962,8 @@
         loadBtn: $("loadBtn"),
         saveBtn: $("saveBtn"),
         addProductBtn: $("addProductBtn"),
+        importExcelBtn: $("importExcelBtn"),
+        excelFile: $("excelFileInput"),
         batchUploadBtn: $("batchUploadBtn"),
         batchImageFile: $("batchImageFileInput"),
         catalogSearch: $("catalogSearchInput"),
@@ -1281,6 +1292,134 @@
         return match;
       }
 
+      function importExcelRows(rows) {
+        if (!Array.isArray(rows) || !rows.length) throw new Error("The selected file has no product rows.");
+
+        const normalizeHeader = (value) => String(value || "").trim().toLowerCase().replace(/[^a-z0-9]+/g, "");
+        const aliases = {
+          code: ["code", "productcode", "itemno", "itemnumber", "sku"],
+          name: ["name", "productname", "englishname"],
+          category: ["category", "categoryname"],
+          description: ["description", "productdescription"],
+          image: ["image", "mainimage", "imagepath"],
+          images: ["images", "imagepaths", "gallery"],
+          specifications: ["specifications", "specification", "specs"],
+        };
+        const read = (row, field) => {
+          const keys = aliases[field];
+          const matchedKey = Object.keys(row).find((key) => keys.includes(normalizeHeader(key)));
+          return matchedKey ? String(row[matchedKey] ?? "").trim() : "";
+        };
+        const parseImages = (mainImage, gallery) =>
+          [...new Set([mainImage, ...String(gallery || "").split("|").map((value) => value.trim())].filter(Boolean))];
+        const parseSpecifications = (value) =>
+          String(value || "")
+            .split("|")
+            .map((item) => item.trim())
+            .filter(Boolean)
+            .map((item) => {
+              const separator = item.indexOf(":");
+              if (separator < 1 || !item.slice(separator + 1).trim()) {
+                throw new Error(`Invalid specification “${item}”. Use Label: Value pairs separated by |.`);
+              }
+              return { label: item.slice(0, separator).trim(), value: item.slice(separator + 1).trim() };
+            });
+
+        const rowsToImport = rows.map((row, index) => {
+          const code = normalizeProductCode(read(row, "code"));
+          const name = read(row, "name");
+          const categoryName = read(row, "category");
+          if (!code || !name || !categoryName) {
+            throw new Error(`Row ${index + 2} requires Code, Name, and Category.`);
+          }
+          const images = parseImages(read(row, "image"), read(row, "images"));
+          const invalidPath = images.find((path) => !isProductCatalogImagePath(path, code));
+          if (invalidPath) {
+            throw new Error(`Row ${index + 2}: image paths must be inside “${IMAGE_DIR}/${cleanFileName(code)}/”.`);
+          }
+          return {
+            rowNumber: index + 2,
+            code,
+            name,
+            categoryName,
+            description: read(row, "description"),
+            images,
+            specifications: parseSpecifications(read(row, "specifications")),
+          };
+        });
+
+        const importedCodes = new Set();
+        rowsToImport.forEach((item) => {
+          const key = normalizeProductCodeLoose(item.code);
+          if (importedCodes.has(key)) throw new Error(`Duplicate Code “${item.code}” appears in the import file.`);
+          importedCodes.add(key);
+        });
+
+        const categoryByName = new Map(
+          state.config.categories.map((category) => [String(category.name).trim().toLowerCase(), category])
+        );
+        const availableCategories = state.config.categories.map((category) => category.name).join(", ");
+        rowsToImport.forEach((item) => {
+          const category = categoryByName.get(item.categoryName.toLowerCase());
+          if (!category) {
+            throw new Error(`Row ${item.rowNumber}: Category “${item.categoryName}” does not exist. Use one of: ${availableCategories}.`);
+          }
+          item.category = category;
+        });
+
+        let added = 0;
+        let updated = 0;
+        let moved = 0;
+        rowsToImport.forEach((item) => {
+          const matches = findProductsByCodeLoose(item.code);
+          if (matches.length > 1) throw new Error(`Code “${item.code}” already exists more than once in the catalog. Resolve duplicates before importing.`);
+          const product = {
+            code: item.code,
+            name: item.name,
+            ...(item.images.length ? { image: item.images[0], images: item.images } : {}),
+            ...(item.description ? { description: item.description } : {}),
+            ...(item.specifications.length ? { specifications: item.specifications } : {}),
+          };
+          if (!matches.length) {
+            if (!product.image) throw new Error(`Row ${item.rowNumber}: new products require an Image path.`);
+            item.category.products.push(product);
+            added += 1;
+          } else {
+            const { category: previousCategory, index, product: previousProduct } = matches[0];
+            if (!product.image && previousProduct.image) {
+              product.image = previousProduct.image;
+              if (Array.isArray(previousProduct.images)) product.images = previousProduct.images;
+            }
+            if (!product.description && previousProduct.description) product.description = previousProduct.description;
+            if (!item.specifications.length && previousProduct.specifications) product.specifications = previousProduct.specifications;
+            previousCategory.products.splice(index, 1);
+            item.category.products.push(product);
+            updated += 1;
+            if (previousCategory.id !== item.category.id) moved += 1;
+          }
+          state.changedProductCodes.add(normalizeProductCodeLoose(item.code));
+        });
+
+        sortAllProducts();
+        state.selectedCategoryId = rowsToImport[0].category.id;
+        state.dirty = true;
+        render();
+        const message = `Excel import ready: ${added} added, ${updated} updated, ${moved} moved. Review the catalog, then publish to GitHub.`;
+        setStatus(message, "success");
+        showCompletion("Excel import complete", message);
+      }
+
+      async function importExcelFile(file) {
+        if (!file) return;
+        if (!window.XLSX) throw new Error("Excel parser failed to load. Refresh the page and try again.");
+        const extension = file.name.split(".").pop()?.toLowerCase();
+        if (!['xlsx', 'xls', 'csv'].includes(extension)) throw new Error("Use an .xlsx, .xls, or .csv file.");
+        const workbook = XLSX.read(await file.arrayBuffer(), { type: "array" });
+        const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+        const rows = XLSX.utils.sheet_to_json(firstSheet, { defval: "", raw: false });
+        importExcelRows(rows);
+      }
+
       function mergePendingChangesIntoRemoteConfig(remoteConfig, pendingChanges) {
         pendingChanges.deletedProducts.forEach((deletedProduct) => {
           const remoteEntry = findProductEntryByIdentity(remoteConfig, deletedProduct);
@@ -1409,6 +1548,7 @@
         els.saveBtn.disabled = !state.config || !state.dirty || state.isSaving;
         els.loadBtn.disabled = state.isSaving;
         els.addProductBtn.disabled = !state.config || state.isSaving;
+        els.importExcelBtn.disabled = !state.config || state.isSaving;
         els.batchUploadBtn.disabled = !state.config || state.isSaving;
         els.catalogSearch.disabled = !state.config || state.isSaving;
       }
@@ -1955,7 +2095,7 @@
       }
 
       async function saveToGitHub() {
-        if (!state.config || state.isSaving || (!state.changedProductCodes.size && !state.deletedProducts.length)) return;
+        if (!state.config || state.isSaving || !state.dirty) return;
         const pendingChanges = {
           config: structuredClone(state.config),
           pendingUploads: [...state.pendingUploads],
@@ -2225,6 +2365,22 @@
         if (event.target === els.completionBackdrop) closeCompletion();
       });
       els.addProductBtn.addEventListener("click", () => openEditor(state.selectedCategoryId, null));
+      els.importExcelBtn.addEventListener("click", () => {
+        if (!state.config) return;
+        els.excelFile.click();
+      });
+      els.excelFile.addEventListener("change", async () => {
+        const file = els.excelFile.files?.[0];
+        if (!file) return;
+        try {
+          setStatus(`Reading ${file.name}...`);
+          await importExcelFile(file);
+        } catch (error) {
+          setStatus(`Excel import failed: ${error.message}`, "error");
+        } finally {
+          els.excelFile.value = "";
+        }
+      });
       els.productCode.addEventListener("input", validateProductIdentityFields);
       els.productName.addEventListener("input", validateProductIdentityFields);
       els.catalogSearch.addEventListener("input", () => {

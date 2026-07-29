@@ -2256,24 +2256,6 @@ window.PET_CATALOG_CONFIG = {
               "value": "300 g"
             }
           ]
-        },
-        {
-          "code": "TZ-16",
-          "name": "Color Screen Remote Dog Training Collar",
-          "image": "assets/images/catalog/tz-16/1784853521187-tz-16-1.jpg",
-          "description": "Color Screen Remote Dog Training Collar is designed for comfortable walks and outdoor activities. The product listing highlights smart automatic operation. A practical choice for pet owners and retail assortments.",
-          "specifications": [
-            {
-              "label": "Dimensions",
-              "value": "25 x 176 x 173 mm"
-            }
-          ],
-          "images": [
-            "assets/images/catalog/tz-16/1784853521187-tz-16-1.jpg",
-            "assets/images/catalog/tz-16/1784853521187-tz-16-2.jpg",
-            "assets/images/catalog/tz-16/1784853521187-tz-16-3.jpg",
-            "assets/images/catalog/tz-16/1784853521187-tz-16-4.jpg"
-          ]
         }
       ]
     }
