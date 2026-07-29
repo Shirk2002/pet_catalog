@@ -52,12 +52,15 @@
   }
 
   function setSiteInfo() {
-    document.title = config.site?.title || "Pet Supplies Product Catalog";
-    siteTitle.textContent = config.site?.title || "Pet Supplies Product Catalog";
+    document.title = config.site?.title || "Petdora | Curated pet products for modern retail";
+    siteTitle.textContent =
+      config.site?.heroTitle ||
+      "Petdora makes everyday pet care feel considered.";
     siteDescription.textContent =
       config.site?.description ||
-      "Browse pet supplies by category and view product names with images.";
-    footerText.textContent = config.site?.footer || "© Pet Supplies Product Catalog";
+      "Discover practical, design-forward products selected for contemporary pet collections.";
+    footerText.textContent =
+      config.site?.footer || "© Petdora. Curated pet products for modern retail.";
   }
 
   function getSelectedCategory() {
@@ -301,7 +304,7 @@
 
   function renderPage(category) {
     renderCategories(category.id);
-    categoryKicker.textContent = "Current Category";
+    categoryKicker.textContent = "Collection";
     categoryTitle.textContent = category.name;
     categoryDescription.textContent =
       category.description || "View products in this category.";

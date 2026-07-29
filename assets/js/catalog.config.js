@@ -3,9 +3,10 @@
 
 window.PET_CATALOG_CONFIG = {
   "site": {
-    "title": "Pet Supplies Product Catalog",
-    "description": "Browse pet supplies by category and view product names with images.",
-    "footer": "Pet Supplies Product Catalog"
+    "title": "Petdora | Curated pet products for modern retail",
+    "heroTitle": "Petdora makes everyday pet care feel considered.",
+    "description": "Discover thoughtful pet products curated for retail collections, everyday care and modern pet living.",
+    "footer": "© Petdora. Curated pet products for modern retail."
   },
   "categories": [
     {

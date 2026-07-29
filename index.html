@@ -3,129 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A pet supplies catalog website for browsing product categories, names, and images."
-    />
-    <title>Pet Supplies Product Catalog</title>
+    <meta name="description" content="Petdora curates thoughtful pet products for modern retail collections." />
+    <title>Petdora | Curated pet products for modern retail</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-content">
-        <div>
-          <p class="eyebrow">Pet Supplies Catalog</p>
-          <h1 id="site-title">Pet Supplies Product Catalog</h1>
-          <p id="site-description" class="site-description">
-            Browse pet supplies by category and view product names with images.
-          </p>
+    <header id="top" class="site-header">
+      <div class="container brand-bar">
+        <a class="brand-lockup" href="#top" aria-label="Petdora home">
+          <img class="brand-logo-image" src="assets/images/petdora-logo.png" alt="" />
+          <span>petdora</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#collection">Collection</a>
+          <a href="#why-petdora">Why Petdora</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="header-action" href="#collection">Explore catalog <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="container hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Curated pet products for modern retail</p>
+          <h1 id="site-title">Petdora makes everyday pet care feel considered.</h1>
+          <p id="site-description" class="site-description">Discover practical, design-forward products selected for contemporary pet collections.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#collection">Explore collection <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#contact">Start an inquiry</a>
+          </div>
+          <dl class="hero-highlights" aria-label="Petdora strengths">
+            <div><dt>Curated</dt><dd>Retail-ready selections</dd></div>
+            <div><dt>Practical</dt><dd>Built for daily care</dd></div>
+            <div><dt>Connected</dt><dd>Easy inquiry support</dd></div>
+          </dl>
         </div>
-
-        <div class="contact-panel" aria-label="Contact links">
-          <a
-            class="contact-link"
-            href="https://www.facebook.com/profile.php?id=61585897942353"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Facebook profile"
-            title="Facebook"
-          >
-            <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path
-                  d="M13.5 21v-7h2.3l.5-3h-2.8V9.3c0-.8.4-1.6 1.8-1.6H16V5.1c-.3 0-.9-.1-1.8-.1-3 0-4.7 1.8-4.7 5V11H7v3h2.5v7h4z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </a>
-
-          <a
-            class="contact-link"
-            href="https://wa.me/8613728181520"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="WhatsApp contact"
-            title="WhatsApp"
-          >
-            <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path
-                  d="M20 11.9A8 8 0 0 1 8.2 18.8L4 20l1.2-4.1A8 8 0 1 1 20 11.9zm-8-6.5a6.5 6.5 0 0 0-5.5 9.9l.3.5-.7 2.4 2.5-.7.4.2A6.5 6.5 0 1 0 12 5.4zm3.9 8.2c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1l-.4.5c-.1.1-.3.2-.5.1a5.3 5.3 0 0 1-2.6-2.3c-.1-.2 0-.4.1-.5l.4-.4c.1-.1.1-.2.2-.4 0-.1 0-.3-.1-.4l-.6-1.4c-.1-.3-.3-.3-.5-.3h-.4c-.1 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.5 2.3 3.7 3.2.5.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1 0-.1-.2-.1-.4-.2z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </a>
-
-          <a
-            class="contact-link"
-            href="mailto:walker.clar2002@gmail.com"
-            aria-label="Email contact"
-            title="Email"
-          >
-            <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path
-                  d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.2l8 5.3 8-5.3V8H4zm16 8V10.6l-7.4 4.9a1 1 0 0 1-1.2 0L4 10.6V16h16z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </a>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-orb hero-orb-one"></div>
+          <div class="hero-orb hero-orb-two"></div>
+          <div class="hero-card hero-card-main"><span>Petdora</span><strong>For pets. For people. For everyday.</strong></div>
+          <svg class="hero-paw" viewBox="0 0 240 240" aria-hidden="true">
+            <circle cx="42" cy="82" r="25" />
+            <circle cx="91" cy="45" r="25" />
+            <circle cx="149" cy="45" r="25" />
+            <circle cx="198" cy="82" r="25" />
+            <path d="M49 174c0-43 31-71 71-71s71 28 71 71c0 28-21 45-47 34l-24-10-24 10c-26 11-47-6-47-34Z" />
+          </svg>
         </div>
       </div>
     </header>
 
-    <main class="container layout">
-      <aside class="sidebar" aria-label="Product categories">
-        <div class="sidebar-title">Product Categories</div>
-        <nav id="category-list" class="category-list"></nav>
-      </aside>
-
-      <section class="content" aria-live="polite">
-        <div class="content-heading">
+    <main>
+      <section id="collection" class="catalog-section">
+        <div class="container section-intro">
           <div>
-            <p id="category-kicker" class="eyebrow">All Products</p>
-            <h2 id="category-title">All Categories</h2>
+            <p class="eyebrow">The collection</p>
+            <h2>Find the right fit for your next pet range.</h2>
           </div>
-          <span id="product-count" class="product-count">0 products</span>
+          <p>Browse our catalog by collection, or search directly by product name and item number.</p>
         </div>
-        <p id="category-description" class="category-description">
-          Select a category to view matching products.
-        </p>
-        <label class="product-search" for="product-search-input">
-          <span class="sr-only">Search products</span>
-          <span class="search-icon" aria-hidden="true">⌕</span>
-          <input
-            id="product-search-input"
-            type="search"
-            placeholder="Search by product name or item number"
-            autocomplete="off"
-          />
-          <button id="clear-search-button" type="button" aria-label="Clear search" hidden>
-            ×
-          </button>
-        </label>
-        <div id="product-grid" class="product-grid"></div>
+
+        <div class="container layout">
+          <aside class="sidebar" aria-label="Product categories">
+            <div class="sidebar-title">Browse collections</div>
+            <nav id="category-list" class="category-list"></nav>
+          </aside>
+          <section class="content" aria-live="polite">
+            <div class="content-heading">
+              <div>
+                <p id="category-kicker" class="eyebrow">Collection</p>
+                <h2 id="category-title">All products</h2>
+              </div>
+              <span id="product-count" class="product-count">0 products</span>
+            </div>
+            <p id="category-description" class="category-description">Select a collection to view matching products.</p>
+            <label class="product-search" for="product-search-input">
+              <span class="sr-only">Search products</span>
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="product-search-input" type="search" placeholder="Search product name or item number" autocomplete="off" />
+              <button id="clear-search-button" type="button" aria-label="Clear search" hidden>×</button>
+            </label>
+            <div id="product-grid" class="product-grid"></div>
+          </section>
+        </div>
+      </section>
+
+      <section id="why-petdora" class="value-section">
+        <div class="container value-grid">
+          <div class="value-copy">
+            <p class="eyebrow">Why Petdora</p>
+            <h2>Products with a clear place in everyday pet life.</h2>
+            <p>We bring together functional care essentials and considered product ideas so buyers can build cohesive, easy-to-browse pet collections.</p>
+          </div>
+          <div class="value-list">
+            <article><span>01</span><h3>Designed for discovery</h3><p>Clear categories and product information make range planning simpler.</p></article>
+            <article><span>02</span><h3>Made for real routines</h3><p>From grooming to smart cleaning, every collection starts with daily use.</p></article>
+            <article><span>03</span><h3>Ready to discuss</h3><p>Product codes and direct contact keep each inquiry specific and efficient.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container contact-card">
+          <div>
+            <p class="eyebrow">Let’s build your collection</p>
+            <h2>Have products in mind?</h2>
+            <p>Share the item numbers or tell us what you are sourcing. We’ll help you take the next step.</p>
+          </div>
+          <div class="contact-actions" aria-label="Contact options">
+            <a class="button button-primary" href="https://wa.me/8613728181520" target="_blank" rel="noreferrer">WhatsApp us <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="mailto:walker.clar2002@gmail.com">Email Petdora <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <div
-      id="product-detail-modal"
-      class="product-detail-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="product-detail-title"
-      hidden
-    >
+    <div id="product-detail-modal" class="product-detail-modal" role="dialog" aria-modal="true" aria-labelledby="product-detail-title" hidden>
       <div id="product-detail-backdrop" class="product-detail-backdrop"></div>
       <section class="product-detail-dialog">
         <button id="product-detail-close" class="product-detail-close" type="button" aria-label="Close product details">×</button>
         <div class="product-detail-gallery">
-          <div class="product-detail-main-image-wrap">
-            <img id="product-detail-main-image" src="assets/images/placeholder.svg" alt="" />
-          </div>
+          <div class="product-detail-main-image-wrap"><img id="product-detail-main-image" src="assets/images/placeholder.svg" alt="" /></div>
           <div id="product-detail-thumbnails" class="product-detail-thumbnails" aria-label="Product image gallery"></div>
         </div>
         <div class="product-detail-content">
@@ -138,12 +135,7 @@
       </section>
     </div>
 
-    <footer class="site-footer">
-      <div class="container">
-        <span id="footer-text">© Pet Supplies Product Catalog</span>
-      </div>
-    </footer>
-
+    <footer class="site-footer"><div class="container"><span id="footer-text">© Petdora. Curated pet products for modern retail.</span></div></footer>
     <script src="assets/js/catalog.config.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
